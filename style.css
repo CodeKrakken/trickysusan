@@ -1,3 +1,7 @@
 body {
   text-align: center
 }
+
+.app {
+  background-image: url('Logo_Neon.jpg')
+}
