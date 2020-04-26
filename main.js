@@ -24,11 +24,15 @@ Vue.component ('tabs', {
       <div v-show="selectedTab === 'News'">
         <news></news>
       </div>
+
+      <div v-show="selectedTab === 'Gigs'">
+        <gigs></gigs>
+      </div>
     <div>
   `,
   data() {
     return {
-      tabs: ['News', 'Gigs', 'Shop', 'Bio'],
+      tabs: ['News', 'Gigs', 'Shop', 'Bio', 'Photos'],
       selectedTab: 'News'
     }
   }
@@ -42,6 +46,13 @@ Vue.component('news', {
   `
 })
 
+Vue.component('gigs', {
+  template: `
+    <div>
+      Clearly none.
+    </div>
+  `
+})
 
 var app = new Vue({
   el: '#app'
