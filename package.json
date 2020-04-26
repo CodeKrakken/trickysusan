@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/CodeKrakken/tricky-susan-vue/issues"
   },
-  "homepage": "https://github.com/CodeKrakken/tricky-susan-vue#readme"
+  "homepage": "https://github.com/CodeKrakken/tricky-susan-vue#readme",
+  "engines": {
+    "node": "13.9.0"
+  }
 }
