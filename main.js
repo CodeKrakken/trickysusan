@@ -28,6 +28,10 @@ Vue.component ('tabs', {
       <div v-show="selectedTab === 'Gigs'">
         <gigs></gigs>
       </div>
+
+      <div v-show="selectedTab === 'Shop'">
+        <shop></shop>
+      </div>
     <div>
   `,
   data() {
@@ -50,6 +54,14 @@ Vue.component('gigs', {
   template: `
     <div>
       Clearly none.
+    </div>
+  `
+})
+
+Vue.component('shop', {
+  template: `
+    <div>
+      We would have a single for sale, but ... y'know
     </div>
   `
 })
