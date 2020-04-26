@@ -76,7 +76,9 @@ Vue.component('Bio', {
 Vue.component('Photos', {
   template: `
     <div>
-      Here will be photos
+      <ul>
+        <li><img src="Artwork - Table Doodles.jpg" width=1200>
+      </ul>
     </div>
   `
 })
