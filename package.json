@@ -1,0 +1,19 @@
+{
+  "name": "tricky-susan-vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeKrakken/tricky-susan-vue.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeKrakken/tricky-susan-vue/issues"
+  },
+  "homepage": "https://github.com/CodeKrakken/tricky-susan-vue#readme"
+}
