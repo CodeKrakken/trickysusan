@@ -1,7 +1,9 @@
 body {
-  text-align: center
+  text-align: center;
+  color: white;
+  font-family:monospace
 }
 
 #app {
-  color: white
+
 }
