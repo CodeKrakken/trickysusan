@@ -32,6 +32,10 @@ Vue.component ('tabs', {
       <div v-show="selectedTab === 'Shop'">
         <shop></shop>
       </div>
+
+      <div v-show="selectedTab === 'Bio'">
+        <bio></bio>
+      </div>
     <div>
   `,
   data() {
@@ -62,6 +66,14 @@ Vue.component('shop', {
   template: `
     <div>
       We would have a single for sale, but ... y'know
+    </div>
+  `
+})
+
+Vue.component('Bio', {
+  template: `
+    <div>
+      Once up on a time, we formed and played for a bit. Then we had to stop because ...
     </div>
   `
 })
