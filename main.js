@@ -78,7 +78,7 @@ Vue.component('shop', {
 Vue.component('bio', {
   template: `
     <div>
-      Once up on a time, we formed and played for a bit. Then we had to stop because ...
+      Once upon a time, we formed and played for a bit. Then we had to stop because ...
     </div>
   `
 })
