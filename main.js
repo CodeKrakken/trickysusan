@@ -18,8 +18,12 @@ Vue.component ('tabs', {
         v-for="(tab, index) in tabs"
         @click="selectedTab = tab"
         :key="index"
-        >{{ tab }}</span>
+        >{{ tab }}&nbsp&nbsp</span>
       </ul>
+
+      <div v-show="selectedTab === 'News'">
+        <news></news>
+      </div>
     <div>
   `,
   data() {
