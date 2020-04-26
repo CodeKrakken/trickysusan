@@ -1,14 +1,5 @@
 Vue.config.devtools = true
 
-Vue.component ('root', {
-  template: `
-    <div>
-      Tricky Susan
-      <tabs></tabs>
-    </div>
-  `
-})
-
 Vue.component ('tabs', {
   template: `
     <div>

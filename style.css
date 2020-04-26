@@ -1,9 +1,6 @@
 body {
-  text-align: center;
   color: white;
-  font-family:monospace
-}
-
-#app {
-
+  font-family: monospace;
+  background-image: url('Logo_Neon.jpg');
+  background-size: 100%
 }
