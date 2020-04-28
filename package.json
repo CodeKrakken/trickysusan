@@ -4,20 +4,17 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node main.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CodeKrakken/tricky-susan-vue.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/CodeKrakken/tricky-susan-vue/issues"
   },
-  "homepage": "https://github.com/CodeKrakken/tricky-susan-vue#readme",
-  "engines": {
-    "node": "13.9.0"
-  }
+  "homepage": "https://github.com/CodeKrakken/tricky-susan-vue#readme"
 }
