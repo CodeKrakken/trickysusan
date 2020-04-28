@@ -4,6 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
+    "start": "nodemon src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/CodeKrakken/tricky-susan-vue/issues"
   },
-  "homepage": "https://github.com/CodeKrakken/tricky-susan-vue#readme"
+  "homepage": "https://github.com/CodeKrakken/tricky-susan-vue#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
 }
