@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname + '/frontend/public/index.html'))
+  res.sendFile(path.join(__dirname + '/frontend/index.html'))
 });
 
 app.listen(process.env.PORT, () =>
