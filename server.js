@@ -2,14 +2,16 @@ require('dotenv').config()
 const cors = require('cors');
 const express = require('express');
 const app = express();
+const path = require('path');
  
 app.use(cors());
 
-app.set('view engine', 'ejs');
+app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
-  res.render('index');
+  res.sendFile(path.join(__dirname + '/frontend/public/index.html'))
 });
+
 app.listen(process.env.PORT, () =>
 console.log(`Example listening on ${process.env.PORT}!`),
 );
