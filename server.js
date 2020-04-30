@@ -1,6 +1,5 @@
-import 'dotenv/config';
-import cors from 'cors';
-import express from 'express';
+const cors = require('cors');
+const express = require('express');
 const app = express();
 
 app.use(cors());
