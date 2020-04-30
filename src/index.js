@@ -6,7 +6,7 @@ const app = express();
 app.use(cors());
 
 app.get('/', (req, res) => {
-  res.render('main');
+  res.send('Hello World!');
 });
 app.listen(process.env.PORT, () =>
 console.log(`Example listening on ${process.env.PORT}!`),
