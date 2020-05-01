@@ -62,9 +62,19 @@ Vue.component('news', {
 Vue.component('gigs', {
   template: `
     <div>
-      Clearly none.
+      <ul>
+        <span class="gigs"
+        v-for="(gig, index) in gigs"
+        :key="index"
+        ><li>{{ gig }}</li></span>
+      </ul>
     </div>
-  `
+  `,
+  data() {
+    return {
+      gigs: ["Clearly none."]
+    }
+  }
 })
 
 Vue.component('shop', {
