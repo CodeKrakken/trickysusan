@@ -66,16 +66,25 @@ Vue.component('gigs', {
         <span class="gigs"
         v-for="(gig, index) in gigs"
         :key="index"
-        ><tr><td>{{ gig[0] }}</td><td>{{ gig[1] }}</td></tr><br></span>
+        ><tr><td>{{ gig.date }}</td><td>{{ gig.venue }}</td></tr><br></span>
       </table>
     </div>
   `,
   data() {
     return {
       gigs: [
-        ["13/04/20", "Dublin Castle"],
-        ["15/06/20", "Camden Barfly"],
-        ["31/08/21", "Reading Festival"]
+        {
+          "date": "13/04/20", 
+          "venue": "Dublin Castle"
+        },
+        {
+          "date": "15/06/20",
+          "venue": "Camden Barfly"
+        },
+        {
+          "date": "31/08/21", 
+          "venue": "Reading Festival"
+        }
       ]
     }
   }
