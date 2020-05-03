@@ -62,17 +62,21 @@ Vue.component('news', {
 Vue.component('gigs', {
   template: `
     <div>
-      <ul>
+      <table border>
         <span class="gigs"
         v-for="(gig, index) in gigs"
         :key="index"
-        ><li>{{ gig }}</li></span>
-      </ul>
+        ><tr><td>{{ gig[0] }}</td><td>{{ gig[1] }}</td></tr><br></span>
+      </table>
     </div>
   `,
   data() {
     return {
-      gigs: ["Clearly none."]
+      gigs: [
+        ["13/04/20", "Dublin Castle"],
+        ["15/06/20", "Camden Barfly"],
+        ["31/08/21", "Reading Festival"]
+      ]
     }
   }
 })
