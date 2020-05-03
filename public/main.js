@@ -44,17 +44,26 @@ Vue.component ('tabs', {
 Vue.component('news', {
   template: `
     <div>
-      <ul>
+      <table border width=500>
         <span class="news"
         v-for="(post, index) in posts"
         :key="index"
-        ><li>{{ post }}</li></span>
+        ><tr><td>{{ post.date }}</td><td>{{ post.text }}</td></tr></span>
       </ul>
     </div>
   `,
   data() {
     return {
-      posts: ["Well ... nothing, obviously."]
+      posts: [
+        {
+          "date": "23/03/2020",
+          "text": "Apparently there's some sort of Super Flu knocking about and we're not keen - Therefore, totally of our own volition, we've decided to go into lockdown. People might say we're mad ... Tricky Susan, you've got a single to mix! Uh uh. We're staying home beneath the duvet until this fucking shit is done with."
+        },
+        {
+          "date": "03/03/2020",
+          "text": "Wowsers trousers, so fucking excited to be about to record a single, woo!"
+        }
+      ]
     }
   }
 })
@@ -62,7 +71,7 @@ Vue.component('news', {
 Vue.component('gigs', {
   template: `
     <div>
-      <table border>
+      <table border width=500>
         <span class="gigs"
         v-for="(gig, index) in gigs"
         :key="index"
