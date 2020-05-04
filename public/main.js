@@ -44,7 +44,7 @@ Vue.component ('tabs', {
 Vue.component('news', {
   template: `
     <div>
-      <table border width=500>
+      <table border width=500 align="center">
         <span class="news"
         v-for="(post, index) in posts"
         :key="index"
