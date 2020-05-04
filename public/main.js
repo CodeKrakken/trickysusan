@@ -31,11 +31,15 @@ Vue.component ('tabs', {
       <div v-show="selectedTab === 'Photos'">
         <photos><photos>
       </div>
+
+      <div> v-show="selectedTab === 'Videos'">
+        <videos></videos>
+      <div>
     <div>
   `,
   data() {
     return {
-      tabs: ['News', 'Gigs', 'Shop', 'Bio', 'Photos'],
+      tabs: ['News', 'Gigs', 'Shop', 'Bio', 'Photos', 'Videos'],
       selectedTab: 'News'
     }
   }
@@ -44,7 +48,7 @@ Vue.component ('tabs', {
 Vue.component('news', {
   template: `
     <div>
-      <table border width=500 align="center">
+      <table border width=600 height=300 align="center">
         <span class="news"
         v-for="(post, index) in posts"
         :key="index"
@@ -123,6 +127,13 @@ Vue.component('photos', {
       </ul>
     </div>
   `
+})
+
+Vue.component('videos', {
+  template: `
+    <div>
+
+    </div>`
 })
 
 Vue.component('Player', {
