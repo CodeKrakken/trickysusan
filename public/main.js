@@ -11,14 +11,12 @@ Vue.component ('header', {
 Vue.component ('tabs', {
   template: `
     <div>
-      <ul>
         <span class="tab"
         :class="{ activeTab: selectedTab === tab }"
         v-for="(tab, index) in tabs"
         @click="selectedTab = tab"
         :key="index"
         >{{ tab }}&nbsp&nbsp</span>
-      </ul>
 
       <div v-show="selectedTab === 'News'">
         <news></news>
