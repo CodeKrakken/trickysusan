@@ -1,5 +1,13 @@
 Vue.config.devtools = true
 
+Vue.component ('header', {
+  template: `
+    <div>
+      <img src="Logo_Neon.jpg")>
+    </div>
+  `
+})
+
 Vue.component ('tabs', {
   template: `
     <div>
