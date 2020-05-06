@@ -35,7 +35,7 @@ Vue.component ('tabs', {
       </div>
 
       <div v-show="selectedTab === 'Photos'">
-        <photos><photos>
+        <photos></photos>
       </div>
 
       <div v-show="selectedTab === 'Videos'">
@@ -138,8 +138,11 @@ Vue.component('photos', {
 Vue.component('videos', {
   template: `
     <div>
-
-    </div>`
+      <img src="/Strategy.mp4">
+      <img src="/Tug of War.mp4">
+      <img src="/Come On Over.mp4">
+    </div>
+  `
 })
 
 Vue.component('Player', {
