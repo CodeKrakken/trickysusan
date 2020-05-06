@@ -11,7 +11,7 @@ Vue.component ('banner', {
 Vue.component ('tabs', {
   template: `
     <div>
-        <span class="tab"
+        <span
         :class="{ activeTab: selectedTab === tab }"
         v-for="(tab, index) in tabs"
         @click="selectedTab = tab"
@@ -55,7 +55,7 @@ Vue.component('news', {
   template: `
     <div>
       <table border width=600 height=300 align="center">
-        <span class="news"
+        <span
         v-for="(post, index) in posts"
         :key="index"
         ><tr><td>{{ post.date }}</td><td>{{ post.text }}</td></tr></span>
@@ -82,7 +82,7 @@ Vue.component('gigs', {
   template: `
     <div>
       <table border width=500>
-        <span class="gigs"
+        <span
         v-for="(gig, index) in gigs"
         :key="index"
         ><tr><td>{{ gig.date }}</td><td>{{ gig.venue }}</td></tr><br></span>
@@ -138,9 +138,9 @@ Vue.component('photos', {
 Vue.component('videos', {
   template: `
     <div>
-      <img src="/Strategy.mp4">
-      <img src="/Tug of War.mp4">
-      <img src="/Come On Over.mp4">
+      <video height=300 controls>
+        <source src="/Strategy.mp4" type="video/mp4">
+      </video>
     </div>
   `
 })
