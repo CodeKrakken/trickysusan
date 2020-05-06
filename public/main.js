@@ -38,7 +38,7 @@ Vue.component ('tabs', {
         <photos><photos>
       </div>
 
-      <div> v-show="selectedTab === 'Videos'">
+      <div v-show="selectedTab === 'Videos'">
         <videos></videos>
       <div>
     <div>
