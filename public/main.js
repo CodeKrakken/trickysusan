@@ -138,8 +138,18 @@ Vue.component('photos', {
 Vue.component('videos', {
   template: `
     <div>
-      <video height=300 controls>
+      <video height=200 controls>
         <source src="/Strategy.mp4" type="video/mp4">
+      </video>
+      <video height=200 controls>
+        <source src="/Tug of War.mp4" type="video/mp4">
+      </video>
+      <br>
+      <video height=200 controls>
+        <source src="/Philosophy.mp4" type="video/mp4">
+      </video>
+      <video height=200 controls>
+        <source src="/Leftover Love.mp4" type="video/mp4">
       </video>
     </div>
   `
