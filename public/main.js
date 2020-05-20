@@ -54,7 +54,7 @@ Vue.component ('tabs', {
 Vue.component('news', {
   template: `
     <div>
-      <table border width=600 height=300 align="center">
+      <table>
         <span
         v-for="(post, index) in posts"
         :key="index"
@@ -81,7 +81,7 @@ Vue.component('news', {
 Vue.component('gigs', {
   template: `
     <div>
-      <table border width=500>
+      <table>
         <span
         v-for="(gig, index) in gigs"
         :key="index"
