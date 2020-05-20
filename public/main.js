@@ -3,7 +3,7 @@ Vue.config.devtools = true
 Vue.component ('banner', {
   template: `
     <div>
-      <img src="/Logo_Neon.jpg" width=750 height=150>
+      <img src="public/Logo_Neon.jpg" width=750 height=150>
     </div>
   `
 })
@@ -129,7 +129,7 @@ Vue.component('photos', {
   template: `
     <div>
       <ul>
-        <li><img src="Artwork - Table Doodles.jpg" width=1200>
+        <li><img src="public/Artwork - Table Doodles.jpg" width=1200>
       </ul>
     </div>
   `
@@ -138,21 +138,20 @@ Vue.component('photos', {
 Vue.component('videos', {
   template: `
     <div>
-      <video height=200 controls>
-        <source src="/Strategy.mp4" type="video/mp4">
-      </video>
-      <video height=200 controls>
-        <source src="/Tug of War.mp4" type="video/mp4">
-      </video>
-      <br>
-      <video height=200 controls>
-        <source src="/Philosophy.mp4" type="video/mp4">
-      </video>
-      <video height=200 controls>
-        <source src="/Leftover Love.mp4" type="video/mp4">
-      </video>
+      <span
+        v-for="video, index in videos"
+        :key="index"
+        ><video height=200 controls>
+            <source src="{{ video }}" type="video/mp4">
+        </video>
+      </span>
     </div>
-  `
+  `,
+  data() {
+    return {
+      videos: ["public/Strategy.mp4", "public/Tug of War.mp4", "public/Philosophy.mp4", "/Leftover Love.mp4"]
+    }
+  }
 })
 
 Vue.component('Player', {
