@@ -3,7 +3,7 @@ Vue.config.devtools = true
 Vue.component ('banner', {
   template: `
     <div>
-      <img src="Logo_Neon.jpg" width=750 height=150>
+      <img id="banner" src="Logo_Neon.jpg">
     </div>
   `
 })
