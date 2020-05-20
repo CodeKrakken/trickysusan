@@ -128,9 +128,7 @@ Vue.component('bio', {
 Vue.component('photos', {
   template: `
     <div>
-      <ul>
-        <li><img src="Artwork - Table Doodles.jpg" width=1200>
-      </ul>
+      <img src="Artwork - Table Doodles.jpg" width=1200>
     </div>
   `
 })
@@ -142,7 +140,7 @@ Vue.component('videos', {
         v-for="video, index in videos"
         :key="index"
         ><video height=200 controls>
-            <source src="{{ video }}" type="video/mp4">
+           <source src="{{ video }}" type="video/mp4">
         </video>
       </span>
     </div>
