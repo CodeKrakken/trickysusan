@@ -3,7 +3,7 @@ Vue.config.devtools = true
 Vue.component ('banner', {
   template: `
     <div>
-      <img src="public/Logo_Neon.jpg" width=750 height=150>
+      <img src="Logo_Neon.jpg" width=750 height=150>
     </div>
   `
 })
@@ -12,7 +12,7 @@ Vue.component ('tabs', {
   template: `
     <div>
         <span
-        :class="{ activeTab: selectedTab === tab }"
+        id="tab"
         v-for="(tab, index) in tabs"
         @click="selectedTab = tab"
         :key="index"
@@ -129,7 +129,7 @@ Vue.component('photos', {
   template: `
     <div>
       <ul>
-        <li><img src="public/Artwork - Table Doodles.jpg" width=1200>
+        <li><img src="Artwork - Table Doodles.jpg" width=1200>
       </ul>
     </div>
   `
@@ -149,7 +149,7 @@ Vue.component('videos', {
   `,
   data() {
     return {
-      videos: ["public/Strategy.mp4", "public/Tug of War.mp4", "public/Philosophy.mp4", "/Leftover Love.mp4"]
+      videos: ["Strategy.mp4", "Tug of War.mp4", "Philosophy.mp4", "Leftover Love.mp4"]
     }
   }
 })

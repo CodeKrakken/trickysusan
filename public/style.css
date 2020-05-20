@@ -7,3 +7,7 @@ body {
 table {
   text-align: left
 }
+
+#tab:hover {
+  color: blue
+}
