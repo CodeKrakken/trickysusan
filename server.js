@@ -12,8 +12,8 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname + '/index.html'))
 });
 
-app.listen(process.env.PORT, () =>
-console.log(`Example listening on ${process.env.PORT}!`),
+app.listen((process.env.PORT || 3000), () =>
+console.log(`Example listening on ${(process.env.PORT || '3000')}!`),
 );
 console.log('Hello Endless Project.');
 console.log(process.env.MY_SECRET);
