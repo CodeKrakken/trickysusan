@@ -137,6 +137,7 @@ Vue.component('photos', {
     <div>
       <span v-for="image in images">
       <img v-bind:src="image" height=400>
+      </span>
     </div>
   `,
   data() {
@@ -157,11 +158,9 @@ Vue.component('photos', {
 Vue.component('videos', {
   template: `
     <div>
-      <span
-        v-for="video, index in videos"
-        :key="index"
-        ><video height=200 controls>
-           <source src="{{ video(index) }}" type="video/mp4">
+      <span v-for="video in videos">
+        <video height=300 controls>
+          <source v-bind:src="video" type="video/mp4">
         </video>
       </span>
     </div>
@@ -169,10 +168,10 @@ Vue.component('videos', {
   data() {
     return {
       videos: [
-        "Strategy.mp4", 
-        "Tug of War.mp4", 
-        "Philosophy.mp4", 
-        "Leftover Love.mp4"
+        "videos/Strategy.mp4",
+        "videos/Leftover Love.mp4",
+        "videos/Philosophy.mp4",
+        "videos/Tug of War.mp4"
       ]
     }
   },
