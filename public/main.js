@@ -3,7 +3,7 @@ Vue.config.devtools = true
 Vue.component ('banner', {
   template: `
     <div>
-      <img id="banner" src="Logo_Neon.jpg">
+      <img id="banner" src="images/Logo_Neon.jpg">
     </div>
   `
 })
@@ -136,14 +136,19 @@ Vue.component('photos', {
   template: `
     <div>
       <span v-for="image in images">
-      <img v-bind:src="image" width=1200>
+      <img v-bind:src="image" height=400>
     </div>
   `,
   data() {
     return {
       images: [
-        'Artwork - Table Doodles.jpg',
-        'Artwork - Table Doodles.jpg'
+        'images/promo.jpg',
+        'images/Escape Bar.jpg',
+        'images/IMGP0004.jpg',
+        'images/IMGP9917.jpg',
+        'images/IMGP9959.jpg',
+        'images/IMGP9985.jpg',
+        'images/WaterRats.jpg'
       ]
     }
   }
