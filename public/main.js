@@ -45,8 +45,15 @@ Vue.component ('tabs', {
   `,
   data() {
     return {
-      tabs: ['News', 'Gigs', 'Shop', 'Bio', 'Photos', 'Videos'],
-      selectedTab: 'News'
+      tabs: [
+        'News', 
+        'Gigs', 
+        'Shop', 
+        'Bio', 
+        'Photos', 
+        'Videos'
+      ],
+      selectedTab: 'Videos'
     }
   }
 })
@@ -128,9 +135,18 @@ Vue.component('bio', {
 Vue.component('photos', {
   template: `
     <div>
-      <img src="Artwork - Table Doodles.jpg" width=1200>
+      <span v-for="image in images">
+      <img v-bind:src="image" width=1200>
     </div>
-  `
+  `,
+  data() {
+    return {
+      images: [
+        'Artwork - Table Doodles.jpg',
+        'Artwork - Table Doodles.jpg'
+      ]
+    }
+  }
 })
 
 Vue.component('videos', {
@@ -140,14 +156,24 @@ Vue.component('videos', {
         v-for="video, index in videos"
         :key="index"
         ><video height=200 controls>
-           <source src="{{ video }}" type="video/mp4">
+           <source src="{{ video(index) }}" type="video/mp4">
         </video>
       </span>
     </div>
   `,
   data() {
     return {
-      videos: ["Strategy.mp4", "Tug of War.mp4", "Philosophy.mp4", "Leftover Love.mp4"]
+      videos: [
+        "Strategy.mp4", 
+        "Tug of War.mp4", 
+        "Philosophy.mp4", 
+        "Leftover Love.mp4"
+      ]
+    }
+  },
+  computed: {
+    video(index) {
+      return this.videos(index)
     }
   }
 })
