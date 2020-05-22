@@ -17,7 +17,7 @@ Vue.component ('tabs', {
       v-for="(tab, index) in tabs"
       @click="selectTab(tab)"
       :key="index"
-      >{{ tab }}&nbsp&nbsp</span>
+      >{{ tab }}<br></span>
 
     <div>
   `,
@@ -44,7 +44,7 @@ Vue.component ('tabs', {
 Vue.component('tab-content', {
   template: `
 
-    <div>
+    <div id="tab-content">
 
       <div v-show="selectedTab === 'News'">
         <news></news>
@@ -219,6 +219,7 @@ var app = new Vue({
     <div>
       <banner></banner>
       <tabs @select-tab="selectTab"></tabs>
+      <br>
       <tab-content :selectedTab="selectedTab"></tab-content>
 <!--       <player></player> -->
     </div>

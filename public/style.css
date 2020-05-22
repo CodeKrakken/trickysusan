@@ -2,11 +2,14 @@ body {
   color: white;
   font-family: monospace;
   background: black;
-  text-align: center
 }
 
 #banner {
   width: 100%
+}
+
+#tab-content {
+  text-align: center
 }
 
 table {
