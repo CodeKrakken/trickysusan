@@ -10,14 +10,14 @@ Vue.component ('banner', {
 
 Vue.component ('tabs', {
   template: `
-    <div id="tabs">
+    <div>
   
       <span
       id="tab"
       v-for="(tab, index) in tabs"
       @click="selectTab(tab)"
       :key="index"
-      >{{ tab }}<br></span>
+      >{{ tab }}</span>
 
     <div>
   `,
@@ -218,8 +218,7 @@ var app = new Vue({
   template: `
     <div>
       <banner></banner>
-      <tabs @select-tab="selectTab"></tabs>
-      <br>
+      <tabs @select-tab="selectTab" id="tabs"></tabs>
       <tab-content :selectedTab="selectedTab"></tab-content>
 <!--       <player></player> -->
     </div>
