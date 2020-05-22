@@ -11,15 +11,42 @@ Vue.component ('banner', {
 Vue.component ('tabs', {
   template: `
     <div>
-    
-        <span
-        id="tab"
-        v-for="(tab, index) in tabs"
-        @click="selectTab(tab)"
-        :key="index"
-        >{{ tab }}&nbsp&nbsp</span>
+  
+      <span
+      id="tab"
+      v-for="(tab, index) in tabs"
+      @click="selectTab(tab)"
+      :key="index"
+      >{{ tab }}&nbsp&nbsp</span>
 
-        <div v-show="selectedTab === 'News'">
+    <div>
+  `,
+  data() {
+    return {
+      tabs: [
+        'News', 
+        'Gigs', 
+        'Shop', 
+        'Bio', 
+        'Photos', 
+        'Videos',
+      ],
+    }
+  },
+  methods: {
+    selectTab(tab) {
+      this.selectedTab = tab
+      this.$emit('select-tab', this.selectedTab)
+    }
+  }
+})
+
+Vue.component('tab-content', {
+  template: `
+
+    <div>
+
+      <div v-show="selectedTab === 'News'">
         <news></news>
       </div>
 
@@ -42,37 +69,7 @@ Vue.component ('tabs', {
       <div v-show="selectedTab === 'Videos'">
         <videos></videos>
       </div>
-
-
-    <div>
-  `,
-  data() {
-    return {
-      tabs: [
-        'News', 
-        'Gigs', 
-        'Shop', 
-        'Bio', 
-        'Photos', 
-        'Videos',
-      ],
-      selectedTab: 'News'
-    }
-  },
-  methods: {
-    selectTab(tab) {
-      this.selectedTab = tab
-    }
-  }
-})
-
-Vue.component('tab-content', {
-  template: `
-
-    <div>
-     CONTENT WILL GO HERE
-
-      
+  
     </div>
     
   `,
@@ -83,7 +80,6 @@ Vue.component('tab-content', {
     }
   }
 })
-
 
 Vue.component('news', {
   template: `
@@ -222,12 +218,17 @@ var app = new Vue({
   template: `
     <div>
       <banner></banner>
-      <tabs></tabs>
+      <tabs @select-tab="selectTab"></tabs>
       <tab-content :selectedTab="selectedTab"></tab-content>
 <!--       <player></player> -->
     </div>
    `,
    data: {
-     selectedTab: 'Videos',
+     selectedTab: 'News',
+   },
+   methods: {
+     selectTab(tab) {
+       this.selectedTab = tab
+     }
    }
 })
