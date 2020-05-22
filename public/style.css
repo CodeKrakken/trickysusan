@@ -8,6 +8,10 @@ body {
   width: 100%
 }
 
+#tabs {
+  width: 50px
+}
+
 #tab-content {
   text-align: center
 }

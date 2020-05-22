@@ -10,7 +10,7 @@ Vue.component ('banner', {
 
 Vue.component ('tabs', {
   template: `
-    <div>
+    <div id="tabs">
   
       <span
       id="tab"
