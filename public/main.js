@@ -11,14 +11,15 @@ Vue.component ('banner', {
 Vue.component ('tabs', {
   template: `
     <div>
+    
         <span
         id="tab"
         v-for="(tab, index) in tabs"
-        @click="selectedTab = tab"
+        @click="selectTab(tab)"
         :key="index"
         >{{ tab }}&nbsp&nbsp</span>
 
-      <div v-show="selectedTab === 'News'">
+        <div v-show="selectedTab === 'News'">
         <news></news>
       </div>
 
@@ -40,7 +41,9 @@ Vue.component ('tabs', {
 
       <div v-show="selectedTab === 'Videos'">
         <videos></videos>
-      <div>
+      </div>
+
+
     <div>
   `,
   data() {
@@ -51,12 +54,36 @@ Vue.component ('tabs', {
         'Shop', 
         'Bio', 
         'Photos', 
-        'Videos'
+        'Videos',
       ],
-      selectedTab: 'Videos'
+      selectedTab: 'News'
+    }
+  },
+  methods: {
+    selectTab(tab) {
+      this.selectedTab = tab
     }
   }
 })
+
+Vue.component('tab-content', {
+  template: `
+
+    <div>
+     CONTENT WILL GO HERE
+
+      
+    </div>
+    
+  `,
+  props: {
+    selectedTab: {
+      type: String,
+      required: true
+    }
+  }
+})
+
 
 Vue.component('news', {
   template: `
@@ -191,5 +218,16 @@ Vue.component('Player', {
 })
 
 var app = new Vue({
-  el: '#app'
+  el: '#app',
+  template: `
+    <div>
+      <banner></banner>
+      <tabs></tabs>
+      <tab-content :selectedTab="selectedTab"></tab-content>
+<!--       <player></player> -->
+    </div>
+   `,
+   data: {
+     selectedTab: 'Videos',
+   }
 })
