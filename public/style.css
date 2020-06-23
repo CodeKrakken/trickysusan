@@ -9,8 +9,9 @@ body {
 }
 
 #tabs {
-    display: flex;
-  flex-direction: column
+  display: flex;
+  flex-direction: column;
+  max-width: 50px
 }
 
 #tab-content {
