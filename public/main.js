@@ -89,7 +89,7 @@ Vue.component('news', {
         v-for="(post, index) in posts"
         :key="index"
         ><tr><td>{{ post.date }}</td><td>{{ post.text }}</td></tr></span>
-      </ul>
+      </table>
     </div>
   `,
   data() {
@@ -158,7 +158,7 @@ Vue.component('bio', {
 Vue.component('photos', {
   template: `
     <div>
-      <span v-for="image in images">
+      <span v-for="image in images" id="image">
       <img v-bind:src="image" height=400>
       </span>
     </div>
@@ -166,13 +166,18 @@ Vue.component('photos', {
   data() {
     return {
       images: [
-        'images/promo.jpg',
-        'images/Escape Bar.jpg',
-        'images/IMGP0004.jpg',
-        'images/IMGP9917.jpg',
+        'images/A_IMGP9182-1-StandingLilWall_neon.jpg',
+        'images/B_IMGP8878-1_WallSatire_Neon_Blue.jpg',
+        'images/C_IMGP9120-1_LilWall_neon.jpg',
+        'images/D_IMGP8979-1_Chair_2_Neon_lightening.jpg',
+        'images/E_IMGP8842-1_Val_Neon.jpg',
+        'images/F_8832-1_Wall_neon.jpg',
         'images/IMGP9959.jpg',
+        'images/promo.jpg',
+        'images/IMGP0004.jpg',
         'images/IMGP9985.jpg',
-        'images/WaterRats.jpg'
+        'images/WaterRats.jpg',
+        'images/IMGP9917.jpg'
       ]
     }
   }
@@ -224,7 +229,7 @@ var app = new Vue({
     </div>
    `,
    data: {
-     selectedTab: 'News',
+     selectedTab: 'Photos',
    },
    methods: {
      selectTab(tab) {
