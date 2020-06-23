@@ -4,6 +4,35 @@ body {
   background: black;
 }
 
+.grid-template-container {
+  display: grid;
+  grid-template-areas: "grid-header grid-header"
+                       "grid-menu grid-content";
+  grid-template-rows: 1fr 9fr;
+  grid-template-columns: 1fr 9fr;
+  width: 100%;
+}
+
+.grid-header {
+  grid-area: grid-header;
+  border: 1px white dashed;
+}
+
+.grid-menu {
+  grid-area: grid-menu;
+  border: 1px white dashed;
+}
+
+.grid-content {
+  grid-area: grid-content;
+  border: 1px white dashed;
+}
+
+#grid {
+  width: 100%;
+  display: grid;
+}
+
 #banner {
   width: 100%
 }
@@ -11,11 +40,12 @@ body {
 #tabs {
   display: flex;
   flex-direction: column;
-  max-width: 50px
+  text-align: center;
 }
 
 #tab-content {
-  text-align: center
+  text-align: center;
+  display: inline;
 }
 
 table {

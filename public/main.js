@@ -222,10 +222,13 @@ var app = new Vue({
   el: '#app',
   template: `
     <div>
-      <banner></banner>
-      <tabs @select-tab="selectTab" id="tabs"></tabs>
-      <tab-content :selectedTab="selectedTab"></tab-content>
-<!--       <player></player> -->
+      <div class="grid-template-container">
+        <div class="grid-header">
+          <banner></banner>
+        </div>
+        <div class="grid-menu"><tabs @select-tab="selectTab" id="tabs"></tabs></div>
+        <div class="grid-content"><tab-content :selectedTab="selectedTab"></tab-content></div>
+      </div>
     </div>
    `,
    data: {
