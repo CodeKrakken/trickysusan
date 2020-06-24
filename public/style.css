@@ -1,12 +1,8 @@
-html {
-  height: 100%
-}
-
 body {
   color: white;
   font-family: monospace;
   background: black;
-  height: 100%
+  border: 1px white dashed;
 }
 
 .grid-template-container {

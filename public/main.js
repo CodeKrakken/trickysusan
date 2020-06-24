@@ -158,7 +158,7 @@ Vue.component('bio', {
 Vue.component('photos', {
   template: `
     <div>
-      <span v-for="image in images" id="image">
+      <span v-for="image in images">
       <img v-bind:src="image" height=400>
       </span>
     </div>
@@ -176,8 +176,7 @@ Vue.component('photos', {
         'images/promo.jpg',
         'images/IMGP0004.jpg',
         'images/IMGP9985.jpg',
-        'images/WaterRats.jpg',
-        'images/IMGP9917.jpg'
+        'images/WaterRats.jpg'
       ]
     }
   }
