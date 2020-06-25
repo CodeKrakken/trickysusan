@@ -1,11 +1,10 @@
-* { box-sizing: border-box; }
-
 @viewport { width: device-width }
 
 body {
   color: white;
   font-family: monospace;
   background: black;
+  box-sizing: border-box;
 }
 
 .grid-template-container {
@@ -18,7 +17,7 @@ body {
   top: 0;
   bottom: 0;
   left: 0;
-  right: 0
+  right: 0;
 }
 
 .grid-header {
@@ -34,10 +33,16 @@ body {
 .grid-content {
   grid-area: grid-content;
   border: 1px white dashed;
+  overflow-y: scroll;
 }
 
 #banner {
-  width: 100%
+  width: 100vw;
+}
+
+#single-photo {
+  height: 350px;
+  padding-right: 3px
 }
 
 #tabs {
