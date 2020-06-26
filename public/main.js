@@ -166,18 +166,18 @@ Vue.component('photos', {
   data() {
     return {
       images: [
-        'images/A_IMGP9182-1-StandingLilWall_neon.jpg',
-        'images/B_IMGP8878-1_WallSatire_Neon_Blue.jpg',
-        'images/C_IMGP9120-1_LilWall_neon.jpg',
-        'images/D_IMGP8979-1_Chair_2_Neon_lightening.jpg',
-        'images/E_IMGP8842-1_Val_Neon.jpg',
-        'images/F_8832-1_Wall_neon.jpg',
-        'images/IMGP9959.jpg',
-        'images/promo.jpg',
-        'images/IMGP0004.jpg',
-        'images/IMGP9985.jpg',
-        'images/WaterRats.jpg',
-        'images/IMGP9917.jpg',
+        // 'images/A_IMGP9182-1-StandingLilWall_neon.jpg',
+        // 'images/B_IMGP8878-1_WallSatire_Neon_Blue.jpg',
+        // 'images/C_IMGP9120-1_LilWall_neon.jpg',
+        // 'images/D_IMGP8979-1_Chair_2_Neon_lightening.jpg',
+        // 'images/E_IMGP8842-1_Val_Neon.jpg',
+        // 'images/F_8832-1_Wall_neon.jpg',
+        // 'images/IMGP9959.jpg',
+        // 'images/promo.jpg',
+        // 'images/IMGP0004.jpg',
+        // 'images/IMGP9985.jpg',
+        // 'images/WaterRats.jpg',
+        // 'images/IMGP9917.jpg',
       ]
     }
   }
@@ -223,11 +223,9 @@ var app = new Vue({
   template: `
     <div>
       <div class="grid-template-container">
-        <div class="grid-header">
-          <banner></banner>
-        </div>
-        <div class="grid-menu"><tabs @select-tab="selectTab" id="tabs"></tabs></div>
-        <div class="grid-content"><tab-content :selectedTab="selectedTab"></tab-content></div>
+        <banner></banner>
+        <tab-content :selectedTab="selectedTab"></tab-content>
+        <tabs @select-tab="selectTab" id="tabs"></tabs>
       </div>
     </div>
    `,
