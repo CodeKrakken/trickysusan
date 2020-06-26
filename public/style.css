@@ -10,6 +10,8 @@ body {
   background: black;
   box-sizing: border-box;
   font-family: 'Odibee Sans';
+  font-size: 200%;
+  font-style: italic;
 }
 
 .grid-template-container {
@@ -32,7 +34,6 @@ body {
 }
 
 #tab {
-  border: 1px dashed white;
   text-align: center;
   height: fit-content
 }
