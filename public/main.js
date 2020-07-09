@@ -43,9 +43,8 @@ Vue.component ('tabs', {
 
 Vue.component('tab-content', {
   template: `
-
-    <div id="content-container">
-    <div id="content"
+    <div class="content-container">
+      <div class="content">
 
       <div v-show="selectedTab === 'News'">
         <news></news>
@@ -70,7 +69,7 @@ Vue.component('tab-content', {
       <div v-show="selectedTab === 'Videos'">
         <videos></videos>
       </div>
-      </div>
+    </div>
   
     </div>
     

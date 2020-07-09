@@ -50,13 +50,16 @@ body {
   font-style: italic;
 }
 
-#content-container {
+.content-container {
   margin: auto;
   display: flex;
 }
 
-#content {
-  text-align: center;
+.content {
+  text-align: justify;
+  padding-left: 10%;
+  padding-right: 10%;
+  font-size: 150%
 }
 
 table {
