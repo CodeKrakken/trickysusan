@@ -44,7 +44,8 @@ Vue.component ('tabs', {
 Vue.component('tab-content', {
   template: `
 
-    <div id="tab-content">
+    <div id="content-container">
+    <div id="content"
 
       <div v-show="selectedTab === 'News'">
         <news></news>
@@ -68,6 +69,7 @@ Vue.component('tab-content', {
 
       <div v-show="selectedTab === 'Videos'">
         <videos></videos>
+      </div>
       </div>
   
     </div>
@@ -150,7 +152,31 @@ Vue.component('shop', {
 Vue.component('bio', {
   template: `
     <div>
-      Once upon a time, we formed and played for a bit. Then we had to stop because ...
+    Tricky Susan are here to assault your taste buds with their attention-demanding rock ‘n’ roll. A four-piece outfit formed in London and led by Camilla Summerskill, Tricky Susan are paving the way with their melodic, hook-driven and beat-centric hits. On stage, their energy is hard to match. On record, their hunger to tell you their story inescapable.
+
+ 
+
+    They don’t do tired. They do do melodies. They don’t follow crowds. They do like crowds. They HATE pretentiousness. But they adore profundity…. They fi.…What are you still doing reading this? Frick off to the gig page.        NOW.
+    
+     
+    
+    Camilla on vocals
+    
+    Donald on guitar
+    
+    John on bass
+    
+    Val on drums
+    
+     
+    
+     
+    
+    « I’ve seen deaf people cry at a Tricky Susan show »
+    
+     
+    
+    « I’ve even seen a goose take a bump at one of their shows » 
     </div>
   `
 })
@@ -228,7 +254,7 @@ var app = new Vue({
     </div>
    `,
    data: {
-     selectedTab: 'Photos',
+     selectedTab: 'Bio',
    },
    methods: {
      selectTab(tab) {

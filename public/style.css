@@ -10,8 +10,6 @@ body {
   background: black;
   box-sizing: border-box;
   font-family: 'Odibee Sans';
-  font-size: 200%;
-  font-style: italic;
 }
 
 .grid-template-container {
@@ -48,9 +46,16 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+  font-size: 200%;
+  font-style: italic;
 }
 
-#tab-content {
+#content-container {
+  margin: auto;
+  display: flex;
+}
+
+#content {
   text-align: center;
 }
 
