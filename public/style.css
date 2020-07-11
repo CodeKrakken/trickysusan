@@ -59,7 +59,7 @@ body {
   text-align: justify;
   padding-left: 10%;
   padding-right: 10%;
-  font-size: 150%
+  font-size: 150%;
 }
 
 table {
@@ -73,3 +73,5 @@ table {
 #tab:hover {
   color: #00BCD4
 }
+
+.center { text-align: center }
