@@ -11,7 +11,7 @@ Vue.component ('banner', {
 Vue.component ('tabs', {
   template: `
     <div>
-  
+
       <span
       id="tab"
       v-for="(tab, index) in tabs"
@@ -29,7 +29,7 @@ Vue.component ('tabs', {
         'Shop', 
         'Bio', 
         'Photos', 
-        'Videos',
+        'Videos'
       ],
     }
   },
