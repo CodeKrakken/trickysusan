@@ -170,9 +170,11 @@ Vue.component('bio', {
 
 Vue.component('photos', {
   template: `
-    <div>
-      <img v-bind:src="images[0]" id="single-photo">
-    </div>
+  <div>
+    <span v-for="image in images">
+      <img v-bind:src="image" id="single-photo">
+    </span>
+  </div>
   `,
   data() {
     return {
