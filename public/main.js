@@ -267,8 +267,8 @@ var app = new Vue({
       <div class="grid-template-container">
         <banner></banner>
         <tab-content :selectedTab="selectedTab"></tab-content>
-        <tabs @select-tab="selectTab" id="tabs"></tabs>
         <socials></socials>
+        <tabs @select-tab="selectTab" id="tabs"></tabs>
       </div>
     </div>
    `,
