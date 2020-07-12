@@ -89,16 +89,16 @@ Vue.component('gigs', {
     return {
       gigs: [
         {
-          "date": "13/04/20", 
-          "venue": "Dublin Castle"
+          date: "13/04/20", 
+          venue: "Dublin Castle"
         },
         {
-          "date": "15/06/20",
-          "venue": "Camden Barfly"
+          date: "15/06/20",
+          venue: "Camden Barfly"
         },
         {
-          "date": "31/08/21", 
-          "venue": "Reading Festival"
+          date: "31/08/21", 
+          venue: "Reading Festival"
         }
       ]
     }
