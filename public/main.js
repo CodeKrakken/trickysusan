@@ -78,8 +78,8 @@ Vue.component('gigs', {
   template: `
     <div class="center">
       Obviously we aren't doing any gigs at the moment. But you can watch these videos, and pretend you're seeing us really play.
-      <br><br>
-      <span v-for="video in videos">
+      <br><br><br>
+      <span v-for="video in videos" id="padding">
         <video height=280 controls>
           <source v-bind:src="video" type="video/mp4">
         </video>
