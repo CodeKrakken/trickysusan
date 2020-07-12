@@ -26,7 +26,6 @@ Vue.component ('tabs', {
       tabs: [
         'News', 
         'Gigs', 
-        'Shop', 
         'Bio', 
         'Photos', 
         'Videos'
@@ -85,25 +84,23 @@ Vue.component('tab-content', {
 Vue.component('news', {
   template: `
     <div>
-      <table>
-        <span
-        v-for="(post, index) in posts"
-        :key="index"
-        ><tr><td>{{ post.date }}</td><td>{{ post.text }}</td></tr></span>
-      </table>
+      COVID-19 was a major prick, and still is as far as we’re concerned. Aside from all the obvious, it stopped us playing ... for now. 
+      We’re working really hard to establish when we can get back to rocking out in front of you.<br><br>
+      In the meanwhile we’ve been in the recording studio laying down our latest tracks. Watch this space ... <br><br>
+
+      <div class="center">
+        KA-POW.
+      </div>
+      <br><br>
+      <div id="bottom">
+        Follow us on <a href="https://www.instagram.com/trickysusan/?hl=en">Instagram</a> and 
+        <a href="https://www.facebook.com/TrickySusan">Facebook</a>.
+      </div>
     </div>
   `,
   data() {
     return {
       posts: [
-        {
-          "date": "23/03/2020",
-          "text": "Apparently there's some sort of Super Flu knocking about and we're not keen - Therefore, totally of our own volition, we've decided to go into lockdown. People might say we're mad ... Tricky Susan, you've got a single to mix! Uh uh. We're staying home beneath the duvet until this fucking shit is done with."
-        },
-        {
-          "date": "03/03/2020",
-          "text": "Wowsers trousers, so fucking excited to be about to record a single, woo!"
-        }
       ]
     }
   }
@@ -151,9 +148,13 @@ Vue.component('shop', {
 Vue.component('bio', {
   template: `
     <div>
-      Tricky Susan are here to assault your taste buds with their attention-demanding rock ‘n’ roll. A four-piece outfit formed in London and led by Camilla Summerskill, Tricky Susan are paving the way with their melodic, hook-driven and beat-centric hits. On stage, their energy is hard to match. On record, their hunger to tell you their story inescapable.
+      Tricky Susan are here to assault your taste buds with their attention-demanding rock ‘n’ roll. 
+      A four-piece outfit formed in London and led by Camilla Summerskill, Tricky Susan are paving the way with their melodic, 
+      hook-driven and beat-centric hits. On stage, their energy is hard to match. 
+      On record, their hunger to tell you their story inescapable.
       <br><br>
-      They don’t do tired. They do do melodies. They don’t follow crowds. They do like crowds. They HATE pretentiousness. But they adore profundity…. They fi.…What are you still doing reading this? Frick off to the gig page.        NOW.
+      They don’t do tired. They do do melodies. They don’t follow crowds. They do like crowds. They HATE pretentiousness. 
+      But they adore profundity…. They fi.…What are you still doing reading this? Frick off to the gig page. NOW.
       <br><br>
       <div class="center">
         Camilla on vocals<br>
