@@ -77,8 +77,9 @@ body {
 .center { text-align: center }
 
 #socials {
-  grid-area: grid-socials;
-  display: inline;
+  position: absolute;
+  bottom: 0;
+  right: 0
 }
 
 #social {
