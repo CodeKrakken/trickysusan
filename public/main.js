@@ -140,14 +140,14 @@ Vue.component('bio', {
 Vue.component('socials', {
   template: `
     <div id="socials">
-      <span v-for="image in images">
-        <img v-bind:src="image" id="social">
+      <span v-for="social in socials">
+        <img v-bind:src="social" id="social">
       </span>
     </div>
   `,
   data() {
     return {
-      images: [
+      socials: [
         'images/facebook hover.png',
         'images/instagram hover.png'
       ]
@@ -228,7 +228,6 @@ Vue.component ('tabs', {
       @click="selectTab(tab)"
       :key="index"
       >{{ tab }}</span>
-
     <div>
   `,
   data() {
