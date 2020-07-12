@@ -141,7 +141,10 @@ Vue.component('socials', {
   template: `
     <div id="socials">
       <span v-for="social in socials">
-        <img v-bind:src="social" id="social">
+        <a href="https://www.instagram.com/trickysusan/?hl=en">
+          <img v-bind:src="social" id="social">
+        </a>
+        
       </span>
     </div>
   `,
