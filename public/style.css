@@ -10,6 +10,7 @@ body {
   background: black;
   box-sizing: border-box;
   font-family: 'Odibee Sans';
+  letter-spacing: 0.1em;
 }
 
 .grid-template-container {
