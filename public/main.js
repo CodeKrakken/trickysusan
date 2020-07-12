@@ -76,13 +76,14 @@ Vue.component('news', {
 
 Vue.component('gigs', {
   template: `
-    <div>
-      <table>
-        <span
-        v-for="(gig, index) in gigs"
-        :key="index"
-        ><tr><td>{{ gig.date }}</td><td>{{ gig.venue }}</td></tr><br></span>
-      </table>
+    <div class="center">
+      Obviously we aren't doing any gigs at the moment. But you can watch these videos, and pretend you're seeing us really play.
+      <br><br>
+      <span v-for="video in videos">
+        <video height=280 controls>
+          <source v-bind:src="video" type="video/mp4">
+        </video>
+      </span>
     </div>
   `,
   data() {
@@ -99,7 +100,11 @@ Vue.component('gigs', {
         {
           date: "31/08/21", 
           venue: "Reading Festival"
-        }
+        },
+      ],
+      videos: [
+        "videos/Leftover Love.mp4",
+        "videos/Philosophy.mp4",
       ]
     }
   }
@@ -144,7 +149,6 @@ Vue.component('socials', {
         <a :href="social.link" target="_blank">
           <img v-bind:src="social.image" id="social">
         </a>
-        
       </span>
     </div>
   `,
@@ -206,8 +210,6 @@ Vue.component('videos', {
     return {
       videos: [
         "videos/Strategy.mp4",
-        "videos/Leftover Love.mp4",
-        "videos/Philosophy.mp4",
         "videos/Tug of War.mp4"
       ]
     }
