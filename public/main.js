@@ -281,12 +281,3 @@ var app = new Vue({
      }
    }
 })
-
-var socials = new Vue({
-  el: '#socials',
-  template: `
-    <div>
-      <socials />
-    </div>
-  `
-})
