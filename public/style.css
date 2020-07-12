@@ -16,6 +16,9 @@ body {
 .grid-template-container {
   display: grid;
   grid-template-rows: 2fr 10fr 1fr;
+  grid-template-areas: "grid-header grid-header"
+                       "grid-content grid-content"
+                       "grid-tabs grid-socials";
   position: fixed;
   top: 0;
   bottom: 0;
@@ -25,6 +28,7 @@ body {
 
 #banner {
   width: 100vw;
+  grid-area: grid-header
 }
 
 #single-photo {
@@ -44,16 +48,18 @@ body {
 
 #tabs {
   text-align: center;
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
   font-size: 150%;
   font-style: italic;
+  grid-area: grid-tabs
 }
 
 .content-container {
   margin: auto;
   display: flex;
+  grid-area: grid-content
 }
 
 .content {
@@ -67,15 +73,19 @@ body {
   color: rgb(226, 32, 118)
 }
 /* 226, 32, 118 for pink, 169, 222, 240 for blue */
+
 .center { text-align: center }
 
 #socials {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
+  grid-area: grid-socials;
+  display: inline;
 }
 
 #social {
-  height: 5px
+  height: 50px;
+  filter: grayscale(100%)
+}
+
+#social:hover {
+  filter: grayscale(0%)
 }

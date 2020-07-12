@@ -139,7 +139,7 @@ Vue.component('bio', {
 
 Vue.component('socials', {
   template: `
-    <div>
+    <div id="socials">
       <span v-for="image in images">
         <img v-bind:src="image" id="social">
       </span>
@@ -148,9 +148,7 @@ Vue.component('socials', {
   data() {
     return {
       images: [
-        'images/facebook.png',
         'images/facebook hover.png',
-        'images/instagram.png',
         'images/instagram hover.png'
       ]
     }
@@ -272,4 +270,13 @@ var app = new Vue({
        this.selectedTab = tab
      }
    }
+})
+
+var socials = new Vue({
+  el: '#socials',
+  template: `
+    <div>
+      <socials />
+    </div>
+  `
 })
