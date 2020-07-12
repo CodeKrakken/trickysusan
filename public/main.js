@@ -141,7 +141,7 @@ Vue.component('socials', {
   template: `
     <div>
       <span v-for="image in images">
-        <img v-bind:src="image" id="single-photo">
+        <img v-bind:src="image" id="social">
       </span>
     </div>
   `,
