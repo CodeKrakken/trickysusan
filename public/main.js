@@ -59,11 +59,6 @@ Vue.component('news', {
       <div class="center">
         <h1>KA-POW.</h1>
       </div>
-      <br><br>
-      <div class="center">
-        Follow us on <a href="https://www.instagram.com/trickysusan/?hl=en">Instagram</a> and 
-        <a href="https://www.facebook.com/TrickySusan">Facebook</a>.
-      </div>
     </div>
   `,
   data() {
