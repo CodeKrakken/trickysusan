@@ -8,38 +8,6 @@ Vue.component ('banner', {
   `
 })
 
-Vue.component ('tabs', {
-  template: `
-    <div>
-
-      <span
-      id="tab"
-      v-for="(tab, index) in tabs"
-      @click="selectTab(tab)"
-      :key="index"
-      >{{ tab }}</span>
-
-    <div>
-  `,
-  data() {
-    return {
-      tabs: [
-        'News', 
-        'Gigs', 
-        'Bio', 
-        'Photos', 
-        'Videos'
-      ],
-    }
-  },
-  methods: {
-    selectTab(tab) {
-      this.selectedTab = tab
-      this.$emit('select-tab', this.selectedTab)
-    }
-  }
-})
-
 Vue.component('tab-content', {
   template: `
     <div class="content-container">
@@ -89,10 +57,10 @@ Vue.component('news', {
       In the meanwhile we’ve been in the recording studio laying down our latest tracks. Watch this space ... <br><br>
 
       <div class="center">
-        KA-POW.
+        <h1>KA-POW.</h1>
       </div>
       <br><br>
-      <div id="bottom">
+      <div class="center">
         Follow us on <a href="https://www.instagram.com/trickysusan/?hl=en">Instagram</a> and 
         <a href="https://www.facebook.com/TrickySusan">Facebook</a>.
       </div>
@@ -169,6 +137,26 @@ Vue.component('bio', {
   `
 })
 
+Vue.component('socials', {
+  template: `
+    <div>
+      <span v-for="image in images">
+        <img v-bind:src="image" id="single-photo">
+      </span>
+    </div>
+  `,
+  data() {
+    return {
+      images: [
+        'images/facebook.png',
+        'images/facebook hover.png',
+        'images/instagram.png',
+        'images/instagram hover.png'
+      ]
+    }
+  }
+})
+
 Vue.component('photos', {
   template: `
   <div>
@@ -224,12 +212,44 @@ Vue.component('videos', {
   }
 })
 
-Vue.component('Player', {
+Vue.component('player', {
   template: `
     <div>
       <iframe scrolling="no" height=300 frameborder="yes" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1040292169%3Fsecret_token%3Ds-CcynywUems9&color=%2382d5e8&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/trickysusan" title="Tricky Susan" target="_blank" style="color: #cccccc; text-decoration: none;">Tricky Susan</a> · <a href="https://soundcloud.com/trickysusan/sets/website/s-CcynywUems9" title="Website" target="_blank" style="color: #cccccc; text-decoration: none;">Website</a></div>
     </div>
   `
+})
+
+Vue.component ('tabs', {
+  template: `
+    <div>
+
+      <span
+      id="tab"
+      v-for="(tab, index) in tabs"
+      @click="selectTab(tab)"
+      :key="index"
+      >{{ tab }}</span>
+
+    <div>
+  `,
+  data() {
+    return {
+      tabs: [
+        'News', 
+        'Gigs', 
+        'Bio', 
+        'Photos', 
+        'Videos'
+      ],
+    }
+  },
+  methods: {
+    selectTab(tab) {
+      this.selectedTab = tab
+      this.$emit('select-tab', this.selectedTab)
+    }
+  }
 })
 
 var app = new Vue({
@@ -240,6 +260,7 @@ var app = new Vue({
         <banner></banner>
         <tab-content :selectedTab="selectedTab"></tab-content>
         <tabs @select-tab="selectTab" id="tabs"></tabs>
+        <socials></socials>
       </div>
     </div>
    `,

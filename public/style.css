@@ -63,20 +63,19 @@ body {
   font-size: 150%;
 }
 
-table {
-  text-align: left;
-  border: 1px dashed white;
-  width: 600px;
-  margin-left: auto;
-  margin-right: auto
-}
-
 #tab:hover {
   color: #00BCD4
 }
 
 .center { text-align: center }
 
-#bottom { 
-  text-align: center
- }
+#socials {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.social {
+  color: red;
+}
