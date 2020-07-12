@@ -239,7 +239,7 @@ Vue.component ('tabs', {
       @click="selectTab(tab)"
       :key="index"
       >{{ tab }}</span>
-    <div>
+    </div>
   `,
   data() {
     return {

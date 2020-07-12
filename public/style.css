@@ -48,9 +48,9 @@ body {
 
 #tabs {
   text-align: center;
-  width: 90%;
+  width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   font-size: 150%;
   font-style: italic;
   grid-area: grid-tabs
