@@ -141,8 +141,8 @@ Vue.component('socials', {
   template: `
     <div id="socials">
       <span v-for="social in socials">
-        <a href="https://www.instagram.com/trickysusan/?hl=en">
-          <img v-bind:src="social" id="social">
+        <a :href="social.link" target="_blank">
+          <img v-bind:src="social.image" id="social">
         </a>
         
       </span>
@@ -151,8 +151,14 @@ Vue.component('socials', {
   data() {
     return {
       socials: [
-        'images/facebook hover.png',
-        'images/instagram hover.png'
+        {
+          image: 'images/instagram hover.png',
+          link: 'https://www.instagram.com/trickysusan/?hl=en'
+        },
+        {
+          image: 'images/facebook hover.png',
+          link: 'https://www.facebook.com/TrickySusan'
+        }
       ]
     }
   }

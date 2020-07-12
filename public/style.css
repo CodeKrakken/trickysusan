@@ -83,7 +83,8 @@ body {
 
 #social {
   height: 50px;
-  filter: grayscale(100%)
+  filter: grayscale(100%);
+  padding: 1%;
 }
 
 #social:hover {
