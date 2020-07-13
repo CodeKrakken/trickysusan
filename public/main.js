@@ -278,8 +278,8 @@ var app = new Vue({
 })
 
 
-var sandbox = new Vue({
-  el: '#sandbox',
+var sandpit = new Vue({
+  el: '#sandpit',
   template: `
     <div>
       <img src="images/Logo_Neon.jpg" style="width: 100px">
