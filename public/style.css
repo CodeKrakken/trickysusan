@@ -51,7 +51,7 @@ body {
   /* grid-area: grid-tabs */
 }
 
-.content {
+.main-content {
   text-align: justify;
   font-size: 150%;
   padding-left: 5%;
@@ -80,7 +80,7 @@ body {
 #social:hover {
   filter: grayscale(0%)
 }
-
+/* 
 #margin {
   margin: 0.7%;
-}
+} */

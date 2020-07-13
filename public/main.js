@@ -35,8 +35,7 @@ Vue.component('socials', {
 })
 Vue.component('main-content', {
   template: `
-    <div class="content">
-      <div class="inner-content">
+    <div class="main-content">
       <div v-show="selectedTab === 'News'">
         <news></news>
       </div>
@@ -59,7 +58,6 @@ Vue.component('main-content', {
 
       <div v-show="selectedTab === 'Videos'">
         <videos></videos>
-      </div>
       </div>
     </div>
   `,
