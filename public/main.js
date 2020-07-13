@@ -277,19 +277,13 @@ var app = new Vue({
    }
 })
 
-Vue.component('div-one', {
-  template: `
-    <div>
-      Here's some content
-    </div>
-  `
-})
 
 var sandbox = new Vue({
   el: '#sandbox',
   template: `
     <div>
       <img src="images/Logo_Neon.jpg" style="width: 100px">
+
     </div>
   `
 })
