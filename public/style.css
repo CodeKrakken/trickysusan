@@ -13,18 +13,18 @@ body {
   letter-spacing: 0.1em;
 }
 
-.grid-template-container {
+/* .grid-template-container { CURRENTLY NOT USED
   /* display: grid;
   grid-template-rows: 2fr 10fr 1fr;
   grid-template-areas: "grid-header grid-socials"
                        "grid-content grid-content"
-                       "grid-tabs grid-socials"; */
+                       "grid-tabs grid-socials";
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-}
+} */
 
 #banner {
   width: 95%;
@@ -48,12 +48,14 @@ body {
 } */
 
 #tabs {
-  text-align: center;
-  width: 100%;
   display: flex;
   justify-content: space-around;
   font-size: 150%;
   font-style: italic;
+  position: fixed;
+  bottom: 1%;
+  left: 0;
+  right: 0
   /* grid-area: grid-tabs */
 }
 
