@@ -148,7 +148,7 @@ Vue.component('bio', {
         Camilla on vocals<br>
         Donald on guitar<br>
         John on bass<br>
-        Val on drums<br>
+        Val on drums<br><br><br>
 
         <div id="quotes">
           "... I’ve seen deaf people cry at a Tricky Susan show ..."<br>
