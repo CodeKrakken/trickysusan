@@ -225,8 +225,7 @@ Vue.component('player', {
 
 Vue.component ('tabs', {
   template: `
-    <div>
-
+    <div id="tabs">
       <span
       id="tab"
       v-for="(tab, index) in tabs"
@@ -261,7 +260,7 @@ var app = new Vue({
       <banner />
       <socials />
       <main-content :selectedTab="selectedTab" />
-      <tabs @select-tab="selectTab" id="tabs" />
+      <tabs @select-tab="selectTab" />
     </div>
    `,
    data: {
