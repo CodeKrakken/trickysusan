@@ -8,6 +8,32 @@ Vue.component ('banner', {
   `
 })
 
+Vue.component('socials', {
+  template: `
+    <div id="socials">
+      <span v-for="social in socials">
+        <a :href="social.link" target="_blank">
+          <img v-bind:src="social.image" id="social">
+        </a>
+      </span>
+    </div>
+  `,
+  data() {
+    return {
+      socials: [
+        {
+          image: 'images/instagram hover.png',
+          link: 'https://www.instagram.com/trickysusan/?hl=en'
+        },
+        {
+          image: 'images/facebook hover.png',
+          link: 'https://www.facebook.com/TrickySusan'
+        }
+      ]
+    }
+  }
+})
+
 Vue.component('tab-content', {
   template: `
     <div class="content-container">
@@ -135,32 +161,6 @@ Vue.component('bio', {
       </div>
     </div>
   `
-})
-
-Vue.component('socials', {
-  template: `
-    <div id="socials">
-      <span v-for="social in socials">
-        <a :href="social.link" target="_blank">
-          <img v-bind:src="social.image" id="social">
-        </a>
-      </span>
-    </div>
-  `,
-  data() {
-    return {
-      socials: [
-        {
-          image: 'images/instagram hover.png',
-          link: 'https://www.instagram.com/trickysusan/?hl=en'
-        },
-        {
-          image: 'images/facebook hover.png',
-          link: 'https://www.facebook.com/TrickySusan'
-        }
-      ]
-    }
-  }
 })
 
 Vue.component('photos', {

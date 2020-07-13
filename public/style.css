@@ -45,7 +45,7 @@ body {
 #tab-text {
   margin: auto auto;
   text-justify: center;
-}
+} */
 
 #tabs {
   text-align: center;
@@ -54,9 +54,10 @@ body {
   justify-content: space-around;
   font-size: 150%;
   font-style: italic;
-  grid-area: grid-tabs
+  /* grid-area: grid-tabs */
 }
 
+/*
 .content-container {
   margin: auto;
   display: flex;
