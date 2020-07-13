@@ -32,12 +32,11 @@ body {
   /* grid-area: grid-header */
 }
 
-/* #single-photo {
+#single-photo {
   height: 350px;
   padding: 10px
 }
 
-*/
 
 #tabs {
   display: flex;
@@ -47,7 +46,8 @@ body {
   position: fixed;
   bottom: 1%;
   left: 0;
-  right: 0
+  right: 0;
+  background: black
   /* grid-area: grid-tabs */
 }
 
@@ -56,6 +56,7 @@ body {
   font-size: 150%;
   padding-left: 5%;
   padding-right: 5%;
+  height: 100%
 }
 
 #tab:hover {
