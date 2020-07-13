@@ -1,4 +1,4 @@
-@viewport { width: device-width }
+/* @viewport { width: device-width }
 
 @font-face {
   font-family: 'Odibee Sans';
@@ -11,14 +11,14 @@ body {
   box-sizing: border-box;
   font-family: 'Odibee Sans';
   letter-spacing: 0.1em;
-}
+} */
 
 .grid-template-container {
-  display: grid;
+  /* display: grid;
   grid-template-rows: 2fr 10fr 1fr;
-  grid-template-areas: "grid-header grid-header"
+  grid-template-areas: "grid-header grid-socials"
                        "grid-content grid-content"
-                       "grid-tabs grid-socials";
+                       "grid-tabs grid-socials"; */
   position: fixed;
   top: 0;
   bottom: 0;
@@ -27,11 +27,11 @@ body {
 }
 
 #banner {
-  width: 100vw;
-  grid-area: grid-header
+  width: 90%
+  /* grid-area: grid-header */
 }
 
-#single-photo {
+/* #single-photo {
   height: 350px;
   padding: 10px
 }
@@ -65,33 +65,31 @@ body {
 .content {
   text-align: justify;
   font-size: 150%;
-  padding-left: 8%;
-  padding-right: 12%
+  padding-left: 7%;
+  padding-right: 11%
 }
 
 #tab:hover {
   color: rgb(226, 32, 118)
-}
+} */
 /* 226, 32, 118 for pink, 169, 222, 240 for blue */
 
-.center { text-align: center }
+/* .center { text-align: center } */
 
 #socials {
-  position: absolute;
-  top: 0;
-  right: 0
+  /* grid-area: grid-socials; */
+  width: 5%;
 }
 
 #social {
-  height: 50px;
+  width: 100%;
   filter: grayscale(100%);
-  padding: 1%;
 }
 
 #social:hover {
   filter: grayscale(0%)
 }
 
-#padding {
+/* #padding {
   margin: 0.7%
-}
+} */

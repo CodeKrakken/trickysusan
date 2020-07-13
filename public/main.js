@@ -276,3 +276,13 @@ var app = new Vue({
      }
    }
 })
+
+var sandbox = new Vue({
+  el: '#sandbox',
+  template: `
+    <div class="grid-template-container">
+      <banner />
+      <socials />
+    </div>
+  `
+})
