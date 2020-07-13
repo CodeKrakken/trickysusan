@@ -35,9 +35,8 @@ Vue.component('socials', {
 })
 Vue.component('main-content', {
   template: `
-    <div class="content-container">
-      <div class="content">
-
+    <div class="content">
+      <div class="inner-content">
       <div v-show="selectedTab === 'News'">
         <news></news>
       </div>
@@ -61,10 +60,8 @@ Vue.component('main-content', {
       <div v-show="selectedTab === 'Videos'">
         <videos></videos>
       </div>
+      </div>
     </div>
-  
-    </div>
-    
   `,
   props: {
     selectedTab: {
@@ -99,7 +96,7 @@ Vue.component('gigs', {
     <div class="center">
       Obviously we aren't doing any gigs at the moment. But you can watch these videos, and pretend you're seeing us really play.
       <br><br><br>
-      <span v-for="video in videos" id="padding">
+      <span v-for="video in videos" id="margin">
         <video height=280 controls>
           <source v-bind:src="video" type="video/mp4">
         </video>

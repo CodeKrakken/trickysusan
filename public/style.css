@@ -51,27 +51,20 @@ body {
   /* grid-area: grid-tabs */
 }
 
-
-.content-container {
-  margin: auto;
-  display: flex;
-  grid-area: grid-content
-}
-
 .content {
   text-align: justify;
   font-size: 150%;
-  padding-left: 7%;
-  padding-right: 11%
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 #tab:hover {
   color: rgb(226, 32, 118)
 }
 
-/* 226, 32, 118 for pink, 169, 222, 240 for blue
+/* 226, 32, 118 for pink, 169, 222, 240 for blue */
 
-/* .center { text-align: center } */
+.center { text-align: center }
 
 #socials {
   /* grid-area: grid-socials; */
@@ -88,6 +81,6 @@ body {
   filter: grayscale(0%)
 }
 
-#padding {
+#margin {
   margin: 0.7%;
 }
