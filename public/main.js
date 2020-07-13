@@ -33,8 +33,7 @@ Vue.component('socials', {
     }
   }
 })
-
-Vue.component('tab-content', {
+Vue.component('main-content', {
   template: `
     <div class="content-container">
       <div class="content">
@@ -259,12 +258,10 @@ var app = new Vue({
   el: '#app',
   template: `
     <div>
-      <div class="grid-template-container">
-        <banner />
-        <socials />
-        <tab-content :selectedTab="selectedTab" />
-        <tabs @select-tab="selectTab" id="tabs" />
-      </div>
+      <banner />
+      <socials />
+      <main-content :selectedTab="selectedTab" />
+      <tabs @select-tab="selectTab" id="tabs" />
     </div>
    `,
    data: {

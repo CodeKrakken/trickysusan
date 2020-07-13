@@ -27,7 +27,7 @@ body {
 }
 
 #banner {
-  width: 90%;
+  width: 95%;
   float: left
   /* grid-area: grid-header */
 }
@@ -80,7 +80,7 @@ body {
 
 #socials {
   /* grid-area: grid-socials; */
-  width: 10%;
+  width: 5%;
   float: right
 }
 
@@ -93,6 +93,6 @@ body {
   filter: grayscale(0%)
 }
 
-/* #padding {
-  margin: 0.7%
-} */
+#padding {
+  margin: 0.7%;
+}
