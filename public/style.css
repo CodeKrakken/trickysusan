@@ -11,6 +11,7 @@ body {
   box-sizing: border-box;
   font-family: 'Odibee Sans';
   letter-spacing: 0.1em;
+  padding: 1%
 }
 
 /* .grid-template-container { CURRENTLY NOT USED
@@ -44,7 +45,7 @@ body {
   font-size: 150%;
   font-style: italic;
   position: fixed;
-  bottom: 1%;
+  bottom: 0;
   left: 0;
   right: 0;
   background: black
@@ -85,3 +86,10 @@ body {
 #margin {
   margin: 0.7%;
 } */
+
+#quotes {
+  font-size: 70%;
+  font-style: italic;
+  position: relative;
+  top: 10vh
+}

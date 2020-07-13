@@ -148,10 +148,12 @@ Vue.component('bio', {
         Camilla on vocals<br>
         Donald on guitar<br>
         John on bass<br>
-        Val on drums<br><br>
-    
-        "... I’ve seen deaf people cry at a Tricky Susan show ..."<br>
-        "... I’ve even seen a goose take a bump at one of their shows ..."
+        Val on drums<br>
+
+        <div id="quotes">
+          "... I’ve seen deaf people cry at a Tricky Susan show ..."<br>
+          "... I’ve even seen a goose take a bump at one of their shows ..."
+        </div>
       </div>
     </div>
   `
@@ -267,7 +269,6 @@ var app = new Vue({
      }
    }
 })
-
 
 var sandpit = new Vue({
   el: '#sandpit',
