@@ -260,10 +260,10 @@ var app = new Vue({
   template: `
     <div>
       <div class="grid-template-container">
-        <banner></banner>
-        <tab-content :selectedTab="selectedTab"></tab-content>
-        <socials></socials>
-        <tabs @select-tab="selectTab" id="tabs"></tabs>
+        <banner />
+        <tab-content :selectedTab="selectedTab" />
+        <socials />
+        <tabs @select-tab="selectTab" id="tabs" />
       </div>
     </div>
    `,
@@ -277,12 +277,19 @@ var app = new Vue({
    }
 })
 
+Vue.component('div-one', {
+  template: `
+    <div>
+      Here's some content
+    </div>
+  `
+})
+
 var sandbox = new Vue({
   el: '#sandbox',
   template: `
-    <div class="grid-template-container">
-      <banner />
-      <socials />
+    <div>
+      <img src="images/Logo_Neon.jpg" style="width: 100px">
     </div>
   `
 })
