@@ -261,8 +261,8 @@ var app = new Vue({
     <div>
       <div class="grid-template-container">
         <banner />
-        <tab-content :selectedTab="selectedTab" />
         <socials />
+        <tab-content :selectedTab="selectedTab" />
         <tabs @select-tab="selectTab" id="tabs" />
       </div>
     </div>
@@ -282,8 +282,8 @@ var sandpit = new Vue({
   el: '#sandpit',
   template: `
     <div>
-      <img src="images/Logo_Neon.jpg" style="width: 100px">
-
+      <banner />
+      <socials />
     </div>
   `
 })

@@ -1,4 +1,4 @@
-/* @viewport { width: device-width }
+@viewport { width: device-width }
 
 @font-face {
   font-family: 'Odibee Sans';
@@ -11,7 +11,7 @@ body {
   box-sizing: border-box;
   font-family: 'Odibee Sans';
   letter-spacing: 0.1em;
-} */
+}
 
 .grid-template-container {
   /* display: grid;
@@ -27,7 +27,8 @@ body {
 }
 
 #banner {
-  width: 100%
+  width: 90%;
+  float: left
   /* grid-area: grid-header */
 }
 
@@ -78,7 +79,8 @@ body {
 
 #socials {
   /* grid-area: grid-socials; */
-  width: 5%;
+  width: 10%;
+  float: right
 }
 
 #social {
