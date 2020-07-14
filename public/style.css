@@ -91,3 +91,8 @@ body {
   font-size: 70%;
   font-style: italic;
 }
+
+.inner {
+  position: relative;
+  top: 2ch
+}

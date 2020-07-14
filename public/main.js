@@ -136,6 +136,7 @@ Vue.component('shop', {
 Vue.component('bio', {
   template: `
     <div>
+    <div class="inner">
       Tricky Susan are here to assault your taste buds with their attention-demanding rock ‘n’ roll. 
       A four-piece outfit formed in London and led by Camilla Summerskill, Tricky Susan are paving the way with their melodic, 
       hook-driven and beat-centric hits. On stage, their energy is hard to match. 
@@ -148,12 +149,14 @@ Vue.component('bio', {
         Camilla on vocals<br>
         Donald on guitar<br>
         John on bass<br>
-        Val on drums<br><br><br>
+        Val on drums<br><br>
 
         <div id="quotes">
+        <br>
           "... I’ve seen deaf people cry at a Tricky Susan show ..."<br>
           "... I’ve even seen a goose take a bump at one of their shows ..."
         </div>
+      </div>
       </div>
     </div>
   `
