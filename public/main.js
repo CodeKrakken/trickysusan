@@ -36,7 +36,6 @@ Vue.component('socials', {
 Vue.component('main-content', {
   template: `
     <div class="main-content">
-      <div class="inner">
         <div v-show="selectedTab === 'News'">
           <news></news>
         </div>
@@ -60,7 +59,6 @@ Vue.component('main-content', {
         <div v-show="selectedTab === 'Videos'">
           <videos></videos>
         </div>
-      </div>
     </div>
   `,
   props: {
@@ -73,7 +71,7 @@ Vue.component('main-content', {
 
 Vue.component('news', {
   template: `
-    <div>
+    <div class="inner">
       COVID-19 was a major prick, and still is as far as we’re concerned. Aside from all the obvious, it stopped us playing ... for now. 
       We’re working really hard to establish when we can get back to rocking out in front of you.<br><br>
       In the meanwhile we’ve been in the recording studio laying down our latest tracks. Watch this space ... <br><br>
@@ -265,7 +263,7 @@ var app = new Vue({
     </div>
    `,
    data: {
-     selectedTab: 'Bio',
+     selectedTab: 'News',
    },
    methods: {
      selectTab(tab) {
@@ -278,11 +276,11 @@ var sandpit = new Vue({
   el: '#sandpit',
   template: `
     <div>
-      <main-content :selectedTab="selectedTab" />
+      <Nothing />
     </div>
   `,
   data: {
-    selectedTab: 'Bio',
+    selectedTab: 'News',
   },
   methods: {
     selectTab(tab) {
