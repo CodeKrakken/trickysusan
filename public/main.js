@@ -73,7 +73,8 @@ Vue.component('news', {
   template: `
     <div>
       <div v-for="(post, index) in posts">
-        <span :key="index" v-html="post">
+        <span :key="index">{{ post.date }}<br><br></span>
+        <span :key="index" v-html="post.text">
         </span>
       </div>
     </div>
@@ -81,7 +82,10 @@ Vue.component('news', {
   data() {
     return {
       posts: [
-        'COVID-19 was a major prick, and still is as far as we’re concerned. Aside from all the obvious, it stopped us playing ... for now. We’re working really hard to establish when we can get back to rocking out in front of you.<br><br>In the meanwhile we’ve been in the recording studio laying down our latest tracks. Watch this space ... <br><br><div class="center"><h1>KA-POW.</h1></div>'
+        {
+          text: 'COVID-19 was a major prick, and still is as far as we’re concerned. Aside from all the obvious, it stopped us playing ... for now. We’re working really hard to establish when we can get back to rocking out in front of you.<br><br>In the meanwhile we’ve been in the recording studio laying down our latest tracks. Watch this space ... <br><br><div class="center"><h1>KA-POW.</h1></div>',
+          date: '14/07/2020'
+        }
       ]
     }
   }
