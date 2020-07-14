@@ -58,6 +58,8 @@ body {
   font-size: 150%;
   padding-left: 5%;
   padding-right: 5%;
+  position: absolute;
+  top: 25%;
 }
 
 #tab:hover {
@@ -71,7 +73,7 @@ body {
 #socials {
   /* grid-area: grid-socials; */
   width: 5%;
-  float: right
+  float: right;
 }
 
 #social {
@@ -93,6 +95,5 @@ body {
 }
 
 .inner {
-  position: relative;
-  top: 2ch
+  margin: auto;
 }

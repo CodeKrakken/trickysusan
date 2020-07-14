@@ -36,28 +36,30 @@ Vue.component('socials', {
 Vue.component('main-content', {
   template: `
     <div class="main-content">
-      <div v-show="selectedTab === 'News'">
-        <news></news>
-      </div>
+      <div class="inner">
+        <div v-show="selectedTab === 'News'">
+          <news></news>
+        </div>
 
-      <div v-show="selectedTab === 'Gigs'">
-        <gigs></gigs>
-      </div>
+        <div v-show="selectedTab === 'Gigs'">
+          <gigs></gigs>
+        </div>
 
-      <div v-show="selectedTab === 'Shop'">
-        <shop></shop>
-      </div>
+        <div v-show="selectedTab === 'Shop'">
+          <shop></shop>
+        </div>
 
-      <div v-show="selectedTab === 'Bio'">
-        <bio></bio>
-      </div>
+        <div v-show="selectedTab === 'Bio'">
+          <bio></bio>
+        </div>
 
-      <div v-show="selectedTab === 'Photos'">
-        <photos></photos>
-      </div>
+        <div v-show="selectedTab === 'Photos'">
+          <photos></photos>
+        </div>
 
-      <div v-show="selectedTab === 'Videos'">
-        <videos></videos>
+        <div v-show="selectedTab === 'Videos'">
+          <videos></videos>
+        </div>
       </div>
     </div>
   `,
@@ -136,27 +138,26 @@ Vue.component('shop', {
 Vue.component('bio', {
   template: `
     <div>
-    <div class="inner">
       Tricky Susan are here to assault your taste buds with their attention-demanding rock ‘n’ roll. 
       A four-piece outfit formed in London and led by Camilla Summerskill, Tricky Susan are paving the way with their melodic, 
       hook-driven and beat-centric hits. On stage, their energy is hard to match. 
       On record, their hunger to tell you their story inescapable.
       <br><br>
       They don’t do tired. They do do melodies. They don’t follow crowds. They do like crowds. They HATE pretentiousness. 
-      But they adore profundity…. They fi.…What are you still doing reading this? Frick off to the gig page. NOW.
+      But they adore profundity ... They fi ... 
       <br><br>
       <div class="center">
+      What are you still doing reading this? Frick off to the gig page. NOW.
+      <br><br>
         Camilla on vocals<br>
         Donald on guitar<br>
         John on bass<br>
         Val on drums<br><br>
 
         <div id="quotes">
-        <br>
           "... I’ve seen deaf people cry at a Tricky Susan show ..."<br>
           "... I’ve even seen a goose take a bump at one of their shows ..."
         </div>
-      </div>
       </div>
     </div>
   `
@@ -277,8 +278,15 @@ var sandpit = new Vue({
   el: '#sandpit',
   template: `
     <div>
-      <banner />
-      <socials />
+      <main-content :selectedTab="selectedTab" />
     </div>
-  `
+  `,
+  data: {
+    selectedTab: 'Bio',
+  },
+  methods: {
+    selectTab(tab) {
+      this.selectedTab = tab
+    }
+  }
 })
