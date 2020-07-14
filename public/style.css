@@ -65,8 +65,7 @@ body {
   right: 0;
   justify-content: center;
   align-items: center;
-  display: flex;
-  border: 1px dashed white
+  display: flex
 }
 
 #tab:hover {
@@ -100,8 +99,3 @@ body {
   font-size: 70%;
   font-style: italic;
 }
-
-.inner {
-  margin: auto
-}
-

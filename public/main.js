@@ -71,10 +71,10 @@ Vue.component('main-content', {
 
 Vue.component('news', {
   template: `
-    <div class="inner">
+    <div>
       COVID-19 was a major prick, and still is as far as we’re concerned. Aside from all the obvious, it stopped us playing ... for now. 
       We’re working really hard to establish when we can get back to rocking out in front of you.<br><br>
-      In the meanwhile we’ve been in the recording studio laying down our latest tracks. Watch this space ... <br><br>
+      In the meanwhile we’ve been in the recording studio laying down our latest tracks. Watch this space ... <br><br><br><br>
 
       <div class="center">
         <h1>KA-POW.</h1>
@@ -276,7 +276,6 @@ var sandpit = new Vue({
   el: '#sandpit',
   template: `
     <div>
-      <Nothing />
     </div>
   `,
   data: {
