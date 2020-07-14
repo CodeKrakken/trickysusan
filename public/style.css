@@ -11,7 +11,8 @@ body {
   box-sizing: border-box;
   font-family: 'Odibee Sans';
   letter-spacing: 0.1em;
-  padding: 1%
+  padding: 1%;
+  cursor: pointer;
 }
 
 /* .grid-template-container { CURRENTLY NOT USED
