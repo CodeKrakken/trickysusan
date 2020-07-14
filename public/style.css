@@ -57,7 +57,7 @@ body {
 
 /* 226, 32, 118 for pink, 169, 222, 240 for blue */
 
-.center { text-align: center }
+.center { text-align: center; }
 
 #socials {
   width: 5%;
@@ -89,4 +89,13 @@ body {
 
 #single-photo:hover {
   height: 700px
+}
+
+#gig-content {
+  text-align: center
+}
+
+#gig-image {
+  height: 30ch;
+  padding-top: 3%
 }

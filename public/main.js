@@ -77,13 +77,8 @@ Vue.component('news', {
 Vue.component('gigs', {
   template: `
     <div class="center">
-      Obviously we aren't doing any gigs at the moment. But grab and drink and watch, and it's just like the real thing ... almost.
-      <br><br>
-      <span v-for="clip in clips">
-        <video height=280 controls>
-          <source v-bind:src="clip.address" type="video/mp4">
-        </video>
-      </span>
+      You will note the lack of people both on and off stage. As soon as this can be remedied, it shall be.
+      <img src="/images/stage.jpg" id="gig-image"/>
     </div>
   `,
   data() {
@@ -239,7 +234,7 @@ var app = new Vue({
     </div>
    `,
    data: {
-     selectedTab: 'Photos',
+     selectedTab: 'Gigs',
    },
    methods: {
      selectTab(tab) {
