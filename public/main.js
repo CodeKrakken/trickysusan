@@ -36,29 +36,12 @@ Vue.component('socials', {
 Vue.component('main-content', {
   template: `
     <div class="main-content">
-        <div v-show="selectedTab === 'News'">
-          <news></news>
-        </div>
-
-        <div v-show="selectedTab === 'Gigs'">
-          <gigs></gigs>
-        </div>
-
-        <div v-show="selectedTab === 'Shop'">
-          <shop></shop>
-        </div>
-
-        <div v-show="selectedTab === 'Bio'">
-          <bio></bio>
-        </div>
-
-        <div v-show="selectedTab === 'Photos'">
-          <photos></photos>
-        </div>
-
-        <div v-show="selectedTab === 'Videos'">
-          <videos></videos>
-        </div>
+      <div v-show="selectedTab === 'News'"><news /></div>
+      <div v-show="selectedTab === 'Gigs'"><gigs /></div>
+      <div v-show="selectedTab === 'Shop'"><shop /></div>
+      <div v-show="selectedTab === 'Bio'"><bio /></div>
+      <div v-show="selectedTab === 'Photos'"><photos /></div>
+      <div v-show="selectedTab === 'Videos'"><videos /></div>
     </div>
   `,
   props: {
