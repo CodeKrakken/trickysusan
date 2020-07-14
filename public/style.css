@@ -15,30 +15,15 @@ body {
   cursor: default;
 }
 
-/* .grid-template-container { CURRENTLY NOT USED
-  /* display: grid;
-  grid-template-rows: 2fr 10fr 1fr;
-  grid-template-areas: "grid-header grid-socials"
-                       "grid-content grid-content"
-                       "grid-tabs grid-socials";
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-} */
-
 #banner {
   width: 95%;
   float: left
-  /* grid-area: grid-header */
 }
 
 #single-photo {
   height: 350px;
   padding: 10px
 }
-
 
 #tabs {
   display: flex;
@@ -50,8 +35,8 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background: black
-  /* grid-area: grid-tabs */
+  background: black;
+  align-items: center
 }
 
 .main-content {
@@ -79,7 +64,6 @@ body {
 .center { text-align: center }
 
 #socials {
-  /* grid-area: grid-socials; */
   width: 5%;
   float: right;
 }

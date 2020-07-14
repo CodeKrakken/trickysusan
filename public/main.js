@@ -257,7 +257,7 @@ var app = new Vue({
     </div>
    `,
    data: {
-     selectedTab: 'Gigs',
+     selectedTab: 'Photos',
    },
    methods: {
      selectTab(tab) {
