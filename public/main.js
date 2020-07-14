@@ -164,17 +164,21 @@ Vue.component('videos', {
   template: `
     <div>
       <span v-for="video in videos">
-        <video height=300 controls>
-          <source v-bind:src="video" type="video/mp4">
-        </video>
+          <source v-html="video.address" title="video.name" type="video/mp4">
       </span>
     </div>
   `,
   data() {
     return {
       videos: [
-        "videos/Strategy.mp4",
-        "videos/Tug of War.mp4"
+        {
+          name: "Strategy",
+          address: '<iframe width="560" height="315" src="https://www.youtube.com/embed/exggrODRu4w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+        },
+        {
+          name: "Tug of War",
+          address: '<iframe width="560" height="315" src="https://www.youtube.com/embed/hm2jNxkG2ak" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+        }  
       ]
     }
   },
