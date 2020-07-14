@@ -72,18 +72,16 @@ Vue.component('main-content', {
 Vue.component('news', {
   template: `
     <div>
-      COVID-19 was a major prick, and still is as far as we’re concerned. Aside from all the obvious, it stopped us playing ... for now. 
-      We’re working really hard to establish when we can get back to rocking out in front of you.<br><br>
-      In the meanwhile we’ve been in the recording studio laying down our latest tracks. Watch this space ... <br><br><br><br>
-
-      <div class="center">
-        <h1>KA-POW.</h1>
+      <div v-for="(post, index) in posts">
+        <span :key="index" v-html="post">
+        </span>
       </div>
     </div>
   `,
   data() {
     return {
       posts: [
+        'COVID-19 was a major prick, and still is as far as we’re concerned. Aside from all the obvious, it stopped us playing ... for now. We’re working really hard to establish when we can get back to rocking out in front of you.<br><br>In the meanwhile we’ve been in the recording studio laying down our latest tracks. Watch this space ... <br><br><div class="center"><h1>KA-POW.</h1></div>'
       ]
     }
   }
@@ -92,34 +90,26 @@ Vue.component('news', {
 Vue.component('gigs', {
   template: `
     <div class="center">
-      Obviously we aren't doing any gigs at the moment. But you can watch these videos, and pretend you're seeing us really play.
-      <br><br><br>
-      <span v-for="video in videos" id="margin">
+      Obviously we aren't doing any gigs at the moment. But grab and drink and watch, and it's just like the real thing ... almost.
+      <br><br>
+      <span v-for="clip in clips">
         <video height=280 controls>
-          <source v-bind:src="video" type="video/mp4">
+          <source v-bind:src="clip.address" type="video/mp4">
         </video>
       </span>
     </div>
   `,
   data() {
     return {
-      gigs: [
-        {
-          date: "13/04/20", 
-          venue: "Dublin Castle"
+      clips: [
+        { 
+          name: "Grab",
+          address: "videos/Grab.mp4"
         },
         {
-          date: "15/06/20",
-          venue: "Camden Barfly"
-        },
-        {
-          date: "31/08/21", 
-          venue: "Reading Festival"
-        },
-      ],
-      videos: [
-        "videos/Leftover Love.mp4",
-        "videos/Philosophy.mp4",
+          name: "Philosophy",
+          address: "videos/Philosophy.mp4",
+        }
       ]
     }
   }
@@ -263,7 +253,7 @@ var app = new Vue({
     </div>
    `,
    data: {
-     selectedTab: 'News',
+     selectedTab: 'Gigs',
    },
    methods: {
      selectTab(tab) {
