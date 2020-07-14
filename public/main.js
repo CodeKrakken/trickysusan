@@ -35,7 +35,7 @@ Vue.component('socials', {
 })
 Vue.component('main-content', {
   template: `
-    <div class="main-content">
+    <div id="main-content">
       <div v-show="selectedTab === 'News'"><news /></div>
       <div v-show="selectedTab === 'Gigs'"><gigs /></div>
       <div v-show="selectedTab === 'Shop'"><shop /></div>
@@ -140,7 +140,7 @@ Vue.component('bio', {
 
 Vue.component('photos', {
   template: `
-  <div>
+  <div id="photos">
     <span v-for="image in images">
       <img v-bind:src="image" id="single-photo">
     </span>
@@ -157,7 +157,6 @@ Vue.component('photos', {
         'images/F_8832-1_Wall_neon.jpg',
         'images/IMGP9959.jpg',
         'images/promo.jpg',
-        'images/IMGP0004.jpg',
         'images/IMGP9985.jpg',
         'images/WaterRats.jpg',
         'images/IMGP9917.jpg',

@@ -17,12 +17,8 @@ body {
 
 #banner {
   width: 95%;
+  max-height: 27%;
   float: left
-}
-
-#single-photo {
-  height: 350px;
-  padding: 10px
 }
 
 #tabs {
@@ -39,7 +35,7 @@ body {
   align-items: center
 }
 
-.main-content {
+#main-content {
   text-align: justify;
   font-size: 150%;
   padding-left: 5%;
@@ -80,4 +76,17 @@ body {
 #quotes {
   font-size: 70%;
   font-style: italic;
+}
+
+#photos {
+  text-align: center
+}
+
+#single-photo {
+  padding: 10px;
+  height: 140px;
+}
+
+#single-photo:hover {
+  height: 700px
 }
