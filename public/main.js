@@ -77,7 +77,7 @@ Vue.component('news', {
 Vue.component('gigs', {
   template: `
     <div class="center">
-      You will note the lack of people both on and off stage. As soon as this can be remedied, it shall be.
+      You will note the lack of people both on and off stage. As soon as this can be remedied, it shall be.<br>
       <img src="/images/stage.jpg" id="gig-image"/>
     </div>
   `,
