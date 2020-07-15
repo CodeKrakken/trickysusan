@@ -11,14 +11,16 @@ body {
   box-sizing: border-box;
   font-family: 'Odibee Sans';
   letter-spacing: 0.1em;
-  padding: 1%;
   cursor: default;
 }
 
 #banner {
   width: 95%;
   max-height: 27%;
-  float: left
+  float: left;
+  position: fixed;
+  left: 1%;
+  z-index: 1;
 }
 
 #tabs {
@@ -60,8 +62,12 @@ body {
 .center { text-align: center; }
 
 #socials {
+  position: fixed;
+  top: 1%;
+  right: 1%;
   width: 5%;
   float: right;
+  z-index: 2
 }
 
 #social {
@@ -79,10 +85,14 @@ body {
 }
 
 #photos {
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  display: flex
+  position: absolute;
+  top: 28%;
+  bottom: 7%;
+  left: 5%;
+  right: 5%
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* display: flex */
 }
 
 #single-photo {
