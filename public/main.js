@@ -35,7 +35,7 @@ Vue.component('socials', {
 })
 Vue.component('main-content', {
   template: `
-    <div id="main-content">
+    <div class="main-content">
       <div v-show="selectedTab === 'News'"><news /></div>
       <div v-show="selectedTab === 'Gigs'"><gigs /></div>
       <div v-show="selectedTab === 'Shop'"><shop /></div>
@@ -81,20 +81,6 @@ Vue.component('gigs', {
       <img src="/images/stage.jpg" id="gig-image"/>
     </div>
   `,
-  data() {
-    return {
-      clips: [
-        { 
-          name: "Grab",
-          address: "videos/Grab.mp4"
-        },
-        {
-          name: "Philosophy",
-          address: "videos/Philosophy.mp4",
-        }
-      ]
-    }
-  }
 })
 
 Vue.component('shop', {

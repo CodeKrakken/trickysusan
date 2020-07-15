@@ -35,7 +35,7 @@ body {
   align-items: center
 }
 
-#main-content {
+.main-content {
   text-align: justify;
   font-size: 150%;
   padding-left: 5%;
@@ -79,16 +79,15 @@ body {
 }
 
 #photos {
-  text-align: center
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex
 }
 
 #single-photo {
   padding: 10px;
-  height: 140px;
-}
-
-#single-photo:hover {
-  height: 700px
+  height: 400px;
 }
 
 #gig-content {
