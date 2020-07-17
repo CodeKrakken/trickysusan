@@ -19,8 +19,10 @@ body {
   max-height: 27%;
   float: left;
   position: fixed;
+  top: 0;
   left: 1%;
   z-index: 1;
+  border-top: 15px solid black
 }
 
 #tabs {
@@ -63,7 +65,7 @@ body {
 
 #socials {
   position: fixed;
-  top: 1%;
+  top: 1.5%;
   right: 1%;
   width: 5%;
   float: right;
@@ -86,8 +88,7 @@ body {
 
 #photos {
   position: absolute;
-  top: 28%;
-  bottom: 7%;
+  top: 0%;
   left: 5%;
   right: 5%
   /* justify-content: center; */
