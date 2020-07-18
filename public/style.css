@@ -65,7 +65,7 @@ body {
 
 #socials {
   position: fixed;
-  top: 1.5%;
+  top: 1%;
   right: 1%;
   width: 5%;
   float: right;
@@ -90,10 +90,13 @@ body {
   position: absolute;
   top: 0%;
   left: 5%;
-  right: 5%
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* display: flex */
+  right: 5%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#photos::-webkit-scrollbar {
+  display: none;
 }
 
 #single-photo {
