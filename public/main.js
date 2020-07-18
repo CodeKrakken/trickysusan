@@ -34,8 +34,6 @@ Vue.component('socials', {
   }
 })
 
-{/* 
-       */}
 Vue.component('main-content', {
   template: `
     <div class="main-content">
