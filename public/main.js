@@ -33,6 +33,9 @@ Vue.component('socials', {
     }
   }
 })
+
+{/* 
+       */}
 Vue.component('main-content', {
   template: `
     <div class="main-content">
@@ -54,7 +57,7 @@ Vue.component('main-content', {
 
 Vue.component('news', {
   template: `
-    <div>
+    <div id="news">
       <div v-for="(post, index) in posts">
         <span :key="index">{{ post.date }}<br><br></span>
         <span :key="index" v-html="post.text">
@@ -121,10 +124,12 @@ Vue.component('bio', {
 
 Vue.component('photos', {
   template: `
-  <div id="photos">
-    <span v-for="image in images">
-      <img v-bind:src="image" id="single-photo">
-    </span>
+  <div> 
+    <div class="photos">
+      <span v-for="image in images">
+        <img v-bind:src="image" id="single-photo">
+      </span>
+    </div>
   </div>
   `,
   data() {
@@ -213,6 +218,16 @@ Vue.component ('tabs', {
   }
 })
 
+Vue.component ('nothing', {
+  template: `
+    <div>
+      <div class="photos">
+        I<br>s<br> <br>i<br>t<br> <br>p<br>o<br>s<br>s<br>i<br>b<br>l<br>e<br> <br>t<br>o<br> <br>h<br>a<br>v<br>e<br> <br>a<br> <br>w<br>h<br>o<br>l<br>e<br> <br>s<br>c<br>r<br>o<br>l<br>l<br>i<br>n<br>g<br> <br>p<br>a<br>g<br>e<br> <br>w<br>i<br>t<br>h<br>o<br>u<br>t<br> <br>a<br> <br>s<br>c<br>r<br>o<br>l<br>l<br>b<br>a<br>r<br> <br>a<br>t<br> <br>t<br>h<br>e<br> <br>s<br>i<br>d<br>e<br>?<br> <br>L<br>e<br>t<br>'<br>s<br> <br>f<br>i<br>n<br>d<br> <br>o<br>u<br>t<br>,<br> <br>t<br>o<br>g<br>e<br>t<br>h<br>e<br>r<br>.
+      </div>
+  </div>
+  `
+})
+
 var app = new Vue({
   el: '#app',
   template: `
@@ -237,10 +252,11 @@ var sandpit = new Vue({
   el: '#sandpit',
   template: `
     <div>
+      <nothing />
     </div>
   `,
   data: {
-    selectedTab: 'News',
+    selectedTab: 'Photos',
   },
   methods: {
     selectTab(tab) {
@@ -248,3 +264,4 @@ var sandpit = new Vue({
     }
   }
 })
+
