@@ -12,9 +12,9 @@ Vue.component('socials', {
   template: `
     <div id="socials">
       <span v-for="social in socials">
-        <a :href="social.link" target="_blank">
-          <img v-bind:src="social.image" id="social">
-        </a>
+          <a :href="social.link" target="_blank">
+            <img v-bind:src="social.image" id="social">
+          </a>
       </span>
     </div>
   `,
@@ -28,6 +28,10 @@ Vue.component('socials', {
         {
           image: 'images/facebook hover.png',
           link: 'https://www.facebook.com/TrickySusan'
+        },
+        {
+          image: 'images/yt_icon_rgb.png',
+          link: 'https://www.youtube.com/user/youronewayticket'
         }
       ]
     }

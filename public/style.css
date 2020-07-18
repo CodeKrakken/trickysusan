@@ -63,14 +63,18 @@ body {
 #socials {
   position: fixed;
   top: 1%;
-  right: 1%;
+  bottom: 89%;
+  right: 2%;
   width: 5%;
   float: right;
-  z-index: 2
+  z-index: 2;
+  text-align: right;
+  display: flex;
+  flex-direction: column
 }
 
 #social {
-  width: 100%;
+  width: 50%;
   filter: grayscale(100%);
 }
 
