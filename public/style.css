@@ -62,15 +62,16 @@ body {
 
 #socials {
   position: fixed;
-  top: 1%;
-  bottom: 89%;
-  right: 2%;
+  top: 0;
+  bottom: 72%;
+  right: 0;
   width: 5%;
   float: right;
   z-index: 2;
-  text-align: right;
   display: flex;
-  flex-direction: column
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
 }
 
 #social {

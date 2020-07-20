@@ -12,9 +12,9 @@ Vue.component('socials', {
   template: `
     <div id="socials">
       <span v-for="social in socials">
-          <a :href="social.link" target="_blank">
-            <img v-bind:src="social.image" id="social">
-          </a>
+        <a :href="social.link" target="_blank">
+          <img v-bind:src="social.image" id="social">
+        </a> 
       </span>
     </div>
   `,
