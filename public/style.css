@@ -88,21 +88,12 @@ body {
   font-style: italic;
 }
 
-.photos {
-  height: 100%;
-  width: 100%;
-  overflow: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.photos::-webkit-scrollbar {
-  display: none;
+#photos {
+  text-align: center
 }
 
 #single-photo {
-  padding: 10px;
-  height: 400px;
+  height: 100%;
 }
 
 #gig-content {
