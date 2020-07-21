@@ -126,12 +126,9 @@ Vue.component('bio', {
 
 Vue.component('photos', {
   template: `
-  <div> 
-    <div class="photos">
-      <v-attr="src: msg">
-      
+    <div> 
+      <img v-bind:src="images[0]">
     </div>
-  </div>
   `,
   data() {
     return {
@@ -149,7 +146,6 @@ Vue.component('photos', {
         'images/IMGP9917.jpg',
       ],
       selectedImageIndex: 0,
-      msg: "Work, you fucker"
     }
   }
 })
