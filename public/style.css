@@ -104,3 +104,9 @@ body {
   height: 30ch;
   padding-top: 3%
 }
+
+#previous-button {
+  position: absolute;
+  top: 50%;
+  left: 10%
+}

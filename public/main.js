@@ -127,7 +127,7 @@ Vue.component('bio', {
 Vue.component('photos', {
   template: `
     <div id="photos">
-      <button v-on:click="previousImage()">Previous image</button> 
+      <button v-on:click="previousImage()" id="previous-button">Previous image</button> 
       <img v-bind:src="images[selectedImageIndex]" id="single-photo">
       <button v-on:click="nextImage()">Next image</button>
     </div>
