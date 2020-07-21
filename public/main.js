@@ -127,7 +127,7 @@ Vue.component('bio', {
 Vue.component('photos', {
   template: `
     <div> 
-      <img v-bind:src="images[0]">
+      <img v-bind:src="images[selectedImageIndex]" id="single-photo">
     </div>
   `,
   data() {
