@@ -126,7 +126,8 @@ Vue.component('bio', {
 
 Vue.component('photos', {
   template: `
-    <div id="photos"> 
+    <div id="photos">
+      <button v-on:click="previousImage()">Previous image</button> 
       <img v-bind:src="images[selectedImageIndex]" id="single-photo">
       <button v-on:click="nextImage()">Next image</button>
     </div>
@@ -154,6 +155,10 @@ Vue.component('photos', {
       this.selectedImageIndex === (this.images.length - 1) ?
       this.selectedImageIndex = 0 :
       this.selectedImageIndex += 1;
+    },
+
+    previousImage() {
+      this.selectedImageIndex -= 1;
     }
   }
 })
