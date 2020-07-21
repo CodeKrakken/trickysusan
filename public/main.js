@@ -158,6 +158,8 @@ Vue.component('photos', {
     },
 
     previousImage() {
+      this.selectedImageIndex === 0 ?
+      this.selectedImageIndex = (this.images.length - 1) :
       this.selectedImageIndex -= 1;
     }
   }
