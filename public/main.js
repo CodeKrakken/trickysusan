@@ -128,9 +128,8 @@ Vue.component('photos', {
   template: `
   <div> 
     <div class="photos">
-      <span v-for="image in images">
-        <img v-bind:src="image" id="single-photo">
-      </span>
+      <v-attr="src: msg">
+      
     </div>
   </div>
   `,
@@ -148,7 +147,9 @@ Vue.component('photos', {
         'images/IMGP9985.jpg',
         'images/WaterRats.jpg',
         'images/IMGP9917.jpg',
-      ]
+      ],
+      selectedImageIndex: 0,
+      msg: "Work, you fucker"
     }
   }
 })
@@ -157,7 +158,7 @@ Vue.component('videos', {
   template: `
     <div>
       <span v-for="video in videos">
-          <source v-html="video.address" title="video.name" type="video/mp4">
+        <source v-html="video.address" title="video.name" type="video/mp4">
       </span>
     </div>
   `,
