@@ -128,6 +128,7 @@ Vue.component('photos', {
   template: `
     <div id="photos"> 
       <img v-bind:src="images[selectedImageIndex]" id="single-photo">
+      <button v-on:click="nextImage()">Next image</button>
     </div>
   `,
   data() {
@@ -146,6 +147,13 @@ Vue.component('photos', {
         'images/IMGP9917.jpg',
       ],
       selectedImageIndex: 0,
+    }
+  },
+  methods: {
+    nextImage() {
+      this.selectedImageIndex === (this.images.length - 1) ?
+      this.selectedImageIndex = 0 :
+      this.selectedImageIndex += 1;
     }
   }
 })
