@@ -110,3 +110,9 @@ body {
   top: 50%;
   left: 10%
 }
+
+#next-button {
+  position: absolute;
+  top: 50%;
+  right: 10%
+}
