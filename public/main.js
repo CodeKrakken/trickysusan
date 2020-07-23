@@ -195,6 +195,8 @@ Vue.component('videos', {
       this.selectedVideoIndex -= 1
     },
     nextVideo() {
+      this.selectedVideoIndex === (this.videos.length - 1) ?
+      this.selectedVideoIndex = 0 :
       this.selectedVideoIndex += 1
     }
   }
