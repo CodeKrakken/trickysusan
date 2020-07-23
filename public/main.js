@@ -62,8 +62,7 @@ Vue.component('news', {
     <div id="news">
       <div v-for="(post, index) in posts">
         <span :key="index">{{ post.date }}<br><br></span>
-        <span :key="index" v-html="post.text">
-        </span>
+        <span :key="index" v-html="post.text" />
       </div>
     </div>
   `,
@@ -261,7 +260,7 @@ var app = new Vue({
     </div>
    `,
    data: {
-     selectedTab: 'Videos',
+     selectedTab: 'News',
    },
    methods: {
      selectTab(tab) {
