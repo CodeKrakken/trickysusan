@@ -168,9 +168,7 @@ Vue.component('photos', {
 Vue.component('videos', {
   template: `
     <div>
-      <span v-for="video in videos">
-        <source v-html="video.address" title="video.name" type="video/mp4">
-      </span>
+      <span v-html="videos[selectedVideoIndex].address" />
     </div>
   `,
   data() {
@@ -184,12 +182,8 @@ Vue.component('videos', {
           name: "Tug of War",
           address: '<iframe width="560" height="315" src="https://www.youtube.com/embed/hm2jNxkG2ak" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
         }  
-      ]
-    }
-  },
-  computed: {
-    video(index) {
-      return this.videos(index)
+      ],
+      selectedVideoIndex: 0
     }
   }
 })
@@ -253,7 +247,7 @@ var app = new Vue({
     </div>
    `,
    data: {
-     selectedTab: 'Photos',
+     selectedTab: 'Videos',
    },
    methods: {
      selectTab(tab) {

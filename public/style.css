@@ -110,8 +110,6 @@ body {
   top: 50%;
   left: 10%;
   background-image: url("/images/previous-button.jpg");
-  height: 5%;
-  width: 5%;
   background-size: 100%
 }
 
@@ -120,6 +118,5 @@ body {
   top: 50%;
   right: 10%;
   background-image: url("/images/next-button.jpg");
-  height: 100px;
-  width: 100px;
+  background-size: 100%
 }
