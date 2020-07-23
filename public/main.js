@@ -170,7 +170,7 @@ Vue.component('videos', {
     <div>
       <button v-on:click="previousVideo()" id="previous-button" />
       <span v-html="videos[selectedVideoIndex].address" />
-      <button v:on-click="nextVideo()" id="next-button" />
+      <button v-on:click="nextVideo()" id="next-button" />
     </div>
   `,
   data() {
@@ -191,6 +191,9 @@ Vue.component('videos', {
   methods: {
     previousVideo() {
       this.selectedVideoIndex -= 1
+    },
+    nextVideo() {
+      this.selectedVideoIndex += 1
     }
   }
 })
