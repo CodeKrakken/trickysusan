@@ -168,7 +168,7 @@ Vue.component('photos', {
 Vue.component('videos', {
   template: `
     <div>
-      <button v-on:click="nextImage()" id="previous-button" />
+      <button v-on:click="previousVideo()" id="previous-button" />
       <span v-html="videos[selectedVideoIndex].address" />
     </div>
   `,
@@ -184,7 +184,12 @@ Vue.component('videos', {
           address: '<iframe width="560" height="315" src="https://www.youtube.com/embed/hm2jNxkG2ak" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
         }  
       ],
-      selectedVideoIndex: 0
+      selectedVideoIndex: 1
+    }
+  },
+  methods: {
+    previousVideo() {
+      this.selectedVideoIndex -= 1
     }
   }
 })
