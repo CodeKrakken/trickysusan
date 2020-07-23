@@ -168,6 +168,7 @@ Vue.component('photos', {
 Vue.component('videos', {
   template: `
     <div>
+      <button v-on:click="nextImage()" id="previous-button" />
       <span v-html="videos[selectedVideoIndex].address" />
     </div>
   `,
