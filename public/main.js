@@ -177,11 +177,11 @@ Vue.component('videos', {
       videos: [
         {
           name: "Strategy",
-          address: '<iframe height=50% width=50% src="https://www.youtube.com/embed/exggrODRu4w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+          address: '<iframe height=100% width=100% src="https://www.youtube.com/embed/exggrODRu4w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
         },
         {
           name: "Tug of War",
-          address: '<iframe height=50% width=50% src="https://www.youtube.com/embed/hm2jNxkG2ak" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+          address: '<iframe src="https://www.youtube.com/embed/hm2jNxkG2ak" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
         }  
       ],
       selectedVideoIndex: 0
