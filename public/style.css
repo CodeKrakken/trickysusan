@@ -120,3 +120,7 @@ body {
   background-image: url("/images/next-button.jpg");
   background-size: 100%
 }
+
+#single-video {
+  height: 10px
+}

@@ -169,7 +169,7 @@ Vue.component('videos', {
   template: `
     <div>
       <button v-on:click="previousVideo()" id="previous-button" />
-      <span v-html="videos[selectedVideoIndex].address" />
+      <span v-html="videos[selectedVideoIndex].address" id="single-video" />
       <button v-on:click="nextVideo()" id="next-button" />
     </div>
   `,
@@ -178,7 +178,7 @@ Vue.component('videos', {
       videos: [
         {
           name: "Strategy",
-          address: '<iframe width="560" height="315" src="https://www.youtube.com/embed/exggrODRu4w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+          address: '<iframe src="https://www.youtube.com/embed/exggrODRu4w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
         },
         {
           name: "Tug of War",
