@@ -58,8 +58,6 @@ body {
   align-items: center;
 }
 
-.center { text-align: center; }
-
 #socials {
   position: fixed;
   top: 0;
@@ -88,16 +86,12 @@ body {
   font-style: italic;
 }
 
-#photos {
-  text-align: center
-}
+.center { text-align: center }
+
+#photos { text-align: center }
 
 #single-photo {
   height: 100%;
-}
-
-#gig-content {
-  text-align: center
 }
 
 #gig-image {
@@ -119,8 +113,4 @@ body {
   right: 10%;
   background-image: url("/images/next-button.jpg");
   background-size: 100%
-}
-
-#single-video {
-  height: 10px
 }
