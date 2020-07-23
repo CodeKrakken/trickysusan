@@ -81,7 +81,7 @@ Vue.component('news', {
 Vue.component('gigs', {
   template: `
     <div class="center">
-      You will note the lack of people both on and off stage. As soon as this can be remedied, it shall be.<br>
+      You will note the lack of bodies both on and off stage. As soon as this can be remedied, it shall be.<br>
       <img src="/images/stage.jpg" id="gig-image"/>
     </div>
   `,
@@ -112,7 +112,7 @@ Vue.component('bio', {
         Camilla on vocals<br>
         Donald on guitar<br>
         John on bass<br>
-        Val on drums<br><br>
+        Val on drums
 
         <div id="quotes">
           "... I’ve seen deaf people cry at a Tricky Susan show ..."<br>
