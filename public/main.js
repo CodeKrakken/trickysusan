@@ -260,7 +260,7 @@ var app = new Vue({
     </div>
    `,
    data: {
-     selectedTab: 'Videos',
+     selectedTab: 'Photos',
    },
    methods: {
      selectTab(tab) {
@@ -273,7 +273,7 @@ var sandpit = new Vue({
   el: '#sandpit',
   template: `
     <div>
-      <nothing />
+      <photos />
     </div>
   `,
   data: {
