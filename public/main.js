@@ -168,7 +168,7 @@ Vue.component('videos', {
   template: `
     <div class="center">
       <button v-on:click="previousVideo()" id="previous-button" />
-      <span v-html="videos[selectedVideoIndex].address" id="single-video" />
+      <span v-html="videos[selectedVideoIndex].address" />
       <button v-on:click="nextVideo()" id="next-button" />
     </div>
   `,
@@ -177,7 +177,7 @@ Vue.component('videos', {
       videos: [
         {
           name: "Strategy",
-          address: '<iframe height=100% width=100% src="https://www.youtube.com/embed/exggrODRu4w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+          address: '<iframe height=450px width=800px src="https://www.youtube.com/embed/exggrODRu4w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
         },
         {
           name: "Tug of War",
@@ -260,7 +260,7 @@ var app = new Vue({
     </div>
    `,
    data: {
-     selectedTab: 'News',
+     selectedTab: 'Videos',
    },
    methods: {
      selectTab(tab) {
