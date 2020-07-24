@@ -79,6 +79,11 @@ body {
   height: 100%;
 }
 
+#single-video {
+  height: 450px; 
+  width: 800px
+}
+
 #gig-image {
   height: 30ch;
   padding-top: 3%
