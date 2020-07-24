@@ -87,20 +87,23 @@ iframe {
   padding-top: 3%
 }
 
-#previous-button {
-  position: absolute;
-  top: 50%;
-  left: 10%;
+#previous {
+  left: 15%;
   background-image: url("/images/previous-button.jpg");
-  background-size: 100%
 }
 
-#next-button {
-  position: absolute;
-  top: 50%;
-  right: 10%;
+#next {
+  right: 15%;
   background-image: url("/images/next-button.jpg");
-  background-size: 100%
+}
+
+button {
+  position: absolute;
+  top: 40%;
+  height: 20%;
+  width: 5%;
+  background-repeat: no-repeat;
+  background-size: 
 }
 
 #tabs {
