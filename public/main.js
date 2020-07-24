@@ -181,7 +181,7 @@ Vue.component('videos', {
         },
         {
           name: "Tug of War",
-          address: '<iframe src="https://www.youtube.com/embed/hm2jNxkG2ak" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+          address: '<iframe height=450px width=800px src="https://www.youtube.com/embed/hm2jNxkG2ak" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
         }  
       ],
       selectedVideoIndex: 0
