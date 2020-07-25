@@ -75,13 +75,11 @@ body {
 
 #single-photo {
   height: 63vh;
-  border: 1px dashed white
 }
 
 iframe {
   height: 63vh; 
   width: 64vw;
-  border: 1px dashed white
 }
 
 #gig-image {
@@ -101,14 +99,13 @@ iframe {
 
 button {
   position: absolute;
-  top: 40%;
+  top: 45%;
   height: 7.5%;
   width: 2.2%;
   background-repeat: no-repeat;
   background-size: contain;
   border: none;
   background-color: black;
-  border: 1px dashed white
 }
 
 #tabs {

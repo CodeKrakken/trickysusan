@@ -125,7 +125,7 @@ Vue.component('bio', {
 
 Vue.component('photos', {
   template: `
-    <div>
+    <div id="photos">
       <button v-on:click="previousImage()" id="previous" /> 
       <img v-bind:src="images[selectedImageIndex]" id="single-photo">
       <button v-on:click="nextImage()" id="next" />
@@ -166,10 +166,10 @@ Vue.component('photos', {
 
 Vue.component('videos', {
   template: `
-    <div class="center">
-      <button v-on:click="previousVideo()" id="previous-button" />
-      
-      <button v-on:click="nextVideo()" id="next-button" />
+    <div>
+      <button v-on:click="previousVideo()" id="previous" />
+      <span v-html="videos[selectedVideoIndex].address" />
+      <button v-on:click="nextVideo()" id="next" />
     </div>
   `,
   data() {
@@ -275,4 +275,5 @@ var app = new Vue({
 //     }
 //   }
 // })
+
 
