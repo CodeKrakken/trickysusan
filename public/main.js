@@ -125,7 +125,7 @@ Vue.component('bio', {
 
 Vue.component('photos', {
   template: `
-    <div id="photos">
+    <div>
       <button v-on:click="previousImage()" id="previous" /> 
       <img v-bind:src="images[selectedImageIndex]" id="single-photo">
       <button v-on:click="nextImage()" id="next" />
@@ -168,7 +168,7 @@ Vue.component('videos', {
   template: `
     <div class="center">
       <button v-on:click="previousVideo()" id="previous-button" />
-      <span v-html="videos[selectedVideoIndex].address" />
+      
       <button v-on:click="nextVideo()" id="next-button" />
     </div>
   `,
@@ -250,7 +250,7 @@ var app = new Vue({
     </div>
    `,
    data: {
-     selectedTab: 'Photos',
+     selectedTab: 'Videos',
    },
    methods: {
      selectTab(tab) {
@@ -259,20 +259,20 @@ var app = new Vue({
    }
 })
 
-var sandpit = new Vue({
-  el: '#sandpit',
-  template: `
-    <div>
-      <photos />
-    </div>
-  `,
-  data: {
-    selectedTab: 'Photos',
-  },
-  methods: {
-    selectTab(tab) {
-      this.selectedTab = tab
-    }
-  }
-})
+// var sandpit = new Vue({
+//   el: '#sandpit',
+//   template: `
+//     <div>
+//       <photos />
+//     </div>
+//   `,
+//   data: {
+//     selectedTab: 'Photos',
+//   },
+//   methods: {
+//     selectTab(tab) {
+//       this.selectedTab = tab
+//     }
+//   }
+// })
 

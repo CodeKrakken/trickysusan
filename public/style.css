@@ -74,12 +74,14 @@ body {
 .center { text-align: center }
 
 #single-photo {
-  height: 64vh
+  height: 63vh;
+  border: 1px dashed white
 }
 
 iframe {
-  height: 64vh; 
-  width: 64vw
+  height: 63vh; 
+  width: 64vw;
+  border: 1px dashed white
 }
 
 #gig-image {
@@ -106,6 +108,7 @@ button {
   background-size: contain;
   border: none;
   background-color: black;
+  border: 1px dashed white
 }
 
 #tabs {
