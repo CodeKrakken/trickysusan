@@ -100,11 +100,12 @@ iframe {
 button {
   position: absolute;
   top: 40%;
-  height: 16%;
+  height: 18%;
   width: 5%;
   background-repeat: no-repeat;
   background-size: 100%;
-  border: none
+  border: none;
+  background-color: black
 }
 
 #tabs {
