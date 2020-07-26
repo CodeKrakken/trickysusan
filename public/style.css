@@ -116,11 +116,11 @@ button:hover {
 
 #tabs {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   font-size: 150%;
   font-style: italic;
   height: 7%;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
@@ -131,7 +131,7 @@ button:hover {
 
 #tab {
   filter: brightness(50%);
-  width: fit-content
+  width: 100%;
 }
 
 #tab:hover {
