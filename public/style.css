@@ -80,6 +80,7 @@ body {
 iframe {
   height: 58vh; 
   width: 58vw;
+  margin-bottom: 1%
 }
 
 #gig-image {
@@ -125,11 +126,12 @@ button:hover {
   right: 0;
   background: black;
   align-items: center;
-  color: #00ffff;
+  color: rgb(0, 174, 239)
 }
 
 #tab {
   filter: brightness(50%);
+  width: fit-content
 }
 
 #tab:hover {

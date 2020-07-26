@@ -170,6 +170,9 @@ Vue.component('videos', {
       <button v-on:click="previousVideo()" id="previous" />
       <span v-html="videos[selectedVideoIndex].address" />
       <button v-on:click="nextVideo()" id="next" />
+      <div class="center">
+        "{{ videos[selectedVideoIndex].name }}"
+      </div>
     </div>
   `,
   data() {
@@ -213,20 +216,19 @@ Vue.component ('tabs', {
   template: `
     <div id="tabs">
       <span
-      id="tab"
       v-for="(tab, index) in tabs"
       @click="selectTab(tab)"
       :key="index"
-      >{{ tab }}</span>
+      ><div id="tab">{{ tab }}</div></span>
     </div>
   `,
   data() {
     return {
       tabs: [
         'News', 
-        'Gigs', 
-        'Bio', 
-        'Photos', 
+        'Gigs',
+        'Bio',
+        'Photos',
         'Videos'
       ],
     }
