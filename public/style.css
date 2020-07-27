@@ -116,7 +116,7 @@ button:hover {
 
 #tabs {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   font-size: 150%;
   font-style: italic;
   height: 7%;
@@ -137,4 +137,12 @@ button:hover {
 #tab:hover {
   cursor: pointer;
   filter: brightness(100%);
+}
+
+#email {
+  font-size: 200%
+}
+
+#contact {
+  font-size: 150%
 }

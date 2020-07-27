@@ -212,11 +212,17 @@ Vue.component('videos', {
 Vue.component('contact', {
   template: `
     <div class="center">
-      Wanna get in touch?
-      <br><br>
-      Hit us up on<br><br>
+
+      <div id="contact"> 
+        Wanna get in touch?
+        <br><br>
+        Hit us up on<br><br>
+      </div>
       
-      trickysusanband@gmail.com
+      <div id="email">
+        <a href="mailto:trickysusanband@gmail.com">trickysusanband@gmail.com</a>
+      </div>
+    
     </div>
   `
 })
