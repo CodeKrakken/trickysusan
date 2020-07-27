@@ -47,6 +47,7 @@ Vue.component('main-content', {
       <div v-show="selectedTab === 'Bio'"><bio /></div>
       <div v-show="selectedTab === 'Photos'"><photos /></div>
       <div v-show="selectedTab === 'Videos'"><videos /></div>
+      <div v-show="selectedTab === 'Contact'"><contact /></div>
     </div>
   `,
   props: {
@@ -208,6 +209,18 @@ Vue.component('videos', {
   }
 })
 
+Vue.component('contact', {
+  template: `
+    <div class="center">
+      Wanna get in touch?
+      <br><br>
+      Hit us up on<br><br>
+      
+      trickysusanband@gmail.com
+    </div>
+  `
+})
+
 Vue.component('player', {
   template: `
     <div>
@@ -233,7 +246,8 @@ Vue.component ('tabs', {
         'Gigs',
         'Bio',
         'Photos',
-        'Videos'
+        'Videos',
+        'Contact'
       ],
     }
   },
