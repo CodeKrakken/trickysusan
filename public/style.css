@@ -15,13 +15,12 @@ body {
 }
 
 #banner {
-  width: 95%;
-  max-height: 27%;
-  float: left;
   position: fixed;
   top: 0;
   left: 1%;
-  border-top: 15px solid black
+  border-top: 15px solid black;
+  height: 10%;
+  width: auto
 }
 
 #socials {
