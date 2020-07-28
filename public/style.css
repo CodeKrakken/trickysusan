@@ -85,7 +85,8 @@ iframe {
 
 #caption {
   text-align: center;
-  padding-top: 3%
+  padding-top: 3%;
+  font-size: 150%
 }
 
 #gig-image {
@@ -132,18 +133,21 @@ button:hover {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 50%
+  top: 30%;
+  left: 6%;
+  text-align: right
 }
 
 #tab {
-  filter: brightness(50%);
-  font-size: 150%;
+  filter: brightness(75%);
+  font-size: 200%;
   font-style: italic;
   background: black;
-  color: rgb(0, 174, 239)
+  color: rgb(0, 174, 239);
+  margin-bottom: 60%
 }
 
 #tab:hover {
   cursor: pointer;
-  filter: brightness(100%);
+  filter: brightness(125%);
 }
