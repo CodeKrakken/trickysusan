@@ -7,11 +7,12 @@
 
 body {
   color: white;
-  background: black;
+  background: url(images/stars.jpg);
   box-sizing: border-box;
   font-family: 'Odibee Sans';
   letter-spacing: 0.1em;
   cursor: default;
+  background-size: contain;
 }
 
 #banner {
