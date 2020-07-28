@@ -171,7 +171,7 @@ Vue.component('videos', {
       <button v-on:click="previousVideo()" id="previous" />
       <span v-html="videos[selectedVideoIndex].address" />
       <button v-on:click="nextVideo()" id="next" />
-      <div class="center">
+      <div id="caption">
         "{{ videos[selectedVideoIndex].name }}"
       </div>
     </div>

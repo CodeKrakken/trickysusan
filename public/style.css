@@ -83,9 +83,23 @@ iframe {
   margin-bottom: 1%
 }
 
+#caption {
+  text-align: center;
+  padding-top: 3%
+}
+
 #gig-image {
   height: 30ch;
   padding-top: 3%
+}
+
+
+#email {
+  font-size: 200%
+}
+
+#contact {
+  font-size: 150%
 }
 
 #previous {
@@ -132,12 +146,4 @@ button:hover {
 #tab:hover {
   cursor: pointer;
   filter: brightness(100%);
-}
-
-#email {
-  font-size: 200%
-}
-
-#contact {
-  font-size: 150%
 }
