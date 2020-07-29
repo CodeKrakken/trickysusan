@@ -269,6 +269,7 @@ var app = new Vue({
   el: '#app',
   template: `
     <div>
+      <div id="background" />
       <band-name />
       <socials />
       <main-content :selectedTab="selectedTab" />

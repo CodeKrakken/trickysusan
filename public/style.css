@@ -7,12 +7,22 @@
 
 body {
   color: white;
-  background: url(images/stars.jpg);
   box-sizing: border-box;
   font-family: 'Odibee Sans';
   letter-spacing: 0.1em;
   cursor: default;
-  background-size: contain;
+}
+
+#background {
+  background: url(images/stars.jpg);
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  filter: brightness(25%);
+  z-index: -10
 }
 
 #band-name {
