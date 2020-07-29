@@ -16,9 +16,8 @@ body {
 }
 
 #band-name {
-  position: fixed;
-  height: 10%;
-  width: auto
+  height: auto;
+  width: 10%
 }
 
 #socials {
