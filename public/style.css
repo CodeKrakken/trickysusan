@@ -128,9 +128,9 @@ button:hover {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 30%;
+  top: 20%;
   text-align: right;
-  background: black
+  background: black;
 }
 
 #tab {
