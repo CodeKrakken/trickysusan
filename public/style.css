@@ -15,11 +15,8 @@ body {
   background-size: contain;
 }
 
-#banner {
+#band-name {
   position: fixed;
-  top: 0;
-  left: 1%;
-  border-top: 15px solid black;
   height: 10%;
   width: auto
 }
@@ -36,6 +33,7 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   text-align: center;
+  background: black
 }
 
 #social {
@@ -84,14 +82,14 @@ iframe {
 #caption {
   text-align: center;
   padding-top: 3%;
-  font-size: 150%
+  font-size: 150%;
+  background: black
 }
 
 #gig-image {
   height: 30ch;
   padding-top: 3%
 }
-
 
 #email {
   font-size: 200%
@@ -132,8 +130,8 @@ button:hover {
   flex-direction: column;
   position: absolute;
   top: 30%;
-  left: 6%;
-  text-align: right
+  text-align: right;
+  background: black
 }
 
 #tab {

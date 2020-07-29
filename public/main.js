@@ -1,9 +1,9 @@
 Vue.config.devtools = true
 
-Vue.component ('banner', {
+Vue.component ('band-name', {
   template: `
     <div>
-      <img src="images/bandname.jpg" id="banner">
+      <img src="images/band-name.jpg" id="band-name">
     </div>
   `
 })
@@ -269,7 +269,7 @@ var app = new Vue({
   el: '#app',
   template: `
     <div>
-      <banner />
+      <band-name />
       <socials />
       <main-content :selectedTab="selectedTab" />
       <tabs @select-tab="selectTab" />
