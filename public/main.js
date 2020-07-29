@@ -1,5 +1,13 @@
 Vue.config.devtools = true
 
+Vue.component ('background', {
+  template: `
+  <div>
+    <div id="background">
+  </div>
+`
+})
+
 Vue.component ('band-name', {
   template: `
     <div>
@@ -269,7 +277,7 @@ var app = new Vue({
   el: '#app',
   template: `
     <div>
-      <div id="background" />
+      <background />
       <band-name />
       <socials />
       <main-content :selectedTab="selectedTab" />
