@@ -55,11 +55,11 @@ body {
 .main-content {
   text-align: justify;
   font-size: 150%;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
   position: absolute;
-  top: 28%;
-  bottom: 7%;
+  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
   display: flex;
@@ -142,7 +142,7 @@ button:hover {
 }
 
 #tab {
-  filter: brightness(75%);
+  filter: brightness(50%);
   font-size: 200%;
   font-style: italic;
   background: black;
@@ -152,5 +152,5 @@ button:hover {
 
 #tab:hover {
   cursor: pointer;
-  filter: brightness(125%);
+  filter: brightness(100%);
 }
