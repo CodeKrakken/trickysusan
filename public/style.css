@@ -87,10 +87,11 @@ iframe {
 }
 
 #caption {
-  text-align: center;
   padding-top: 3%;
   font-size: 150%;
-  background: black
+  background: black;
+  position: fixed;
+  margin: auto auto
 }
 
 #gig-image {
