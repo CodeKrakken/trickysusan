@@ -11,17 +11,17 @@ Vue.component ('background', {
 Vue.component ('band-name', {
   template: `
     <div>
-      <img src="images/band-name.jpg" id="band-name">
+      <img src="images/band-name.jpg" id="band-name" class="border">
     </div>
   `
 })
 
 Vue.component('socials', {
   template: `
-    <div id="socials">
+    <div id="socials" class="border">
       <span v-for="social in socials">
         <a :href="social.link" target="_blank">
-          <img v-bind:src="social.image" id="social">
+          <img v-bind:src="social.image" id="social" class="border">
         </a> 
       </span>
     </div>
@@ -48,7 +48,7 @@ Vue.component('socials', {
 
 Vue.component('main-content', {
   template: `
-    <div class="main-content">
+    <div class="main-content border">
       <div v-show="selectedTab === 'News'"><news /></div>
       <div v-show="selectedTab === 'Gigs'"><gigs /></div>
       <div v-show="selectedTab === 'Shop'"><shop /></div>
@@ -68,7 +68,7 @@ Vue.component('main-content', {
 
 Vue.component('news', {
   template: `
-    <div id="news">
+    <div id="news" class="border">
       <div v-for="(post, index) in posts">
         <span :key="index">{{ post.date }}<br><br></span>
         <span :key="index" v-html="post.text" />
@@ -89,7 +89,7 @@ Vue.component('news', {
 
 Vue.component('gigs', {
   template: `
-    <div class="center">
+    <div class="center border">
       You will note the lack of bodies both on and off stage. As soon as this can be remedied, it shall be.<br>
       <img src="/images/stage.jpg" id="gig-image"/>
     </div>
@@ -106,7 +106,7 @@ Vue.component('shop', {
 
 Vue.component('bio', {
   template: `
-    <div>
+    <div class="border">
       Tricky Susan are here to assault your taste buds with their attention-demanding rock ‘n’ roll. 
       A four-piece outfit formed in London and led by Camilla Summerskill, Tricky Susan are paving the way with their melodic, 
       hook-driven and beat-centric hits. On stage, their energy is hard to match. 
@@ -123,7 +123,7 @@ Vue.component('bio', {
         John on bass<br>
         Val on drums
 
-        <div id="quotes">
+        <div id="quotes" class="border">
           "... I’ve seen deaf people cry at a Tricky Susan show ..."<br>
           "... I’ve even seen a goose take a bump at one of their shows ..."
         </div>
@@ -134,9 +134,9 @@ Vue.component('bio', {
 
 Vue.component('photos', {
   template: `
-    <div id="photos">
+    <div id="photos" class="border">
       <button v-on:click="previousImage()" id="previous" /> 
-      <img v-bind:src="images[selectedImageIndex]" id="single-photo">
+      <img v-bind:src="images[selectedImageIndex]" id="single-photo" class="border">
       <button v-on:click="nextImage()" id="next" />
     </div>
   `,
@@ -176,10 +176,10 @@ Vue.component('photos', {
 Vue.component('videos', {
   template: `
     <div>
-      <button v-on:click="previousVideo()" id="previous" />
+      <button v-on:click="previousVideo()" id="previous" class="border"/>
       <span v-html="videos[selectedVideoIndex].address" />
-      <button v-on:click="nextVideo()" id="next" />
-      <div id="caption">
+      <button v-on:click="nextVideo()" id="next" class="border"/>
+      <div id="caption" class="border">
         "{{ videos[selectedVideoIndex].name }}"
       </div>
     </div>
@@ -219,15 +219,15 @@ Vue.component('videos', {
 
 Vue.component('contact', {
   template: `
-    <div class="center">
+    <div class="center" class="border">
 
-      <div id="contact"> 
+      <div id="contact" class="border"> 
         Wanna get in touch?
         <br><br>
         Hit us up on<br><br>
       </div>
       
-      <div id="email">
+      <div id="email" class="border">
         <a href="mailto:trickysusanband@gmail.com">trickysusanband@gmail.com</a>
       </div>
     
@@ -245,12 +245,12 @@ Vue.component('player', {
 
 Vue.component ('tabs', {
   template: `
-    <div id="tabs">
+    <div id="tabs" class="border">
       <span
       v-for="(tab, index) in tabs"
       @click="selectTab(tab)"
       :key="index"
-      ><div id="tab">{{ tab }}</div></span>
+      ><div id="tab" class="border">{{ tab }}</div></span>
     </div>
   `,
   data() {
