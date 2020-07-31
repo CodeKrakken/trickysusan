@@ -82,12 +82,11 @@ body {
 }
 
 iframe {
-  height: 57vh; 
-  width: 57vw;
+  height: 77vh; 
+  width: 77vw;
 }
 
 #caption {
-  padding-top: 3%;
   font-size: 150%;
   background: black;
   text-align: center;
