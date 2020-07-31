@@ -90,7 +90,10 @@ iframe {
   padding-top: 3%;
   font-size: 150%;
   background: black;
-  position: fixed;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
   margin: auto auto
 }
 
