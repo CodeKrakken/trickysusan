@@ -138,9 +138,12 @@ Vue.component('bio', {
 Vue.component('photos', {
   template: `
     <div id="photos" class="border">
-      <button v-on:click="previousImage()" id="previous" /> 
       <img v-bind:src="images[selectedImageIndex]" id="single-photo" class="border">
-      <button v-on:click="nextImage()" id="next" />
+      <div id="video-navigator">
+        <button v-on:click="previousImage()" id="previous" />
+        <div id="caption" />
+        <button v-on:click="nextImage()" id="next" />
+      </div>
     </div>
   `,
   data() {
@@ -290,7 +293,7 @@ var app = new Vue({
     </div>
    `,
    data: {
-     selectedTab: 'Videos',
+     selectedTab: 'Photos',
    },
    methods: {
      selectTab(tab) {
