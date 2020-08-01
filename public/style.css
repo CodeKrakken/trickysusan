@@ -29,8 +29,8 @@ body {
   height: auto;
   width: 10%;
 }
-
-/* .border {
+/* 
+.border {
   border: 1px dashed white;
 } */
 
@@ -82,15 +82,18 @@ iframe {
 
 #video-navigator {
   display: flex;
-  justify-content: space-evenly;
-  margin-top: 1%;
+  margin-top: 2%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  justify-content: center
 }
 
 #caption {
   font-size: 150%;
   background: black;
   width: 25%;
-  text-align: center
+  text-align: center;
 }
 
 #gig-image {
@@ -119,7 +122,6 @@ iframe {
 button {
   height: 4.7vh;
   width: 2.2vw;
-  margin-top: 1%;
   background-repeat: no-repeat;
   background-size: contain;
   background-color: black;
