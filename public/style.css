@@ -35,7 +35,7 @@ body {
 } */
 
 #social {
-  width: 50%;
+  width: 25%;
   filter: grayscale(100%);
 }
 
@@ -75,8 +75,8 @@ body {
 }
 
 iframe {
-  height: 57vh; 
-  width: 57vw;
+  height: 60vh; 
+  width: 60vw;
 }
 
 #caption {
@@ -115,7 +115,7 @@ iframe {
 button {
   position: absolute;
   top: 45%;
-  height: 7.5%;
+  height: 4.7%;
   width: 2.2%;
   background-repeat: no-repeat;
   background-size: contain;
@@ -145,7 +145,7 @@ button:hover {
   top: 20%;
   bottom: 20%;
   right: 0;
-  width: 5%;
+  width: 10%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
