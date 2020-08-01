@@ -150,7 +150,8 @@ button:hover {
   flex-direction: column;
   justify-content: space-evenly;
   text-align: center;
-  background: black
+  background: black;
+  z-index: 1
 }
 
 #tab {
