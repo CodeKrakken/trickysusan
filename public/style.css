@@ -79,13 +79,16 @@ iframe {
   width: 60vw;
 }
 
+#video-navigator {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1%;
+}
+
 #caption {
   font-size: 150%;
   background: black;
-  position: absolute;
-  top: 85%;
-  left: 0;
-  right: 0;
+  width: 25%;
   text-align: center
 }
 
@@ -113,15 +116,14 @@ iframe {
 }
 
 button {
-  position: absolute;
-  top: 45%;
-  height: 4.7%;
-  width: 2.2%;
+  height: 4.7vh;
+  width: 2.2vw;
+  margin-top: 1%;
   background-repeat: no-repeat;
   background-size: contain;
-  border: none;
   background-color: black;
   filter: brightness(50%);
+  border: none
 }
 
 button:hover {
