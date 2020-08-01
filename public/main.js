@@ -227,7 +227,7 @@ Vue.component('videos', {
 
 Vue.component('contact', {
   template: `
-    <div class="center" class="border">
+    <div class="border">
 
       <div id="contact" class="border"> 
         Wanna get in touch?

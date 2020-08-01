@@ -112,7 +112,8 @@ iframe {
 }
 
 #contact {
-  font-size: 150%
+  font-size: 150%;
+  text-align: center
 }
 
 #previous {
