@@ -90,8 +90,11 @@ Vue.component('news', {
 Vue.component('gigs', {
   template: `
     <div class="center border">
-      You will note the lack of bodies both on and off stage. As soon as this can be remedied, it shall be.<br>
-      <img src="/images/stage.jpg" id="gig-image"/>
+      <img src="/images/stage.jpg" id="gig-image"/><br><br>
+      <div id="gig-caption">
+        You will note the lack of bodies both on and off stage.<br>
+        As soon as this can be remedied, it shall be.
+      </div>
     </div>
   `,
 })

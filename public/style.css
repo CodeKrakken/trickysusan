@@ -97,8 +97,14 @@ iframe {
 }
 
 #gig-image {
-  height: 30ch;
-  padding-top: 3%
+  height: 75vh
+}
+
+#gig-caption {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0
 }
 
 #email {
