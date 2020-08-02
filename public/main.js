@@ -227,21 +227,94 @@ Vue.component('videos', {
 
 Vue.component('contact', {
   template: `
-    <div class="border">
-
-      <div id="contact" class="border"> 
-        Wanna get in touch?
-        <br><br>
-        Hit us up on<br><br>
-      </div>
-      
-      <div id="email" class="border">
-        <a href="mailto:trickysusanband@gmail.com">trickysusanband@gmail.com</a>
-      </div>
+    <div>
+      <div class="fcf-body">
     
+        <div id="fcf-form">
+        <h3 class="fcf-h3">Contact us</h3>
+    
+        <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+            
+            <div class="fcf-form-group">
+                <label for="Name" class="fcf-label">Your name</label>
+                <div class="fcf-input-group">
+                    <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+                </div>
+            </div>
+    
+            <div class="fcf-form-group">
+                <label for="Email" class="fcf-label">Your email address</label>
+                <div class="fcf-input-group">
+                    <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+                </div>
+            </div>
+    
+            <div class="fcf-form-group">
+                <label for="Message" class="fcf-label">Your message</label>
+                <div class="fcf-input-group">
+                    <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+                </div>
+            </div>
+    
+            <div class="fcf-form-group">
+                <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
+            </div>
+    
+            <div class="fcf-credit" id="fcf-credit">
+            Simple HTML email form provided by: <a href="https://www.freecontactform.com" target="_blank">FreeContactForm.com</a>
+            </div>
+    
+          </form>
+        </div>
+      </div>
     </div>
-  `
+  `,
+  data() {
+    return {
+      name: '',
+      email: '',
+      errors: {
+        name: false,
+        email: false
+      }
+    }
+  },
+  methods: {
+    processForm: function() {
+      console.log({ name: this.name, email: this.email });
+      alert('Processing!');
+    },
+    validateEmail: function() {
+      const isValid = window.isValidEmail(this.email)
+
+      console.log(isValid);
+      this.errors.email = !isValid;
+    }
+  }
 })
+
+function isValidEmail(email) {
+  var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1-3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
+
+// Vue.component('contact-old', {
+//   template: `
+//     <div class="border">
+
+//       <div id="contact" class="border"> 
+//         Wanna get in touch?
+//         <br><br>
+//         Hit us up on<br><br>
+//       </div>
+      
+//       <div id="email" class="border">
+//         <a href="mailto:trickysusanband@gmail.com">trickysusanband@gmail.com</a>
+//       </div>
+    
+//     </div>
+//   `
+// })
 
 Vue.component('player', {
   template: `
@@ -293,7 +366,7 @@ var app = new Vue({
     </div>
    `,
    data: {
-     selectedTab: 'Photos',
+     selectedTab: 'Contact',
    },
    methods: {
      selectTab(tab) {
