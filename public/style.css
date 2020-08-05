@@ -171,7 +171,7 @@ button:hover {
   font-size: 200%;
   font-style: italic;
   background: black;
-  color: rgb(0, 174, 239);
+  color: yellow /* rgb(0, 174, 239); */
 }
 
 #tab:hover {
