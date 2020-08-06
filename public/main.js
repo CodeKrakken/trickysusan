@@ -55,7 +55,7 @@ Vue.component('main-content', {
       <div v-show="selectedTab === 'Bio'"><bio /></div>
       <div v-show="selectedTab === 'Photos'"><photos /></div>
       <div v-show="selectedTab === 'Videos'"><videos /></div>
-      <div v-show="selectedTab === 'Contact'"><contact /></div>
+      <div v-show="selectedTab === 'Contact'"><contact-old /></div>
     </div>
   `,
   props: {
@@ -298,23 +298,23 @@ function isValidEmail(email) {
   return re.test(email);
 }
 
-// Vue.component('contact-old', {
-//   template: `
-//     <div class="border">
+Vue.component('contact-old', {
+  template: `
+    <div class="border">
 
-//       <div id="contact" class="border"> 
-//         Wanna get in touch?
-//         <br><br>
-//         Hit us up on<br><br>
-//       </div>
+      <div id="contact" class="border"> 
+        Wanna get in touch?
+        <br><br>
+        Hit us up on<br><br>
+      </div>
       
-//       <div id="email" class="border">
-//         <a href="mailto:trickysusanband@gmail.com">trickysusanband@gmail.com</a>
-//       </div>
+      <div id="email" class="border">
+        <a href="mailto:trickysusanband@gmail.com">trickysusanband@gmail.com</a>
+      </div>
     
-//     </div>
-//   `
-// })
+    </div>
+  `
+})
 
 Vue.component('player', {
   template: `
