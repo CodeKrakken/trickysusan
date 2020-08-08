@@ -6,7 +6,8 @@
     "symfony/twig-bridge": "^3",
     "alrik11es/cowsayphp": "^1.2",
     "csanquer/pdo-service-provider": "~1.1dev",
-    "sendgrid/sendgrid": "~5.0.9"
+    "sendgrid/sendgrid": "~5.0.9",
+    "phpmailer/phpmailer": "~6.1"
   },
   "require-dev": {
     "heroku/heroku-buildpack-php": "*"
