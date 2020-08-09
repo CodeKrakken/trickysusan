@@ -1,6 +1,9 @@
 require('dotenv').config()
+const bodyParser = require('body-parser');
+const exphbs = require('express-handlebars');
 const cors = require('cors');
 const express = require('express');
+const nodemailer = require('nodemailer');
 const app = express();
 const path = require('path');
  
@@ -13,7 +16,11 @@ app.get('/', (req, res) => {
 });
  
 app.listen((process.env.PORT || 3000), () =>
-console.log(`Example listening on ${(process.env.PORT || '3000')}!`),
+console.log(`Listening on ${(process.env.PORT || '3000')}!`),
 );
-console.log('Hello Endless Project.');
-console.log(process.env.MY_SECRET);
+
+app.engine('handlebars', exphbs());
+app.set('view engine', 'handlebars');
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
