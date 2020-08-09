@@ -233,7 +233,7 @@ Vue.component('contact', {
         <div id="fcf-form">
         <h3 class="fcf-h3">Contact us</h3>
     
-        <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process-2.php">
+        <form id="fcf-form-id" class="fcf-form-class" method="get" action="index.html">
             
             <div class="fcf-form-group">
                 <label for="Name" class="fcf-label">Your name</label>
