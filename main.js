@@ -36,7 +36,7 @@ app.post('/send', (req, res) => {
     secure: false,
     auth: {
       user: 'apikey', 
-      pass: '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'
+      pass: process.env.API_KEY
     },
     tls:{
       rejectUnauthorized:false
