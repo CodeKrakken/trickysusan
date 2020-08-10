@@ -174,3 +174,22 @@ iframe {
   cursor: pointer;
   filter: brightness(100%);
 }
+
+::-moz-placeholder { 
+  font-family: 'Odibee Sans';
+  letter-spacing: 0.03em;
+  font-style: italic;
+  font-size: 150%
+}
+
+#submit-button {
+  font-family: 'Odibee Sans';
+  letter-spacing: 0.03em;
+  font-size: 100%
+}
+
+#message-box {
+  width: 40vw;
+  height: 20vw;
+  /* align-self: center */
+}
