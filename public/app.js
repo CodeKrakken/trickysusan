@@ -228,7 +228,7 @@ Vue.component('videos', {
 Vue.component('contact', {
   template: `
     <div class="center">
-      <h3>Contact</h3>
+      <h1>Contact</h1>
       <form method="POST" action="send">
         <p><input type="text" name="name" placeholder="name"></p>
         <p><input type="email" name="email" placeholder="email"></p>
