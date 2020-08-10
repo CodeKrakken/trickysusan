@@ -45,7 +45,7 @@ app.post('/send', (req, res) => {
 
   let mailOptions = {
     from: '"Nodemailer Contact" <newholm1@hotmail.com>',
-    to: 'donaldnewholmiii@gmail.com, newholm1@hotmail.com',
+    to: 'newholm1@hotmail.com, donaldnewholmiii@gmail.com',
     subject: "Node",
     text: "Hello world?",
     html: output
