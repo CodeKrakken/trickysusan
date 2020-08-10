@@ -179,7 +179,7 @@ iframe {
   font-family: 'Odibee Sans';
   letter-spacing: 0.03em;
   font-style: italic;
-  font-size: 150%
+  font-size: 150%;
 }
 
 #submit-button {
@@ -189,7 +189,8 @@ iframe {
 }
 
 #message-box {
-  width: 40vw;
-  height: 20vw;
-  /* align-self: center */
+  width: 30vw;
+  height: 30vh;
 }
+
+.contact-info { width: 30vw }
