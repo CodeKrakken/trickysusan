@@ -11,17 +11,17 @@ Vue.component ('background', {
 Vue.component ('band-name', {
   template: `
     <div>
-      <img src="images/band-name.jpg" id="band-name" class="border">
+      <img src="images/band-name.jpg" id="band-name">
     </div>
   `
 })
 
 Vue.component('socials', {
   template: `
-    <div id="socials" class="border">
+    <div id="socials">
       <span v-for="social in socials">
         <a :href="social.link" target="_blank">
-          <img v-bind:src="social.image" id="social" class="border">
+          <img v-bind:src="social.image" id="social">
         </a> 
       </span>
     </div>
@@ -68,7 +68,7 @@ Vue.component('main-content', {
 
 Vue.component('news', {
   template: `
-    <div id="news" class="border">
+    <div id="news">
       <div v-for="(post, index) in posts">
         <span :key="index">{{ post.date }}<br><br></span>
         <span :key="index" v-html="post.text" />
@@ -109,7 +109,7 @@ Vue.component('shop', {
 
 Vue.component('bio', {
   template: `
-    <div class="border">
+    <div>
       Tricky Susan are here to assault your taste buds with their attention-demanding rock ‘n’ roll. 
       A four-piece outfit formed in London and led by Camilla Summerskill, Tricky Susan are paving the way with their melodic, 
       hook-driven and beat-centric hits. On stage, their energy is hard to match. 
@@ -126,7 +126,7 @@ Vue.component('bio', {
         John on bass<br>
         Val on drums
 
-        <div id="quotes" class="border">
+        <div id="quotes">
           "... I’ve seen deaf people cry at a Tricky Susan show ..."<br>
           "... I’ve even seen a goose take a bump at one of their shows ..."
         </div>
@@ -137,12 +137,12 @@ Vue.component('bio', {
 
 Vue.component('photos', {
   template: `
-    <div id="photos" class="border">
-      <img v-bind:src="images[selectedImageIndex]" id="single-photo" class="border">
+    <div id="photos">
+      <img v-bind:src="images[selectedImageIndex]" id="single-photo">
       <div id="video-navigator">
-        <button v-on:click="previousImage()" id="previous" />
+        <button v-on:click="previousImage()" class="nav-button" id="previous" />
         <div id="caption" />
-        <button v-on:click="nextImage()" id="next" />
+        <button v-on:click="nextImage()" class="nav-button" id="next" />
       </div>
     </div>
   `,
@@ -182,13 +182,13 @@ Vue.component('photos', {
 Vue.component('videos', {
   template: `
     <div>
-      <span v-html="videos[selectedVideoIndex].address" class="border"/>
+      <span v-html="videos[selectedVideoIndex].address" />
       <div id="video-navigator">
-        <button v-on:click="previousVideo()" id="previous" class="border"/>     
-        <div id="caption" class="border">
+        <button v-on:click="previousVideo()" id="previous" class="border nav-button"/>     
+        <div id="caption">
           "{{ videos[selectedVideoIndex].name }}"
         </div>
-        <button v-on:click="nextVideo()" id="next" class="border"/>
+        <button v-on:click="nextVideo()" id="next" class="border nav-button"/>
       </div>
     </div>
   `,
@@ -227,7 +227,7 @@ Vue.component('videos', {
 
 Vue.component('contact', {
   template: `
-    <div>
+    <div class="center">
       <h3>Contact</h3>
       <form method="POST" action="send">
         <p><input type="text" name="name" placeholder="name"></p>
@@ -261,29 +261,6 @@ Vue.component('contact', {
   }
 })
 
-function isValidEmail(email) {
-  var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1-3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return re.test(email);
-}
-
-Vue.component('contact-old', {
-  template: `
-    <div class="border">
-
-      <div id="contact" class="border"> 
-        Wanna get in touch?
-        <br><br>
-        Hit us up on<br><br>
-      </div>
-      
-      <div id="email" class="border">
-        <a href="mailto:trickysusanband@gmail.com">trickysusanband@gmail.com</a>
-      </div>
-    
-    </div>
-  `
-})
-
 Vue.component('player', {
   template: `
     <div>
@@ -294,12 +271,12 @@ Vue.component('player', {
 
 Vue.component ('tabs', {
   template: `
-    <div id="tabs" class="border">
+    <div id="tabs">
       <span
       v-for="(tab, index) in tabs"
       @click="selectTab(tab)"
       :key="index"
-      ><div id="tab" class="border">{{ tab }}</div></span>
+      ><div id="tab">{{ tab }}</div></span>
     </div>
   `,
   data() {
@@ -342,22 +319,3 @@ var app = new Vue({
      }
    }
 })
-
-// var sandpit = new Vue({
-//   el: '#sandpit',
-//   template: `
-//     <div>
-//       <photos />
-//     </div>
-//   `,
-//   data: {
-//     selectedTab: 'Photos',
-//   },
-//   methods: {
-//     selectTab(tab) {
-//       this.selectedTab = tab
-//     }
-//   }
-// })
-
-
