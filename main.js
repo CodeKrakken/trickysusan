@@ -25,16 +25,9 @@ app.get('/', (req, res) => {
 
 app.post('/send', (req, res) => {
   const output = `
-    <p>You have a new contact request</p>
-    <h3>Contact Details</h3>
-    <ul>
-    <li>Name: ${req.body.name}</li>
-    <li>Company: ${req.body.company}</li>
-    <li>Email: ${req.body.email}</li>
-    <li>Phone: ${req.body.phone}</li>
-    </ul>
-    <h3>Message</h3>
+    <p>You have received a new message via tricky-susan.herokuapp.com</p>
     <p>${req.body.message}</p>
+    <p>${req.body.name}, ${req.body.email}</p>
   `;
 
   let transporter = nodemailer.createTransport({
@@ -72,6 +65,3 @@ app.post('/send', (req, res) => {
 app.listen((process.env.PORT || 3000), () =>
 console.log(`Listening on ${(process.env.PORT || '3000')}!`),
 );
-
-
-
