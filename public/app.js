@@ -234,6 +234,7 @@ Vue.component('contact', {
         <p><input class="contact-info" type="email" name="email" placeholder="email"></p>
         <p><textarea id="message-box" name="message" rows="6" placeholder="What's going down, Charlie Brown?"></textarea></p>
         <p><button id="submit-button" type="submit">Done</button></p>
+
       </form>
     </div>
   `,

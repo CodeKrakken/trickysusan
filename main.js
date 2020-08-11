@@ -14,7 +14,6 @@ app.set('view engine', 'handlebars');
 app.use(cors());
 
 app.use(express.static(__dirname + '/public'));
-// app.use('/public', express.static(path.join(__dirname, 'public')));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -45,7 +44,7 @@ app.post('/send', (req, res) => {
 
   let mailOptions = {
     from: '"Nodemailer Contact" <newholm1@hotmail.com>',
-    to: 'newholm1@hotmail.com, donaldnewholmiii@gmail.com',
+    to: 'donaldnewholmiii@gmail.com',
     subject: "Node",
     text: "Hello world?",
     html: output
@@ -58,7 +57,7 @@ app.post('/send', (req, res) => {
     console.log('Messsage sent: %s', info.messageId)
     console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
 
-    res.sendFile(path.join(__dirname + '/public/index.html'))
+    res.sendFile(path.join(__dirname + '/public/index.html'), {msg:'Message Sent.'});
   })
 });
  
