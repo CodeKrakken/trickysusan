@@ -58,7 +58,7 @@ app.post('/send', (req, res) => {
     console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
 
     // res.sendFile(path.join(__dirname + '/public/index.html'))
-    res.render('layouts/main', {msg:'Message Sent.'});
+    res.render('layouts/main');
   })
 });
  
