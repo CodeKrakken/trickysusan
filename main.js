@@ -56,8 +56,9 @@ app.post('/send', (req, res) => {
     }
     console.log('Messsage sent: %s', info.messageId)
     console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-
-    // res.sendFile(path.join(__dirname + '/public/index.html'))
+    console.log(process.env.VUE_APP_MESSAGE_SENT)
+    process.env.VUE_APP_MESSAGE_SENT=true
+    console.log(process.env.VUE_APP_MESSAGE_SENT)
     res.render('layouts/main');
   })
 });

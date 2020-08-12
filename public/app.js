@@ -245,7 +245,7 @@ Vue.component('contact', {
       errors: {
         name: false,
         email: false
-      }
+      },
     }
   },
   methods: {
