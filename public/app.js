@@ -319,19 +319,13 @@ var app = new Vue({
       <main-content :selectedTab="selectedTab" />
       <tabs @select-tab="selectTab" />
     </div>
-   `,
-   data: {
-     selectedTab: 'Contact',
-   },
-   methods: {
-     selectTab(tab) {
-       this.selectedTab = tab
-     }
-   },
-   props: {
-     msg: {
-       type: Boolean,
-       required: true
-     }
-   }
+  `,
+  data: {
+    selectedTab: 'Contact',
+    msg: window.msg
+  },   
+  methods: {
+    selectTab(tab) {
+    this.selectedTab = tab     }
+  }
 })

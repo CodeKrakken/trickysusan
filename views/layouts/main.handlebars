@@ -5,12 +5,15 @@
     <meta charset="utf-8">
     <title>Tricky Susan</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+      window.msg = {{json msg}}
+    </script>
   </head>
 
   <body>
-
-    <div id="app" :msg="msg" />
-
+    {{ msg }}
+    <div id="app" />
+    
     <script src="vue.js"></script>
     <script src="app.js"></script>
   </body>

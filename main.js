@@ -8,7 +8,16 @@ const path = require('path');
 
 const app = express();
  
-app.engine('handlebars', exphbs());
+app.engine('handlebars', exphbs({
+  helpers: {
+    json: function (value) {
+      return JSON.stringify(value);
+    }
+  },
+  partialsDir: ['views/partials/'],
+  defaultLayout: 'main'
+}));
+
 app.set('view engine', 'handlebars');
 
 app.use(cors());
@@ -59,7 +68,7 @@ app.post('/send', (req, res) => {
     res.render('layouts/main', { msg: true });
   })
 });
- 
+
 app.listen((process.env.PORT || 3000), () =>
 console.log(`Listening on ${(process.env.PORT || '3000')}!`),
 );
