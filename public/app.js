@@ -62,6 +62,10 @@ Vue.component('main-content', {
     selectedTab: {
       type: String,
       required: true
+    },
+    msg: {
+      type: Boolean,
+      required: true
     }
   }
 })
@@ -234,7 +238,6 @@ Vue.component('contact', {
         <p><input class="contact-info" type="email" name="email" placeholder="email"></p>
         <p><textarea id="message-box" name="message" rows="6" placeholder="What's going down, Charlie Brown?"></textarea></p>
         <p><button id="submit-button" type="submit">Done</button></p>
-
       </form>
     </div>
   `,
@@ -258,6 +261,12 @@ Vue.component('contact', {
 
       console.log(isValid);
       this.errors.email = !isValid;
+    }
+  },
+  props: {
+    msg: {
+      type: Boolean,
+      required: true
     }
   }
 })
@@ -317,6 +326,12 @@ var app = new Vue({
    methods: {
      selectTab(tab) {
        this.selectedTab = tab
+     }
+   },
+   props: {
+     msg: {
+       type: Boolean,
+       required: true
      }
    }
 })

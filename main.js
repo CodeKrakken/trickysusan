@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
-  res.render('layouts/main')
+  res.render('layouts/main', { msg: false })
 });
 
 app.post('/send', (req, res) => {
@@ -56,10 +56,7 @@ app.post('/send', (req, res) => {
     }
     console.log('Messsage sent: %s', info.messageId)
     console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-    console.log(process.env.VUE_APP_MESSAGE_SENT)
-    process.env.VUE_APP_MESSAGE_SENT=true
-    console.log(process.env.VUE_APP_MESSAGE_SENT)
-    res.render('layouts/main');
+    res.render('layouts/main', { msg: true });
   })
 });
  
