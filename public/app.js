@@ -233,7 +233,7 @@ Vue.component('contact', {
   template: `
     <div class="center">
       <h1>Contact</h1>
-      <form method="POST" action="send">
+      <form method="POST" action="/">
         <p><input class="contact-info" type="text" name="name" placeholder="name"></p>
         <p><input class="contact-info" type="email" name="email" placeholder="email"></p>
         <p><textarea id="message-box" name="message" rows="6" placeholder="What's going down, Charlie Brown?"></textarea></p>

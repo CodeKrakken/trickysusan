@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
   res.render('layouts/main', { msg: false })
 });
 
-app.post('/send', (req, res) => {
+app.post('/', (req, res) => {
   const output = `
     <p>You have received a new message via tricky-susan.herokuapp.com</p>
     <p>${req.body.message}</p>
