@@ -215,3 +215,11 @@ iframe {
 }
 
 .contact-info { width: 30vw }
+
+#message-sent {
+  position: absolute;
+  top: 90%;
+  left: 0;
+  right: 0;
+  margin: auto
+}
