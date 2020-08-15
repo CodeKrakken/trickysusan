@@ -1,5 +1,7 @@
 Vue.config.devtools = true
 
+$(document).ready(function(){
+
 Vue.component ('background', {
   template: `
   <div>
@@ -329,4 +331,5 @@ var app = new Vue({
     selectTab(tab) {
     this.selectedTab = tab     }
   }
+})
 })
