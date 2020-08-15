@@ -2,6 +2,10 @@ Vue.config.devtools = true
 
 $(document).ready(function(){
 
+  $("button").click(function() {
+    $("p").hide();
+  });
+
 Vue.component ('background', {
   template: `
   <div>
@@ -64,10 +68,6 @@ Vue.component('main-content', {
     selectedTab: {
       type: String,
       required: true
-    },
-    msg: {
-      type: Boolean,
-      required: true
     }
   }
 })
@@ -105,23 +105,14 @@ Vue.component('gigs', {
   `,
 })
 
-Vue.component('shop', {
-  template: `
-    <div>
-      We would have a single for sale, but ... y'know
-    </div>
-  `
-})
-
 Vue.component('bio', {
   template: `
     <div>
       Tricky Susan are here to assault your taste buds with their attention-demanding rock ‘n’ roll. 
-      A four-piece outfit formed in London and led by Camilla Summerskill, Tricky Susan are paving the way with their melodic, 
-      hook-driven and beat-centric hits. On stage, their energy is hard to match. 
-      On record, their hunger to tell you their story inescapable.
-      <br><br>
-      They don’t do tired. They do do melodies. They don’t follow crowds. They do like crowds. They HATE pretentiousness. 
+      A four-piece outfit formed in London and led by Camilla Summerskill, Tricky Susan are paving the
+      way with their melodic, hook-driven and beat-centric hits. On stage, their energy is hard to match. 
+      On record, their hunger to tell you their story inescapable.<br><br>They don’t do tired. They 
+      do do melodies. They don’t follow crowds. They do like crowds. They HATE pretentiousness. 
       But they adore profundity ... They fi ... 
       <br><br>
       <div class="center">
@@ -240,44 +231,31 @@ Vue.component('contact', {
         <p><input class="contact-info" type="email" name="email" placeholder="email"></p>
         <p><textarea id="message-box" name="message" rows="6" placeholder="What's going down, Charlie Brown?"></textarea></p>
         <p><button id="submit-button" type="submit">Done</button></p>
-        <span id="message-sent" v-if="window.msg === true">Message Sent.</span>
+        <span id="message-sent" v-if="window.messageSent === true">Message Sent.</span>
       </form>
     </div>
-  `,
-  data() {
-    return {
-      name: '',
-      email: '',
-      errors: {
-        name: false,
-        email: false
-      },
-    }
-  },
-  methods: {
-    processForm: function() {
-      console.log({ name: this.name, email: this.email });
-      alert('Processing!');
-    },
-    validateEmail: function() {
-      const isValid = window.isValidEmail(this.email)
-
-      console.log(isValid);
-      this.errors.email = !isValid;
-    }
-  },
-  props: {
-    msg: {
-      type: Boolean,
-      required: true
-    }
-  }
+  `
 })
 
 Vue.component('player', {
   template: `
     <div>
-      <iframe scrolling="no" height=300 frameborder="yes" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1040292169%3Fsecret_token%3Ds-CcynywUems9&color=%2382d5e8&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/trickysusan" title="Tricky Susan" target="_blank" style="color: #cccccc; text-decoration: none;">Tricky Susan</a> · <a href="https://soundcloud.com/trickysusan/sets/website/s-CcynywUems9" title="Website" target="_blank" style="color: #cccccc; text-decoration: none;">Website</a></div>
+      <iframe scrolling="no" height=300 frameborder="yes" \
+      src="https://w.soundcloud.com/player/?url=https%3A//api.\
+      soundcloud.com/playlists/1040292169%3Fsecret_token%3Ds-\
+      CcynywUems9&color=%2382d5e8&auto_play=true&hide_related=\
+      false&show_comments=true&show_user=true&show_reposts=false\
+      &show_teaser=true&visual=true"></iframe><div style="font-size: \
+      10px; color: #cccccc;line-break: anywhere;word-break: normal;\
+      overflow: hidden;white-space: nowrap;text-overflow: ellipsis;\
+       font-family: Interstate,Lucida Grande,Lucida Sans Unicode,\
+       Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight:\
+        100;"><a href="https://soundcloud.com/trickysusan" \
+        title="Tricky Susan" target="_blank" style="color: \
+        #cccccc; text-decoration: none;">Tricky Susan</a> · \
+        <a href="https://soundcloud.com/trickysusan/sets/website/s-CcynywUems9"\
+         title="Website" target="_blank" style="color: #cccccc; \
+         text-decoration: none;">Website</a></div>
     </div>
   `
 })
@@ -324,8 +302,7 @@ var app = new Vue({
     </div>
   `,
   data: {
-    selectedTab: 'Contact',
-    msg: window.msg
+    selectedTab: 'Contact'
   },   
   methods: {
     selectTab(tab) {

@@ -28,14 +28,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
-  res.render('layouts/main', { msg: false })
+  res.render('layouts/main', { messageSent: false })
 });
 
 app.post('/', (req, res) => {
   const output = `
-    <p>You have received a new message via tricky-susan.herokuapp.com</p>
-    <p>${req.body.message}</p>
-    <p>${req.body.name}, ${req.body.email}</p>
+    <p style="font-size:150%;text-align:center;font-weight:bold">You have received a new message via tricky-susan.herokuapp.com.</p>
+    <p style="padding-left:5%;padding-right:5%;text-align:justify">"${req.body.message}"</p>
+    <p style="text-align:right;padding-right:5%;font-size:150%"><b> - ${req.body.name},</b><i> ${req.body.email}</i></p>
   `;
 
   let transporter = nodemailer.createTransport({
@@ -65,7 +65,7 @@ app.post('/', (req, res) => {
     }
     console.log('Messsage sent: %s', info.messageId)
     console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-    res.render('layouts/main', { msg: true });
+    res.render('layouts/main', { messageSent: true });
   })
 });
 
