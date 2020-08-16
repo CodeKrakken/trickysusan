@@ -2,9 +2,18 @@ Vue.config.devtools = true
 
 $(document).ready(function(){
 
-  $(document).on('click', '#submit-button', function(){
-    $("#submitbutton").hide();
-  });
+  $(document).on('click', '#submit-button', function(event){
+
+    event.preventDefault();
+    $('#submit-button').hide();
+
+    const formValues = $('form').serialize();
+    
+    $.post("http://127.0.0.1:3000/", formValues, function(data){
+      console.log(formValues)
+      $("#message-sent").html(data);
+    })
+  })
 
 Vue.component ('background', {
   template: `
@@ -61,13 +70,18 @@ Vue.component('main-content', {
       <div v-show="selectedTab === 'Bio'"><bio /></div>
       <div v-show="selectedTab === 'Photos'"><photos /></div>
       <div v-show="selectedTab === 'Videos'"><videos /></div>
-      <div v-show="selectedTab === 'Contact'"><contact /></div>
+      <div v-show="selectedTab === 'Contact'" :messageSent="messageSent"><contact /></div>
     </div>
   `,
   props: {
     selectedTab: {
       type: String,
       required: true
+    }
+  },
+  data() {
+    return {
+      messageSent: true
     }
   }
 })
@@ -223,6 +237,12 @@ Vue.component('videos', {
 })
 
 Vue.component('contact', {
+  props: {
+    messageSent: {
+      type: Boolean,
+      required: true
+    }
+  },
   template: `
     <div class="center">
       <h1>Contact</h1>
@@ -230,11 +250,11 @@ Vue.component('contact', {
         <p><input class="contact-info" type="text" name="name" placeholder="name"></p>
         <p><input class="contact-info" type="email" name="email" placeholder="email"></p>
         <p><textarea id="message-box" name="message" rows="6" placeholder="What's going down, Charlie Brown?"></textarea></p>
-        <p><button id="submit-button" type="submit">Done</button></p>
-        <span id="message-sent" v-if="window.messageSent === true">Message Sent.</span>
+        <p><button id="submit-button" type="button">Done</button></p>
+        <span v-show="messageSent === true ">Message Sent.</span>
       </form>
     </div>
-  `
+  `,
 })
 
 Vue.component('player', {
