@@ -2,8 +2,8 @@ Vue.config.devtools = true
 
 $(document).ready(function(){
 
-  $(document).on('click', 'button', function(){
-    $("p").hide();
+  $(document).on('click', '#submit-button', function(){
+    $("#submitbutton").hide();
   });
 
 Vue.component ('background', {
@@ -294,8 +294,11 @@ var app = new Vue({
   el: '#app',
   template: `
     <div>
-      <button>Click Me</button>
-      <p>And I shall vanish</p>
+      <background />
+      <band-name />
+      <socials />
+      <main-content :selectedTab="selectedTab" />
+      <tabs @select-tab="selectTab" />
     </div>
   `,
   data: {
