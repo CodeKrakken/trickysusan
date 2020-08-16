@@ -2,7 +2,7 @@ Vue.config.devtools = true
 
 $(document).ready(function(){
 
-  $("button").click(function() {
+  $(document).on('click', 'button', function(){
     $("p").hide();
   });
 
@@ -294,11 +294,8 @@ var app = new Vue({
   el: '#app',
   template: `
     <div>
-      <background />
-      <band-name />
-      <socials />
-      <main-content :selectedTab="selectedTab" />
-      <tabs @select-tab="selectTab" />
+      <button>Click Me</button>
+      <p>And I shall vanish</p>
     </div>
   `,
   data: {
@@ -307,6 +304,9 @@ var app = new Vue({
   methods: {
     selectTab(tab) {
     this.selectedTab = tab     }
+  },
+  mounted() {
+    $(document).trigger('vue-loaded');
   }
 })
 })
