@@ -6,12 +6,11 @@ $(document).ready(function(){
 
     event.preventDefault();
     $('#submit-button').hide();
-
-    const formValues = $('form').serialize();
     
+    const formValues = $('form').serialize();
+    console.log(formValues)
     $.post("http://127.0.0.1:3000/", formValues, function(data){
-      console.log(formValues)
-      $("#message-sent").html(data);
+      window.messageSent = true
     })
   })
 
@@ -70,7 +69,7 @@ Vue.component('main-content', {
       <div v-show="selectedTab === 'Bio'"><bio /></div>
       <div v-show="selectedTab === 'Photos'"><photos /></div>
       <div v-show="selectedTab === 'Videos'"><videos /></div>
-      <div v-show="selectedTab === 'Contact'" :messageSent="messageSent"><contact /></div>
+      <div v-show="selectedTab === 'Contact'"><contact /></div>
     </div>
   `,
   props: {
@@ -79,11 +78,6 @@ Vue.component('main-content', {
       required: true
     }
   },
-  data() {
-    return {
-      messageSent: true
-    }
-  }
 })
 
 Vue.component('news', {
@@ -237,12 +231,6 @@ Vue.component('videos', {
 })
 
 Vue.component('contact', {
-  props: {
-    messageSent: {
-      type: Boolean,
-      required: true
-    }
-  },
   template: `
     <div class="center">
       <h1>Contact</h1>
@@ -251,10 +239,15 @@ Vue.component('contact', {
         <p><input class="contact-info" type="email" name="email" placeholder="email"></p>
         <p><textarea id="message-box" name="message" rows="6" placeholder="What's going down, Charlie Brown?"></textarea></p>
         <p><button id="submit-button" type="button">Done</button></p>
-        <span v-show="messageSent === true ">Message Sent.</span>
       </form>
+        <span v-show=" window.messageSent === true ">Message Sent.</span>
     </div>
   `,
+  data() {
+    return {
+      messageSent: false
+    }
+  }
 })
 
 Vue.component('player', {

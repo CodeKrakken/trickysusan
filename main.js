@@ -65,7 +65,8 @@ app.post('/', (req, res) => {
     }
     console.log('Message sent: %s', info.messageId)
     console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-    res.render('layouts/main', { messageSent: true });
+    res.contentType('json');
+    res.send({ some: JSON.stringify({response: 'json'})});
   })
 });
 
