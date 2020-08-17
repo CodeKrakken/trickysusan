@@ -208,7 +208,7 @@ iframe {
   letter-spacing: 0.03em;
   font-size: 100%;
   position: absolute;
-  top: 90%;
+  top: 85%;
   left: 0;
   right: 0;
   margin: auto
@@ -223,7 +223,7 @@ iframe {
 
 #message-sent {
   position: absolute;
-  top: 90%;
+  top: 85%;
   left: 0;
   right: 0;
   margin: auto
