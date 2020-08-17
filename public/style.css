@@ -208,7 +208,7 @@ iframe {
   letter-spacing: 0.03em;
   font-size: 100%;
   position: absolute;
-  top: 85%;
+  top: 80%;
   left: 0;
   right: 0;
   margin: auto
@@ -223,7 +223,7 @@ iframe {
 
 #message-sent {
   position: absolute;
-  top: 85%;
+  top: 80%;
   left: 0;
   right: 0;
   margin: auto
@@ -231,4 +231,12 @@ iframe {
 
 #test-button {
   z-index: -20
+}
+
+#contact-header {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  right: 0;
+  margin: auto
 }

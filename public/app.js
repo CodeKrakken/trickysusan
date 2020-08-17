@@ -5,14 +5,15 @@ $(document).ready(function(){
   $(document).on('click', '#submit-button', function(event){
 
     event.preventDefault();
-    $('#submit-button').hide();
-
     const formValues = $('form').serialize();
     
-    $.post("http://127.0.0.1:3000/", formValues, function(data){
-      console.log(formValues)
-      $("#message-sent").html(data);
-    })
+    // if (formValues.name && formValues.email && formValues.message) {
+      $.post("http://127.0.0.1:3000/", formValues, function(data) {
+        $('#submit-button').hide();
+        $("#message-sent").html(data);
+      })
+    // }
+    
   })
 
 Vue.component ('background', {
@@ -245,7 +246,7 @@ Vue.component('contact', {
   },
   template: `
     <div class="center">
-      <h1>Contact</h1>
+      <h1 id="contact-header">Contact</h1>
       <form method="POST" action="/">
         <p><input class="contact-info" type="text" name="name" placeholder="name"></p>
         <p><input class="contact-info" type="email" name="email" placeholder="email"></p>
