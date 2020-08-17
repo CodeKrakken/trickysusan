@@ -207,6 +207,11 @@ iframe {
   font-family: 'Odibee Sans';
   letter-spacing: 0.03em;
   font-size: 100%;
+  position: absolute;
+  top: 90%;
+  left: 0;
+  right: 0;
+  margin: auto
 }
 
 #message-box {
