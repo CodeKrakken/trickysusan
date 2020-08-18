@@ -8,7 +8,11 @@ $(document).ready(function(){
     const formValues = $('form').serialize();
     
       $.post("http://127.0.0.1:3000/", formValues, function(data) {
-        if (data === "Message Sent.") { $('#submit-button').hide(); }
+        if (data === "Message Sent.") { 
+          $('#submit-button').hide(); 
+          var form = document.getElementById('form');
+          form.reset();
+        }
         $("#message-sent").html(data);
       })
     
@@ -245,7 +249,7 @@ Vue.component('contact', {
   template: `
     <div class="center">
       <h1 id="contact-header">Contact</h1>
-      <form method="POST" action="/">
+      <form id="form" method="POST" action="/">
         <p><input class="contact-info" type="text" name="name" placeholder="name"></p>
         <p><input class="contact-info" type="email" name="email" placeholder="email"></p>
         <p><textarea id="message-box" name="message" rows="6" placeholder="What's going down, Charlie Brown?"></textarea></p>
