@@ -74,7 +74,8 @@ Vue.component('main-content', {
       <div v-show="selectedTab === 'Bio'"><bio /></div>
       <div v-show="selectedTab === 'Photos'"><photos /></div>
       <div v-show="selectedTab === 'Videos'"><videos /></div>
-      <div v-show="selectedTab === 'Contact'" :messageSent="messageSent"><contact /></div>
+      <div v-show="selectedTab === 'Contact'"><contact /></div>
+      <div v-show="selectedTab === 'Music'"><player /></div>
     </div>
   `,
   props: {
@@ -297,7 +298,8 @@ Vue.component ('tabs', {
   data() {
     return {
       tabs: [
-        'News', 
+        'News',
+        'Music', 
         'Gigs',
         'Bio',
         'Photos',
