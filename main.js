@@ -5,6 +5,7 @@ const cors = require('cors');
 const express = require('express');
 const nodemailer = require('nodemailer');
 const path = require('path');
+const validator = require("email-validator");
 
 const app = express();
  
@@ -32,7 +33,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/', (req, res) => {
-  if (req.body.message && req.body.name && req.body.email) { // && reg.body.email.includes('@') && reg.body.email.includes('.'))
+  if (req.body.message && req.body.name && validator.validate(req.body.email)) { // && reg.body.email.includes('@') && reg.body.email.includes('.'))
     const output = `
       <p style="font-size:150%;text-align:center;font-weight:bold">You have received a new message via tricky-susan.herokuapp.com.</p>
       <p style="padding-left:5%;padding-right:5%;text-align:justify">"${req.body.message}"</p>
