@@ -7,12 +7,10 @@ $(document).ready(function(){
     event.preventDefault();
     const formValues = $('form').serialize();
     
-    // if (formValues.name && formValues.email && formValues.message) {
       $.post("http://127.0.0.1:3000/", formValues, function(data) {
-        $('#submit-button').hide();
+        if (data === "Message Sent.") { $('#submit-button').hide(); }
         $("#message-sent").html(data);
       })
-    // }
     
   })
 
