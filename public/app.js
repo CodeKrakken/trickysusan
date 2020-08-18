@@ -12,6 +12,8 @@ $(document).ready(function(){
           $('#submit-button').hide(); 
           var form = document.getElementById('form');
           form.reset();
+          $('form input').prop("disabled", true);
+          $('form textarea').prop("disabled", true);
         }
         $("#message-sent").html(data);
       })
