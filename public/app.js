@@ -9,15 +9,14 @@ $(document).ready(function(){
     
       $.post("http://127.0.0.1:3000/", formValues, function(data) {
         if (data === "Message Sent.") { 
-          $('#submit-button').hide(); 
           var form = document.getElementById('form');
           form.reset();
           $('form input').prop("disabled", true);
           $('form textarea').prop("disabled", true);
-        }
-        $("#message-sent").html(data);
+          $('form button').prop("disabled", true);
+        };
+          $("#message-conf").html(data);        
       })
-    
   })
 
 Vue.component ('background', {
@@ -256,7 +255,7 @@ Vue.component('contact', {
         <p><input class="contact-info" type="email" name="email" placeholder="email"></p>
         <p><textarea id="message-box" name="message" rows="6" placeholder="What's going down, Charlie Brown?"></textarea></p>
         <p><button id="submit-button" type="button">Done</button></p>
-        <div id="message-sent" />
+        <div id="message-conf" />
       </form>
     </div>
   `,
