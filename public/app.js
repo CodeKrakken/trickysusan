@@ -18,12 +18,6 @@ $(document).ready(function(){
       })
   })
 
-  $(document).on('click', '#play', function() {
-    var player = document.getElementById('player');
-    console.log('Playing');
-    $('player button').prop("disabled", true);
-  })
-
 Vue.component ('background', {
   template: `
   <div>
@@ -270,14 +264,20 @@ Vue.component('contact', {
 Vue.component('music', {
   template: `
     <div id="player">
-      <div v-show="playing === false" @click="playing=true">Play</div>
-      <div v-show="playing === true" @click="playing=false">Stop</div>
+      <div v-show="playing === false" @click="playPause()">Play</div>
+      <div v-show="playing === true" @click="playPause()">Pause</div>
     </div>
   `,
   data() {
     return {
       playing: false
     }
+  },
+  methods: {
+    playPause() {
+      this.playing = !this.playing;
+      this.playing ? console.log("Playing") : console.log("Paused");
+    },
   }
 })
 
@@ -318,6 +318,7 @@ Vue.component ('tabs', {
     return {
       tabs: [
         'News',
+        'Music',
         'Gigs',
         'Bio',
         'Photos',
@@ -346,11 +347,11 @@ var app = new Vue({
     </div>
   `,
   data: {
-    selectedTab: 'Contact'
+    selectedTab: 'Music'
   },   
   methods: {
     selectTab(tab) {
-    this.selectedTab = tab     }
+    this.selectedTab = tab }
   },
   mounted() {
     $(document).trigger('vue-loaded');
