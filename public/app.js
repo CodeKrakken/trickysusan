@@ -75,7 +75,7 @@ Vue.component('main-content', {
       <div v-show="selectedTab === 'Photos'"><photos /></div>
       <div v-show="selectedTab === 'Videos'"><videos /></div>
       <div v-show="selectedTab === 'Contact'"><contact /></div>
-      <div v-show="selectedTab === 'Music'"><player /></div>
+      <div v-show="selectedTab === 'Music'"><music /></div>
     </div>
   `,
   props: {
@@ -262,7 +262,7 @@ Vue.component('contact', {
   `,
 })
 
-Vue.component('player', {
+Vue.component('music', {
   template: `
     <div>
       <iframe scrolling="no" height=300 frameborder="yes" \

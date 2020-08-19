@@ -56,7 +56,7 @@ app.post('/', (req, res) => {
     let mailOptions = {
       from: '"Nodemailer Contact" <newholm1@hotmail.com>',
       to: 'donaldnewholmiii@gmail.com',
-      subject: "Node",
+      subject: "Tricky Susan",
       text: "Hello world?",
       html: output
     };
