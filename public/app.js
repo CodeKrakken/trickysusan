@@ -264,19 +264,25 @@ Vue.component('contact', {
 Vue.component('music', {
   template: `
     <div id="player">
-      <div v-show="playing === false" @click="playPause()">Play</div>
+      <div v-show="playing === false" @click="playPause('Grab.mp3')">Play</div>
       <div v-show="playing === true" @click="playPause()">Pause</div>
     </div>
   `,
   data() {
     return {
-      playing: false
+      playing: false,
+      songs: [
+        'Grab.mp3',
+        '/public/Undercover.mp3'
+      ]
     }
   },
   methods: {
-    playPause() {
+    playPause(song) {
       this.playing = !this.playing;
-      this.playing ? console.log("Playing") : console.log("Paused");
+      const audio = new Audio(song);
+      audio.play;
+      console.log(this.playing ? "Playing" : "Paused");
     },
   }
 })
@@ -318,7 +324,6 @@ Vue.component ('tabs', {
     return {
       tabs: [
         'News',
-        'Music',
         'Gigs',
         'Bio',
         'Photos',
