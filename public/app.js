@@ -2,9 +2,8 @@ Vue.config.devtools = true
 
 $(document).ready(function(){
 
-  $(document).on('click', '#submit-button', function(event){
+  $(document).on('click', '#submit-button', function(){
 
-    event.preventDefault();
     const formValues = $('form').serialize();
     
       $.post("http://127.0.0.1:3000/", formValues, function(data) {
@@ -17,6 +16,12 @@ $(document).ready(function(){
         };
           $("#message-conf").html(data);        
       })
+  })
+
+  $(document).on('click', '#play', function() {
+    var player = document.getElementById('player');
+    console.log('Playing');
+    $('player button').prop("disabled", true);
   })
 
 Vue.component ('background', {
@@ -264,6 +269,20 @@ Vue.component('contact', {
 
 Vue.component('music', {
   template: `
+    <div id="player">
+      <div v-show="playing === false" @click="playing=true">Play</div>
+      <div v-show="playing === true" @click="playing=false">Stop</div>
+    </div>
+  `,
+  data() {
+    return {
+      playing: false
+    }
+  }
+})
+
+Vue.component('player', {
+  template: `
     <div>
       <iframe scrolling="no" height=300 frameborder="yes" \
       src="https://w.soundcloud.com/player/?url=https%3A//api.\
@@ -299,7 +318,6 @@ Vue.component ('tabs', {
     return {
       tabs: [
         'News',
-        'Music', 
         'Gigs',
         'Bio',
         'Photos',
