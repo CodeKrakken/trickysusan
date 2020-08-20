@@ -253,31 +253,39 @@ $(document).ready(function(){
   Vue.component('music', {
     template: `
       <div>
-        <button @click.prevent="playSound(songs[selectedSong])">Play</button>
+        <button @click.prevent="audio.playing ? pause(audio) : play(audio)" v-for="audio in audios" :key="audio.id">
+          {{ audio.playing ? 'Pause' : 'Play' }} {{ audio.name }}
+        </button>
       </div>
     `,
     data() {
       return {
         playing: false,
         selectedSong: 0,
-        songs: [
-          'Grab.mp3',
-          'Undercover.mp3'
+        audios: [
+          {
+            id: 'grab',
+            name: 'Grab',
+            file: new Audio('Grab.mp3'),
+            playing: false
+          },
+          {
+            id: 'undercover',
+            name: 'Undercover',
+            file: new Audio('Undercover.mp3'),
+            playing: false
+          }
         ]
       }
     },
     methods: {
-      playPause(song) {
-        this.playing = !this.playing;
-        const audio = new Audio(song);
-        audio.play;
-        console.log(this.playing ? "Playing" : "Paused");
+      play(audio) {
+        audio.playing = true;
+        audio.file.play();
       },
-      playSound(sound) {
-        if(sound) {
-          var audio = new Audio(sound);
-          audio.play();
-        }
+      pause(audio) {
+        audio.playing = false;
+        audio.file.pause();
       }
     }
   })
