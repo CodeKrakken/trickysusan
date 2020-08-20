@@ -3,7 +3,6 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const express = require('express');
 const nodemailer = require('nodemailer');
-const path = require('path');
 const validator = require("email-validator");
 
 const app = express();
