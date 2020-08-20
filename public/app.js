@@ -254,10 +254,10 @@ $(document).ready(function(){
     template: `
       <div>
         <button @click.prevent="previousSong()">Previous</button>
-        <button @click.prevent="audio.playing ? pause(audio) : play(audio)" v-for="audio in audios" :key="audio.id">
-          {{ audio.playing ? 'Pause' : 'Play' }} {{ audio.name }}
-        </button>
+        <button v-if="this.playing === true" @click="pause(audios[selectedSongIndex].file)">Pause</button>
+        <button v-if="this.playing === false" @click="play(audios[selectedSongIndex].file)">Play</button>
         <button @click.prevent="nextSong()">Next</button>
+        {{ audios[selectedSongIndex].name }}
 
       </div>
     `,
@@ -283,12 +283,14 @@ $(document).ready(function(){
     },
     methods: {
       play(audio) {
-        audio.playing = true;
-        audio.file.play();
+        this.playing = true;
+        console.log("Playing");
+        audio.play();
       },
       pause(audio) {
-        audio.playing = false;
-        audio.file.pause();
+        this.playing = false;
+        console.log("Paused");
+        audio.pause();
       },
       previousSong() {
         this.selectedSongIndex === 0 ?
