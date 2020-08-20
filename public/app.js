@@ -253,15 +253,18 @@ $(document).ready(function(){
   Vue.component('music', {
     template: `
       <div>
+        <button @click.prevent="previousSong()">Previous</button>
         <button @click.prevent="audio.playing ? pause(audio) : play(audio)" v-for="audio in audios" :key="audio.id">
           {{ audio.playing ? 'Pause' : 'Play' }} {{ audio.name }}
         </button>
+        <button @click.prevent="nextSong()">Next</button>
+
       </div>
     `,
     data() {
       return {
         playing: false,
-        selectedSong: 0,
+        selectedSongIndex: 0,
         audios: [
           {
             id: 'grab',
@@ -286,6 +289,18 @@ $(document).ready(function(){
       pause(audio) {
         audio.playing = false;
         audio.file.pause();
+      },
+      previousSong() {
+        this.selectedSongIndex === 0 ?
+        this.selectedSongIndex = (this.audios.length - 1) :
+        this.selectedSongIndex -= 1
+        console.log(this.selectedSongIndex)
+      },
+      nextSong() {
+        this.selectedSongIndex === (this.audios.length - 1) ?
+        this.selectedSongIndex = 0 :
+        this.selectedSongIndex += 1
+        console.log(this.selectedSongIndex)
       }
     }
   })
