@@ -253,10 +253,10 @@ $(document).ready(function(){
   Vue.component('music', {
     template: `
       <div>
-        <button @click.prevent="previousSong()">Previous</button>
-        <button v-if="this.playing === true" @click="pause(audios[selectedSongIndex].file)">Pause</button>
-        <button v-if="this.playing === false" @click="play(audios[selectedSongIndex].file)">Play</button>
-        <button @click.prevent="nextSong()">Next</button>
+        <button class="nav-button" id="previous" @click.prevent="previousSong()"></button>
+        <button v-if="this.playing === true" id="submit-button" @click="pause(audios[selectedSongIndex].file)">Pause</button>
+        <button v-if="this.playing === false" id="submit-button" @click="play(audios[selectedSongIndex].file)">Play</button>
+        <button class="nav-button" id="next" @click.prevent="nextSong()"></button><br>
         {{ audios[selectedSongIndex].name }}
 
       </div>
@@ -386,7 +386,7 @@ $(document).ready(function(){
       </div>
     `,
     data: {
-      selectedTab: 'Music'
+      selectedTab: 'News'
     },   
     methods: {
       selectTab(tab) {
