@@ -264,6 +264,7 @@ $(document).ready(function(){
     data() {
       return {
         playing: false,
+        autoplay: false,
         selectedSongIndex: 0,
         audios: [
           {
@@ -284,25 +285,38 @@ $(document).ready(function(){
     methods: {
       play(audio) {
         this.playing = true;
-        console.log("Playing");
         audio.play();
       },
       pause(audio) {
         this.playing = false;
-        console.log("Paused");
         audio.pause();
       },
       previousSong() {
+        if (this.playing === true) { 
+          this.pause(this.audios[this.selectedSongIndex].file);
+          this.autoplay = true;
+        }
         this.selectedSongIndex === 0 ?
         this.selectedSongIndex = (this.audios.length - 1) :
-        this.selectedSongIndex -= 1
-        console.log(this.selectedSongIndex)
+        this.selectedSongIndex -= 1;
+        if (this.autoplay === true) { 
+          this.autoplay = false;
+          this.play(this.audios[this.selectedSongIndex].file) 
+        }
       },
       nextSong() {
+        if (this.playing === true) { 
+          this.pause(this.audios[this.selectedSongIndex].file);
+          this.autoplay = true; 
+        }
         this.selectedSongIndex === (this.audios.length - 1) ?
         this.selectedSongIndex = 0 :
         this.selectedSongIndex += 1
-        console.log(this.selectedSongIndex)
+
+        if (this.autoplay === true) { 
+          this.autoplay = false;
+          this.play(this.audios[this.selectedSongIndex].file) 
+        }
       }
     }
   })
