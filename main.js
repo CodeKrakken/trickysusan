@@ -1,6 +1,5 @@
 require('dotenv').config()
 const bodyParser = require('body-parser');
-const exphbs = require('express-handlebars');
 const cors = require('cors');
 const express = require('express');
 const nodemailer = require('nodemailer');
@@ -8,18 +7,6 @@ const path = require('path');
 const validator = require("email-validator");
 
 const app = express();
- 
-app.engine('handlebars', exphbs({
-  helpers: {
-    json: function (value) {
-      return JSON.stringify(value);
-    }
-  },
-  partialsDir: ['views/partials/'],
-  defaultLayout: 'main'
-}));
-
-app.set('view engine', 'handlebars');
 
 app.use(cors());
 
