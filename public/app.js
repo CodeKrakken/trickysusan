@@ -68,24 +68,19 @@ Vue.component('main-content', {
   template: `
     <div class="main-content border">
       <div v-show="selectedTab === 'News'"><news /></div>
+      <div v-show="selectedTab === 'Music'"><music /></div>
       <div v-show="selectedTab === 'Gigs'"><gigs /></div>
       <div v-show="selectedTab === 'Shop'"><shop /></div>
       <div v-show="selectedTab === 'Bio'"><bio /></div>
       <div v-show="selectedTab === 'Photos'"><photos /></div>
       <div v-show="selectedTab === 'Videos'"><videos /></div>
       <div v-show="selectedTab === 'Contact'"><contact /></div>
-      <div v-show="selectedTab === 'Music'"><music /></div>
     </div>
   `,
   props: {
     selectedTab: {
       type: String,
       required: true
-    }
-  },
-  data() {
-    return {
-      messageSent: true
     }
   }
 })
@@ -153,11 +148,11 @@ Vue.component('bio', {
 Vue.component('photos', {
   template: `
     <div id="photos">
-      <img v-bind:src="images[selectedImageIndex]" id="single-photo">
+      <img :src="images[selectedImageIndex]" id="single-photo">
       <div id="video-navigator">
-        <button v-on:click="previousImage()" class="nav-button" id="previous" />
+        <button @click="previousImage()" class="nav-button" id="previous" />
         <div id="caption" />
-        <button v-on:click="nextImage()" class="nav-button" id="next" />
+        <button @click="nextImage()" class="nav-button" id="next" />
       </div>
     </div>
   `,
@@ -199,11 +194,11 @@ Vue.component('videos', {
     <div>
       <span v-html="videos[selectedVideoIndex].address" />
       <div id="video-navigator">
-        <button v-on:click="previousVideo()" id="previous" class="border nav-button"/>     
+        <button @click="previousVideo()" id="previous" class="border nav-button"/>     
         <div id="caption">
           "{{ videos[selectedVideoIndex].name }}"
         </div>
-        <button v-on:click="nextVideo()" id="next" class="border nav-button"/>
+        <button @click="nextVideo()" id="next" class="border nav-button"/>
       </div>
     </div>
   `,
@@ -241,12 +236,6 @@ Vue.component('videos', {
 })
 
 Vue.component('contact', {
-  props: {
-    messageSent: {
-      type: Boolean,
-      required: true
-    }
-  },
   template: `
     <div class="center">
       <h1 id="contact-header">Contact</h1>
@@ -358,8 +347,5 @@ var app = new Vue({
     selectTab(tab) {
     this.selectedTab = tab }
   },
-  mounted() {
-    $(document).trigger('vue-loaded');
-  }
 })
 })
