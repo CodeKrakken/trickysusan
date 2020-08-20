@@ -253,12 +253,13 @@ $(document).ready(function(){
   Vue.component('music', {
     template: `
       <div>
-        <button @click.prevent="playSound('Grab.mp3')">Play</button>
+        <button @click.prevent="playSound(songs[selectedSong])">Play</button>
       </div>
     `,
     data() {
       return {
         playing: false,
+        selectedSong: 0,
         songs: [
           'Grab.mp3',
           'Undercover.mp3'
