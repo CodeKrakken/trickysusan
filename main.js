@@ -29,7 +29,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
-  res.render('layouts/main')
+  res.sendFile('/index.html')
 });
 
 app.post('/', (req, res) => {
