@@ -136,6 +136,10 @@ iframe {
   filter: brightness(100%);
 }
 
+.border {
+  border: 1px solid white
+}
+
 #tabs {
   position: absolute;
   top: 20%;

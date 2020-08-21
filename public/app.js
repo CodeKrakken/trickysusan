@@ -66,7 +66,7 @@ $(document).ready(function(){
 
   Vue.component('main-content', {
     template: `
-      <div class="main-content border">
+      <div class="main-content">
         <div v-show="selectedTab === 'News'"><news /></div>
         <div v-show="selectedTab === 'Music'"><music /></div>
         <div v-show="selectedTab === 'Gigs'"><gigs /></div>
@@ -253,11 +253,11 @@ $(document).ready(function(){
   Vue.component('music', {
     template: `
       <div>
-        <button class="nav-button" id="previous" @click.prevent="previousSong()"></button>
-        <button v-if="this.playing === true" id="play-button" @click="pause(audios[selectedSongIndex].file)">Pause</button>
-        <button v-if="this.playing === false" id="play-button" @click="play(audios[selectedSongIndex].file)">Play</button>
-        <button class="nav-button" id="next" @click.prevent="nextSong()"></button><br>
-        <div id="song-name"> {{ audios[selectedSongIndex].name }} </div>
+        <button class="nav-button border" id="previous" @click.prevent="previousSong()"></button>
+        <button v-if="this.playing === true" id="play-button" class="border" @click="pause(audios[selectedSongIndex].file)">Pause</button>
+        <button v-if="this.playing === false" id="play-button" class="border" @click="play(audios[selectedSongIndex].file)">Play</button>
+        <button class="nav-button border" id="next" @click.prevent="nextSong()"></button><br>
+        <div id="song-name" class="border"> {{ audios[selectedSongIndex].name }} </div>
 
       </div>
     `,
@@ -358,7 +358,6 @@ $(document).ready(function(){
       return {
         tabs: [
           'News',
-          'Music',
           'Gigs',
           'Bio',
           'Photos',
@@ -387,7 +386,7 @@ $(document).ready(function(){
       </div>
     `,
     data: {
-      selectedTab: 'Music'
+      selectedTab: 'News'
     },   
     methods: {
       selectTab(tab) {
