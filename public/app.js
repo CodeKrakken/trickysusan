@@ -254,10 +254,10 @@ $(document).ready(function(){
     template: `
       <div>
         <button class="nav-button" id="previous" @click.prevent="previousSong()"></button>
-        <button v-if="this.playing === true" id="submit-button" @click="pause(audios[selectedSongIndex].file)">Pause</button>
-        <button v-if="this.playing === false" id="submit-button" @click="play(audios[selectedSongIndex].file)">Play</button>
+        <button v-if="this.playing === true" id="play-button" @click="pause(audios[selectedSongIndex].file)">Pause</button>
+        <button v-if="this.playing === false" id="play-button" @click="play(audios[selectedSongIndex].file)">Play</button>
         <button class="nav-button" id="next" @click.prevent="nextSong()"></button><br>
-        {{ audios[selectedSongIndex].name }}
+        <div id="song-name"> {{ audios[selectedSongIndex].name }} </div>
 
       </div>
     `,
@@ -358,6 +358,7 @@ $(document).ready(function(){
       return {
         tabs: [
           'News',
+          'Music',
           'Gigs',
           'Bio',
           'Photos',
@@ -386,7 +387,7 @@ $(document).ready(function(){
       </div>
     `,
     data: {
-      selectedTab: 'News'
+      selectedTab: 'Music'
     },   
     methods: {
       selectTab(tab) {
