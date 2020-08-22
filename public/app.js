@@ -257,8 +257,7 @@ $(document).ready(function(){
         <button v-if="this.playing === true" id="play-button" class="border" @click="pause(audios[selectedSongIndex].file)">Pause</button>
         <button v-if="this.playing === false" id="play-button" class="border" @click="play(audios[selectedSongIndex].file)">Play</button>
         <button class="nav-button border" id="next" @click.prevent="nextSong()"></button><br>
-        <div id="song-name" class="border"> {{ audios[selectedSongIndex].name }} </div>
-
+        <div id="song-name" class="border"> "{{ audios[selectedSongIndex].name }}" </div>
       </div>
     `,
     data() {
@@ -358,6 +357,7 @@ $(document).ready(function(){
       return {
         tabs: [
           'News',
+          'Music',
           'Gigs',
           'Bio',
           'Photos',
