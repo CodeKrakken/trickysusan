@@ -244,11 +244,7 @@ iframe {
 }
 
 #play-button {
-  font-family: 'Odibee Sans';
-  letter-spacing: 0.03em;
-  font-size: 100%;
-  color: white;
-  background: black
+  background-image: url("/images/play-button.jpg");
 }
 
 #song-name {

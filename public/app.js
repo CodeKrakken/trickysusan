@@ -255,7 +255,7 @@ $(document).ready(function(){
       <div>
         <button class="previous nav-button border" @click.prevent="previousSong()"></button>
         <button v-if="this.playing === true" id="play-button" class="border" @click="pause(audios[selectedSongIndex].file)">Pause</button>
-        <button v-if="this.playing === false" id="play-button" class="border" @click="play(audios[selectedSongIndex].file)">Play</button>
+        <button v-if="this.playing === false" id="play-button" class="border nav-button" @click="play(audios[selectedSongIndex].file)"></button>
         <button class="nav-button border next" @click.prevent="nextSong()"></button><br>
         <div id="song-name" class="border"> "{{ audios[selectedSongIndex].name }}" </div>
       </div>
@@ -353,15 +353,15 @@ $(document).ready(function(){
 
   var app = new Vue({
     el: '#app',
-    template: `
-      <div>
-        <background />
-        <band-name />
-        <socials />
-        <main-content :selectedTab="selectedTab" />
-        <tabs @select-tab="selectTab" />
-      </div>
-    `,
+    // template: `
+    //   <div>
+    //     <background />
+    //     <band-name />
+    //     <socials />
+    //     <main-content :selectedTab="selectedTab" />
+    //     <tabs @select-tab="selectTab" />
+    //   </div>
+    // `,
     data: {
       selectedTab: 'News'
     },   
