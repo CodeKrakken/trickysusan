@@ -151,9 +151,9 @@ $(document).ready(function(){
       <div id="photos">
         <img :src="images[selectedImageIndex]" id="single-photo">
         <div id="video-navigator">
-          <button @click="previousImage()" class="nav-button" id="previous" />
+          <button @click="previousImage()" class="previous nav-button" />
           <div id="caption" />
-          <button @click="nextImage()" class="nav-button" id="next" />
+          <button @click="nextImage()" class="next nav-button" />
         </div>
       </div>
     `,
@@ -194,11 +194,11 @@ $(document).ready(function(){
       <div>
         <span v-html="videos[selectedVideoIndex].address" />
         <div id="video-navigator">
-          <button @click="previousVideo()" id="previous" class="border nav-button"/>     
+          <button @click="previousVideo()" class="previous border nav-button"/>     
           <div id="caption">
             "{{ videos[selectedVideoIndex].name }}"
           </div>
-          <button @click="nextVideo()" id="next" class="border nav-button"/>
+          <button @click="nextVideo()" class="border next nav-button"/>
         </div>
       </div>
     `,
@@ -253,10 +253,10 @@ $(document).ready(function(){
   Vue.component('music', {
     template: `
       <div>
-        <button class="nav-button border" id="previous" @click.prevent="previousSong()"></button>
+        <button class="previous nav-button border" @click.prevent="previousSong()"></button>
         <button v-if="this.playing === true" id="play-button" class="border" @click="pause(audios[selectedSongIndex].file)">Pause</button>
         <button v-if="this.playing === false" id="play-button" class="border" @click="play(audios[selectedSongIndex].file)">Play</button>
-        <button class="nav-button border" id="next" @click.prevent="nextSong()"></button><br>
+        <button class="nav-button border next" @click.prevent="nextSong()"></button><br>
         <div id="song-name" class="border"> "{{ audios[selectedSongIndex].name }}" </div>
       </div>
     `,
@@ -318,29 +318,6 @@ $(document).ready(function(){
         }
       }
     }
-  })
-
-  Vue.component('player', {
-    template: `
-      <div>
-        <iframe scrolling="no" height=300 frameborder="yes" \
-        src="https://w.soundcloud.com/player/?url=https%3A//api.\
-        soundcloud.com/playlists/1040292169%3Fsecret_token%3Ds-\
-        CcynywUems9&color=%2382d5e8&auto_play=true&hide_related=\
-        false&show_comments=true&show_user=true&show_reposts=false\
-        &show_teaser=true&visual=true"></iframe><div style="font-size: \
-        10px; color: #cccccc;line-break: anywhere;word-break: normal;\
-        overflow: hidden;white-space: nowrap;text-overflow: ellipsis;\
-        font-family: Interstate,Lucida Grande,Lucida Sans Unicode,\
-        Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight:\
-        100;"><a href="https://soundcloud.com/trickysusan" \
-        title="Tricky Susan" target="_blank" style="color: \
-        #cccccc; text-decoration: none;">Tricky Susan</a> · \
-        <a href="https://soundcloud.com/trickysusan/sets/website/s-CcynywUems9"\
-         title="Website" target="_blank" style="color: #cccccc; \
-         text-decoration: none;">Website</a></div>
-      </div>
-    `
   })
 
   Vue.component ('tabs', {
