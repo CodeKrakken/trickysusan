@@ -353,15 +353,15 @@ $(document).ready(function(){
 
   var app = new Vue({
     el: '#app',
-    // template: `
-    //   <div>
-    //     <background />
-    //     <band-name />
-    //     <socials />
-    //     <main-content :selectedTab="selectedTab" />
-    //     <tabs @select-tab="selectTab" />
-    //   </div>
-    // `,
+    template: `
+      <div>
+        <background />
+        <band-name />
+        <socials />
+        <main-content :selectedTab="selectedTab" />
+        <tabs @select-tab="selectTab" />
+      </div>
+    `,
     data: {
       selectedTab: 'News'
     },   
