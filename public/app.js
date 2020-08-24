@@ -29,9 +29,7 @@ $(document).ready(function(){
   Vue.component ('band-name', {
     template: `
       <div>
-        <div id="bandname-container">
-          <img src="images/band-name.jpg" id="band-name">
-        </div>
+        <img src="images/band-name.jpg" id="band-name">
       </div>
     `
   })
