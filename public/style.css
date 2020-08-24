@@ -255,6 +255,13 @@ iframe {
   height: 4vw
 }
 
+#pause-button {
+  background-image: url("/images/pause-button.jpg");
+  grid-area: grid-play;
+  width: 4vw;
+  height: 4vw
+}
+
 #song-name {
   grid-area: grid-name;
   display: flex;
