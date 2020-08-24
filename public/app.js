@@ -29,7 +29,9 @@ $(document).ready(function(){
   Vue.component ('band-name', {
     template: `
       <div>
-        <img src="images/band-name.jpg" id="band-name">
+        <div id="bandname-container">
+          <img src="images/band-name.jpg" id="band-name">
+        </div>
       </div>
     `
   })
@@ -353,15 +355,15 @@ $(document).ready(function(){
 
   var app = new Vue({
     el: '#app',
-    // template: `
-    //   <div>
-    //     <background />
-    //     <band-name />
-    //     <socials />
-    //     <main-content :selectedTab="selectedTab" />
-    //     <tabs @select-tab="selectTab" />
-    //   </div>
-    // `,
+    template: `
+      <div>
+        <background />
+        <band-name />
+        <socials />
+        <main-content :selectedTab="selectedTab" />
+        <tabs @select-tab="selectTab" />
+      </div>
+    `,
     data: {
       selectedTab: 'News'
     },   
