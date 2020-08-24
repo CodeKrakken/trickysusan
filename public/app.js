@@ -336,7 +336,7 @@ $(document).ready(function(){
       return {
         tabs: [
           'News',
-          // 'Music',
+          'Music',
           'Gigs',
           'Bio',
           'Photos',
@@ -365,7 +365,7 @@ $(document).ready(function(){
       </div>
     `,
     data: {
-      selectedTab: 'News'
+      selectedTab: 'Music'
     },   
     methods: {
       selectTab(tab) {

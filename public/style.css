@@ -250,13 +250,16 @@ iframe {
 
 #play-button {
   background-image: url("/images/play-button.jpg");
-  grid-area: grid-play
+  grid-area: grid-play;
+  width: 4vw;
+  height: 4vw
 }
 
 #song-name {
-  text-align: center;
   grid-area: grid-name;
-  width: 10vw
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .music-navigator {
@@ -265,14 +268,17 @@ iframe {
                        "grid-name grid-name grid-name";
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
-  width: 100%;
-  text-align: center;
+  width: 12vw;
 }
 
 #player-previous {
   grid-area: grid-previous;
+  width: 4vw;
+  height: 4vw
 }
 
 #player-next {
-  grid-area: grid-next
+  grid-area: grid-next;
+  width: 4vw;
+  height: 4vw
 }
