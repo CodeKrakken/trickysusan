@@ -26,8 +26,11 @@ body {
 }
 
 #band-name {
-  height: auto;
   width: 10%;
+  height: auto;
+  position: absolute;
+  top: 1vh;
+  left: 1vh;
   background: transparent;
 }
 
