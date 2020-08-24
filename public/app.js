@@ -253,18 +253,20 @@ $(document).ready(function(){
   Vue.component('music', {
     template: `
       <div>
-        <button class="previous nav-button border" @click.prevent="previousSong()"></button>
-        <button v-if="this.playing === true" id="play-button" class="border" @click="pause(audios[selectedSongIndex].file)">Pause</button>
-        <button v-if="this.playing === false" id="play-button" class="border nav-button" @click="play(audios[selectedSongIndex].file)"></button>
-        <button class="nav-button border next" @click.prevent="nextSong()"></button><br>
-        <div id="song-name" class="border"> "{{ audios[selectedSongIndex].name }}" </div>
+        <div class="music-navigator">
+          <button class="previous nav-button border" id="player-previous" @click.prevent="previousSong()"></button>
+          <button v-if="this.playing === true" id="play-button" class="border" @click="pause(audios[selectedSongIndex].file)">Pause</button>
+          <button v-if="this.playing === false" id="play-button" class="border nav-button" @click="play(audios[selectedSongIndex].file)"></button>
+          <button class="nav-button border next" id="player-next" @click.prevent="nextSong()"></button><br>
+          <div id="song-name" class="border"> "{{ audios[selectedSongIndex].name }}" </div>
+        </div>
       </div>
     `,
     data() {
       return {
         playing: false,
         autoplay: false,
-        selectedSongIndex: 0,
+        selectedSongIndex: 1,
         audios: [
           {
             id: 'grab',
@@ -334,7 +336,7 @@ $(document).ready(function(){
       return {
         tabs: [
           'News',
-          'Music',
+          // 'Music',
           'Gigs',
           'Bio',
           'Photos',

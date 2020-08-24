@@ -250,8 +250,29 @@ iframe {
 
 #play-button {
   background-image: url("/images/play-button.jpg");
+  grid-area: grid-play
 }
 
 #song-name {
   text-align: center;
+  grid-area: grid-name;
+  width: 10vw
+}
+
+.music-navigator {
+  display: grid;
+  grid-template-areas: "grid-previous grid-play grid-next"
+                       "grid-name grid-name grid-name";
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  text-align: center;
+}
+
+#player-previous {
+  grid-area: grid-previous;
+}
+
+#player-next {
+  grid-area: grid-next
 }
