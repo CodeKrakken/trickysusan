@@ -248,21 +248,24 @@ iframe {
   margin: auto
 }
 
+.player-button {
+  width: 2vw;
+  height: 2vw;
+  margin: 10px
+}
+
 #play-button {
   background-image: url("/images/play-button.jpg");
   grid-area: grid-play;
-  width: 4vw;
-  height: 4vw;
-  margin: 10px;
 }
 
 #pause-button {
   background-image: url("/images/pause-button.jpg");
   grid-area: grid-play;
-  width: 4vw;
-  height: 4vw;
-  margin: 10px;
 }
+
+#player-previous { grid-area: grid-previous }
+#player-next { grid-area: grid-next }
 
 #song-name {
   grid-area: grid-name;
@@ -278,18 +281,4 @@ iframe {
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   width: 12vw;
-}
-
-#player-previous {
-  grid-area: grid-previous;
-  width: 4vw;
-  height: 4vw;
-  margin: 10px
-}
-
-#player-next {
-  grid-area: grid-next;
-  width: 4vw;
-  height: 4vw;
-  margin: 10px
 }
