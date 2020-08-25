@@ -41,7 +41,13 @@ body {
 }
 
 #social:hover {
-  filter: grayscale(0%)
+  filter: grayscale(0%);
+  filter: brightness(75%)
+}
+
+#social:active {
+  filter: grayscale(0%);
+  filter: brightness(100%);
 }
 
 .main-content {
@@ -131,12 +137,18 @@ iframe {
   background-repeat: no-repeat;
   background-size: contain;
   background-color: black;
-  filter: brightness(50%);
-  border: none
+  border: none;
+  filter: grayscale(100%);
 }
 
 .nav-button:hover {
-  filter: brightness(100%);
+  filter: grayscale(0%);
+  filter: brightness(75%)
+}
+
+.nav-button:active {
+  filter: grayscale(0%);
+  filter: brightness(100%)
 }
 
 /* .border {
@@ -170,7 +182,7 @@ iframe {
 }
 
 #tab {
-  filter: brightness(50%);
+  filter: grayscale(100%);
   font-size: 200%;
   font-style: italic;
   background: transparent;
@@ -178,8 +190,13 @@ iframe {
 }
 
 #tab:hover {
-  cursor: pointer;
+  filter: grayscale(0%);
+  filter: brightness(75%)
+}
+
+#tab:active {
   filter: brightness(100%);
+  filter: grayscale(0%)
 }
 
 ::-moz-placeholder { 
