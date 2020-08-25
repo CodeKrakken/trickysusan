@@ -253,11 +253,26 @@ $(document).ready(function(){
   Vue.component('music', {
     template: `
       <div>
-        <div class="music-navigator">
-          <button class="previous nav-button border player-button" id="player-previous" @click.prevent="previousSong()"></button>
-          <button v-if="this.playing === true" id="pause-button" class="border nav-button player-button" @click="pause(audios[selectedSongIndex].file)"></button>
-          <button v-if="this.playing === false" id="play-button" class="border nav-button player-button" @click="play(audios[selectedSongIndex].file)"></button>
-          <button class="nav-button border next player-button" id="player-next" @click.prevent="nextSong()"></button><br>
+        <div class="music-navigator border">
+          <button class="previous nav-button border player-button" 
+                  id="player-previous" 
+                  @click.prevent="previousSong()">
+          </button>
+          <button v-if="this.playing === true" 
+                  id="pause-button" 
+                  class="border nav-button player-button" 
+                  @click="pause(audios[selectedSongIndex].file)">
+          </button>
+          <button v-if="this.playing === false" 
+                  id="play-button" 
+                  class="border nav-button player-button" 
+                  @click="play(audios[selectedSongIndex].file)">
+          </button>
+          <button 
+                  class="nav-button border next player-button" 
+                  id="player-next" 
+                  @click.prevent="nextSong()">
+          </button><br>
           <div id="song-name" class="border"> "{{ audios[selectedSongIndex].name }}" </div>
         </div>
       </div>

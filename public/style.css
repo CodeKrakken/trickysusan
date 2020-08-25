@@ -140,7 +140,7 @@ iframe {
 }
 
 /* .border {
-  border: 1px solid white
+  border: 1px dashed white
 } */
 
 #tabs {
@@ -251,7 +251,7 @@ iframe {
 .player-button {
   width: 2vw;
   height: 2vw;
-  margin: 10px
+  margin: 10px;
 }
 
 #play-button {
@@ -270,8 +270,6 @@ iframe {
 #song-name {
   grid-area: grid-name;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .music-navigator {
@@ -280,5 +278,5 @@ iframe {
                        "grid-name grid-name grid-name";
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
-  width: 12vw;
+  justify-items: center
 }
