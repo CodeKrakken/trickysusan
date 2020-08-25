@@ -287,12 +287,10 @@ $(document).ready(function(){
           {
             name: 'Grab',
             file: new Audio('Grab.mp3'),
-            playing: false
           },
           {
             name: 'Undercover',
             file: new Audio('Undercover.mp3'),
-            playing: false
           }
         ]
       }
