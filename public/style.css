@@ -272,7 +272,9 @@ iframe {
 #song-name {
   grid-area: grid-name;
   display: flex;
-  align-items: flex-end
+  align-items: flex-end;
+  font-size: 200%;
+  text-align: center
 }
 
 .music-navigator {
@@ -281,7 +283,8 @@ iframe {
                        "grid-previous grid-play grid-next";
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center
+  justify-items: center;
+  width: 10vw;
 }
 
 button:focus {
