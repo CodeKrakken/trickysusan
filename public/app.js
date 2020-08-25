@@ -285,13 +285,11 @@ $(document).ready(function(){
         selectedSongIndex: 1,
         audios: [
           {
-            id: 'grab',
             name: 'Grab',
             file: new Audio('Grab.mp3'),
             playing: false
           },
           {
-            id: 'undercover',
             name: 'Undercover',
             file: new Audio('Undercover.mp3'),
             playing: false

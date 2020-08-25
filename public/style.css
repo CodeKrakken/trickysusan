@@ -272,7 +272,7 @@ iframe {
 #song-name {
   grid-area: grid-name;
   display: flex;
-  align-items: center
+  align-items: flex-end
 }
 
 .music-navigator {
