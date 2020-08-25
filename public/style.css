@@ -118,11 +118,11 @@ iframe {
 }
 
 .previous {
-  background-image: url("/images/previous-button.jpg");
+  background-image: url("/images/previous-button.png");
 }
 
 .next {
-  background-image: url("/images/next-button.jpg");
+  background-image: url("/images/next-button.png");
 }
 
 .nav-button {
@@ -255,12 +255,14 @@ iframe {
 }
 
 #play-button {
-  background-image: url("/images/play-button.jpg");
+  background-image: url("/images/play-button.png");
   grid-area: grid-play;
+  position: relative;
+  left: 0.1vw;
 }
 
 #pause-button {
-  background-image: url("/images/pause-button.jpg");
+  background-image: url("/images/pause-button.png");
   grid-area: grid-play;
 }
 
@@ -270,12 +272,13 @@ iframe {
 #song-name {
   grid-area: grid-name;
   display: flex;
+  align-items: center
 }
 
 .music-navigator {
   display: grid;
-  grid-template-areas: "grid-previous grid-play grid-next"
-                       "grid-name grid-name grid-name";
+  grid-template-areas: "grid-name grid-name grid-name"
+                       "grid-previous grid-play grid-next";
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center

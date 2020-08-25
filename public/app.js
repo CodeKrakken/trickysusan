@@ -254,6 +254,7 @@ $(document).ready(function(){
     template: `
       <div>
         <div class="music-navigator border">
+          <div id="song-name" class="border"> "{{ audios[selectedSongIndex].name }}" </div>
           <button class="previous nav-button border player-button" 
                   id="player-previous" 
                   @click.prevent="previousSong()">
@@ -273,7 +274,7 @@ $(document).ready(function(){
                   id="player-next" 
                   @click.prevent="nextSong()">
           </button><br>
-          <div id="song-name" class="border"> "{{ audios[selectedSongIndex].name }}" </div>
+
         </div>
       </div>
     `,
