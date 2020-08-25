@@ -304,3 +304,8 @@ button:focus {
   border: none;
   outline: none;
 }
+
+ /* button:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+} */
