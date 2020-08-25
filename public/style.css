@@ -138,16 +138,14 @@ iframe {
   background-size: contain;
   background-color: black;
   border: none;
-  filter: grayscale(100%);
+  filter: brightness(50%)
 }
 
 .nav-button:hover {
-  filter: grayscale(0%);
   filter: brightness(75%)
 }
 
 .nav-button:active {
-  filter: grayscale(0%);
   filter: brightness(100%)
 }
 
@@ -182,21 +180,19 @@ iframe {
 }
 
 #tab {
-  filter: grayscale(100%);
   font-size: 200%;
   font-style: italic;
   background: transparent;
   color: rgb(0, 174, 239);
+  filter: brightness(50%);
 }
 
 #tab:hover {
-  filter: grayscale(0%);
   filter: brightness(75%)
 }
 
 #tab:active {
   filter: brightness(100%);
-  filter: grayscale(0%)
 }
 
 ::-moz-placeholder { 
