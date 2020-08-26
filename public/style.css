@@ -268,7 +268,6 @@ iframe {
 }
 
 #play-button {
-  background-image: url("/images/play-button.png");
   grid-area: grid-play;
   position: relative;
   left: 0.1vw;
@@ -300,7 +299,7 @@ iframe {
   width: 10vw;
 }
 
-button:focus {
+.nav-button:focus {
   border: none;
   outline: none;
 }
