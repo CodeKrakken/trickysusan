@@ -106,6 +106,106 @@ $(document).ready(function(){
     }
   })
 
+  Vue.component('music', {
+    template: `
+      <div>
+        <div class="music-navigator border">
+          <div id="song-name" class="border"> "{{ audios[selectedSongIndex].name }}" </div>
+          <button class="previous nav-button border player-button" 
+                  id="player-previous" 
+                  @click.prevent="previousSong()">
+          </button>
+          <button v-if="this.playing === true" 
+                  id="pause-button" 
+                  class="border nav-button player-button" 
+                  @click="pause(audios[selectedSongIndex].file)">
+          </button>
+          <button v-if="this.playing === false" 
+                  id="play-button" 
+                  class="border nav-button player-button" 
+                  @click="play(audios[selectedSongIndex].file)">
+          </button>
+          <button 
+                  class="nav-button border next player-button" 
+                  id="player-next" 
+                  @click.prevent="nextSong()">
+          </button><br>
+
+        </div>
+      </div>
+    `,
+    data() {
+      return {
+        playing: false,
+        autoplay: false,
+        selectedSongIndex: 1,
+        audios: [
+          {
+            name: 'Undercover',
+            file: new Audio('Undercover.mp3')
+          },
+          {
+            name: 'Grab',
+            file: new Audio('Grab.mp3')
+          },
+          {
+            name: 'Strategy',
+            file: new Audio('Strategy.mp3')
+          },
+          {
+            name: 'Philosophy',
+            file: new Audio('Philosophy.mp3')
+          },
+          {
+            name: 'Lifeline',
+            file: new Audio('Lifeline.mp3')
+          },
+          {
+            name: 'Fidelity',
+            file: new Audio('Fidelity.mp3')
+          }
+        ]
+      }
+    },
+    methods: {
+      play(audio) {
+        this.playing = true;
+        audio.play();
+      },
+      pause(audio) {
+        this.playing = false;
+        audio.pause();
+      },
+      previousSong() {
+        if (this.playing === true) { 
+          this.pause(this.audios[this.selectedSongIndex].file);
+          this.autoplay = true;
+        }
+        this.selectedSongIndex === 0 ?
+        this.selectedSongIndex = (this.audios.length - 1) :
+        this.selectedSongIndex -= 1;
+        if (this.autoplay === true) { 
+          this.autoplay = false;
+          this.play(this.audios[this.selectedSongIndex].file) 
+        }
+      },
+      nextSong() {
+        if (this.playing === true) { 
+          this.pause(this.audios[this.selectedSongIndex].file);
+          this.autoplay = true; 
+        }
+        this.selectedSongIndex === (this.audios.length - 1) ?
+        this.selectedSongIndex = 0 :
+        this.selectedSongIndex += 1
+
+        if (this.autoplay === true) { 
+          this.autoplay = false;
+          this.play(this.audios[this.selectedSongIndex].file) 
+        }
+      }
+    }
+  })
+
   Vue.component('gigs', {
     template: `
       <div class="center border">
@@ -248,106 +348,6 @@ $(document).ready(function(){
         </form>
       </div>
     `,
-  })
-
-  Vue.component('music', {
-    template: `
-      <div>
-        <div class="music-navigator border">
-          <div id="song-name" class="border"> "{{ audios[selectedSongIndex].name }}" </div>
-          <button class="previous nav-button border player-button" 
-                  id="player-previous" 
-                  @click.prevent="previousSong()">
-          </button>
-          <button v-if="this.playing === true" 
-                  id="pause-button" 
-                  class="border nav-button player-button" 
-                  @click="pause(audios[selectedSongIndex].file)">
-          </button>
-          <button v-if="this.playing === false" 
-                  id="play-button" 
-                  class="border nav-button player-button" 
-                  @click="play(audios[selectedSongIndex].file)">
-          </button>
-          <button 
-                  class="nav-button border next player-button" 
-                  id="player-next" 
-                  @click.prevent="nextSong()">
-          </button><br>
-
-        </div>
-      </div>
-    `,
-    data() {
-      return {
-        playing: false,
-        autoplay: false,
-        selectedSongIndex: 1,
-        audios: [
-          {
-            name: 'Undercover',
-            file: new Audio('Undercover.mp3')
-          },
-          {
-            name: 'Grab',
-            file: new Audio('Grab.mp3')
-          },
-          {
-            name: 'Strategy',
-            file: new Audio('Strategy.mp3')
-          },
-          {
-            name: 'Philosophy',
-            file: new Audio('Philosophy.mp3')
-          },
-          {
-            name: 'Lifeline',
-            file: new Audio('Lifeline.mp3')
-          },
-          {
-            name: 'Fidelity',
-            file: new Audio('Fidelity.mp3')
-          }
-        ]
-      }
-    },
-    methods: {
-      play(audio) {
-        this.playing = true;
-        audio.play();
-      },
-      pause(audio) {
-        this.playing = false;
-        audio.pause();
-      },
-      previousSong() {
-        if (this.playing === true) { 
-          this.pause(this.audios[this.selectedSongIndex].file);
-          this.autoplay = true;
-        }
-        this.selectedSongIndex === 0 ?
-        this.selectedSongIndex = (this.audios.length - 1) :
-        this.selectedSongIndex -= 1;
-        if (this.autoplay === true) { 
-          this.autoplay = false;
-          this.play(this.audios[this.selectedSongIndex].file) 
-        }
-      },
-      nextSong() {
-        if (this.playing === true) { 
-          this.pause(this.audios[this.selectedSongIndex].file);
-          this.autoplay = true; 
-        }
-        this.selectedSongIndex === (this.audios.length - 1) ?
-        this.selectedSongIndex = 0 :
-        this.selectedSongIndex += 1
-
-        if (this.autoplay === true) { 
-          this.autoplay = false;
-          this.play(this.audios[this.selectedSongIndex].file) 
-        }
-      }
-    }
   })
 
   Vue.component ('tabs', {

@@ -41,13 +41,7 @@ body {
 }
 
 #social:hover {
-  filter: grayscale(0%);
-  filter: brightness(75%)
-}
-
-#social:active {
-  filter: grayscale(0%);
-  filter: brightness(100%);
+  filter: grayscale(0%)
 }
 
 .main-content {
@@ -137,16 +131,12 @@ iframe {
   background-repeat: no-repeat;
   background-size: contain;
   background-color: black;
-  border: none;
-  filter: brightness(50%)
+  filter: brightness(50%);
+  border: none
 }
 
 .nav-button:hover {
-  filter: brightness(75%)
-}
-
-.nav-button:active {
-  filter: brightness(100%)
+  filter: brightness(100%);
 }
 
 /* .border {
@@ -180,18 +170,15 @@ iframe {
 }
 
 #tab {
+  filter: brightness(50%);
   font-size: 200%;
   font-style: italic;
   background: transparent;
   color: rgb(0, 174, 239);
-  filter: brightness(50%);
 }
 
 #tab:hover {
-  filter: brightness(75%)
-}
-
-#tab:active {
+  cursor: pointer;
   filter: brightness(100%);
 }
 
@@ -268,6 +255,7 @@ iframe {
 }
 
 #play-button {
+  background-image: url("/images/play-button.png");
   grid-area: grid-play;
   position: relative;
   left: 0.1vw;
@@ -299,12 +287,7 @@ iframe {
   width: 10vw;
 }
 
-.nav-button:focus {
+button:focus {
   border: none;
   outline: none;
 }
-
- /* button:-moz-focusring {
-  color: transparent;
-  text-shadow: 0 0 0 #000;
-} */
