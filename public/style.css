@@ -255,15 +255,21 @@ iframe {
 }
 
 #play-button {
-  background-image: url("/images/play-button.png");
   grid-area: grid-play;
   position: relative;
   left: 0.1vw;
 }
 
+#play-icon {
+  width: 100%
+}
+
 #pause-button {
-  background-image: url("/images/pause-button.png");
   grid-area: grid-play;
+}
+
+#pause-icon {
+  width: 100%
 }
 
 #player-previous { grid-area: grid-previous }
