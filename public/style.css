@@ -34,6 +34,20 @@ body {
   background: transparent;
 }
 
+#socials {
+  position: absolute;
+  top: 30%;
+  bottom: 30%;
+  right: 0;
+  width: 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: left;
+  background: transparent;
+  z-index: 1
+}
+
 #social {
   width: 3vw;
   filter: grayscale(100%);
@@ -41,7 +55,13 @@ body {
 }
 
 #social:hover {
-  filter: grayscale(0%)
+  filter: grayscale(0%);
+  filter: brightness(75%);
+}
+
+#social:active {
+  filter: grayscale(0%);
+  filter: brightness(100%);
 }
 
 .main-content {
@@ -133,20 +153,6 @@ iframe {
   background: transparent
 }
 
-#socials {
-  position: absolute;
-  top: 30%;
-  bottom: 30%;
-  right: 0;
-  width: 8%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  text-align: left;
-  background: transparent;
-  z-index: 1
-}
-
 #tab {
   filter: brightness(50%);
   font-size: 200%;
@@ -157,6 +163,10 @@ iframe {
 
 #tab:hover {
   cursor: pointer;
+  filter: brightness(75%);
+}
+
+#tab:active {
   filter: brightness(100%);
 }
 
@@ -235,7 +245,11 @@ iframe {
 }
 
 .nav-button:hover {
-  filter: brightness(100%);
+  filter: brightness(75%);
+}
+
+.nav-button:active {
+  filter: brightness(100%)
 }
 
 #play-button {
