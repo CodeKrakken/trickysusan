@@ -56,7 +56,7 @@ $(document).ready(function(){
             link: 'https://www.facebook.com/TrickySusan'
           },
           {
-            image: 'images/yt_icon_rgb.png',
+            image: 'images/youtube.png',
             link: 'https://www.youtube.com/user/youronewayticket'
           }
         ]

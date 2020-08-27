@@ -50,8 +50,9 @@ body {
 
 #social {
   width: 3vw;
+
   filter: grayscale(100%);
-  text-align: left
+  text-align: left;
 }
 
 #social:hover {
