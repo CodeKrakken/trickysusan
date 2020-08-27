@@ -117,14 +117,6 @@ iframe {
   text-align: center
 }
 
-.previous {
-  background-image: url("/images/previous-button.png");
-}
-
-.next {
-  background-image: url("/images/next-button.png");
-}
-
 .nav-button {
   height: 4.7vh;
   width: 2.2vw;
@@ -273,7 +265,12 @@ iframe {
 }
 
 #player-previous { grid-area: grid-previous }
+
+#previous-icon { width: 100% }
+
 #player-next { grid-area: grid-next }
+
+#next-icon { width: 100% }
 
 #song-name {
   grid-area: grid-name;

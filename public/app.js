@@ -111,26 +111,28 @@ $(document).ready(function(){
       <div>
         <div class="music-navigator border">
           <div id="song-name" class="border"> "{{ audios[selectedSongIndex].name }}" </div>
-          <button class="previous nav-button border player-button" 
+          <button class="nav-button border player-button" 
                   id="player-previous" 
                   @click.prevent="previousSong()">
+                  <img src="/images/previous-button.png" id="previous-icon" />
           </button>
           <button v-if="this.playing === true" 
                   id="pause-button" 
                   class="border nav-button player-button" 
                   @click="pause(audios[selectedSongIndex].file)">
-                  <img src="/images/pause-button.png" id="pause-icon">
+                  <img src="/images/pause-button.png" id="pause-icon" />
           </button>
           <button v-if="this.playing === false" 
-                  id="play-button" 
+                  
                   class="border nav-button player-button" 
                   @click="play(audios[selectedSongIndex].file)">
-                  <img src="/images/play-button.png" id="play-icon">
+                  <img src="/images/play-button.png" id="play-icon" />
           </button>
           <button 
-                  class="nav-button border next player-button" 
+                  class="nav-button border player-button" 
                   id="player-next" 
                   @click.prevent="nextSong()">
+                  <img src="/images/next-button.png" id="next-icon" />
           </button><br>
 
         </div>
@@ -253,9 +255,13 @@ $(document).ready(function(){
       <div id="photos">
         <img :src="images[selectedImageIndex]" id="single-photo">
         <div id="video-navigator">
-          <button @click="previousImage()" class="previous nav-button" />
+          <button @click="previousImage()" class="previous nav-button">
+            <img src="/images/previous-button.png" id="previous-icon" />
+          </button>
           <div id="caption" />
-          <button @click="nextImage()" class="next nav-button" />
+          <button @click="nextImage()" class="next nav-button">
+            <img src="/images/next-button.png" id="next-icon" />
+          </button>
         </div>
       </div>
     `,
@@ -296,11 +302,15 @@ $(document).ready(function(){
       <div>
         <span v-html="videos[selectedVideoIndex].address" />
         <div id="video-navigator">
-          <button @click="previousVideo()" class="previous border nav-button"/>     
+          <button @click="previousVideo()" class="previous border nav-button">
+            <img src="/images/previous-button.png" id="previous-icon" />
+          </button>
           <div id="caption">
             "{{ videos[selectedVideoIndex].name }}"
           </div>
-          <button @click="nextVideo()" class="border next nav-button"/>
+          <button @click="nextVideo()" class="border next nav-button">
+            <img src="/images/next-button.png" id="next-icon" />
+          </button>
         </div>
       </div>
     `,
