@@ -123,7 +123,7 @@ $(document).ready(function(){
                   <img src="/images/pause-button.png" id="pause-icon" />
           </button>
           <button v-if="this.playing === false" 
-                  id="play-button" 
+                  id="play-button"
                   class="border nav-button" 
                   @click="play(audios[selectedSongIndex].file)">
                   <img src="/images/play-button.png" id="play-icon" />

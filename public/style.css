@@ -230,9 +230,8 @@ iframe {
   filter: brightness(50%);
   background: transparent;
   border: none;
-  width: 2vw;
-  height: 2vw;
-  margin: 10px;
+  width: 3vw;
+  height: 3vw;
 }
 
 .nav-button:hover {
