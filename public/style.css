@@ -280,10 +280,9 @@ iframe {
 
 #song-name {
   grid-area: grid-name;
-  display: flex;
-  align-items: flex-end;
   font-size: 200%;
-  text-align: center
+  text-align: center;
+  padding-bottom: 1vh
 }
 
 .music-navigator {
