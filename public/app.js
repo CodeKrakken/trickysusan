@@ -405,7 +405,7 @@ $(document).ready(function(){
       </div>
     `,
     data: {
-      selectedTab: 'Music'
+      selectedTab: 'Videos'
     },   
     methods: {
       selectTab(tab) {

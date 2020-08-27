@@ -103,7 +103,7 @@ iframe {
 
 #video-navigator {
   display: flex;
-  margin-top: 2%;
+  margin-top: 3vh;
   position: absolute;
   left: 0;
   right: 0;
