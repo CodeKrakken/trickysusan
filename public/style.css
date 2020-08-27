@@ -117,20 +117,6 @@ iframe {
   text-align: center
 }
 
-.nav-button {
-  height: 4.7vh;
-  width: 2.2vw;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-color: black;
-  filter: brightness(50%);
-  border: none
-}
-
-.nav-button:hover {
-  filter: brightness(100%);
-}
-
 /* .border {
   border: 1px dashed white
 } */
@@ -240,10 +226,17 @@ iframe {
   margin: auto
 }
 
-.player-button {
+.nav-button {
+  filter: brightness(50%);
+  background: transparent;
+  border: none;
   width: 2vw;
   height: 2vw;
   margin: 10px;
+}
+
+.nav-button:hover {
+  filter: brightness(100%);
 }
 
 #play-button {

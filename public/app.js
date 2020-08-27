@@ -111,25 +111,25 @@ $(document).ready(function(){
       <div>
         <div class="music-navigator border">
           <div id="song-name" class="border"> "{{ audios[selectedSongIndex].name }}" </div>
-          <button class="nav-button border player-button" 
+          <button class="nav-button border" 
                   id="player-previous" 
                   @click.prevent="previousSong()">
                   <img src="/images/previous-button.png" id="previous-icon" />
           </button>
           <button v-if="this.playing === true" 
                   id="pause-button" 
-                  class="border nav-button player-button" 
+                  class="border nav-button" 
                   @click="pause(audios[selectedSongIndex].file)">
                   <img src="/images/pause-button.png" id="pause-icon" />
           </button>
           <button v-if="this.playing === false" 
-                  
-                  class="border nav-button player-button" 
+                  id="play-button" 
+                  class="border nav-button" 
                   @click="play(audios[selectedSongIndex].file)">
                   <img src="/images/play-button.png" id="play-icon" />
           </button>
           <button 
-                  class="nav-button border player-button" 
+                  class="nav-button border" 
                   id="player-next" 
                   @click.prevent="nextSong()">
                   <img src="/images/next-button.png" id="next-icon" />
