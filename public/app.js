@@ -320,13 +320,13 @@ $(document).ready(function(){
           {
             name: "Strategy",
             address: '<iframe src="https://www.youtube.com/embed/exggrODRu4w?rel=0&modestbranding=1" \
-                      frameborder="0" allow="accelerometer; autoplay; encrypted-media; \
+                      frameborder="0" fullscreen="0" allow="accelerometer; autoplay; encrypted-media; \
                       gyroscope; picture-in-picture" allowfullscreen></iframe>'
           },
           {
             name: "Tug of War",
-            address: '<iframe src="https://www.youtube.com/embed/hm2jNxkG2ak?rel=0modestbranding=1" \
-                      frameborder="0" allow="accelerometer; autoplay; encrypted-media; \
+            address: '<iframe src="https://www.youtube.com/embed/hm2jNxkG2ak?rel=0&modestbranding=1&start=4" \
+                      frameborder="0" fullscreen="0" allow="accelerometer; autoplay; encrypted-media; \
                       gyroscope; picture-in-picture" allowfullscreen></iframe>'
           },
         ],
