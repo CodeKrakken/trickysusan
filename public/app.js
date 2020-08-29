@@ -332,8 +332,10 @@ $(document).ready(function(){
 
   Vue.component('gigs', {
     template: `
-      <div class="center border">
-        <img src="/images/stage.jpg" id="gig-image"/><br><br>
+      <div>
+        <div>
+          <img src="/images/stage.jpg" id="gig-image"/><br><br>
+        </div>
         <div id="gig-caption">
           You will note the lack of bodies both on and off stage.<br>
           As soon as this can be remedied, it shall be.
