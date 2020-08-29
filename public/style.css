@@ -121,8 +121,13 @@ iframe {
   text-align: center;
 }
 
+#gig-image-container {
+  max-height: 75vh;
+  background: black
+}
+
 #gig-image {
-  height: 75vh;
+  max-height: 75vh
 }
 
 #gig-caption {

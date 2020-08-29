@@ -333,9 +333,14 @@ $(document).ready(function(){
   Vue.component('gigs', {
     template: `
       <div>
-        <div>
-          <img src="/images/stage.jpg" id="gig-image"/><br><br>
+        <div class="shadow-one" id="gig-image-container">
+          <div class="shadow-two">
+            <div class="shadow-three">
+              <img src="/images/stage.jpg" id="gig-image" class="shadow-four" /><br><br>
+            </div>
+          </div>
         </div>
+        <br>
         <div id="gig-caption">
           You will note the lack of bodies both on and off stage.<br>
           As soon as this can be remedied, it shall be.
@@ -551,7 +556,7 @@ $(document).ready(function(){
       </div>
     `,
     data: {
-      selectedTab: 'Photos'
+      selectedTab: 'Gigs'
     },   
     methods: {
       selectTab(tab) {
