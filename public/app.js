@@ -236,11 +236,11 @@ $(document).ready(function(){
         <div class="center">
           What are you still doing reading this? Frick off to the gig page. NOW.
           <br><br>
-          Camilla on vocals<br>
-          Donald on guitar<br>
-          John on bass<br>
-          Val on drums
-
+          <img src="/images/camilla-portrait.png" class="portrait-photo" />
+          <img src="/images/donald-portrait.png" class="portrait-photo" />
+          <img src="/images/john-portrait.png" class="portrait-photo" />
+          <img src="/images/val-portrait.png" class="portrait-photo" />
+          
           <div id="quotes">
             "... I’ve seen deaf people cry at a Tricky Susan show ..."<br>
             "... I’ve even seen a goose take a bump at one of their shows ..."
@@ -405,7 +405,7 @@ $(document).ready(function(){
       </div>
     `,
     data: {
-      selectedTab: 'Videos'
+      selectedTab: 'Bio'
     },   
     methods: {
       selectTab(tab) {

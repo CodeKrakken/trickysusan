@@ -305,3 +305,9 @@ a:focus {
   border: none;
   outline: none
 }
+
+.portrait-photo {
+  width: 2vw;
+  height: auto;
+  border: 1px solid rgb(0, 174, 239);
+}
