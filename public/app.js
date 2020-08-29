@@ -18,6 +18,108 @@ $(document).ready(function(){
     })
   })
 
+  window.onload = function() {
+
+
+  const canvas = $("canvas");
+  const h3 = $('name');
+  const audio = $("audio");
+
+  $("file-input").onChange = function() {
+
+    const files = this.files;
+    console.log('FILES[0]: ', files[0])
+    audio.src = URL.createObjectURL(files[0]);
+
+    const name = files[0].name
+    h3.innerText = `${name}`
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    const ctx = canvas.getContext("2d");
+
+    const context = new AudioContext();
+    let src = context.createMediaElementSource(audio);
+
+    const analyser = context.createAnalyser();
+
+    src.connect(analyser);
+    analyser.connect(context.destination);
+
+    analyser.fftSize = 16384;
+
+    const bufferLength = analyser.frequencyBinCount;
+
+    const dataArray = new Uint8Array(bufferLength);
+
+    console.log('DATA-ARRAY: ', dataArray)
+
+    const WIDTH = canvas.width;
+    const HEIGHT = canvas.height;
+    console.log('WIDTH: ', WIDTH, 'HEIGHT: ', HEIGHT)
+
+    const barWidth = (WIDTH / bufferLength) * 13;
+    console.log('BARWIDTH: ', barWidth)
+
+    console.log('TOTAL WIDTH: ', (117*10)+(118*barWidth))
+
+    let barHeight;
+    let x = 0;
+
+    function renderFrame() {
+      requestAnimationFrame(renderFrame);
+
+      x = 0;
+
+      analyser.getByteFrequencyData(dataArray);
+
+      ctx.fillStyle = "rgba(0,0,0,0.2)";
+      ctx.fillRect(0, 0, WIDTH, HEIGHT);
+
+      let r, g, b;
+      let bars = 118
+
+      for (let i = 0; i < bars; i++) {
+        barHeight = (dataArray[i] * 2.5);
+
+        if (dataArray[i] > 210) {
+          r = 250
+          g = 0
+          b = 255
+        } else if (dataArray[i] > 200) {
+          r = 250
+          g = 255
+          b = 0
+        } else if (dataArray[i] > 190) {
+          r = 204
+          g = 255
+          b = 0
+        } else if (dataArray[i] > 180) {
+          r = 0
+          g = 219
+          b = 255
+        } else if (dataArray[i] < 150) {
+          r = 0
+          g = 199
+          b = 255
+        } else if (dataArray[i] < 140) {
+          r = 0
+          g = 12
+          b = 255
+        }
+
+        ctx.fillStyle = `rgb(${r},${g},${b})`;
+        ctx.fillRect(x, (HEIGHT - barHeight), barWidth, barHeight);
+
+        x += barWidth + 10
+      }
+    }
+
+    audio.play();
+    renderFrame();
+  };
+};
+
   Vue.component ('background', {
     template: `
       <div>
@@ -208,6 +310,18 @@ $(document).ready(function(){
         }
       }
     }
+  })
+
+  Vue.component('visualiser', {
+    template: `
+      <div>
+        <input type="file" id="file-input" accept="audio/*,video/*,image/*" />
+        <canvas id="canvas"></canvas>
+        <h3 id="name"></h3>
+        <audio id="audio" controls></audio>
+        <div id="background"></div>
+      </div>
+    `
   })
 
   Vue.component('gigs', {
@@ -412,6 +526,14 @@ $(document).ready(function(){
         this.selectedTab = tab 
       },
     },
+  })
+
+  var ape = new Vue({
+    el: '#ape',
+    template: `
+    <div>
+      <visualiser />
+    </div>`
   })
 })
 

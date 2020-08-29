@@ -311,3 +311,32 @@ a:focus {
   height: auto;
   border: 1px solid rgb(0, 174, 239);
 }
+
+/* Visualiser Styles */
+
+#name {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  z-index: 3;
+  color: #eeeeee;
+  font-family: monospace;
+}
+
+/* #background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(transparent,#00035f,transparent);
+  background-size: 100% 7px;
+  animation: bg 1s infinite linear;
+  z-index: 2;
+  opacity: 0.3;
+} */
+
+@keyframes bg {
+  0%{ background-position: 0 0; }
+  100%{ background-position: 8px 8px; }
+}
