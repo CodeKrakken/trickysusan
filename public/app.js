@@ -130,8 +130,14 @@ $(document).ready(function(){
 
   Vue.component ('band-name', {
     template: `
-      <div>
-        <img src="images/band-name.jpg" id="band-name">
+      <div class="shadow-one" id="band-name-container" >
+        <div class="shadow-two">
+          <div class="shadow-three">
+            <div class="shadow-four">
+              <img src="/images/band-name.jpg" id="band-name" />
+            </div>
+          </div>
+        </div>
       </div>
     `
   })
@@ -534,7 +540,7 @@ $(document).ready(function(){
   var app = new Vue({
     el: '#app',
     template: `
-      <div>
+      <div class="huh">
         <background />
         <band-name />
         <socials />

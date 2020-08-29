@@ -25,13 +25,13 @@ body {
   z-index: -1
 }
 
+#band-name-container {
+  max-width: 10%;
+  background: black
+}
+
 #band-name {
-  width: 10%;
-  height: auto;
-  position: absolute;
-  top: 1vh;
-  left: 1vh;
-  background: transparent;
+  max-width: 100%;
 }
 
 #socials {
