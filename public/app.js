@@ -384,16 +384,22 @@ $(document).ready(function(){
 
   Vue.component('photos', {
     template: `
-      <div id="photos">
-        <img :src="images[selectedImageIndex]" id="single-photo">
-        <div id="video-navigator">
-          <button @click="previousImage()" class="previous nav-button">
-            <img src="/images/previous-button.png" id="previous-icon" />
-          </button>
-          <div id="caption" />
-          <button @click="nextImage()" class="next nav-button">
-            <img src="/images/next-button.png" id="next-icon" />
-          </button>
+      <div class="photos">
+        <div class="shadow-one">
+          <div class="shadow-two">
+            <div class="shadow-three single-photo">
+              <img :src="images[selectedImageIndex]" class="shadow-four single-photo" />
+              <div id="video-navigator">
+                <button @click="previousImage()" class="previous nav-button">
+                  <img src="/images/previous-button.png" id="previous-icon" />
+                </button>
+                <div id="caption" />
+                <button @click="nextImage()" class="next nav-button">
+                  <img src="/images/next-button.png" id="next-icon" />
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     `,
@@ -537,7 +543,7 @@ $(document).ready(function(){
       </div>
     `,
     data: {
-      selectedTab: 'Bio'
+      selectedTab: 'Photos'
     },   
     methods: {
       selectTab(tab) {
