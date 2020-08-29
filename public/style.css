@@ -317,6 +317,7 @@ a:focus {
   grid-template-columns: repeat(4, 1fr);
   text-align: center;
   max-width: 50vw;
+  font-size: 70%
 }
 
 .portrait-photo {
@@ -324,7 +325,8 @@ a:focus {
   height: auto;
   border: 1px solid rgb(226, 32, 118);
   margin-left: 2vw;
-  margin-right: 2vw
+  margin-right: 2vw;
+  margin-bottom: 1vw
 }
 
 /* Visualiser Styles */
