@@ -339,26 +339,44 @@ $(document).ready(function(){
   Vue.component('bio', {
     template: `
       <div>
-        Tricky Susan are here to assault your taste buds with their attention-demanding rock ‘n’ roll. 
-        A four-piece outfit formed in London and led by Camilla Summerskill, Tricky Susan are paving the
-        way with their melodic, hook-driven and beat-centric hits. On stage, their energy is hard to match. 
-        On record, their hunger to tell you their story inescapable.<br><br>They don’t do tired. They 
-        do do melodies. They don’t follow crowds. They do like crowds. They HATE pretentiousness. 
-        But they adore profundity ... They fi ... 
+        <div>
+          Tricky Susan are here to assault your taste buds with their attention-demanding rock ‘n’ roll. 
+          A four-piece outfit formed in London and led by Camilla Summerskill, Tricky Susan are paving the
+          way with their melodic, hook-driven and beat-centric hits. On stage, their energy is hard to match. 
+          On record, their hunger to tell you their story inescapable.<br><br>They don’t do tired. They 
+          do do melodies. They don’t follow crowds. They do like crowds. They HATE pretentiousness. 
+          But they adore profundity ... They fi ... 
+        </div>
+        
         <br><br>
         
         <div class="center">
-          What are you still doing reading this? Frick off to the gig page. NOW.
+          <div>
+            What are you still doing reading this? Frick off to the gig page. NOW.
+          </div>
+        
           <br><br>
-          <img src="/images/camilla-portrait.png" class="portrait-photo" />
-          <img src="/images/donald-portrait.png" class="portrait-photo" />
-          <img src="/images/john-portrait.png" class="portrait-photo" />
-          <img src="/images/val-portrait.png" class="portrait-photo" />
+
+          <div id="grid-container">
+        
+            <div id="personal-bio">
+              <div><img src="/images/camilla-portrait.png" class="portrait-photo" /></div>
+              <div><img src="/images/donald-portrait.png" class="portrait-photo" /></div>
+              <div><img src="/images/john-portrait.png" class="portrait-photo" /></div>
+              <div><img src="/images/val-portrait.png" class="portrait-photo" /></div>
+              <div>Camilla - vocals</div>
+              <div>Donald - guitar</div>
+              <div>John - bass</div>
+              <div>Val - drums</div>
+            </div>
+
+          </div>
           
           <div id="quotes">
             "... I’ve seen deaf people cry at a Tricky Susan show ..."<br>
             "... I’ve even seen a goose take a bump at one of their shows ..."
           </div>
+          
         </div>
       </div>
     `

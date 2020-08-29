@@ -306,12 +306,27 @@ a:focus {
   outline: none
 }
 
+#grid-container {
+  display: flex;
+  justify-content: center;
+}
+
+#personal-bio {
+  display: grid;
+  grid-template-rows: 8fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  max-width: 50vw;          
+}
+
 .portrait-photo {
-  width: 12vw;
+  width: 8vw;
   height: auto;
   border: 1px solid rgb(226, 32, 118);
   margin: 1vw
 }
+
+
 
 /* Visualiser Styles */
 
