@@ -359,15 +359,15 @@ $(document).ready(function(){
 
           <div id="grid-container">
         
-            <div id="personal-bio">
-              <div><img src="/images/camilla-portrait.png" class="portrait-photo" /></div>
-              <div><img src="/images/donald-portrait.png" class="portrait-photo" /></div>
-              <div><img src="/images/john-portrait.png" class="portrait-photo" /></div>
-              <div><img src="/images/val-portrait.png" class="portrait-photo" /></div>
-              <div>Camilla - vocals</div>
-              <div>Donald - guitar</div>
-              <div>John - bass</div>
-              <div>Val - drums</div>
+            <div id="personal-bio" class="border">
+              <div class="border"><img src="/images/camilla-portrait.png" class="portrait-photo" /></div>
+              <div class="border"><img src="/images/donald-portrait.png" class="portrait-photo" /></div>
+              <div class="border"><img src="/images/john-portrait.png" class="portrait-photo" /></div>
+              <div class="border"><img src="/images/val-portrait.png" class="portrait-photo" /></div>
+              <div class="border">Camilla - vocals</div>
+              <div class="border">Donald - guitar</div>
+              <div class="border">John - bass</div>
+              <div class="border">Val - drums</div>
             </div>
 
           </div>
