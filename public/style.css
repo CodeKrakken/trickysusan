@@ -50,9 +50,9 @@ body {
 
 #social {
   width: 3vw;
-
   filter: grayscale(100%);
   text-align: left;
+  transition: all 0.9s ease
 }
 
 #social:hover {
@@ -63,6 +63,7 @@ body {
 #social:active {
   filter: grayscale(0%);
   filter: brightness(100%);
+  transition: all 0.1s ease;
 }
 
 .main-content {
@@ -160,15 +161,18 @@ iframe {
   font-style: italic;
   background: transparent;
   color: rgb(0, 174, 239);
+  transition: all 0.1s ease;
 }
 
 #tab:hover {
   cursor: pointer;
   filter: brightness(75%);
+  transition: all 0.2s ease;
 }
 
 #tab:active {
   filter: brightness(100%);
+  transition: all 0.1s ease;
 }
 
 ::-moz-placeholder { 
@@ -243,14 +247,17 @@ iframe {
   border: none;
   width: 3vw;
   height: 3vw;
+  transition: all 0.1s ease;
 }
 
 .nav-button:hover {
   filter: brightness(75%);
+  transition: all 0.2s ease;
 }
 
 .nav-button:active {
-  filter: brightness(100%)
+  filter: brightness(100%);
+  transition: all 0.1s ease;
 }
 
 #play-button {
@@ -323,10 +330,10 @@ a:focus {
 .portrait-photo {
   width: 8vw;
   height: auto;
-  border: 1px solid rgb(226, 32, 118);
+  border: 1px solid rgb(113, 16, 59);
   margin-left: 2vw;
   margin-right: 2vw;
-  margin-bottom: 1vw
+  margin-bottom: 1vw;
 }
 
 /* Visualiser Styles */
