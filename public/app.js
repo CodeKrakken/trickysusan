@@ -348,7 +348,7 @@ $(document).ready(function(){
           But they adore profundity ... They fi ... 
         </div>
         
-        <br><br>
+        <br>
         
         <div class="center">
           <div>
