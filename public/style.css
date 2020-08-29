@@ -51,8 +51,7 @@ body {
 #social {
   width: 3vw;
   filter: grayscale(100%);
-  text-align: left;
-  transition: all 0.9s ease
+  text-align: left
 }
 
 #social:hover {
@@ -63,7 +62,7 @@ body {
 #social:active {
   filter: grayscale(0%);
   filter: brightness(100%);
-  transition: all 0.1s ease;
+  transition: all 0.2s ease;
 }
 
 .main-content {
@@ -95,11 +94,13 @@ body {
 
 #single-photo {
   height: 75vh;
+  border: 1px solid rgb(0, 87, 119);
 }
 
 iframe {
   height: 75vh; 
   width: 58vw;
+  border: 1px solid rgb(0, 87, 119);
 }
 
 #video-navigator {
@@ -120,7 +121,8 @@ iframe {
 }
 
 #gig-image {
-  height: 75vh
+  height: 75vh;
+  border: 1px solid rgb(0, 87, 119);
 }
 
 #gig-caption {
@@ -330,10 +332,10 @@ a:focus {
 .portrait-photo {
   width: 8vw;
   height: auto;
-  border: 1px solid rgb(113, 16, 59);
   margin-left: 2vw;
   margin-right: 2vw;
   margin-bottom: 1vw;
+  border: 1px solid rgb(0, 87, 119);
 }
 
 /* Visualiser Styles */
