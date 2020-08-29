@@ -307,9 +307,10 @@ a:focus {
 }
 
 .portrait-photo {
-  width: 2vw;
+  width: 12vw;
   height: auto;
-  border: 1px solid rgb(0, 174, 239);
+  border: 1px solid rgb(226, 32, 118);
+  margin: 1vw
 }
 
 /* Visualiser Styles */
