@@ -94,13 +94,11 @@ body {
 
 #single-photo {
   height: 75vh;
-  border: 1px solid rgb(0, 87, 119);
 }
 
 iframe {
   height: 75vh; 
   width: 58vw;
-  border: 1px solid rgb(0, 87, 119);
 }
 
 #video-navigator {
@@ -122,7 +120,6 @@ iframe {
 
 #gig-image {
   height: 75vh;
-  border: 1px solid rgb(0, 87, 119);
 }
 
 #gig-caption {
@@ -335,7 +332,6 @@ a:focus {
   margin-left: 2vw;
   margin-right: 2vw;
   margin-bottom: 1vw;
-  border: 1px solid rgb(0, 87, 119);
 }
 
 /* Visualiser Styles */
