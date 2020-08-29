@@ -345,17 +345,17 @@ $(document).ready(function(){
           way with their melodic, hook-driven and beat-centric hits. On stage, their energy is hard to match. 
           On record, their hunger to tell you their story inescapable.<br><br>They don’t do tired. They 
           do do melodies. They don’t follow crowds. They do like crowds. They HATE pretentiousness. 
-          But they adore profundity ... They fi ... 
+          But they adore profundity ... They fi ...
         </div>
         
-        <br><br>
+        <br>
         
         <div class="center">
           <div>
             What are you still doing reading this? Frick off to the gig page. NOW.
           </div>
         
-          <br><br>
+          <br><br><br>
 
           <div id="grid-container">
         
