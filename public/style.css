@@ -26,12 +26,17 @@ body {
 }
 
 #band-name-container {
-  max-width: 10%;
+  max-width: 10vw;
   background: transparent
 }
 
 #band-name {
-  max-width: 100%;
+    height: auto;
+    position: absolute;
+    top: 1vh;
+    left: 1vh;
+    background: black;
+    max-width: 10vw;
 }
 
 #socials {
