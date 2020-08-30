@@ -27,12 +27,13 @@ body {
 
 #band-name-container {
   max-width: 10vw;
-  background: transparent
+  background: transparent;
+  float:left
 }
 
 #band-name {
     height: auto;
-    position: absolute;
+    /* position: absolute; */
     top: 1vh;
     left: 1vh;
     background: black;
@@ -97,10 +98,10 @@ body {
 
 .center { text-align: center }
 
-/* .shadow-one { box-shadow: 20px 20px 20px black }
+.shadow-one { box-shadow: 20px 20px 20px black }
 .shadow-two { box-shadow: 20px -20px 20px black }
 .shadow-three { box-shadow: -20px -20px 20px black }
-.shadow-four { box-shadow: -20px 20px 20px black } */
+.shadow-four { box-shadow: -20px 20px 20px black }
 
 .single-photo { height: 75vh; }
 
