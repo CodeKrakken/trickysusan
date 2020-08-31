@@ -387,8 +387,10 @@ $(document).ready(function(){
 
   Vue.component('photos', {
     template: `
-      <div class="photos shadow-one">
-        <img :src="images[selectedImageIndex]" class="single-photo" />
+      <div>
+        <div>
+          <img :src="images[selectedImageIndex]" class="single-photo shadow-one" />
+        </div>
         <div id="video-navigator">
           <button @click="previousImage()" class="previous nav-button">
             <img src="/images/previous-button.png" id="previous-icon" />
@@ -398,7 +400,7 @@ $(document).ready(function(){
             <img src="/images/next-button.png" id="next-icon" />
           </button>
         </div>
-      </div>
+    </div>
     `,
     data() {
       return {
@@ -542,7 +544,7 @@ $(document).ready(function(){
       </div>
     `,
     data: {
-      selectedTab: 'Gigs'
+      selectedTab: 'Photos'
     },   
     methods: {
       selectTab(tab) {

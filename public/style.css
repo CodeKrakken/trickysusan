@@ -11,10 +11,12 @@ body {
   font-family: 'Odibee Sans';
   letter-spacing: 0.1em;
   cursor: default;
+  text-shadow: 5px 5px 5px black, -5px -5px 5px black, 5px -5px 5px black, -5px 5px 5px black;
+
 }
 
 #background {
-  background: url(images/stars.jpg);
+  /* background: url(images/stars.jpg); */
   background-size: cover;
   position: absolute;
   top: 0;
@@ -27,7 +29,7 @@ body {
 
 #band-name-container { float:left; height: 15vh }
 
-#band-name { max-width: 10vw; height: auto }
+#band-name { max-width: 10vw; height: 15vh }
 
 #socials {
   position: absolute;
@@ -245,11 +247,15 @@ iframe {
 
 .nav-button {
   filter: brightness(50%);
-  background: transparent;
+  background: black;
   border: none;
   width: 3vw;
   height: 3vw;
   transition: all 0.1s ease;
+  box-shadow: 5px 5px 5px black, 
+              5px -5px 5px black,
+              -5px -5px 5px black,
+              -5px 5px 5px black
 }
 
 .nav-button:hover {
