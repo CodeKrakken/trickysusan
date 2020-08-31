@@ -327,16 +327,25 @@ $(document).ready(function(){
   Vue.component('gigs', {
     template: `
       <div>
-        <div class="shadow-one" id="gig-image-container">
-          <img src="/images/stage.jpg" id="gig-image" /><br><br>
-        </div>
-        <br>
         <div id="gig-caption">
-          You will note the lack of bodies both on and off stage.<br>
-          As soon as this can be remedied, it shall be.
+          The wheels are in motion for a return to the stage. In the meantime, here's a taste of how it was last time ...
+        </div>
+        <br><br>
+        <div class="photo">
+          <span v-html="video.address" />
         </div>
       </div>
     `,
+    data() {
+      return {
+        video: {
+          name: "Philosophy (live)",
+          address: '<iframe src="https://www.youtube-nocookie.com/embed/Z5I9GFF74-Y?rel=0&modestbranding=1" \
+                    frameborder="0" fullscreen="0" allow="accelerometer; autoplay; encrypted-media; \
+                    gyroscope; picture-in-picture" allowfullscreen></iframe>'
+        }
+      }
+    }
   })
 
   Vue.component('bio', {
