@@ -131,13 +131,7 @@ $(document).ready(function(){
   Vue.component ('band-name', {
     template: `
       <div class="shadow-one" id="band-name-container" >
-        <div class="shadow-two">
-          <div class="shadow-three">
-            <div class="shadow-four">
-              <img src="/images/band-name.jpg" id="band-name" />
-            </div>
-          </div>
-        </div>
+        <img src="/images/band-name.jpg" id="band-name" />
       </div>
     `
   })

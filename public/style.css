@@ -25,20 +25,9 @@ body {
   z-index: -1
 }
 
-#band-name-container {
-  max-width: 10vw;
-  background: transparent;
-  float:left
-}
+#band-name-container { float:left }
 
-#band-name {
-    height: auto;
-    /* position: absolute; */
-    top: 1vh;
-    left: 1vh;
-    background: black;
-    max-width: 10vw;
-}
+#band-name { max-width: 10vw; }
 
 #socials {
   position: absolute;
@@ -98,10 +87,7 @@ body {
 
 .center { text-align: center }
 
-.shadow-one { box-shadow: 20px 20px 20px black }
-.shadow-two { box-shadow: 20px -20px 20px black }
-.shadow-three { box-shadow: -20px -20px 20px black }
-.shadow-four { box-shadow: -20px 20px 20px black }
+.shadow-one { box-shadow: 20px 20px 20px black, 20px -20px 20px black, -20px -20px 20px black, -20px 20px 20px black !important}
 
 .single-photo { height: 75vh; }
 
