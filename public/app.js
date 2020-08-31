@@ -330,6 +330,9 @@ $(document).ready(function(){
         <div class="photo">
           <span v-html="video.address" />
         </div>
+        <div id="gig-caption">
+          "{{ video.name }}"
+        </div>
       </div>
     `,
     data() {
@@ -446,6 +449,18 @@ $(document).ready(function(){
                       frameborder="0" fullscreen="0" allow="accelerometer; autoplay; encrypted-media; \
                       gyroscope; picture-in-picture" allowfullscreen></iframe>'
           },
+          {
+            name: "Come On Over (session)",
+            address: '<iframe src="https://www.youtube.com/embed/X3lryMPttIY?rel=0&modestbranding=1" \
+                      frameborder="0" fullscreen="0" allow="accelerometer; autoplay; encrypted-media; \
+                      gyroscope; picture-in-picture" allowfullscreen></iframe>'
+          },
+          {
+            name: "Baby, I Do",
+            address: '<iframe src="https://www.youtube.com/embed/qTJmtTHc31U?rel=0&modestbranding=1" \
+                      frameborder="0" fullscreen="0" allow="accelerometer; autoplay; encrypted-media; \
+                      gyroscope; picture-in-picture" allowfullscreen></iframe>'
+          }
         ],
         selectedVideoIndex: 1
       }
