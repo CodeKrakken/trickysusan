@@ -11,8 +11,7 @@ body {
   font-family: 'Odibee Sans';
   letter-spacing: 0.1em;
   cursor: default;
-  text-shadow: 5px 5px 5px black, -5px -5px 5px black, 5px -5px 5px black, -5px 5px 5px black;
-
+  text-shadow: 5px 5px 3px black, -5px -5px 3px black, 5px -5px 3px black, -5px 5px 3px black;
 }
 
 #background {
