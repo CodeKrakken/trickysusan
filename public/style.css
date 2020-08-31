@@ -241,7 +241,7 @@ iframe {
 
 #message-conf {
   position: absolute;
-  top: 90%;
+  top: 90vh;
   left: 0;
   right: 0;
   margin: auto
