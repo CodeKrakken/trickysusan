@@ -81,10 +81,10 @@ body {
   font-size: 70%;
   font-style: italic;
   position: absolute;
-  top: 90%;
+  top: 80%;
   left: 0;
   right: 0;
-  margin: auto
+  text-align: center
 }
 
 .center { text-align: center }

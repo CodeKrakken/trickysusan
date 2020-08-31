@@ -342,45 +342,18 @@ $(document).ready(function(){
   Vue.component('bio', {
     template: `
       <div>
-        <div>
-          Tricky Susan are here to assault your taste buds with their attention-demanding rock ‘n’ roll. 
-          A four-piece outfit formed in London and led by Camilla Summerskill, Tricky Susan are paving the
-          way with their melodic, hook-driven and beat-centric hits. On stage, their energy is hard to match. 
-          On record, their hunger to tell you their story inescapable.<br><br>They don’t do tired. They 
-          do do melodies. They don’t follow crowds. They do like crowds. They HATE pretentiousness. 
-          But they adore profundity ... They fi ...
-        </div>
-        
-        <br>
-        
-        <div class="center">
-          <div>
-            What are you still doing reading this? Frick off to the gig page. NOW.
-          </div>
-        
-          <br><br><br>
-
-          <div id="grid-container">
-        
-            <div id="personal-bio" class="border">
-              <div class="border"><img src="/images/camilla-portrait.png" class="portrait-photo shadow-one" /></div>
-              <div class="border"><img src="/images/donald-portrait.png" class="portrait-photo shadow-one" /></div>
-              <div class="border"><img src="/images/john-portrait.png" class="portrait-photo shadow-one" /></div>
-              <div class="border"><img src="/images/val-portrait.png" class="portrait-photo shadow-one" /></div>
-              <div class="border">Camilla - vocals</div>
-              <div class="border">Donald - guitar</div>
-              <div class="border">John - bass</div>
-              <div class="border">Val - drums</div>
-            </div>
-
-          </div>
+        Tricky Susan are here to assault your taste buds with their attention-grabbing rock ‘n’ roll.
+        <br><br>
+        A four-piece outfit formed in London, Tricky Susan entice you to join their journey with their melodic, hook-driven and beat-centric hits.
+        Packing the punch in their storytelling and an intense gusto for performing live – their energy is hard to eclipse.
+        <br><br>
+        Head over to the Gigs page and follow them on Instagram and Facebook … PRONTO. 
           
-          <div id="quotes">
-            "... I’ve seen deaf people cry at a Tricky Susan show ..."<br>
-            "... I’ve even seen a goose take a bump at one of their shows ..."
-          </div>
-          
+        <div id="quotes">
+          "... I’ve seen deaf people cry at a Tricky Susan show ..."<br>
+          "... I’ve even seen a goose take a bump at one of their shows ..."
         </div>
+
       </div>
     `
   })
