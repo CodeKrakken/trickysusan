@@ -153,7 +153,8 @@ iframe {
   flex-direction: column;
   justify-content: space-evenly;
   text-align: right;
-  background: transparent
+  background: transparent;
+  text-shadow: 2px 2px 2px black, -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black;
 }
 
 #tab {
