@@ -389,7 +389,7 @@ $(document).ready(function(){
     template: `
       <div>
         <div>
-          <img :src="images[selectedImageIndex]" id="photo" />
+          <img :src="images[selectedImageIndex]" class="photo" />
         </div>
         <div id="video-navigator">
           <button @click="previousImage()" class="previous nav-button">
@@ -437,7 +437,7 @@ $(document).ready(function(){
   Vue.component('videos', {
     template: `
       <div>
-        <div class="shadow-one single-photo">
+        <div class="photo">
           <span v-html="videos[selectedVideoIndex].address" />
         </div>
         <div id="video-navigator">
