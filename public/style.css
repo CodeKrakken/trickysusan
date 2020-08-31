@@ -90,10 +90,10 @@ body {
 .center { text-align: center }
 
 .shadow-one { 
-  box-shadow: 20px 20px 20px black, 
-              20px -20px 20px black, 
-              -20px -20px 20px black, 
-              -20px 20px 20px black 
+  box-shadow: 15px 15px 15px black, 
+              15px -15px 15px black, 
+              -15px -15px 15px black, 
+              -15px 15px 15px black 
 }
 
 .photo {
