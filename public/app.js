@@ -333,9 +333,6 @@ $(document).ready(function(){
         <div class="photo">
           <span v-html="video.address" />
         </div>
-        <div id="gig-caption">
-          "{{ video.name }}"
-        </div>
       </div>
     `,
     data() {
@@ -428,9 +425,7 @@ $(document).ready(function(){
           <button @click="previousVideo()" class="previous border nav-button">
             <img src="/images/previous-button.png" id="previous-icon" />
           </button>
-          <div id="caption">
-            "{{ videos[selectedVideoIndex].name }}"
-          </div>
+          <div id="caption" />
           <button @click="nextVideo()" class="border next nav-button">
             <img src="/images/next-button.png" id="next-icon" />
           </button>
