@@ -489,10 +489,10 @@ $(document).ready(function(){
       <div class="center">
         <h1 id="contact-header">Contact</h1>
         <form id="form" method="POST" action="/">
-          <p><input class="contact-info" type="text" name="name" placeholder="name"></p>
-          <p><input class="contact-info" type="email" name="email" placeholder="email"></p>
-          <p><textarea id="message-box" name="message" rows="6" placeholder="What's going down, Charlie Brown?"></textarea></p>
-          <p><button id="submit-button" type="button">Done</button></p>
+          <p><input class="contact-info" type="text" name="name" placeholder="name"  class="shadow-one"></p>
+          <p><input class="contact-info" type="email" name="email" placeholder="email" class="shadow-one"></p>
+          <p><textarea id="message-box" name="message" rows="6" placeholder="What's going down, Charlie Brown?" class="shadow-one"></textarea></p>
+          <p><button id="submit-button" type="button" class="shadow-one">Done</button></p>
           <div id="message-conf" />
         </form>
       </div>
