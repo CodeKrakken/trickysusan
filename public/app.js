@@ -141,7 +141,7 @@ $(document).ready(function(){
       <div id="socials">
         <span v-for="social in socials">
           <a :href="social.link" target="_blank">
-            <img v-bind:src="social.image" id="social">
+            <img v-bind:src="social.image" id="social" class="shadow-one">
           </a> 
         </span>
       </div>
