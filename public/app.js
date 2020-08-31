@@ -389,7 +389,7 @@ $(document).ready(function(){
     template: `
       <div>
         <div>
-          <img :src="images[selectedImageIndex]" class="single-photo shadow-one" />
+          <img :src="images[selectedImageIndex]" id="photo" />
         </div>
         <div id="video-navigator">
           <button @click="previousImage()" class="previous nav-button">

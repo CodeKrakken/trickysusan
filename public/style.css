@@ -92,7 +92,13 @@ body {
 
 .shadow-one { box-shadow: 20px 20px 20px black, 20px -20px 20px black, -20px -20px 20px black, -20px 20px 20px black }
 
-.single-photo { height: 75vh; }
+#photo {
+  height: 75vh;
+  box-shadow: 20px 20px 20px black, 
+              20px -20px 20px black, 
+              -20px -20px 20px black, 
+              -20px 20px 20px black
+}
 
 iframe {
   height: 75vh; 
