@@ -536,7 +536,7 @@ $(document).ready(function(){
       </div>
     `,
     data: {
-      selectedTab: 'Videos'
+      selectedTab: 'Gigs'
     },   
     methods: {
       selectTab(tab) {

@@ -155,19 +155,12 @@ iframe {
 #gig-caption {
   position: absolute;
   margin: auto;
-  left: 0;
-  right: 0;
-  text-align: center;
-  font-size: 150%;
-  background: transparent;
-  width: 25%;display: flex;
-  position: absolute;
-  left: 0;
-  right: 0;
   top: 90vh;
+  left: 0;
+  right: 0;
+  font-size: 150%;
+  display: flex;
   justify-content: center;
-  background: transparent;
-  align-content: center;
 }
 
 #email {
