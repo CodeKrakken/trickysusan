@@ -328,11 +328,7 @@ $(document).ready(function(){
     template: `
       <div>
         <div class="shadow-one" id="gig-image-container">
-          <div class="shadow-two">
-            <div class="shadow-three">
-              <img src="/images/stage.jpg" id="gig-image" class="shadow-four" /><br><br>
-            </div>
-          </div>
+          <img src="/images/stage.jpg" id="gig-image" class="shadow-four" /><br><br>
         </div>
         <br>
         <div id="gig-caption">

@@ -25,9 +25,9 @@ body {
   z-index: -1
 }
 
-#band-name-container { float:left }
+#band-name-container { float:left; height: 15vh }
 
-#band-name { max-width: 10vw; }
+#band-name { max-width: 10vw; height: auto }
 
 #socials {
   position: absolute;
@@ -87,7 +87,7 @@ body {
 
 .center { text-align: center }
 
-.shadow-one { box-shadow: 20px 20px 20px black, 20px -20px 20px black, -20px -20px 20px black, -20px 20px 20px black !important}
+.shadow-one { box-shadow: 20px 20px 20px black, 20px -20px 20px black, -20px -20px 20px black, -20px 20px 20px black }
 
 .single-photo { height: 75vh; }
 
