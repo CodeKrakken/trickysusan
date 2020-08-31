@@ -200,7 +200,7 @@ $(document).ready(function(){
       return {
         posts: [
           {
-            text: 'COVID-19 was a major prick, and still is as far as we’re concerned. Aside from all the obvious, it stopped us playing ... for now. We’re working really hard to establish when we can get back to rocking out in front of you.<br><br>In the meanwhile we’ve been in the recording studio laying down our latest tracks. Watch this space ... <br><br><div class="center"><h1>KA-POW.</h1></div>',
+            text: 'Let’s face it - COVID-19 continues to be a major prick. We’re working really hard to establish which venues will have us back as soon as possible, so we can provide an antidote to all this BS – a large and loud dose of Tricky Susan.<br><br>In the meanwhile we’ve been in the recording studio laying down our latest tracks. Watch this space ...<br><br><div class="center"><h1>KA-POW.</h1></div>',
             date: '14/07/2020'
           }
         ]
@@ -515,7 +515,6 @@ $(document).ready(function(){
       return {
         tabs: [
           'News',
-          'Music',
           'Gigs',
           'Bio',
           'Photos',
