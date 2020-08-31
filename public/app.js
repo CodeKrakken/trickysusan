@@ -328,7 +328,7 @@ $(document).ready(function(){
     template: `
       <div>
         <div class="shadow-one" id="gig-image-container">
-          <img src="/images/stage.jpg" id="gig-image" class="shadow-four" /><br><br>
+          <img src="/images/stage.jpg" id="gig-image" /><br><br>
         </div>
         <br>
         <div id="gig-caption">
@@ -387,22 +387,16 @@ $(document).ready(function(){
 
   Vue.component('photos', {
     template: `
-      <div class="photos">
-        <div class="shadow-one">
-          <div class="shadow-two">
-            <div class="shadow-three single-photo">
-              <img :src="images[selectedImageIndex]" class="shadow-four single-photo" />
-              <div id="video-navigator">
-                <button @click="previousImage()" class="previous nav-button">
-                  <img src="/images/previous-button.png" id="previous-icon" />
-                </button>
-                <div id="caption" />
-                <button @click="nextImage()" class="next nav-button">
-                  <img src="/images/next-button.png" id="next-icon" />
-                </button>
-              </div>
-            </div>
-          </div>
+      <div class="photos shadow-one">
+        <img :src="images[selectedImageIndex]" class="single-photo" />
+        <div id="video-navigator">
+          <button @click="previousImage()" class="previous nav-button">
+            <img src="/images/previous-button.png" id="previous-icon" />
+          </button>
+          <div id="caption" />
+          <button @click="nextImage()" class="next nav-button">
+            <img src="/images/next-button.png" id="next-icon" />
+          </button>
         </div>
       </div>
     `,
