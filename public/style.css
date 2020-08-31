@@ -126,6 +126,17 @@ iframe {
   text-align: center;
 }
 
+#live-caption {
+  font-size: 150%;
+  text-align: center;
+  margin-top: 3vh;
+  position: absolute;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  background: transparent
+}
+
 #gig-image-container {
   max-height: 75vh;
   background: black

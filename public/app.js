@@ -330,9 +330,12 @@ $(document).ready(function(){
         <div id="gig-caption">
           The wheels are in motion for a return to the stage. In the meantime, here's a taste of how it was last time ...
         </div>
-        <br><br>
+        <br>
         <div class="photo">
           <span v-html="video.address" />
+        </div>
+        <div id="live-caption">
+          "{{ video.name }}"
         </div>
       </div>
     `,
