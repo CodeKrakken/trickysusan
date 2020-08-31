@@ -435,7 +435,9 @@ $(document).ready(function(){
   Vue.component('videos', {
     template: `
       <div>
-        <span v-html="videos[selectedVideoIndex].address" />
+        <div class="shadow-one single-photo">
+          <span v-html="videos[selectedVideoIndex].address" />
+        </div>
         <div id="video-navigator">
           <button @click="previousVideo()" class="previous border nav-button">
             <img src="/images/previous-button.png" id="previous-icon" />
