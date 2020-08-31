@@ -132,24 +132,14 @@ iframe {
   text-align: center;
 }
 
-#live-caption {
-  font-size: 150%;
-  text-align: center;
-  margin-top: 3vh;
+#gig-header {
   position: absolute;
+  margin: auto;
+  top: 8vh;
   left: 0;
   right: 0;
-  justify-content: center;
-  background: transparent
-}
-
-#gig-image-container {
-  max-height: 75vh;
-  background: black
-}
-
-#gig-image {
-  max-height: 75vh
+  display: flex;
+  justify-content: center
 }
 
 #gig-caption {
@@ -272,8 +262,8 @@ iframe {
 .nav-button {
   filter: brightness(50%);
   background: black;
-  width: 2vw;
-  height: 2vw;
+  width: 3vw;
+  height: 3vw;
   transition: all 0.1s ease;
   box-shadow: 5px 5px 5px black, 
               5px -5px 5px black,

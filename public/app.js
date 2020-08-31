@@ -327,6 +327,9 @@ $(document).ready(function(){
   Vue.component('gigs', {
     template: `
       <div>
+        <div id="gig-header">
+          Wheels are in motion regarding a return to the stage. For now, here's a taste of last time ...
+        </div>
         <div class="photo">
           <span v-html="video.address" />
         </div>
