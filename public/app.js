@@ -327,15 +327,8 @@ $(document).ready(function(){
   Vue.component('gigs', {
     template: `
       <div>
-        <div id="gig-caption">
-          The wheels are in motion for a return to the stage. In the meantime, here's a taste of how it was last time ...
-        </div>
-        <br>
         <div class="photo">
           <span v-html="video.address" />
-        </div>
-        <div id="live-caption">
-          "{{ video.name }}"
         </div>
       </div>
     `,
@@ -385,7 +378,7 @@ $(document).ready(function(){
             <img src="/images/next-button.png" id="next-icon" />
           </button>
         </div>
-    </div>
+      </div>
     `,
     data() {
       return {
@@ -402,7 +395,7 @@ $(document).ready(function(){
           'images/WaterRats.jpg',
           'images/IMGP9917.jpg',
         ],
-        selectedImageIndex: 0,
+        selectedImageIndex: 1,
       }
     },
     methods: {
@@ -528,7 +521,7 @@ $(document).ready(function(){
       </div>
     `,
     data: {
-      selectedTab: 'Bio'
+      selectedTab: 'Videos'
     },   
     methods: {
       selectTab(tab) {

@@ -111,10 +111,10 @@ iframe {
 
 #video-navigator {
   display: flex;
-  margin-top: 3vh;
   position: absolute;
   left: 0;
   right: 0;
+  top: 90vh;
   justify-content: center;
   background: transparent
 }
@@ -158,9 +158,9 @@ iframe {
   font-size: 200%
 }
 
-/* .border {
+.border {
   border: 1px dashed white
-} */
+}
 
 #tabs {
   position: absolute;
