@@ -366,7 +366,7 @@ $(document).ready(function(){
   Vue.component('photos', {
     template: `
       <div>
-        <div>
+        <div class="photo-outer">
           <img :src="images[selectedImageIndex]" class="photo" />
         </div>
         <div id="video-navigator">
@@ -447,7 +447,7 @@ $(document).ready(function(){
                       gyroscope; picture-in-picture" allowfullscreen></iframe>'
           },
         ],
-        selectedVideoIndex: 0
+        selectedVideoIndex: 1
       }
     },
     methods: {

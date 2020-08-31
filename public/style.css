@@ -104,6 +104,10 @@ body {
               -20px 20px 20px black
 }
 
+.photo-outer {
+  height: 75vh;
+}
+
 iframe {
   height: 75vh; 
   width: 58vw;
