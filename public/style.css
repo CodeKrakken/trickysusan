@@ -101,7 +101,7 @@ body {
   box-shadow: 20px 20px 20px black, 
               20px -20px 20px black, 
               -20px -20px 20px black, 
-              -20px 20px 20px black
+              -20px 20px 20px black,
 }
 
 .photo-outer {
@@ -333,20 +333,4 @@ button:focus {
 a:focus {
   border: none;
   outline: none
-}
-
-/* Visualiser Styles */
-
-#name {
-  position: absolute;
-  top: 0;
-  right: 20px;
-  z-index: 3;
-  color: #eeeeee;
-  font-family: monospace;
-}
-
-@keyframes bg {
-  0%{ background-position: 0 0; }
-  100%{ background-position: 8px 8px; }
 }
