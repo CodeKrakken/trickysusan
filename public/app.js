@@ -428,13 +428,5 @@ $(document).ready(function(){
       },
     },
   })
-
-  var ape = new Vue({
-    el: '#ape',
-    template: `
-    <div>
-      <visualiser />
-    </div>`
-  })
 })
 
