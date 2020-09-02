@@ -60,6 +60,10 @@ app.post('/', (req, res) => {
   }
 });
 
+app.get('/admin', (req, res) => {
+  res.sendFile('/admin.html')
+})
+
 const port = (process.env.PORT || 3000)
 app.listen(port, () =>
 console.log(`Listening on ${port}.`),
