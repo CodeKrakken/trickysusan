@@ -32,7 +32,7 @@ app.post('/', (req, res) => {
       secure: false,
       auth: {
         user: 'apikey', 
-        pass: API_KEY
+        pass: process.env.API_KEY
       },
       tls:{
         rejectUnauthorized:false
