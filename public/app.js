@@ -1,7 +1,5 @@
 Vue.config.devtools = true
 
-import Axios from "axios";
-
 $(document).ready(function(){
 
   $(document).on('click', '#submit-button', function(){
