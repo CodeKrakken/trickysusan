@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
-  res.sendFile('/index.html')
+  res.sendFile('/admin.html')
 });
 
 app.post('/', (req, res) => {
@@ -61,7 +61,7 @@ app.post('/', (req, res) => {
 });
 
 app.get('/admin', (req, res) => {
-  res.sendFile('/admin.html')
+  res.sendFile('admin.html')
 })
 
 const port = (process.env.PORT || 3000)
