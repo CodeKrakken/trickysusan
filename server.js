@@ -43,9 +43,9 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.get('/', (req, res) => {
-  res.sendFile('/admin.html')
-});
+// app.get('/', (req, res) => {
+//   res.sendFile('/admin.html')
+// });
 
 app.post('/', (req, res) => {
   if (req.body.message && req.body.name && validator.validate(req.body.email)) {
