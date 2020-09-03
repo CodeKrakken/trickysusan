@@ -2,19 +2,25 @@ Vue.config.devtools = true
 
 $(document).ready(function(){
 
-  $(document).on('click', '#submit-button', function(){
+  // $(document).on('click', '#submit-button', function(){
 
-    const formValues = $('form').serialize();
+  //   const formValues = $('form').serialize();
     
-    $.post("/", formValues, function(data) {
-      if (data === "Message Sent.") { 
-        var form = document.getElementById('form');
-        form.reset();
-        $('form input').prop("disabled", true);
-        $('form textarea').prop("disabled", true);
-        $('form button').prop("disabled", true);
-      };
-      $("#message-conf").html(data);        
+  //   $.post("/", formValues, function(data) {
+  //     if (data === "Message Sent.") { 
+  //       var form = document.getElementById('form');
+  //       form.reset();
+  //       $('form input').prop("disabled", true);
+  //       $('form textarea').prop("disabled", true);
+  //       $('form button').prop("disabled", true);
+  //     };
+  //     $("#message-conf").html(data);        
+  //   })
+  // })
+
+  $(document).on('click', '#news', function(){
+    $.get("/news", function(data) {
+      console.log(data);        
     })
   })
 
@@ -87,7 +93,7 @@ $(document).ready(function(){
 
   Vue.component('news', {
     template: `
-      <div id="news">
+      <div>
         <div v-for="(post, index) in posts">
           <span :key="index">{{ post.date }}<br><br></span>
           <span :key="index" v-html="post.text" />
@@ -104,6 +110,12 @@ $(document).ready(function(){
         ]
       }
     }
+  })
+
+  Vue.component('new-news', {
+    template: `
+      <button id="news">News</button>
+    `
   })
 
   Vue.component('music', {
