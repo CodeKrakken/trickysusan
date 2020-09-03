@@ -1,12 +1,14 @@
 Vue.config.devtools = true
 
+import Axios from "axios";
+
 $(document).ready(function(){
 
   $(document).on('click', '#submit-button', function(){
 
     const formValues = $('form').serialize();
     
-    $.post("http://127.0.0.1:3000/", formValues, function(data) {
+    $.post("/", formValues, function(data) {
       if (data === "Message Sent.") { 
         var form = document.getElementById('form');
         form.reset();
