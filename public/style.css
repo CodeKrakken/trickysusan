@@ -173,7 +173,7 @@ iframe {
   background: transparent;
 }
 
-#tab {
+.tab {
   filter: brightness(50%);
   font-size: 200%;
   font-style: italic;
@@ -182,13 +182,13 @@ iframe {
   transition: all 0.1s ease;
 }
 
-#tab:hover {
+.tab:hover {
   cursor: pointer;
   filter: brightness(75%);
   transition: all 0.2s ease;
 }
 
-#tab:active {
+.tab:active {
   filter: brightness(100%);
   transition: all 0.1s ease;
 }

@@ -4,8 +4,37 @@ const cors = require('cors');
 const express = require('express');
 const nodemailer = require('nodemailer');
 const validator = require("email-validator");
-
 const app = express();
+
+const { Client } = require('pg');
+const client = new Client({
+  user: 'postgres',
+  password: process.env.DATABASE_PASSWORD,
+  host: 'localhost',
+  database: 'trickysusan',
+  port: 5432
+});
+
+client.connect();
+
+const query = `
+  SELECT * FROM news;
+`;
+
+app.get('/news', (req, res) => {
+  client.query(query, (err, res) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const retrievedData = [];
+    for (let row of res.rows) {
+      retrievedData.push(row);
+    }
+    console.log(retrievedData[(retrievedData.length-1)]);
+
+  })
+})
 
 app.use(cors());
 

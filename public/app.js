@@ -18,6 +18,12 @@ $(document).ready(function(){
     })
   })
 
+  $(document).on('click', '#news', function(){
+    $.get("/news", function(data) {
+      console.log(data);        
+    })
+  })
+
   Vue.component ('background', {
     template: `
       <div>
@@ -87,7 +93,7 @@ $(document).ready(function(){
 
   Vue.component('news', {
     template: `
-      <div id="news">
+      <div>
         <div v-for="(post, index) in posts">
           <span :key="index">{{ post.date }}<br><br></span>
           <span :key="index" v-html="post.text" />
@@ -104,6 +110,12 @@ $(document).ready(function(){
         ]
       }
     }
+  })
+
+  Vue.component('new-news', {
+    template: `
+      <button id="news">News</button>
+    `
   })
 
   Vue.component('music', {
@@ -385,7 +397,7 @@ $(document).ready(function(){
         v-for="(tab, index) in tabs"
         @click="selectTab(tab)"
         :key="index"
-        ><div id="tab">{{ tab }}</div></span>
+        ><div class="tab" id={{tab}}>{{ tab }}</div></span>
       </div>
     `,
     data() {
