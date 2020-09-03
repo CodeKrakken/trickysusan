@@ -15,7 +15,7 @@ body {
 }
 
 #background {
-  background: url(images/stars.jpg);
+  /* background: url(images/stars.jpg); */
   background-size: cover;
   position: absolute;
   top: 0;
@@ -101,7 +101,7 @@ body {
   box-shadow: 20px 20px 20px black, 
               20px -20px 20px black, 
               -20px -20px 20px black, 
-              -20px 20px 20px black,
+              -20px 20px 20px black
 }
 
 .photo-outer {
