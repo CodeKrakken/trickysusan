@@ -2,21 +2,21 @@ Vue.config.devtools = true
 
 $(document).ready(function(){
 
-  // $(document).on('click', '#submit-button', function(){
+  $(document).on('click', '#submit-button', function(){
 
-  //   const formValues = $('form').serialize();
+    const formValues = $('form').serialize();
     
-  //   $.post("/", formValues, function(data) {
-  //     if (data === "Message Sent.") { 
-  //       var form = document.getElementById('form');
-  //       form.reset();
-  //       $('form input').prop("disabled", true);
-  //       $('form textarea').prop("disabled", true);
-  //       $('form button').prop("disabled", true);
-  //     };
-  //     $("#message-conf").html(data);        
-  //   })
-  // })
+    $.post("/", formValues, function(data) {
+      if (data === "Message Sent.") { 
+        var form = document.getElementById('form');
+        form.reset();
+        $('form input').prop("disabled", true);
+        $('form textarea').prop("disabled", true);
+        $('form button').prop("disabled", true);
+      };
+      $("#message-conf").html(data);        
+    })
+  })
 
   $(document).on('click', '#news', function(){
     $.get("/news", function(data) {
@@ -397,7 +397,7 @@ $(document).ready(function(){
         v-for="(tab, index) in tabs"
         @click="selectTab(tab)"
         :key="index"
-        ><div id="tab">{{ tab }}</div></span>
+        ><div class="tab" id={{tab}}>{{ tab }}</div></span>
       </div>
     `,
     data() {
