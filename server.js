@@ -31,7 +31,7 @@ app.get('/news', (req, res) => {
     for (let row of res.rows) {
       retrievedData.push(row);
     }
-    console.log(retrievedData[(retrievedData.length-1)]);
+    console.log(retrievedData[retrievedData.length-1]);
 
   })
 })
