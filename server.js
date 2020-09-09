@@ -5,6 +5,32 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const validator = require("email-validator");
 const app = express();
+const pool = require("./db");
+
+const { Client, Pool } = require('pg');
+const client = new Client({
+  user: 'postgres',
+  password: process.env.DATABASE_PASSWORD,
+  host: 'localhost',
+  database: 'trickysusan',
+  port: 5432
+});
+
+client.connect();
+
+const query = `
+  ;
+`;
+
+app.get('/news', async(req, res) => {
+  try {
+    const allNews = await pool.query("SELECT * FROM news")
+    res.json(allNews.rows);
+    }
+  catch (err) {
+    console.error(err.message);
+  }    
+})
 
 app.use(cors());
 
@@ -48,7 +74,11 @@ app.post('/', (req, res) => {
       }
       console.log('Message sent: %s', info.messageId)
       console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-      res.send('Message Sent.');
+      const retrievedData = [];
+    for (let row of res.rows) {
+      retrievedData.push(row);
+    }
+    res.send('Message Sent.');
     })
   } else {
     res.send('Message Not Sent.')
