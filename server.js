@@ -5,8 +5,9 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const validator = require("email-validator");
 const app = express();
+const pool = require("./db");
 
-const { Client } = require('pg');
+const { Client, Pool } = require('pg');
 const client = new Client({
   user: 'postgres',
   password: process.env.DATABASE_PASSWORD,
@@ -18,22 +19,17 @@ const client = new Client({
 client.connect();
 
 const query = `
-  SELECT * FROM news;
+  ;
 `;
 
-app.get('/news', (req, res) => {
-  client.query(query, (err, res) => {
-    if (err) {
-      console.error(err);
-      return;
+app.get('/news', async(req, res) => {
+  try {
+    const allNews = await pool.query("SELECT * FROM news")
+    res.json(allNews.rows);
     }
-    const retrievedData = [];
-    for (let row of res.rows) {
-      retrievedData.push(row);
-    }
-    console.log(retrievedData[retrievedData.length-1]);
-
-  })
+  catch (err) {
+    console.error(err.message);
+  }    
 })
 
 app.use(cors());
@@ -42,10 +38,6 @@ app.use(express.static(__dirname + '/public'));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
-// app.get('/', (req, res) => {
-//   res.sendFile('/admin.html')
-// });
 
 app.post('/', (req, res) => {
   if (req.body.message && req.body.name && validator.validate(req.body.email)) {
@@ -82,7 +74,11 @@ app.post('/', (req, res) => {
       }
       console.log('Message sent: %s', info.messageId)
       console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-      res.send('Message Sent.');
+      const retrievedData = [];
+    for (let row of res.rows) {
+      retrievedData.push(row);
+    }
+    res.send('Message Sent.');
     })
   } else {
     res.send('Message Not Sent.')
@@ -90,7 +86,7 @@ app.post('/', (req, res) => {
 });
 
 app.get('/admin', (req, res) => {
-  res.sendFile('admin.html')
+  res.sendFile('/admin.html')
 })
 
 const port = (process.env.PORT || 3000)
