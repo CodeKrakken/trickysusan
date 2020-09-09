@@ -73,7 +73,7 @@ $(document).ready(function(){
   Vue.component('main-content', {
     template: `
       <div class="main-content">
-        <div v-show="selectedTab === 'News'"><new-news /></div>
+        <div v-show="selectedTab === 'News'"><news /></div>
         <div v-show="selectedTab === 'Music'"><music /></div>
         <div v-show="selectedTab === 'Gigs'"><gigs /></div>
         <div v-show="selectedTab === 'Shop'"><shop /></div>
@@ -114,8 +114,20 @@ $(document).ready(function(){
 
   Vue.component('new-news', {
     template: `
-      <button id="news">News</button>
-    `
+      <div>
+        <div v-for="(post, index) in posts">
+          <span :key="index">{{ post }}<br><br></span>
+          <span :key="index" v-html="post" />
+        </div>
+      </div>
+    `,
+    data() {
+      return {
+        posts: $.get("/news", function(data) {
+          console.log(data);        
+        }) 
+      }
+    }
   })
 
   Vue.component('music', {
