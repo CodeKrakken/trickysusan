@@ -6,46 +6,12 @@ const nodemailer = require('nodemailer');
 const validator = require("email-validator");
 const app = express();
 
-const { Client } = require('pg');
-const client = new Client({
-  user: 'postgres',
-  password: process.env.DATABASE_PASSWORD,
-  host: 'localhost',
-  database: 'trickysusan',
-  port: 5432
-});
-
-client.connect();
-
-const query = `
-  SELECT * FROM news;
-`;
-
-app.get('/news', (req, res) => {
-  client.query(query, (err, res) => {
-    if (err) {
-      console.error(err);
-      return;
-    }
-    const retrievedData = [];
-    for (let row of res.rows) {
-      retrievedData.push(row);
-    }
-    console.log(retrievedData[(retrievedData.length-1)]);
-
-  })
-})
-
 app.use(cors());
 
 app.use(express.static(__dirname + '/public'));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
-// app.get('/', (req, res) => {
-//   res.sendFile('/admin.html')
-// });
 
 app.post('/', (req, res) => {
   if (req.body.message && req.body.name && validator.validate(req.body.email)) {
@@ -88,10 +54,6 @@ app.post('/', (req, res) => {
     res.send('Message Not Sent.')
   }
 });
-
-app.get('/admin', (req, res) => {
-  res.sendFile('admin.html')
-})
 
 const port = (process.env.PORT || 3000)
 app.listen(port, () =>
