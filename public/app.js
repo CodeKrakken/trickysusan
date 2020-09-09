@@ -14,7 +14,7 @@ $(document).ready(function(){
         $('form textarea').prop("disabled", true);
         $('form button').prop("disabled", true);
       };
-      console.log(data);       
+      $("#message-conf").html(data);       
     })
   })
 

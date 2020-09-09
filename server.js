@@ -74,11 +74,7 @@ app.post('/', (req, res) => {
       }
       console.log('Message sent: %s', info.messageId)
       console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-      const retrievedData = [];
-    for (let row of res.rows) {
-      retrievedData.push(row);
-    }
-    res.send('Message Sent.');
+      res.send('Message Sent.');
     })
   } else {
     res.send('Message Not Sent.')
