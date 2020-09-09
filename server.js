@@ -5,8 +5,8 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const validator = require("email-validator");
 const app = express();
-const pool = require("./db");
 
+const pool = require("./db");
 const { Client, Pool } = require('pg');
 const client = new Client({
   user: 'postgres',
@@ -17,10 +17,6 @@ const client = new Client({
 });
 
 client.connect();
-
-const query = `
-  ;
-`;
 
 app.get('/news', async(req, res) => {
   try {
