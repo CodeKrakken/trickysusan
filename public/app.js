@@ -73,7 +73,7 @@ $(document).ready(function(){
   Vue.component('main-content', {
     template: `
       <div class="main-content">
-        <div v-show="selectedTab === 'News'"><new-news /></div>
+        <div v-show="selectedTab === 'News'"><news /></div>
         <div v-show="selectedTab === 'Music'"><music /></div>
         <div v-show="selectedTab === 'Gigs'"><gigs /></div>
         <div v-show="selectedTab === 'Shop'"><shop /></div>
