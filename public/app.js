@@ -73,7 +73,7 @@ $(document).ready(function(){
   Vue.component('main-content', {
     template: `
       <div class="main-content">
-        <div v-show="selectedTab === 'News'"><new-news /></div>
+        <div v-show="selectedTab === 'News'"><news /></div>
         <div v-show="selectedTab === 'Music'"><music /></div>
         <div v-show="selectedTab === 'Gigs'"><gigs /></div>
         <div v-show="selectedTab === 'Shop'"><shop /></div>
@@ -114,8 +114,18 @@ $(document).ready(function(){
 
   Vue.component('new-news', {
     template: `
-      <button id="news">News</button>
-    `
+      {{ news }}
+    `,
+    mounted: {
+      news: $.get("/news", function(data) {
+        console.log(data)
+      })
+    },
+    data() {
+      return {
+        news: []
+      }
+    }
   })
 
   Vue.component('music', {
@@ -123,10 +133,14 @@ $(document).ready(function(){
       <div>
         <div class="music-navigator border">
           <div id="song-name" class="border"> "{{ audios[selectedSongIndex].name }}" </div>
-          <button class="nav-button border" 
-                  id="player-previous" 
-                  @click.prevent="previousSong()">
-                  <img src="/images/previous-button.png" id="previous-icon" />
+          <button 
+            class="nav-button border" 
+            id="player-previous" 
+            @click.prevent="previousSong()"
+          ><img 
+            src="/images/previous-button.png" 
+            id="previous-icon" 
+          />
           </button>
           <button v-if="this.playing === true" 
                   id="pause-button" 
@@ -439,6 +453,9 @@ $(document).ready(function(){
         this.selectedTab = tab 
       },
     },
+    beforeMount() {
+      this.news = JSON.parse(this.$el.dataset.visitorsJson) //Grab this data from the DOM
+    }
   })
 })
 
