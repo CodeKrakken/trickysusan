@@ -117,15 +117,25 @@ $(document).ready(function(){
   Vue.component('new-news', {
     template: `
       <div>
+<<<<<<< HEAD
       <button id="news">News</button>
         <div v-for="(post, index) in posts">
           <span :key="index">{{ post }}<br><br></span>
           <span :key="index" v-html="post" />
         </div>
+=======
+        {{ news }}
+>>>>>>> 359f7b6e1c4b41383957aae519952b2cda7ece0f
       </div>
     `,
+    mounted: {
+      news: $.get("/news", function(data) {
+        console.log(data)
+      })
+    },
     data() {
       return {
+<<<<<<< HEAD
         posts: {
           await: fetch('/news')
         }
@@ -141,6 +151,9 @@ $(document).ready(function(){
         } catch (err) {
           console.error(err.message)
         }
+=======
+        news: []
+>>>>>>> 359f7b6e1c4b41383957aae519952b2cda7ece0f
       }
     }
   })
@@ -150,10 +163,14 @@ $(document).ready(function(){
       <div>
         <div class="music-navigator border">
           <div id="song-name" class="border"> "{{ audios[selectedSongIndex].name }}" </div>
-          <button class="nav-button border" 
-                  id="player-previous" 
-                  @click.prevent="previousSong()">
-                  <img src="/images/previous-button.png" id="previous-icon" />
+          <button 
+            class="nav-button border" 
+            id="player-previous" 
+            @click.prevent="previousSong()"
+          ><img 
+            src="/images/previous-button.png" 
+            id="previous-icon" 
+          />
           </button>
           <button v-if="this.playing === true" 
                   id="pause-button" 
@@ -466,6 +483,9 @@ $(document).ready(function(){
         this.selectedTab = tab 
       },
     },
+    beforeMount() {
+      this.news = JSON.parse(this.$el.dataset.visitorsJson) //Grab this data from the DOM
+    }
   })
 })
 
