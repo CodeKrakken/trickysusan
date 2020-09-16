@@ -73,7 +73,7 @@ $(document).ready(function(){
   Vue.component('main-content', {
     template: `
       <div class="main-content">
-        <div v-show="selectedTab === 'News'"><news /></div>
+        <div v-show="selectedTab === 'News'"><new-news /></div>
         <div v-show="selectedTab === 'Music'"><music /></div>
         <div v-show="selectedTab === 'Gigs'"><gigs /></div>
         <div v-show="selectedTab === 'Shop'"><shop /></div>
@@ -112,9 +112,12 @@ $(document).ready(function(){
     }
   })
 
+
+
   Vue.component('new-news', {
     template: `
       <div>
+      <button id="news">News</button>
         <div v-for="(post, index) in posts">
           <span :key="index">{{ post }}<br><br></span>
           <span :key="index" v-html="post" />
@@ -123,9 +126,21 @@ $(document).ready(function(){
     `,
     data() {
       return {
-        posts: $.get("/news", function(data) {
-          console.log(data);        
-        }) 
+        posts: {
+          await: fetch('/news')
+        }
+      }
+    },
+    methods: {
+      getNews = async () => {
+        try {
+          const response = await fetch('/')
+          const jsonData = response.json()
+
+
+        } catch (err) {
+          console.error(err.message)
+        }
       }
     }
   })
