@@ -18,11 +18,11 @@ $(document).ready(function(){
     })
   })
 
-  $(document).on('click', '#news', function(){
-    $.get("/news", function(data) {
-      console.log(data);        
-    })
-  })
+  // $(document).on('click', '#news', function(){
+  //   $.get("/news", function(data) {
+  //     console.log(data);        
+  //   })
+  // })
 
   Vue.component ('background', {
     template: `
@@ -73,7 +73,7 @@ $(document).ready(function(){
   Vue.component('main-content', {
     template: `
       <div class="main-content">
-        <div v-show="selectedTab === 'News'"><new-news /></div>
+        <div v-show="selectedTab === 'News'"><news /></div>
         <div v-show="selectedTab === 'Music'"><music /></div>
         <div v-show="selectedTab === 'Gigs'"><gigs /></div>
         <div v-show="selectedTab === 'Shop'"><shop /></div>
@@ -112,8 +112,6 @@ $(document).ready(function(){
     }
   })
 
-
-
   Vue.component('new-news', {
     template: `
       <div>
@@ -122,26 +120,23 @@ $(document).ready(function(){
     `,
     mounted: {
       news: $.get("/news", function(data) {
+        this.news = data
         console.log(data)
       })
     },
-    data() {
-      return {
-        posts: {
-          await: fetch('/news')
-        }
-      }
-    },
     methods: {
-      getNews = async () => {
+      getNews: async () => {
         try {
           const response = await fetch('/')
           const jsonData = response.json()
-
-
         } catch (err) {
           console.error(err.message)
         }
+      }
+    },
+    data() {
+      return {
+        news: []
       }
     }
   })
@@ -469,10 +464,7 @@ $(document).ready(function(){
     methods: {
       selectTab(tab) {
         this.selectedTab = tab 
-      },
-    },
-    beforeMount() {
-      this.news = JSON.parse(this.$el.dataset.visitorsJson) //Grab this data from the DOM
+      }
     }
   })
 })
