@@ -117,15 +117,7 @@ $(document).ready(function(){
   Vue.component('new-news', {
     template: `
       <div>
-<<<<<<< HEAD
-      <button id="news">News</button>
-        <div v-for="(post, index) in posts">
-          <span :key="index">{{ post }}<br><br></span>
-          <span :key="index" v-html="post" />
-        </div>
-=======
         {{ news }}
->>>>>>> 359f7b6e1c4b41383957aae519952b2cda7ece0f
       </div>
     `,
     mounted: {
@@ -135,7 +127,6 @@ $(document).ready(function(){
     },
     data() {
       return {
-<<<<<<< HEAD
         posts: {
           await: fetch('/news')
         }
@@ -151,9 +142,6 @@ $(document).ready(function(){
         } catch (err) {
           console.error(err.message)
         }
-=======
-        news: []
->>>>>>> 359f7b6e1c4b41383957aae519952b2cda7ece0f
       }
     }
   })
