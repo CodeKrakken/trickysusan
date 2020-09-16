@@ -112,15 +112,33 @@ $(document).ready(function(){
     }
   })
 
+  Vue.component('nows', {
+    template: `
+      <div>
+        <div v-for="(post, index) in posts">
+          <span :key="index" v-html="post" />
+        </div>
+      </div>
+    `,
+    data() {
+      return {
+        posts: $.get("/news", function(data) {
+          console.log(data);
+        })
+      }
+    }
+  })
+
   Vue.component('new-news', {
     template: `
       <div>
-        {{ news }}
+        <div id="news">
       </div>
     `,
     mounted: {
-      news: $.get("/news", function(data) {
-        this.news = data
+      news: 
+        $.get("/news", function(data) {
+        $("#news").html(data); 
         console.log(data)
       })
     },
