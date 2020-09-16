@@ -73,7 +73,7 @@ $(document).ready(function(){
   Vue.component('main-content', {
     template: `
       <div class="main-content">
-        <div v-show="selectedTab === 'News'"><news /></div>
+        <div v-show="selectedTab === 'News'"><nows /></div>
         <div v-show="selectedTab === 'Music'"><music /></div>
         <div v-show="selectedTab === 'Gigs'"><gigs /></div>
         <div v-show="selectedTab === 'Shop'"><shop /></div>
@@ -112,21 +112,21 @@ $(document).ready(function(){
     }
   })
 
+  // <div v-for="(post, index) in posts">
+  //         <span :key="index" v-html="post" />
+  //       </div>
+
   Vue.component('nows', {
     template: `
       <div>
-        <div v-for="(post, index) in posts">
-          <span :key="index" v-html="post" />
-        </div>
+        {{ posts }}
       </div>
     `,
     data() {
       return {
-        posts: $.get("/news", function(data) {
-          console.log(data);
-        })
+        posts: $.get("/news")
       }
-    }
+    },
   })
 
   Vue.component('new-news', {
@@ -477,7 +477,7 @@ $(document).ready(function(){
       </div>
     `,
     data: {
-      selectedTab: 'Gigs'
+      selectedTab: 'News'
     },   
     methods: {
       selectTab(tab) {
