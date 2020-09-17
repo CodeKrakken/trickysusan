@@ -18,12 +18,6 @@ $(document).ready(function(){
     })
   })
 
-  // $(document).on('click', '#news', function(){
-  //   $.get("/news", function(data) {
-  //     console.log(data);        
-  //   })
-  // })
-
   Vue.component ('background', {
     template: `
       <div>
@@ -73,7 +67,7 @@ $(document).ready(function(){
   Vue.component('main-content', {
     template: `
       <div class="main-content">
-        <div v-show="selectedTab === 'News'"><nows /></div>
+        <div v-show="selectedTab === 'News'"><news /></div>
         <div v-show="selectedTab === 'Music'"><music /></div>
         <div v-show="selectedTab === 'Gigs'"><gigs /></div>
         <div v-show="selectedTab === 'Shop'"><shop /></div>
@@ -124,38 +118,12 @@ $(document).ready(function(){
     `,
     data() {
       return {
-        posts: $.get("/news")
+        posts: null
       }
     },
-  })
-
-  Vue.component('new-news', {
-    template: `
-      <div>
-        <div id="news">
-      </div>
-    `,
-    mounted: {
-      news: 
-        $.get("/news", function(data) {
-        $("#news").html(data); 
-        console.log(data)
-      })
-    },
-    methods: {
-      getNews: async () => {
-        try {
-          const response = await fetch('/')
-          const jsonData = response.json()
-        } catch (err) {
-          console.error(err.message)
-        }
-      }
-    },
-    data() {
-      return {
-        news: []
-      }
+    mounted() {
+      $.get("/news")
+      .then(response => (this.posts = response))
     }
   })
 
