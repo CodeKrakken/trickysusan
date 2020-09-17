@@ -113,12 +113,15 @@ $(document).ready(function(){
   Vue.component('nows', {
     template: `
       <div>
-        {{ posts }}
+        {{ posts[selectedPost].date }}
+        <br><br>
+        {{ posts[selectedPost].post }}
       </div>
     `,
     data() {
       return {
-        posts: null
+        posts: [],
+        selectedPost: 0
       }
     },
     mounted() {
