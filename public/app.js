@@ -67,7 +67,7 @@ $(document).ready(function(){
   Vue.component('main-content', {
     template: `
       <div class="main-content">
-        <div v-show="selectedTab === 'News'"><nows /></div>
+        <div v-show="selectedTab === 'News'"><news /></div>
         <div v-show="selectedTab === 'Music'"><music /></div>
         <div v-show="selectedTab === 'Gigs'"><gigs /></div>
         <div v-show="selectedTab === 'Shop'"><shop /></div>
@@ -117,11 +117,11 @@ $(document).ready(function(){
     data() {
       return {
         posts: [],
-        selectedPost: 0
+        selectedPost: 1
       }
     },
     beforeCreate() {
-      $.get("/news")
+      console.log($.get("/news"))
       .then(response => (this.posts = response))
     }
   })
