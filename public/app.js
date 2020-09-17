@@ -106,10 +106,6 @@ $(document).ready(function(){
     }
   })
 
-  // <div v-for="(post, index) in posts">
-  //         <span :key="index" v-html="post" />
-  //       </div>
-
   Vue.component('nows', {
     template: `
       <div>
