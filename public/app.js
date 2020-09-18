@@ -111,7 +111,7 @@ $(document).ready(function(){
       <div>
         {{ moment(posts[selectedPostIndex].date).format('D.mM.YY') }}
         <br><br>
-        {{ posts[selectedPostIndex].post }}
+        <span v-html="posts[selectedPostIndex].post" />
         <br><br>
         <div id="video-navigator">
           <button @click="previousPost()" class="previous nav-button">
