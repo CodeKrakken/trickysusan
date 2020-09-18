@@ -120,8 +120,8 @@ $(document).ready(function(){
         selectedPost: 1
       }
     },
-    beforeCreate() {
-      console.log($.get("/news"))
+    mounted() {
+      $.get("/news")
       .then(response => (this.posts = response))
     }
   })
