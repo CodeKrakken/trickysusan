@@ -109,20 +109,42 @@ $(document).ready(function(){
   Vue.component('nows', {
     template: `
       <div>
-        {{ posts[selectedPost].date }}
+        {{ posts[selectedPostIndex].date }}
         <br><br>
-        {{ posts[selectedPost].post }}
+        {{ posts[selectedPostIndex].post }}
+        <br><br>
+        <div id="video-navigator">
+          <button @click="previousPost()" class="previous nav-button">
+            <img src="/images/previous-button.png" id="previous-icon" />
+          </button>
+          <div id="caption" />
+          <button @click="nextPost()" class="next nav-button">
+            <img src="/images/next-button.png" id="next-icon" />
+          </button>
+        </div>
       </div>
     `,
     data() {
       return {
         posts: [],
-        selectedPost: 1
+        selectedPostIndex: 1
       }
     },
     mounted() {
       $.get("/news")
       .then(response => (this.posts = response))
+    },
+    methods: {
+      nextPost() {
+        this.selectedPostIndex === (this.posts.length - 1) ?
+        this.selectedPostIndex = 0 :
+        this.selectedPostIndex += 1;
+      },
+      previousPost() {
+        this.selectedPostIndex === 0 ?
+        this.selectedPostIndex = (this.posts.length - 1) :
+        this.selectedPostIndex -= 1;
+      }
     }
   })
 
