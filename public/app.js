@@ -67,7 +67,7 @@ $(document).ready(function(){
   Vue.component('main-content', {
     template: `
       <div class="main-content">
-        <div v-show="selectedTab === 'News'"><news /></div>
+        <div v-show="selectedTab === 'News'"><nows /></div>
         <div v-show="selectedTab === 'Music'"><music /></div>
         <div v-show="selectedTab === 'Gigs'"><gigs /></div>
         <div v-show="selectedTab === 'Shop'"><shop /></div>
@@ -109,7 +109,7 @@ $(document).ready(function(){
   Vue.component('nows', {
     template: `
       <div>
-        {{ posts[selectedPostIndex].date }}
+        {{ moment(posts[selectedPostIndex].date).format("Do MMM YYYY") }}
         <br><br>
         {{ posts[selectedPostIndex].post }}
         <br><br>
@@ -132,7 +132,7 @@ $(document).ready(function(){
     },
     mounted() {
       $.get("/news")
-      .then(response => (this.posts = response))
+      .then(response => (this.posts = response)).then(console.log(response))
     },
     methods: {
       nextPost() {
