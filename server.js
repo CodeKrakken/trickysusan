@@ -7,21 +7,23 @@ const validator = require("email-validator");
 const app = express();
 
 const pool = require("./db");
-// const { Client, Pool } = require('pg');
-// const client = new Client({
-//   user: 'postgres',
-//   password: process.env.DATABASE_PASSWORD,
-//   host: 'localhost',
-//   database: 'trickysusan',
-//   port: 5432
-// });
-
+const { Client, Pool } = require('pg');
 const client = new Client({
-  connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false
-  }
+  user: 'postgres',
+  password: process.env.DATABASE_PASSWORD,
+  host: 'localhost',
+  database: 'trickysusan',
+  port: 5432
 });
+
+// const { Client } = require('pg');
+
+// const client = new Client({
+//   connectionString: process.env.DATABASE_URL,
+//   ssl: {
+//     rejectUnauthorized: false
+//   }
+// });
 
 client.connect();
 
