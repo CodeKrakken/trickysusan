@@ -87,32 +87,15 @@ $(document).ready(function(){
 
   Vue.component('news', {
     template: `
-      <div>
-        <div v-for="(post, index) in posts">
-          <span :key="index">{{ post.date }}<br><br></span>
-          <span :key="index" v-html="post.text" />
+      <div id="news">
+        <div id="date">
+          {{ moment(posts[selectedPostIndex].date).format('D.mM.YY') }}
         </div>
-      </div>
-    `,
-    data() {
-      return {
-        posts: [
-          {
-            text: 'Let’s face it - COVID-19 continues to be a major prick. We’re working really hard to establish which venues will have us back as soon as possible, so we can provide an antidote to all this BS – a large and loud dose of Tricky Susan.<br><br>In the meanwhile we’ve been in the recording studio laying down our latest tracks. Watch this space ...<br><br><div class="center"><h1>KA-POW.</h1></div>',
-            date: '14/07/2020'
-          }
-        ]
-      }
-    }
-  })
-
-  Vue.component('nows', {
-    template: `
-      <div>
-        {{ moment(posts[selectedPostIndex].date).format('D.mM.YY') }}
-        <br><br>
-        <span v-html="posts[selectedPostIndex].post" />
-        <br><br>
+        <br>
+        <div id="post">
+          <span v-html="posts[selectedPostIndex].post" />
+        </div>
+          <br><br>
         <div id="video-navigator">
           <button @click="previousPost()" class="previous nav-button">
             <img src="/images/previous-button.png" id="previous-icon" />
