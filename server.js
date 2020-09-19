@@ -77,6 +77,10 @@ app.post('/', (req, res) => {
   }
 });
 
+app.get('/admin', function (req, res) {
+  res.send('admin')
+})
+
 const port = (process.env.PORT || 3000)
 app.listen(port, () =>
 console.log(`Listening on ${port}.`),
