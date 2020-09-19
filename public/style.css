@@ -335,11 +335,11 @@ a:focus {
   outline: none
 }
 
-#date {
-  text-align: center;
-}
-
-#post {
+#news {
   width: 50vw;
   height: 50vh
+}
+
+#date {
+  text-align: center;
 }

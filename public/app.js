@@ -92,7 +92,7 @@ $(document).ready(function(){
           {{ moment(posts[selectedPostIndex].date).format('D.mM.YY') }}
         </div>
         <br>
-        <div id="post">
+        <div>
           <span v-html="posts[selectedPostIndex].post" />
         </div>
           <br><br>
