@@ -100,10 +100,6 @@ $(document).ready(function(){
           {
             text: 'Let’s face it - COVID-19 continues to be a major prick. We’re working really hard to establish which venues will have us back as soon as possible, so we can provide the antidote to all this BS – a large and loud dose of Tricky Susan.<br><br>In the meanwhile we’ve been in the recording studio laying down our latest tracks. Watch this space ...<br><br><div class="center"><h1>KA-POW.</h1></div>',
             date: '14/07/2020'
-          },
-          {
-            text: 'Just a whole bunch of text to simulate another news story and ensure that the navigation buttons are working. Just a whole bunch of text to simulate another news story and ensure that the navigation buttons are working. Just a whole bunch of text to simulate another news story and ensure that the navigation buttons are working. Just a whole bunch of text to simulate another news story and ensure that the navigation buttons are working.',
-            date: '21/09/2020'
           }
         ]
       }
