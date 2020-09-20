@@ -17,26 +17,7 @@ const client = new Client({
   port: 5432
 });
 
-// const { Client } = require('pg');
-
-// const client = new Client({
-//   connectionString: process.env.DATABASE_URL,
-//   ssl: {
-//     rejectUnauthorized: false
-//   }
-// });
-
 client.connect();
-
-app.get('/news', async(req, res) => {
-  try {
-    const allNews = await pool.query("SELECT * FROM news")
-    res.json(allNews.rows);
-    }
-  catch (err) {
-    console.error(err.message);
-  }    
-})
 
 app.use(cors());
 
@@ -90,8 +71,6 @@ app.post('/', (req, res) => {
 app.get('/admin', function (req, res) {
   res.sendFile(path.join(__dirname + '/public/admin.html'));
 })
-
-
 
 const port = (process.env.PORT || 3000)
 app.listen(port, () =>
