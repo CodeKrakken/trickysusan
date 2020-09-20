@@ -67,7 +67,7 @@ $(document).ready(function(){
   Vue.component('main-content', {
     template: `
       <div class="main-content">
-        <div v-show="selectedTab === 'News'"><news /></div>
+        <div v-show="selectedTab === 'News'"><old-news /></div>
         <div v-show="selectedTab === 'Music'"><music /></div>
         <div v-show="selectedTab === 'Gigs'"><gigs /></div>
         <div v-show="selectedTab === 'Shop'"><shop /></div>
@@ -84,6 +84,28 @@ $(document).ready(function(){
       }
     }
   })
+
+  Vue.component('old-news', {
+    template: `
+      <div>
+        <div v-for="(post, index) in posts">
+          <span :key="index">{{ post.date }}<br><br></span>
+          <span :key="index" v-html="post.text" />
+        </div>
+      </div>
+    `,
+    data() {
+      return {
+        posts: [
+          {
+            text: 'Let’s face it - COVID-19 continues to be a major prick. We’re working really hard to establish which venues will have us back as soon as possible, so we can provide the antidote to all this BS – a large and loud dose of Tricky Susan.<br><br>In the meanwhile we’ve been in the recording studio laying down our latest tracks. Watch this space ...<br><br><div class="center"><h1>KA-POW.</h1></div>',
+            date: '14/07/2020'
+          }
+        ]
+      }
+    }
+  })
+
 
   Vue.component('news', {
     template: `
