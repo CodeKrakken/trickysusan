@@ -5,6 +5,7 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const validator = require("email-validator");
 const app = express();
+const path = require('path');
 
 // const pool = require("./db");
 // const { Client, Pool } = require('pg');
@@ -94,7 +95,7 @@ app.post('/', (req, res) => {
 });
 
 app.get('/admin', function (req, res) {
-  res.send('admin')
+  res.sendFile(path.join(__dirname + '/public/admin.html'));
 })
 
 const port = (process.env.PORT || 3000)
