@@ -137,7 +137,7 @@ $(document).ready(function(){
     },
     mounted() {
       $.get("/news")
-      .then(response => (this.posts = response)).then(console.log(response))
+      .then(response => (this.posts = response.reverse())).then(console.log(response))
     },
     methods: {
       nextPost() {
