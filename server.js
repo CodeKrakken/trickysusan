@@ -6,30 +6,37 @@ const nodemailer = require('nodemailer');
 const validator = require("email-validator");
 const app = express();
 
-const pool = require("./db");
-const { Client, Pool } = require('pg');
-const client = new Client({
-  user: 'postgres',
-  password: process.env.DATABASE_PASSWORD,
-  host: 'localhost',
-  database: 'trickysusan',
-  port: 5432
-});
-
-// const { Client } = require('pg');
-
+// const pool = require("./db");
+// const { Client, Pool } = require('pg');
 // const client = new Client({
-//   connectionString: process.env.DATABASE_URL,
-//   ssl: {
-//     rejectUnauthorized: false
-//   }
+//   user: 'postgres',
+//   password: process.env.DATABASE_PASSWORD,
+//   host: 'localhost',
+//   database: 'trickysusan',
+//   port: 5432
 // });
+
+const { Client, Pool } = require('pg');
+
+const client = new Client({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
+});
 
 client.connect();
 
+client.query('SELECT table_schema,table_name FROM information_schema.tables;', (err, res) => {
+  if (err) throw err;
+  for (let row of res.rows) {
+    console.log(JSON.stringify(row));
+  }
+});
+
 app.get('/news', async(req, res) => {
   try {
-    const allNews = await pool.query("SELECT * FROM news")
+    const allNews = await client.query("SELECT * FROM news")
     res.json(allNews.rows);
     }
   catch (err) {
