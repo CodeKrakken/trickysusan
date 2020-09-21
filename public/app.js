@@ -132,7 +132,7 @@ $(document).ready(function(){
     data() {
       return {
         posts: [],
-        selectedPostIndex: 1
+        selectedPostIndex: 0
       }
     },
     mounted() {
