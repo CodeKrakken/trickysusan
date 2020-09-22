@@ -132,25 +132,21 @@ iframe {
   text-align: center;
 }
 
-#gig-header {
-  position: absolute;
-  margin: auto;
-  top: 6vh;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center
+#gig-image-container {
+  max-height: 75vh;
+  background: black
+}
+
+#gig-image {
+  max-height: 75vh
 }
 
 #gig-caption {
   position: absolute;
   margin: auto;
-  top: 90vh;
   left: 0;
   right: 0;
-  font-size: 150%;
-  display: flex;
-  justify-content: center;
+  text-align: center
 }
 
 #email {
