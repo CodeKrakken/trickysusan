@@ -264,11 +264,13 @@ $(document).ready(function(){
   Vue.component('gigs', {
     template: `
       <div>
-        <div id="gig-header">
-          Wheels are in motion regarding a return to the stage. For now, here's a taste of last time ...
+        <div class="shadow-one" id="gig-image-container">
+          <img src="/images/stage.jpg" id="gig-image" /><br><br>
         </div>
-        <div class="photo">
-          <span v-html="video.address" />
+        <br>
+        <div id="gig-caption">
+          You will note the lack of bodies both on and off stage.<br>
+          As soon as this can be remedied, it shall be.
         </div>
       </div>
     `,
