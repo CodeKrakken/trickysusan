@@ -6,7 +6,6 @@ const nodemailer = require('nodemailer');
 const validator = require("email-validator");
 const app = express();
 const path = require('path');
-
 const { Client } = require('pg');
 
 const client = new Client({
@@ -22,7 +21,6 @@ app.get('/news', async(req, res) => {
   try {
     const allNews = await client.query("SELECT * FROM news")
     res.json(allNews.rows);
-    console.log(allNews);
   }
   catch (err) {
     console.error(err.message);
