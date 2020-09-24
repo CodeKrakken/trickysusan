@@ -85,33 +85,11 @@ $(document).ready(function(){
     }
   })
 
-  Vue.component('old-news', {
-    template: `
-      <div>
-        <div v-for="(post, index) in posts">
-          <span :key="index">{{ post.date }}<br><br></span>
-          <span :key="index" v-html="post.text" />
-        </div>
-      </div>
-    `,
-    data() {
-      return {
-        posts: [
-          {
-            text: 'Let’s face it - COVID-19 continues to be a major prick. We’re working really hard to establish which venues will have us back as soon as possible, so we can provide the antidote to all this BS – a large and loud dose of Tricky Susan.<br><br>In the meanwhile we’ve been in the recording studio laying down our latest tracks. Watch this space ...<br><br><div class="center"><h1>KA-POW.</h1></div>',
-            date: '14/07/2020'
-          }
-        ]
-      }
-    }
-  })
-
-
   Vue.component('news', {
     template: `
       <div id="news">
         <div id="date">
-          {{ moment(posts[selectedPostIndex].date).format('D.mM.YY') }}
+          {{ moment(posts[selectedPostIndex].date).format('DD.MM.YY') }}
         </div>
         <br>
         <div>
