@@ -140,30 +140,30 @@ $(document).ready(function(){
             class="nav-button border" 
             id="player-previous" 
             @click.prevent="previousSong()"
-          ><img 
+            ><img 
             src="/images/previous-button.png" 
-            id="previous-icon" 
-          />
-          </button>
-          <button v-if="this.playing === true" 
-                  id="pause-button" 
-                  class="border nav-button" 
-                  @click="pause(audios[selectedSongIndex].file)">
-                  <img src="/images/pause-button.png" id="pause-icon" />
-          </button>
-          <button v-if="this.playing === false" 
-                  id="play-button"
-                  class="border nav-button" 
-                  @click="play(audios[selectedSongIndex].file)">
-                  <img src="/images/play-button.png" id="play-icon" />
+            id="previous-icon" />
           </button>
           <button 
-                  class="nav-button border" 
-                  id="player-next" 
-                  @click.prevent="nextSong()">
-                  <img src="/images/next-button.png" id="next-icon" />
+            v-if="this.playing === true" 
+            id="pause-button" 
+            class="border nav-button" 
+            @click="pause(audios[selectedSongIndex].file)">
+            <img src="/images/pause-button.png" id="pause-icon" />
+          </button>
+          <button 
+            v-if="this.playing === false" 
+            id="play-button"
+            class="border nav-button" 
+            @click="play(audios[selectedSongIndex].file)">
+            <img src="/images/play-button.png" id="play-icon" />
+          </button>
+          <button 
+            class="nav-button border" 
+            id="player-next" 
+            @click.prevent="nextSong()">
+            <img src="/images/next-button.png" id="next-icon" />
           </button><br>
-
         </div>
       </div>
     `,
@@ -171,7 +171,7 @@ $(document).ready(function(){
       return {
         playing: false,
         autoplay: false,
-        selectedSongIndex: 1,
+        selectedSongIndex: 0,
         audios: [
           {
             name: 'Undercover',
@@ -252,16 +252,6 @@ $(document).ready(function(){
         </div>
       </div>
     `,
-    data() {
-      return {
-        video: {
-          name: "Philosophy (live)",
-          address: '<iframe src="https://www.youtube-nocookie.com/embed/Z5I9GFF74-Y?rel=0&modestbranding=1" \
-                    frameborder="0" fullscreen="0" allow="accelerometer; autoplay; encrypted-media; \
-                    gyroscope; picture-in-picture" allowfullscreen></iframe>'
-        }
-      }
-    }
   })
 
   Vue.component('bio', {
@@ -377,7 +367,7 @@ $(document).ready(function(){
                       gyroscope; picture-in-picture" allowfullscreen></iframe>'
           }
         ],
-        selectedVideoIndex: 1
+        selectedVideoIndex: 0
       }
     },
     methods: {
