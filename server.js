@@ -7,7 +7,7 @@ const validator = require("email-validator");
 const app = express();
 const path = require('path');
 
-const { Client, Pool } = require('pg');
+const { Client } = require('pg');
 
 const client = new Client({
   connectionString: process.env.DATABASE_URL,
