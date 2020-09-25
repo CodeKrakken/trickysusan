@@ -10,7 +10,7 @@ $(document).ready(function(){
     `
   })
 
-  Vue.component('news', {
+  Vue.component('list-news', {
     template: `
       <div>
         <div v-for="post in posts">
@@ -18,7 +18,6 @@ $(document).ready(function(){
             {{ moment(post.date).format('DD.MM.YY') }} ... {{ post.post }}        
           </span>
           <div style="font-size:150%">
-
             <br><br>
           </div>
         </div>
@@ -35,13 +34,30 @@ $(document).ready(function(){
     }
   })
 
+  Vue.component('add-news', {
+    template: `
+      <div>
+        <form @click="submitForm">
+          <input 
+            type="text" 
+            class="form-control" 
+            value={description} 
+            onChange={e => setDescription(e.target.value)} 
+          />
+          <button class="btn btn-success">Add</button>
+        </form>
+      </div>
+    `
+  })
+
   var admin = new Vue({
     el: '#admin',
     template: `
       <div>
         <background />
         <band-name />
-        <news />
+        <list-news />
+        <add-news />
       </div>
     `  
   })
