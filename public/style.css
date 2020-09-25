@@ -339,3 +339,14 @@ a:focus {
 #date {
   text-align: center;
 }
+
+/* admin page */
+
+#admin-news-preview {
+  display: block;
+  text-overflow: ellipsis;
+  width: 50%;
+  overflow: hidden; 
+  white-space: nowrap; 
+  font-size: 150%
+}

@@ -14,8 +14,11 @@ $(document).ready(function(){
     template: `
       <div>
         <div v-for="post in posts">
+          <span id="admin-news-preview">
+            {{ moment(post.date).format('DD.MM.YY') }} ... {{ post.post }}        
+          </span>
           <div style="font-size:150%">
-            {{ moment(post.date).format('DD.MM.YY') }} ... {{ post.post }}
+
             <br><br>
           </div>
         </div>
