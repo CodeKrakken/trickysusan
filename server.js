@@ -80,6 +80,19 @@ app.get('/admin', function (req, res) {
   res.sendFile(path.join(__dirname + '/public/admin.html'));
 })
 
+app.post("/admin/add-news", async(req, res) => {
+	try {
+		const { description } = req.body;
+		const newPost = await client.query('INSERT INTO news (date, post) VALUES(`${req.body.date}`, `${req.body.post}`) RETURNING *', 
+		[description]
+	);
+
+	res.json(newPost.rows[0]);
+	} catch (err) {
+		console.error(err.message);
+	}
+});
+
 const port = (process.env.PORT || 3000)
 app.listen(port, () =>
 console.log(`Listening on ${port}.`),

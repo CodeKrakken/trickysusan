@@ -2,6 +2,22 @@ Vue.config.devtools = true
 
 $(document).ready(function(){
 
+  $(document).on('click', '#add-news-button', function(){
+
+    const formValues = $('form').serialize();
+    
+    $.post("/admin/add-news", formValues, function(data) {
+      if (data === "Message Sent.") { 
+        var form = document.getElementById('form');
+        form.reset();
+        $('form input').prop("disabled", true);
+        $('form textarea').prop("disabled", true);
+        $('form button').prop("disabled", true);
+      };
+      $("#message-conf").html(data);       
+    })
+  })
+
   Vue.component ('background', {
     template: `
       <div>
@@ -36,18 +52,21 @@ $(document).ready(function(){
 
   Vue.component('add-news', {
     template: `
-      <div>
-        <form @click="submitForm">
-          <input 
-            type="text" 
-            class="form-control" 
-            value={description} 
-            onChange={e => setDescription(e.target.value)} 
-          />
-          <button class="btn btn-success">Add</button>
-        </form>
+    <div class="center">
+    <h1 id="contact-header">Contact</h1>
+    <form id="form" method="POST" action="/">
+      <p><input class="contact-info" type="text" name="date" placeholder="date"  class="shadow-one"></p>
+      <p><textarea id="message-box" name="post" rows="6" placeholder="What's the scoop, Betty Boop?" class="shadow-one"></textarea></p>
+      <p><button id="add-news-button" type="button" class="shadow-one">Done</button></p>
+      <div id="message-conf" />
+    </form>
+  </div>
+    </form>
       </div>
-    `
+    `,
+    methods: {
+      
+    }
   })
 
   var admin = new Vue({
