@@ -432,7 +432,7 @@ $(document).ready(function(){
   var app = new Vue({
     el: '#app',
     template: `
-      <div class="huh">
+      <div>
         <background />
         <band-name />
         <socials />
@@ -450,4 +450,3 @@ $(document).ready(function(){
     }
   })
 })
-
