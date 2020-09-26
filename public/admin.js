@@ -2,7 +2,7 @@ Vue.config.devtools = true
 
 $(document).ready(function(){
 
-  $(document).on('click', '#add-news-button', function(){
+  $(document).on('click', '#add-news', function(){
 
     const formValues = $('form').serialize();
     
@@ -31,7 +31,8 @@ $(document).ready(function(){
       <div>
         <div v-for="post in posts">
           <span id="admin-news-preview">
-            {{ moment(post.date).format('DD.MM.YY') }} ... {{ post.post }}        
+            {{ moment(post.date).format('DD.MM.YY') }} ... {{ post.post }}
+            <button id="delete-news" type="button">Delete</button>
           </span>
           <div style="font-size:150%">
             <br><br>
@@ -57,7 +58,7 @@ $(document).ready(function(){
     <form id="form" method="POST" action="/">
       <p><input class="contact-info" type="text" name="date" placeholder="date"  class="shadow-one"></p>
       <p><textarea id="message-box" name="post" rows="6" placeholder="What's the scoop, Betty Boop?" class="shadow-one"></textarea></p>
-      <p><button id="add-news-button" type="button" class="shadow-one">Done</button></p>
+      <p><button id="add-news" type="button" class="shadow-one">Done</button></p>
       <div id="message-conf" />
     </form>
   </div>

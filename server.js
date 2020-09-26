@@ -1,4 +1,5 @@
 require('dotenv').config()
+const moment = require('moment');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const express = require('express');
@@ -82,10 +83,9 @@ app.get('/admin', function (req, res) {
 
 app.post("/admin/add-news", async(req, res) => {
 	try {
-    const { description } = req.body;
-    const query = `INSERT INTO news (date, post) VALUES ( '${req.body.date}', '${req.body.post}' ) RETURNING *`
-		const newPost = await client.query(query);
-
+    const newPost = await client.query(`INSERT INTO news (date, post) 
+                                        VALUES ( '${moment(req.body.date).format('DD.MM.YY')}', '${req.body.post}' ) 
+                                        RETURNING *`);                                  
 	res.json(newPost.rows[0]);
 	} catch (err) {
 		console.error(err.message);
