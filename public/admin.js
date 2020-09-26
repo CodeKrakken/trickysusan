@@ -18,6 +18,13 @@ $(document).ready(function(){
     })
   })
 
+  $(document.on('click', 'delete-news', function() {
+
+    $.delete("/admin/delete-news", post, function() {
+      
+    })
+  }))
+
   Vue.component ('background', {
     template: `
       <div>
