@@ -93,6 +93,17 @@ app.post("/admin/add-news", async(req, res) => {
 	}
 });
 
+app.delete("/admin/delete-news", async(req, res) => {
+  try {
+    const deletePost = await client.query(`DELETE FROM news WHERE post_id=${req.body.post_id} RETURNING *`);
+    res.send("Post Deleted.");
+  } catch (err) {
+    console.error(err.message);
+    res.send("Post Not Deleted.")
+  }
+
+})
+
 const port = (process.env.PORT || 3000)
 app.listen(port, () =>
 console.log(`Listening on ${port}.`),
