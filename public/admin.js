@@ -19,11 +19,9 @@ $(document).ready(function(){
     })
   })
 
-  $(document).on('click', 'delete-news', function() {
+  $(document).on('click', '#delete-news-button', function(id) {
 
-    $.delete("/admin/delete-news", post, function() {
-      
-    })
+
   })
 
   Vue.component ('background', {
@@ -37,10 +35,13 @@ $(document).ready(function(){
   Vue.component('list-news', {
     template: `
       <div>
-        <div v-for="post in posts">
+        <div 
+          v-for="post in posts"
+          key={post.post_id}
+        >
           <span id="admin-news-preview">
             {{ moment(post.date).format('DD.MM.YY') }} ... {{ post.post }}
-            <button id="delete-news" type="button">Delete</button>
+            <button id="delete-news-button" type="button">Delete</button>
           </span>
           <div style="font-size:150%">
             <br><br>
