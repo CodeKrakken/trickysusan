@@ -345,7 +345,7 @@ a:focus {
 #admin-news-preview {
   display: block;
   text-overflow: ellipsis;
-  width: 50%;
+  width: 40%;
   overflow: hidden; 
   white-space: nowrap; 
   font-size: 150%
@@ -353,5 +353,7 @@ a:focus {
 
 #add-news {
   position: fixed;
-  right: 5vw
+  right: 5vw;
+  top: 0;
+  text-align: center
 }
