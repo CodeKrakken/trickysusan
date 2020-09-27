@@ -86,10 +86,10 @@ app.post("/admin/add-news", async(req, res) => {
     const newPost = await client.query(`INSERT INTO news (date, post) 
                                         VALUES ( '${req.body.date}', '${req.body.post}' ) 
                                         RETURNING *`);                                  
-	res.send("Post Added");
+	res.send("Post Added.");
 	} catch (err) {
     console.error(err.message);
-    res.send("Post Not Added")
+    res.send("Post Not Added.")
 	}
 });
 

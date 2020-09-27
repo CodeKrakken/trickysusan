@@ -8,7 +8,7 @@ $(document).ready(function(){
     console.log(formValues);
     
     $.post("/admin/add-news", formValues, function(data) {
-      if (data === "Message Sent.") { 
+      if (data === "Post Added.") { 
         var form = document.getElementById('add-news');
         form.reset();
         $('form input').prop("disabled", true);
@@ -68,7 +68,7 @@ $(document).ready(function(){
       <div>
         <form id="add-news" method="POST" action="/">
           <h1>Add News</h1>
-          <p><input class="contact-info" type="text" name="date" placeholder="date" class="shadow-one"></p>
+          <p><input class="contact-info" type="date" name="date" placeholder="date" class="shadow-one"></p>
           <p><textarea id="message-box" name="post" rows="6" placeholder="What's the scoop, Betty Boop?" class="shadow-one"></textarea></p>
           <p><button id="add-news-button" type="button" class="shadow-one">Done</button></p>
           <div id="news-conf" />
