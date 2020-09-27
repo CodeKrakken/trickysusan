@@ -3,8 +3,9 @@ Vue.config.devtools = true
 $(document).ready(function(){
 
   $(document).on('click', '#add-news-button', function(){
-
-    const formValues = $('add-news').serialize();
+    
+    const formValues = $('form').serialize();
+    console.log(formValues);
     
     $.post("/admin/add-news", formValues, function(data) {
       if (data === "Message Sent.") { 
@@ -53,6 +54,10 @@ $(document).ready(function(){
       }
     },
     mounted() {
+      $.get("/news")
+      .then(response => (this.posts = response.reverse()))
+    },
+    beforeUpdate() {
       $.get("/news")
       .then(response => (this.posts = response.reverse()))
     }
