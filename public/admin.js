@@ -19,17 +19,6 @@ $(document).ready(function(){
     })
   })
 
-  $(document).on('click', '#delete-news-button', async function(post_id) {
-    console.log(post_id)
-    try {
-      const deleteNews = await fetch(`/admin/delete-news/${post_id}`, {
-        method: "DELETE"
-      });
-    } catch (err) {
-      console.error(err.message)
-    }
-  })
-
   Vue.component ('background', {
     template: `
       <div>
@@ -47,7 +36,7 @@ $(document).ready(function(){
         >
           <span id="admin-news-preview">
             {{ moment(post.date).format('DD.MM.YY') }} ... {{ post.post }}
-            <button id="delete-news-button" type="button">Delete</button>
+            <button id="delete-news-button" @click="deleteNews(post.post_id)" type="button">Delete</button>
           </span>
           <div style="font-size:150%">
             <br><br>
@@ -67,6 +56,17 @@ $(document).ready(function(){
     beforeUpdate() {
       $.get("/news")
       .then(response => (this.posts = response.reverse()))
+    },
+    methods: {
+      deleteNews: async (post_id) => {
+        try {
+          await fetch(`/admin/delete-news/${post_id}`, {
+            method: "DELETE"
+          });
+        } catch (err) {
+          console.error(err.message)
+        }
+      }
     }
   })
 
