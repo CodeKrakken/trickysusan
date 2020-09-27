@@ -93,15 +93,31 @@ app.post("/admin/add-news", async(req, res) => {
 	}
 });
 
-app.delete("/admin/delete-news", async(req, res) => {
+app.delete("/admin/delete-news/:id", async(req, res) => {
   try {
-    const deletePost = await client.query(`DELETE FROM news WHERE post_id=${req.body.post_id} RETURNING *`);
-    res.send("Post Deleted.");
+    const { id } = req.params;
+    console.log(req.params);
+    const deletePost = await client.query("DELETE FROM news WHERE post_id = $1 RETURNING *", [
+      id
+    ]);
+    res.json("Post Deleted.");
   } catch (err) {
     console.error(err.message);
     res.send("Post Not Deleted.")
   }
 
+})
+
+app.delete('/todos/:id', async (req, res) => {
+	try {
+		const { id } = req.params;
+		const deleteTodo = await pool.query("DELETE FROM todo WHERE todo_id = $1", [
+			id
+		]);
+		res.json("Todo was deleted.");
+	} catch (err) {
+		console.error(err.message)
+	}
 })
 
 const port = (process.env.PORT || 3000)

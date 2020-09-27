@@ -19,9 +19,15 @@ $(document).ready(function(){
     })
   })
 
-  $(document).on('click', '#delete-news-button', function(id) {
-
-
+  $(document).on('click', '#delete-news-button', async function(post_id) {
+    console.log(post_id)
+    try {
+      const deleteNews = await fetch(`/admin/delete-news/${post_id}`, {
+        method: "DELETE"
+      });
+    } catch (err) {
+      console.error(err.message)
+    }
   })
 
   Vue.component ('background', {
