@@ -20,7 +20,7 @@ client.connect();
 
 app.get('/news', async(req, res) => {
   try {
-    const allNews = await client.query("SELECT * FROM news")
+    const allNews = await client.query("SELECT * FROM news ORDER BY date")
     res.json(allNews.rows);
   }
   catch (err) {

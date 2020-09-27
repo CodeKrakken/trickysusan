@@ -345,7 +345,7 @@ a:focus {
 #admin-news-preview {
   display: block;
   text-overflow: ellipsis;
-  width: 40%;
+  width: 50%;
   overflow: hidden; 
   white-space: nowrap; 
   font-size: 150%

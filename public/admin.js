@@ -19,8 +19,8 @@ $(document).ready(function(){
         >
           <span id="admin-news-preview">
             {{ moment(post.date).format('DD.MM.YY') }} ... {{ post.post }}
-            <button id="delete-news-button" @click="deleteNews(post.post_id)" type="button">Delete</button>
           </span>
+          <button id="delete-news-button" @click="deleteNews(post.post_id)" type="button">Delete</button>
           <div style="font-size:150%">
             <br><br>
           </div>
