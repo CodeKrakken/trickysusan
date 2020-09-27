@@ -2,23 +2,6 @@ Vue.config.devtools = true
 
 $(document).ready(function(){
 
-  $(document).on('click', '#add-news-button', function(){
-    
-    const formValues = $('form').serialize();
-    console.log(formValues);
-    
-    $.post("/admin/add-news", formValues, function(data) {
-      if (data === "Post Added.") { 
-        var form = document.getElementById('add-news');
-        form.reset();
-        $('form input').prop("disabled", true);
-        $('form textarea').prop("disabled", true);
-        $('form button').prop("disabled", true);
-      };
-      $("#news-conf").html(data);       
-    })
-  })
-
   Vue.component ('background', {
     template: `
       <div>
@@ -77,11 +60,29 @@ $(document).ready(function(){
           <h1>Add News</h1>
           <p><input class="contact-info" type="date" name="date" placeholder="date" class="shadow-one"></p>
           <p><textarea id="message-box" name="post" rows="6" placeholder="What's the scoop, Betty Boop?" class="shadow-one"></textarea></p>
-          <p><button id="add-news-button" type="button" class="shadow-one">Done</button></p>
+          <p><button id="add-news-button" @click="addNews()" type="button" class="shadow-one">Done</button></p>
           <div id="news-conf" />
         </form>
       </div>
-    `
+    `,
+    methods: {
+      addNews: async () => {
+    
+        const formValues = $('form').serialize();
+        console.log(formValues);
+        
+        $.post("/admin/add-news", formValues, function(data) {
+          if (data === "Post Added.") { 
+            var form = document.getElementById('add-news');
+            form.reset();
+            $('form input').prop("disabled", true);
+            $('form textarea').prop("disabled", true);
+            $('form button').prop("disabled", true);
+          };
+          $("#news-conf").html(data);       
+        })
+      }
+    }
   })
 
   var admin = new Vue({
