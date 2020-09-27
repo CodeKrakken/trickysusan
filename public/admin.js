@@ -2,28 +2,28 @@ Vue.config.devtools = true
 
 $(document).ready(function(){
 
-  $(document).on('click', '#add-news', function(){
+  $(document).on('click', '#add-news-button', function(){
 
-    const formValues = $('form').serialize();
+    const formValues = $('add-news').serialize();
     
     $.post("/admin/add-news", formValues, function(data) {
       if (data === "Message Sent.") { 
-        var form = document.getElementById('form');
+        var form = document.getElementById('add-news');
         form.reset();
         $('form input').prop("disabled", true);
         $('form textarea').prop("disabled", true);
         $('form button').prop("disabled", true);
       };
-      $("#message-conf").html(data);       
+      $("#news-conf").html(data);       
     })
   })
 
-  $(document.on('click', 'delete-news', function() {
+  $(document).on('click', 'delete-news', function() {
 
     $.delete("/admin/delete-news", post, function() {
       
     })
-  }))
+  })
 
   Vue.component ('background', {
     template: `
@@ -60,21 +60,15 @@ $(document).ready(function(){
 
   Vue.component('add-news', {
     template: `
-    <div class="center">
-    <h1 id="contact-header">Contact</h1>
-    <form id="form" method="POST" action="/">
-      <p><input class="contact-info" type="text" name="date" placeholder="date"  class="shadow-one"></p>
-      <p><textarea id="message-box" name="post" rows="6" placeholder="What's the scoop, Betty Boop?" class="shadow-one"></textarea></p>
-      <p><button id="add-news" type="button" class="shadow-one">Done</button></p>
-      <div id="message-conf" />
-    </form>
-  </div>
-    </form>
+      <div>
+        <form id="add-news" method="POST" action="/">
+          <p><input class="contact-info" type="text" name="date" placeholder="date" class="shadow-one"></p>
+          <p><textarea id="message-box" name="post" rows="6" placeholder="What's the scoop, Betty Boop?" class="shadow-one"></textarea></p>
+          <p><button id="add-news-button" type="button" class="shadow-one">Done</button></p>
+          <div id="news-conf" />
+        </form>
       </div>
-    `,
-    methods: {
-      
-    }
+    `
   })
 
   var admin = new Vue({

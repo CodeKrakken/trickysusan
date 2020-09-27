@@ -84,11 +84,12 @@ app.get('/admin', function (req, res) {
 app.post("/admin/add-news", async(req, res) => {
 	try {
     const newPost = await client.query(`INSERT INTO news (date, post) 
-                                        VALUES ( '${moment(req.body.date).format('DD.MM.YY')}', '${req.body.post}' ) 
+                                        VALUES ( '${req.body.date}', '${req.body.post}' ) 
                                         RETURNING *`);                                  
-	res.json(newPost.rows[0]);
+	res.send("Post Added");
 	} catch (err) {
-		console.error(err.message);
+    console.error(err.message);
+    res.send("Post Not Added")
 	}
 });
 

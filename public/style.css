@@ -17,7 +17,7 @@ body {
 #background {
   background: url(images/stars.jpg);
   background-size: cover;
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -349,4 +349,9 @@ a:focus {
   overflow: hidden; 
   white-space: nowrap; 
   font-size: 150%
+}
+
+#add-news {
+  position: fixed;
+  right: 5vw
 }
