@@ -2,12 +2,28 @@ Vue.config.devtools = true
 
 $(document).ready(function(){
 
-  Vue.component ('background', {
+  Vue.component('login-form', {
     template: `
       <div>
-        <div id="background">
+        <h1>Log In</h1>
+        <input type="text" name="username" v-model="input.username" placeholder="username" />
+        <input type="password" name="password" v-model="input.password" placeholder="password" />
+        <button type="button" v-on:click="login()">Login</button>
       </div>
-    `
+    `,
+    data() {
+      return {
+        input: {
+          username: "",
+          password: ""
+        }
+      }
+    },
+    methods: {
+      login() {
+        loggedIn = true;
+      }
+    }
   })
 
   Vue.component('list-news', {
@@ -91,9 +107,17 @@ $(document).ready(function(){
       <div>
         <background />
         <band-name />
-        <list-news />
-        <add-news />
+        <div v-if="loggedIn">
+          <list-news />
+          <add-news />
+        </div>
+        <div v-else>
+          <login-form />
+        </div>
       </div>
-    `  
+    `,
+    data: {
+      loggedIn: false
+    }  
   })
 })

@@ -96,7 +96,6 @@ app.post("/admin/add-news", async(req, res) => {
 app.delete("/admin/delete-news/:id", async(req, res) => {
   try {
     const { id } = req.params;
-    console.log(req.params);
     const deletePost = await client.query("DELETE FROM news WHERE post_id = $1 RETURNING *", [
       id
     ]);
