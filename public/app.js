@@ -2,22 +2,6 @@ Vue.config.devtools = true
 
 $(document).ready(function(){
 
-  $(document).on('click', '#submit-button', function(){
-
-    const formValues = $('form').serialize();
-    
-    $.post("/", formValues, function(data) {
-      if (data === "Message Sent.") { 
-        var form = document.getElementById('form');
-        form.reset();
-        $('form input').prop("disabled", true);
-        $('form textarea').prop("disabled", true);
-        $('form button').prop("disabled", true);
-      };
-      $("#message-conf").html(data);       
-    })
-  })
-
   Vue.component ('background', {
     template: `
       <div>
@@ -392,11 +376,26 @@ $(document).ready(function(){
           <p><input class="contact-info" type="text" name="name" placeholder="name"  class="shadow-one"></p>
           <p><input class="contact-info" type="email" name="email" placeholder="email" class="shadow-one"></p>
           <p><textarea id="message-box" name="message" rows="6" placeholder="What's going down, Charlie Brown?" class="shadow-one"></textarea></p>
-          <p><button id="submit-button" type="button" class="shadow-one">Done</button></p>
+          <p><button id="submit-button" type="button" @click="submitForm" class="shadow-one">Done</button></p>
           <div id="message-conf" />
         </form>
       </div>
     `,
+    methods: {
+      submitForm() {
+        const formValues = $('form').serialize();
+        $.post("/", formValues, function(data) {
+          if (data === "Message Sent.") { 
+            var form = document.getElementById('form');
+            form.reset();
+            $('form input').prop("disabled", true);
+            $('form textarea').prop("disabled", true);
+            $('form button').prop("disabled", true);
+          };
+          $("#message-conf").html(data);       
+        })
+      }
+    }
   })
 
   Vue.component ('tabs', {
