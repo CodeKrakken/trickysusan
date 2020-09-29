@@ -29,7 +29,7 @@ $(document).ready(function(){
         if (this.input.username && this.input.password) {
 
           if(this.input.username === this.users[0].username && this.input.password === this.users[0].password) {
-            this.$emit("authenticated", true);
+            this.$emit("log-in", true);
             // this.$router.replace({ name: "secure" });
           } else {
             console.log("The username and / or password is incorrect");
@@ -127,12 +127,19 @@ $(document).ready(function(){
           <add-news />
         </div>
         <div v-else>
-          <login-form />
+          <login-form @log-in="logIn" />
         </div>
       </div>
     `,
     data: {
       loggedIn: false
-    }  
+    },
+    methods: {
+      logIn() {
+        this.loggedIn = true
+        this.$forceUpdate();
+        console.log("Logged in")
+      }
+    }
   })
 })
