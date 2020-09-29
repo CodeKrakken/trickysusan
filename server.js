@@ -18,6 +18,13 @@ const client = new Client({
 
 client.connect();
 
+app.use(cors());
+
+app.use(express.static(__dirname + '/public'));
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 app.get('/news', async(req, res) => {
   try {
     const allNews = await client.query("SELECT * FROM news ORDER BY date")
@@ -27,13 +34,6 @@ app.get('/news', async(req, res) => {
     console.error(err.message);
   }    
 })
-
-app.use(cors());
-
-app.use(express.static(__dirname + '/public'));
-
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
 
 app.post('/', (req, res) => {
   if (req.body.message && req.body.name && validator.validate(req.body.email)) {
@@ -81,6 +81,16 @@ app.get('/admin', function (req, res) {
   res.sendFile(path.join(__dirname + '/public/admin.html'));
 })
 
+app.get('/users', async (req, res) => {
+  try {
+    const users = await client.query("SELECT * FROM users")
+    res.json(users.rows);
+  }
+  catch (err) {
+    console.error(err.message);
+  }
+});
+
 app.post("/admin/add-news", async(req, res) => {
 	try {
     const newPost = await client.query(`INSERT INTO news (date, post) 
@@ -104,19 +114,6 @@ app.delete("/admin/delete-news/:id", async(req, res) => {
     console.error(err.message);
     res.send("Post Not Deleted.")
   }
-
-})
-
-app.delete('/todos/:id', async (req, res) => {
-	try {
-		const { id } = req.params;
-		const deleteTodo = await pool.query("DELETE FROM todo WHERE todo_id = $1", [
-			id
-		]);
-		res.json("Todo was deleted.");
-	} catch (err) {
-		console.error(err.message)
-	}
 })
 
 const port = (process.env.PORT || 3000)

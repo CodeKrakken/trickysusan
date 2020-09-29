@@ -11,3 +11,12 @@ VALUES ('2020/07/14', 'Let’s face it - COVID-19 continues to be a major prick.
 
 INSERT INTO news (date, post)
 VALUES ('2020/09/17', 'Another date');
+
+CREATE TABLE users(
+  id SERIAL PRIMARY KEY,
+  username TEXT,
+  password TEXT
+);
+
+INSERT INTO users (username, password)
+VALUES ('Donald', 'password');

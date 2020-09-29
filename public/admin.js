@@ -16,13 +16,19 @@ $(document).ready(function(){
         input: {
           username: "",
           password: ""
-        }
+        },
+        users: []
       }
+    },
+    mounted() {
+      $.get("/users")
+      .then(response => (this.users = response))
     },
     methods: {
       login() {
         if (this.input.username && this.input.password) {
-          if(this.input.username == this.$parent.mockAccount.username && this.input.password == this.$parent.mockAccount.password) {
+
+          if(this.input.username === this.users[0].username && this.input.password === this.users[0].password) {
             this.$emit("authenticated", true);
             // this.$router.replace({ name: "secure" });
           } else {
