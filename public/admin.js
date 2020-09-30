@@ -17,23 +17,19 @@ $(document).ready(function(){
           username: "",
           password: ""
         },
-        users: []
       }
-    },
-    mounted() {
-      $.get("/users")
-      .then(response => (this.users = response))
     },
     methods: {
       login() {
         if (this.input.username && this.input.password) {
-
-          if(this.input.username === this.users[0].username && this.input.password === this.users[0].password) {
-            this.$emit("log-in", true);
-            // this.$router.replace({ name: "secure" });
-          } else {
-            console.log("The username and / or password is incorrect");
-          }
+          const login = [this.input.username, this.input.password]
+          $.post("/admin/login", login, function(data) {
+            if (data === "Login Successful.") {
+              this.$emit("log-in", true);
+            } else {
+              console.log("The username and / or password is incorrect");
+            }
+          })
         } else {
           console.log("A username and password must be present");
         }
@@ -100,7 +96,6 @@ $(document).ready(function(){
       addNews: async () => {
     
         const formValues = $('form').serialize();
-        console.log(formValues);
         
         $.post("/admin/add-news", formValues, function(data) {
           if (data === "Post Added.") { 
@@ -137,7 +132,7 @@ $(document).ready(function(){
     methods: {
       logIn() {
         this.loggedIn = true
-        this.$forceUpdate();
+
         console.log("Logged in")
       }
     }

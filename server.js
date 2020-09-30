@@ -81,9 +81,26 @@ app.get('/admin', function (req, res) {
   res.sendFile(path.join(__dirname + '/public/admin.html'));
 })
 
+app.post('/admin/login', async (req, res) => {
+  try {
+    console.log(req)
+    const users = await client.query("SELECT * FROM users");
+    users.rows.forEach(user => {
+      if (user.username === req.body.username && user.password === req.body.password) {
+        res.send("Login Successful.")
+      } else {
+        res.send("Username or Password incorrect.")
+      }
+    })
+  }
+  catch (err) {
+    console.error(error.message);
+  }
+})
+
 app.get('/users', async (req, res) => {
   try {
-    const users = await client.query("SELECT * FROM users")
+
     res.json(users.rows);
   }
   catch (err) {
