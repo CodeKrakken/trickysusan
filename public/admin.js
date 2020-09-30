@@ -6,9 +6,11 @@ $(document).ready(function(){
     template: `
       <div>
         <h1>Log In</h1>
-        <input type="text" name="username" v-model="input.username" placeholder="username" />
-        <input type="password" name="password" v-model="input.password" placeholder="password" />
-        <button type="button" v-on:click="login()">Login</button>
+        <form id="login" method="POST" action="/">
+          <input type="text" name="username" v-model="input.username" placeholder="username" />
+          <input type="password" name="password" v-model="input.password" placeholder="password" />
+          <button type="button" v-on:click="login()">Login</button>
+        </form>    
       </div>
     `,
     data() {
@@ -21,14 +23,17 @@ $(document).ready(function(){
     },
     methods: {
       login() {
+
         if (this.input.username && this.input.password) {
-          const login = [this.input.username, this.input.password]
-          $.post("/admin/login", login, function(data) {
-            if (data === "Login Successful.") {
-              this.$emit("log-in", true);
-            } else {
-              console.log("The username and / or password is incorrect");
-            }
+          const formValues = $('form').serialize();
+
+          $.post("/admin/login", formValues, function(data) {
+            // if (data === "Login Successful.") {
+            //   this.$emit("log-in", true);
+            // } else {
+            //   console.log("The username and / or password is incorrect");
+            // }
+            console.log(data)
           })
         } else {
           console.log("A username and password must be present");
