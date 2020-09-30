@@ -87,9 +87,9 @@ app.post('/admin/login', async (req, res) => {
     const users = await client.query("SELECT * FROM users");
     users.rows.forEach(user => {
       if (user.username === req.body.username && user.password === req.body.password) {
-        res.send("Login Successful.")
+        res.send("Server: login successful.")
       } else {
-        res.send("Username or Password incorrect.")
+        res.send("Server: username or password incorrect.")
       }
     })
   }

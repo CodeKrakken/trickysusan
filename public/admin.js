@@ -18,7 +18,7 @@ $(document).ready(function(){
         input: {
           username: "",
           password: ""
-        },
+        }
       }
     },
     methods: {
@@ -26,17 +26,21 @@ $(document).ready(function(){
 
         if (this.input.username && this.input.password) {
           const formValues = $('form').serialize();
-
-          $.post("/admin/login", formValues, function(data) {
-            // if (data === "Login Successful.") {
-            //   this.$emit("log-in", true);
-            // } else {
-            //   console.log("The username and / or password is incorrect");
-            // }
-            console.log(data)
+          let auth;
+          var promise = $.post("/admin/login", formValues, function(data) {
+            auth = data
           })
+          promise.done(function() {
+            console.log(auth)
+            if (auth === "Server: login successful.") {
+              this.$emit("log-in", true);
+              console.log("Client: login success emitted.")
+            } else {
+              console.log("Client: username or password incorrect.");
+            }
+          });
         } else {
-          console.log("A username and password must be present");
+          console.log("Client: a username and password must be present");
         }
       }
     }
