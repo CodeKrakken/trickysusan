@@ -27,18 +27,20 @@ $(document).ready(function(){
         if (this.input.username && this.input.password) {
           const formValues = $('form').serialize();
           let auth;
+          let status;
           var promise = $.post("/admin/login", formValues, function(data) {
             auth = data
           })
           promise.done(function() {
             console.log(auth)
             if (auth === "Server: login successful.") {
-              this.$emit("log-in", true);
+              status = true
               console.log("Client: login success emitted.")
             } else {
               console.log("Client: username or password incorrect.");
             }
           });
+          this.$emit("log-in", status);
         } else {
           console.log("Client: a username and password must be present");
         }
