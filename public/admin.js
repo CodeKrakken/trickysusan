@@ -128,6 +128,7 @@ $(document).ready(function(){
     },
     methods: {
       logIn(loginStatus) {
+        console.log(loginStatus)
         this.loggedIn = loginStatus
       }
     }
