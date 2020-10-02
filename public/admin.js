@@ -17,7 +17,7 @@ $(document).ready(function(){
       return {
         loginStatus: false
       }
-    }
+    },
     methods: {
       login() {
         const formValues = $('form').serialize();
