@@ -20,16 +20,22 @@ $(document).ready(function(){
     },
     methods: {
       login() {
+        var login = this
         const formValues = $('form').serialize();
-        $.post("/admin/login", formValues, function(data) {
-          if (data === "Server: login successful.") {
-            this.loginStatus = true
-            console.log("Client: login success emitted.")
-          } else {
-            console.log("Client: username or password incorrect.");
-          }
+        var promise = $.post("/admin/login", formValues, function(data) {
+          $.post("/admin/login", formValues, function(data) {
+            if (data === "Server: login successful.") {
+              login.loginStatus = true
+              console.log(login.loginStatus)
+            } else {
+              console.log("Client: username or password incorrect.");
+            }
+          })
         })
-        this.$emit('log-in', this.loginStatus);
+        promise.done(function() {
+          login.$emit('log-in', login.loginStatus);
+          console.log("Client: login success emitted.")
+        });
       }
     }
   })
@@ -128,7 +134,7 @@ $(document).ready(function(){
     },
     methods: {
       logIn(loginStatus) {
-        console.log(loginStatus)
+        // console.log(loginStatus)
         this.loggedIn = loginStatus
       }
     }
