@@ -7,43 +7,29 @@ $(document).ready(function(){
       <div>
         <h1>Log In</h1>
         <form id="login" method="POST" action="/">
-          <input type="text" name="username" v-model="input.username" placeholder="username" />
-          <input type="password" name="password" v-model="input.password" placeholder="password" />
+          <input type="text" name="username" placeholder="username" />
+          <input type="password" name="password" placeholder="password" />
           <button type="button" v-on:click="login()">Login</button>
         </form>    
       </div>
     `,
     data() {
       return {
-        input: {
-          username: "",
-          password: ""
-        }
+        loginStatus: false
       }
-    },
+    }
     methods: {
       login() {
-
-        if (this.input.username && this.input.password) {
-          const formValues = $('form').serialize();
-          let auth;
-          let status;
-          var promise = $.post("/admin/login", formValues, function(data) {
-            auth = data
-          })
-          promise.done(function() {
-            console.log(auth)
-            if (auth === "Server: login successful.") {
-              status = true
-              console.log("Client: login success emitted.")
-            } else {
-              console.log("Client: username or password incorrect.");
-            }
-          });
-          this.$emit("log-in", status);
-        } else {
-          console.log("Client: a username and password must be present");
-        }
+        const formValues = $('form').serialize();
+        $.post("/admin/login", formValues, function(data) {
+          if (data === "Server: login successful.") {
+            this.loginStatus = true
+            console.log("Client: login success emitted.")
+          } else {
+            console.log("Client: username or password incorrect.");
+          }
+        })
+        this.$emit('log-in', this.loginStatus);
       }
     }
   })
@@ -141,10 +127,8 @@ $(document).ready(function(){
       loggedIn: false
     },
     methods: {
-      logIn() {
-        this.loggedIn = true
-
-        console.log("Logged in")
+      logIn(loginStatus) {
+        this.loggedIn = loginStatus
       }
     }
   })
