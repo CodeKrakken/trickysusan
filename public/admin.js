@@ -20,22 +20,18 @@ $(document).ready(function(){
     },
     methods: {
       login() {
-        var login = this
+        login = this
         const formValues = $('form').serialize();
-        var promise = $.post("/admin/login", formValues, function(data) {
           $.post("/admin/login", formValues, function(data) {
             if (data === "Server: login successful.") {
-              login.loginStatus = true
-              console.log(login.loginStatus)
+              this.loginStatus = true
+              console.log(this.loginStatus)
+              login.$emit('log-in', this.loginStatus);
+              console.log("Client: login success emitted.")
             } else {
               console.log("Client: username or password incorrect.");
             }
           })
-        })
-        promise.done(function() {
-          login.$emit('log-in', login.loginStatus);
-          console.log("Client: login success emitted.")
-        });
       }
     }
   })
