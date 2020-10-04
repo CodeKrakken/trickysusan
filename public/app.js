@@ -59,6 +59,7 @@ $(document).ready(function(){
         <div v-show="selectedTab === 'Photos'"><photos /></div>
         <div v-show="selectedTab === 'Videos'"><videos /></div>
         <div v-show="selectedTab === 'Contact'"><contact /></div>
+        <div v-show="selectedTab === 'EPK'"><epk /></div>
       </div>
     `,
     props: {
@@ -398,6 +399,14 @@ $(document).ready(function(){
     }
   })
 
+  Vue.component ('epk', {
+    template: `
+      <div>
+        INSERT CONTENT HERE
+      </div>
+    `
+  })
+
   Vue.component ('tabs', {
     template: `
       <div id="tabs">
@@ -416,7 +425,8 @@ $(document).ready(function(){
           'Bio',
           'Photos',
           'Videos',
-          'Contact'
+          'Contact',
+          'EPK'
         ],
       }
     },
