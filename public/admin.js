@@ -4,13 +4,15 @@ $(document).ready(function(){
 
   Vue.component('login-form', {
     template: `
-      <div>
-        <h1>Log In</h1>
-        <form id="login" method="POST" action="/">
-          <input type="text" name="username" placeholder="username" />
-          <input type="password" name="password" placeholder="password" />
-          <button type="button" v-on:click="login()">Login</button>
-        </form>    
+      <div class="main-content center">
+        <div>
+          <h1>Log In</h1>
+          <form id="login" method="POST" action="/">
+            <input type="text" name="username" placeholder="username" /><br>
+            <input type="password" name="password" placeholder="password" /><br><br>
+            <button type="button" v-on:click="login()">Login</button>
+          </form>
+        </div>    
       </div>
     `,
     data() {
