@@ -25,6 +25,14 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+app.get('/admin/login-status', async(req, res) => {
+  try {
+    res.send(process.env.LOGIN_STATUS)
+  } catch (err) {
+    console.log(error.message)
+  }
+})
+
 app.get('/news', async(req, res) => {
   try {
     const allNews = await client.query("SELECT * FROM news ORDER BY date")
@@ -87,6 +95,8 @@ app.post('/admin/login', async (req, res) => {
     const users = await client.query("SELECT * FROM users");
     users.rows.forEach(user => {
       if (user.username === req.body.username && user.password === req.body.password) {
+        process.env.LOGIN_STATUS = true
+        console.log(`process.env.LOGIN_STATUS: ${process.env.LOGIN_STATUS}`)
         res.send("Server: login successful.")
       } else {
         res.send("Server: username or password incorrect.")

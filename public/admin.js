@@ -135,6 +135,11 @@ $(document).ready(function(){
         // console.log(loginStatus)
         this.loggedIn = loginStatus
       }
-    }
+    },
+    created() {
+      $.get("/admin/login-status")
+      .then(response => (this.loggedIn = response))
+      .then(console.log(this.loggedIn))
+    },
   })
 })
