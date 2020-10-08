@@ -34,7 +34,8 @@ app.get('/admin/login-status', async(req, res) => {
 })
 
 app.post('/selectedTab', async(req, res) => {
-  console.log(req.body.newTab)
+  process.env.SELECTED_TAB = req.body.newTab
+  console.log(`process.env.SELECTED_TAB: ${process.env.SELECTED_TAB}`)
 })
 
 app.get('/news', async(req, res) => {
