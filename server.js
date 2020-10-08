@@ -33,6 +33,10 @@ app.get('/admin/login-status', async(req, res) => {
   }
 })
 
+app.post('/selectedTab', async(req, res) => {
+  console.log(req.body.newTab)
+})
+
 app.get('/news', async(req, res) => {
   try {
     const allNews = await client.query("SELECT * FROM news ORDER BY date")

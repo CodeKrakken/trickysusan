@@ -432,8 +432,10 @@ $(document).ready(function(){
     },
     methods: {
       selectTab(tab) {
-        this.selectedTab = tab
-        this.$emit('select-tab', this.selectedTab)
+        $.post('/selectedTab', { "newTab" : tab }, function(data) {
+          console.log(tab)
+        })
+        this.$emit('select-tab', tab)
       }
     }
   })
