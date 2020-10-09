@@ -10,7 +10,7 @@ $(document).ready(function(){
           <form id="login" method="POST" action="/">
             <input type="text" name="username" placeholder="username" /><br>
             <input type="password" name="password" placeholder="password" /><br><br>
-            <button type="button" v-on:click="login()">Login</button>
+            <button type="button" @click="login()">Login</button>
             <div id="message-conf">
           </form>
         </div>    
@@ -36,6 +36,19 @@ $(document).ready(function(){
           }
         })
 
+      }
+    }
+  })
+
+  Vue.component('logout-button', {
+    template: `
+      <div>
+        <button @click="logout()">Log Out</button>
+      </div>
+    `,
+    methods: {
+      logout() {
+        this.$emit('log-out', false)
       }
     }
   })
@@ -123,6 +136,7 @@ $(document).ready(function(){
         <background />
         <band-name />
         <div v-if="loggedIn">
+          <logout-button @log-out="logOut" />
           <list-news />
           <add-news />
         </div>
@@ -136,6 +150,9 @@ $(document).ready(function(){
     },
     methods: {
       logIn(loginStatus) {
+        this.loggedIn = loginStatus
+      },
+      logOut(loginStatus) {
         this.loggedIn = loginStatus
       }
     },
