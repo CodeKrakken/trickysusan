@@ -33,6 +33,10 @@ app.get('/admin/login-status', async(req, res) => {
   }
 })
 
+app.get('/selectedTab', async(req, res) => {
+  res.send(process.env.SELECTED_TAB)
+})
+
 app.post('/selectedTab', async(req, res) => {
   process.env.SELECTED_TAB = req.body.newTab
   console.log(`process.env.SELECTED_TAB: ${process.env.SELECTED_TAB}`)

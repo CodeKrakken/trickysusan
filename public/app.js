@@ -458,6 +458,11 @@ $(document).ready(function(){
       selectTab(tab) {
         this.selectedTab = tab 
       }
-    }
+    },
+    created() {
+      $.get("/selectedTab")
+      .then(response => (this.selectedTab = response))
+      .then(console.log(this.selectedTab))
+    },
   })
 })
