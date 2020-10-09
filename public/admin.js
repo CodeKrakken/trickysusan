@@ -23,16 +23,18 @@ $(document).ready(function(){
     },
     methods: {
       login() {
-        login = this
-        const formValues = $('form').serialize();
-          $.post("/admin/login", formValues, function(data) {
-            if (data === "Server: login successful.") {
-              this.loginStatus = true
-              login.$emit('log-in', this.loginStatus);
-            } else {
-              $("#message-conf").html("Username or Password Incorrect");
-            }
-          })
+        // login = this
+        // const formValues = $('form').serialize();
+        // $.post("/admin/login", formValues, function(data) {
+        //   if (data === "Server: login successful.") {
+        //     this.loginStatus = true
+        //     login.$emit('log-in', this.loginStatus);
+        //   } else {
+        //     $("#message-conf").html("Username or Password Incorrect");
+        //   }
+        // })
+        localStorage.setItem("login", true);
+        console.log(localStorage.getItem("login"))
       }
     }
   })
@@ -111,13 +113,16 @@ $(document).ready(function(){
     }
   })
 
+  // <div v-if="loggedIn">
+
   var admin = new Vue({
     el: '#admin',
     template: `
       <div>
         <background />
         <band-name />
-        <div v-if="loggedIn">
+        <div v-if="localStorage.getItem('login status') === true">
+        
           <list-news />
           <add-news />
         </div>
