@@ -11,6 +11,7 @@ $(document).ready(function(){
             <input type="text" name="username" placeholder="username" /><br>
             <input type="password" name="password" placeholder="password" /><br><br>
             <button type="button" v-on:click="login()">Login</button>
+            <div id="message-conf">
           </form>
         </div>    
       </div>
@@ -27,11 +28,9 @@ $(document).ready(function(){
           $.post("/admin/login", formValues, function(data) {
             if (data === "Server: login successful.") {
               this.loginStatus = true
-              console.log(this.loginStatus)
               login.$emit('log-in', this.loginStatus);
-              console.log("Client: login success emitted.")
             } else {
-              console.log("Client: username or password incorrect.");
+              $("#message-conf").html("Username or Password Incorrect");
             }
           })
       }
@@ -132,14 +131,15 @@ $(document).ready(function(){
     },
     methods: {
       logIn(loginStatus) {
-        // console.log(loginStatus)
         this.loggedIn = loginStatus
       }
     },
     created() {
       $.get("/admin/login-status")
       .then(response => (this.loggedIn = response))
-      .then(console.log(this.loggedIn))
     },
+    destroyed() {
+      $.post("/admin/logout")
+    }
   })
 })

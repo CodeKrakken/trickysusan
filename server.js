@@ -39,7 +39,6 @@ app.get('/selectedTab', async(req, res) => {
 
 app.post('/selectedTab', async(req, res) => {
   process.env.SELECTED_TAB = req.body.newTab
-  console.log(`process.env.SELECTED_TAB: ${process.env.SELECTED_TAB}`)
 })
 
 app.get('/news', async(req, res) => {
@@ -85,8 +84,6 @@ app.post('/', (req, res) => {
       if (error) {
         return console.log(error);
       }
-      console.log('Message sent: %s', info.messageId)
-      console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
       res.send('Message Sent.');
     })
   } else {
@@ -100,12 +97,10 @@ app.get('/admin', function (req, res) {
 
 app.post('/admin/login', async (req, res) => {
   try {
-    console.log(req)
     const users = await client.query("SELECT * FROM users");
     users.rows.forEach(user => {
       if (user.username === req.body.username && user.password === req.body.password) {
         process.env.LOGIN_STATUS = true
-        console.log(`process.env.LOGIN_STATUS: ${process.env.LOGIN_STATUS}`)
         res.send("Server: login successful.")
       } else {
         res.send("Server: username or password incorrect.")
@@ -114,6 +109,14 @@ app.post('/admin/login', async (req, res) => {
   }
   catch (err) {
     console.error(error.message);
+  }
+})
+
+app.post('/admin/logout', () => {
+  try {
+    process.env.LOGIN_STATUS = false
+  } catch (err) {
+    error.message
   }
 })
 

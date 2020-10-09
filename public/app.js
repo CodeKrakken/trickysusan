@@ -433,7 +433,6 @@ $(document).ready(function(){
     methods: {
       selectTab(tab) {
         $.post('/selectedTab', { "newTab" : tab }, function(data) {
-          console.log(tab)
         })
         this.$emit('select-tab', tab)
       }
@@ -462,7 +461,6 @@ $(document).ready(function(){
     created() {
       $.get("/selectedTab")
       .then(response => (this.selectedTab = response))
-      .then(console.log(this.selectedTab))
     },
   })
 })
