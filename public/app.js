@@ -434,6 +434,8 @@ $(document).ready(function(){
       selectTab(tab) {
         // $.post('/selectedTab', { "newTab" : tab }, function(data) {
         // })
+        localStorage.tab = tab
+        console.log(localStorage.tab)
         this.$emit('select-tab', tab)
       }
     }
@@ -451,7 +453,7 @@ $(document).ready(function(){
       </div>
     `,
     data: {
-      selectedTab: 'News'
+      selectedTab: localStorage.tab
     },   
     methods: {
       selectTab(tab) {
