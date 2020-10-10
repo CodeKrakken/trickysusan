@@ -27,8 +27,6 @@ $(document).ready(function(){
         const formValues = $('form').serialize();
         $.post("/admin/login", formValues, function(data) {
           if (data === "Server: login successful.") {
-            localStorage.setItem("login", true);
-            console.log(localStorage.getItem("login"))
             this.loginStatus = true
             login.$emit('log-in', this.loginStatus);
           } else {
@@ -151,6 +149,8 @@ $(document).ready(function(){
     methods: {
       logIn(loginStatus) {
         this.loggedIn = loginStatus
+        localStorage.setItem("login", true);
+        console.log(localStorage.getItem("login"))
       },
       logOut(loginStatus) {
         this.loggedIn = loginStatus
