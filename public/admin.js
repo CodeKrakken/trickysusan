@@ -21,8 +21,8 @@ $(document).ready(function(){
         const formValues = $('form').serialize();
         $.post("/admin/login", formValues, function(data) {
           if (data === "Server: login successful.") {
-            localStorage.setItem("login", true)
-            console.log(`localStorage.login === ${localStorage.getItem('login')}`)
+            sessionStorage.setItem("login", true)
+            console.log(`sessionStorage.login === ${sessionStorage.getItem('login')}`)
           } else {
             $("#message-conf").html("Username or Password Incorrect");
           }
@@ -39,8 +39,8 @@ $(document).ready(function(){
     `,
     methods: {
       logout() {
-        localStorage.setItem('login', false)
-        console.log(`localStorage.login === ${localStorage.getItem('login')}`)
+        sessionStorage.setItem('login', false)
+        console.log(`sessionStorage.login === ${sessionStorage.getItem('login')}`)
       }
     }
   })
@@ -119,13 +119,12 @@ $(document).ready(function(){
     }
   })
 
-  var admin = new Vue({
-    el: '#admin',
+  Vue.component('admin-content', {
     template: `
       <div>
         <background />
         <band-name />
-        <div v-if="localStorage.getItem('login') === 'true'">
+        <div v-if="loggedIn === 'true'">
           <logout-button />
           <list-news />
           <add-news />
@@ -135,8 +134,23 @@ $(document).ready(function(){
         </div>
       </div>
     `,
-    beforeUpdate() {
-      loggedIn = localStorage.getItem('login')
+    props: {
+      loggedIn: {
+        type: Boolean,
+        required: true
+      }
     }
+  })
+
+  var admin = new Vue({
+    el: '#admin',
+    template: `
+      <div>
+        <admin-content :loggedIn="loggedIn" />
+      </div>
+    `,
+    data: {
+      loggedIn: (sessionStorage.login || false)
+    },   
   })
 })
