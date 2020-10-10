@@ -432,8 +432,8 @@ $(document).ready(function(){
     },
     methods: {
       selectTab(tab) {
-        $.post('/selectedTab', { "newTab" : tab }, function(data) {
-        })
+        // $.post('/selectedTab', { "newTab" : tab }, function(data) {
+        // })
         this.$emit('select-tab', tab)
       }
     }
@@ -458,9 +458,9 @@ $(document).ready(function(){
         this.selectedTab = tab 
       }
     },
-    created() {
-      $.get("/selectedTab")
-      .then(response => (this.selectedTab = response))
-    },
+    // created() {
+    //   $.get("/selectedTab")
+    //   .then(response => (this.selectedTab = response))
+    // },
   })
 })
