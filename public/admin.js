@@ -16,24 +16,17 @@ $(document).ready(function(){
         </div>    
       </div>
     `,
-    data() {
-      return {
-        loginStatus: false
-      }
-    },
     methods: {
       login() {
-        login = this
         const formValues = $('form').serialize();
         $.post("/admin/login", formValues, function(data) {
           if (data === "Server: login successful.") {
-            this.loginStatus = true
-            login.$emit('log-in', this.loginStatus);
+            localStorage.setItem("login", true)
+            console.log(`localStorage.login === ${localStorage.getItem('login')}`)
           } else {
             $("#message-conf").html("Username or Password Incorrect");
           }
         })
-
       }
     }
   })
@@ -46,7 +39,8 @@ $(document).ready(function(){
     `,
     methods: {
       logout() {
-        this.$emit('log-out', false)
+        localStorage.setItem('login', false)
+        console.log(`localStorage.login === ${localStorage.getItem('login')}`)
       }
     }
   })
@@ -125,43 +119,21 @@ $(document).ready(function(){
     }
   })
 
-  // 
-
   var admin = new Vue({
     el: '#admin',
     template: `
       <div>
         <background />
         <band-name />
-        <div v-if="loggedIn">
-          <logout-button @log-out="logOut" />
+        <div v-if="localStorage.getItem('login') === 'true'">
+          <logout-button />
           <list-news />
           <add-news />
         </div>
         <div v-else>
-          <login-form @log-in="logIn" />
+          <login-form />
         </div>
       </div>
-    `,
-    data: {
-      loggedIn: localStorage.getItem("login")
-    },
-    methods: {
-      logIn(loginStatus) {
-        this.loggedIn = loginStatus
-        localStorage.setItem("login", true);
-        console.log(localStorage.getItem("login"))
-      },
-      logOut(loginStatus) {
-        this.loggedIn = loginStatus
-      }
-    },
-    created() {
-      $.get("/admin/login-status")
-      .then(response => (this.loggedIn = response))
-    },
-    destroyed() {
-      $.post("/admin/logout")
-    }
+    `
   })
 })
