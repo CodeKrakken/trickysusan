@@ -134,6 +134,9 @@ $(document).ready(function(){
           <login-form />
         </div>
       </div>
-    `
+    `,
+    beforeUpdate() {
+      loggedIn = localStorage.getItem('login')
+    }
   })
 })
