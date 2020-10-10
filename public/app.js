@@ -434,8 +434,8 @@ $(document).ready(function(){
       selectTab(tab) {
         // $.post('/selectedTab', { "newTab" : tab }, function(data) {
         // })
-        localStorage.tab = tab
-        console.log(localStorage.tab)
+        sessionStorage.tab = tab
+        console.log(sessionStorage.tab)
         this.$emit('select-tab', tab)
       }
     }
@@ -453,11 +453,11 @@ $(document).ready(function(){
       </div>
     `,
     data: {
-      selectedTab: localStorage.tab
+      selectedTab: (sessionStorage.tab || 'News')
     },   
     methods: {
       selectTab(tab) {
-        this.selectedTab = tab 
+        this.selectedTab = tab
       }
     },
     // created() {
