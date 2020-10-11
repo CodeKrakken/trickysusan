@@ -48,28 +48,6 @@ $(document).ready(function(){
     }
   })
 
-  Vue.component('main-content', {
-    template: `
-      <div class="main-content">
-        <div v-show="selectedTab === 'News'"><news /></div>
-        <div v-show="selectedTab === 'Music'"><music /></div>
-        <div v-show="selectedTab === 'Gigs'"><gigs /></div>
-        <div v-show="selectedTab === 'Shop'"><shop /></div>
-        <div v-show="selectedTab === 'Bio'"><bio /></div>
-        <div v-show="selectedTab === 'Photos'"><photos /></div>
-        <div v-show="selectedTab === 'Videos'"><videos /></div>
-        <div v-show="selectedTab === 'Contact'"><contact /></div>
-        <div v-show="selectedTab === 'EPK'"><epk /></div>
-      </div>
-    `,
-    props: {
-      selectedTab: {
-        type: String,
-        required: true
-      }
-    }
-  })
-
   Vue.component('news', {
     template: `
       <div id="news">
@@ -437,6 +415,28 @@ $(document).ready(function(){
         sessionStorage.tab = tab
         console.log(sessionStorage.tab)
         this.$emit('select-tab', tab)
+      }
+    }
+  })
+
+  Vue.component('main-content', {
+    template: `
+      <div class="main-content">
+        <div v-show="selectedTab === 'News'"><news /></div>
+        <div v-show="selectedTab === 'Music'"><music /></div>
+        <div v-show="selectedTab === 'Gigs'"><gigs /></div>
+        <div v-show="selectedTab === 'Shop'"><shop /></div>
+        <div v-show="selectedTab === 'Bio'"><bio /></div>
+        <div v-show="selectedTab === 'Photos'"><photos /></div>
+        <div v-show="selectedTab === 'Videos'"><videos /></div>
+        <div v-show="selectedTab === 'Contact'"><contact /></div>
+        <div v-show="selectedTab === 'EPK'"><epk /></div>
+      </div>
+    `,
+    props: {
+      selectedTab: {
+        type: String,
+        required: true
       }
     }
   })

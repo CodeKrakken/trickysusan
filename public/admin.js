@@ -18,11 +18,13 @@ $(document).ready(function(){
     `,
     methods: {
       login() {
+        login = this
         const formValues = $('form').serialize();
         $.post("/admin/login", formValues, function(data) {
           if (data === "Server: login successful.") {
             sessionStorage.setItem("login", true)
             console.log(`sessionStorage.login === ${sessionStorage.getItem('login')}`)
+            login.$emit('login')
           } else {
             $("#message-conf").html("Username or Password Incorrect");
           }
@@ -41,6 +43,7 @@ $(document).ready(function(){
       logout() {
         sessionStorage.setItem('login', false)
         console.log(`sessionStorage.login === ${sessionStorage.getItem('login')}`)
+        this.$emit('logout')
       }
     }
   })
@@ -122,15 +125,13 @@ $(document).ready(function(){
   Vue.component('admin-content', {
     template: `
       <div>
-        <background />
-        <band-name />
         <div v-if="loggedIn === 'true'">
-          <logout-button />
+          <logout-button @logout="logout" />
           <list-news />
           <add-news />
         </div>
         <div v-else>
-          <login-form />
+          <login-form @login="login" />
         </div>
       </div>
     `,
@@ -139,6 +140,14 @@ $(document).ready(function(){
         type: Boolean,
         required: true
       }
+    },
+    methods: {
+      login() {
+        this.loggedIn = true
+      },
+      logout() {
+        this.loggedIn = false
+      }
     }
   })
 
@@ -146,6 +155,8 @@ $(document).ready(function(){
     el: '#admin',
     template: `
       <div>
+        <background />
+        <band-name />
         <admin-content :loggedIn="loggedIn" />
       </div>
     `,
