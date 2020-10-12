@@ -33,20 +33,20 @@ Vue.config.devtools = true
 //     }
 //   })
 
-//   Vue.component('logout-button', {
-//     template: `
-//       <div>
-//         <button @click="logout()">Log Out</button>
-//       </div>
-//     `,
-//     methods: {
-//       logout() {
-//         sessionStorage.setItem('login', false)
-//         console.log(`sessionStorage.login === ${sessionStorage.getItem('login')}`)
-//         this.$emit('logout')
-//       }
-//     }
-//   })
+  // Vue.component('logout-button', {
+  //   template: `
+  //     <div>
+  //       <button @click="logout()">Log Out</button>
+  //     </div>
+  //   `,
+  //   methods: {
+  //     logout() {
+  //       sessionStorage.setItem('login', false)
+  //       console.log(`sessionStorage.login === ${sessionStorage.getItem('login')}`)
+  //       this.$emit('logout')
+  //     }
+  //   }
+  // })
 
 //   Vue.component('list-news', {
 //     template: `
@@ -278,6 +278,21 @@ $(document).ready(function(){
     }
   })
 
+  Vue.component('logout-button', {
+    template: `
+      <div>
+        <button @click="logout()">Log Out</button>
+      </div>
+    `,
+    methods: {
+      logout() {
+        sessionStorage.setItem('login', false)
+        console.log(`sessionStorage.login === ${sessionStorage.getItem('login')}`)
+        this.$emit('logout')
+      }
+    }
+  })
+
   var admin = new Vue({
     el: '#admin',
     template: `
@@ -287,6 +302,7 @@ $(document).ready(function(){
         <div v-if="loggedIn">
           <list-news />
           <add-news />
+          <logout-button @logout="logOut" />
         </div>
         <div v-else>
           <login-form @log-in="logIn" />
@@ -300,6 +316,9 @@ $(document).ready(function(){
       logIn(loginStatus) {
         // console.log(loginStatus)
         this.loggedIn = loginStatus
+      },
+      logOut() {
+        this.loggedIn = false
       }
     }
   })
