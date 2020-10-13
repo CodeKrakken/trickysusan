@@ -188,21 +188,21 @@ $(document).ready(function(){
       login() {
         login = this
         const formValues = $('form').serialize();
-          $.post("/admin/login", formValues, function(data) {
-            if (data === "Server: login successful.") {
-              login.$emit('log-in');
-              console.log("Client: login success emitted.")
-            } else {
-              $("#login-conf").html("Guess again, sucka!")              
-            }
-          })
+        $.post("/admin/login", formValues, function(data) {
+          if (data === "Server: login successful.") {
+            login.$emit('log-in');
+            console.log("Client: login success emitted.")
+          } else {
+            $("#login-conf").html("Guess again, sucka!")              
+          }
+        })
       }
     }
   })
 
   Vue.component('list-news', {
     template: `
-      <div>
+      <div id="list-news">
         <div 
           v-for="post in posts"
           key={post.post_id}
@@ -211,9 +211,7 @@ $(document).ready(function(){
             {{ moment(post.date).format('DD.MM.YY') }} ... {{ post.post }}
           </span>
           <button id="delete-news-button" @click="deleteNews(post.post_id)" type="button">Delete</button>
-          <div style="font-size:150%">
-            <br><br>
-          </div>
+          <br><br>
         </div>
       </div>
     `,
@@ -276,7 +274,7 @@ $(document).ready(function(){
 
   Vue.component('logout-button', {
     template: `
-      <div>
+      <div id="logout-button">
         <button @click="logout()">Log Out</button>
       </div>
     `,

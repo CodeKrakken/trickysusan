@@ -350,10 +350,19 @@ a:focus {
 
 /* admin page */
 
+#list-news {
+  display: block;
+  color: white;
+  position: absolute;
+  top: 20vh;
+  left: 5vh;
+  overflow: hidden;
+  width: 50%
+}
+
 #admin-news-preview {
   display: block;
   text-overflow: ellipsis;
-  width: 50%;
   overflow: hidden; 
   white-space: nowrap; 
   font-size: 150%
@@ -364,4 +373,10 @@ a:focus {
   right: 5vw;
   top: 0;
   text-align: center
+}
+
+#logout-button {
+  position: absolute;
+  top: 1vh;
+  right: 1vh
 }
