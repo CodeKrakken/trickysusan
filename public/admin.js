@@ -7,7 +7,7 @@ $(document).ready(function(){
       <div class="main-content center">
         <div>
           <h1>Log In</h1>
-          <form id="login" method="POST" action="/">
+          <form id="login">
             <input type="text" name="username" placeholder="username" /><br>
             <input type="password" name="password" placeholder="password" /><br><br>
             <button type="button" @click="login()">Login</button>
@@ -23,7 +23,6 @@ $(document).ready(function(){
         $.post("/admin/login", formValues, function(data) {
           if (data === "Server: login successful.") {
             login.$emit('log-in');
-            console.log("Client: login success emitted.")
           } else {
             $("#login-conf").html("Guess again, sucka!")              
           }
@@ -53,14 +52,16 @@ $(document).ready(function(){
       }
     },
     mounted() {
-      $.get("/news")
-      .then(response => (this.posts = response.reverse()))
+      this.getNews()
     },
     beforeUpdate() {
-      $.get("/news")
-      .then(response => (this.posts = response.reverse()))
+      this.getNews()
     },
     methods: {
+      getNews() {
+        $.get("/news")
+        .then(response => (this.posts = response.reverse()))
+      },
       deleteNews: async (post_id) => {
         try {
           fetch(`/admin/delete-news/${post_id}`, {
