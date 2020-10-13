@@ -249,7 +249,7 @@ $(document).ready(function(){
         <form id="add-news" method="POST" action="/">
           <h1>Add News</h1>
           <p><input class="contact-info shadow-one" type="date" name="date" placeholder="date"></p>
-          <p><textarea class="shadow-one" id="message-box" name="post" rows="6" placeholder="What's the scoop, Betty Boop?"></textarea></p>
+          <p><textarea id="message-box" name="post" rows="6" placeholder="What's the scoop, Betty Boop?"></textarea></p>
           <p><button id="add-news-button" @click="addNews()" type="button" class="shadow-one">Done</button></p>
           <div id="news-conf" />
         </form>
