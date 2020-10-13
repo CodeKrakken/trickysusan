@@ -62,7 +62,7 @@ $(document).ready(function(){
         $.get("/news")
         .then(response => (this.posts = response.reverse()))
       },
-      deleteNews: async (post_id) => {
+      deleteNews(post_id) {
         try {
           fetch(`/admin/delete-news/${post_id}`, {
             method: "DELETE"
