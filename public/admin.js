@@ -112,7 +112,6 @@ $(document).ready(function(){
     methods: {
       logout() {
         sessionStorage.setItem('login', false)
-        console.log(`sessionStorage.login === ${sessionStorage.getItem('login')}`)
         this.$emit('logout')
       }
     }
@@ -138,19 +137,21 @@ $(document).ready(function(){
       loggedIn: null
     },
     mounted() {
-      this.loggedIn = false || sessionStorage.login
+      this.updateLogin()
     },
     beforeUpdate() {
-      this.loggedIn = sessionStorage.login
+      this.updateLogin()
     },
     methods: {
       logIn() {
         this.loggedIn = true
         sessionStorage.setItem("login", true)
-        console.log(`sessionStorage.login === ${sessionStorage.getItem('login')}`)
       },
       logOut() {
         this.loggedIn = false
+      },
+      updateLogin() {
+        this.loggedIn = sessionStorage.login
       }
     }
   })
