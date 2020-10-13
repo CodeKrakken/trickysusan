@@ -243,6 +243,14 @@ iframe {
   margin: auto
 }
 
+#login-conf {
+  position: absolute;
+  top: 67vh;
+  left: 0;
+  right: 0;
+  margin: auto  
+}
+
 #test-button {
   z-index: -20
 }

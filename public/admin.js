@@ -172,32 +172,28 @@ $(document).ready(function(){
 
   Vue.component('login-form', {
     template: `
-      <div>
-        <h1>Log In</h1>
-        <form id="login" method="POST" action="/">
-          <input type="text" name="username" placeholder="username" />
-          <input type="password" name="password" placeholder="password" />
-          <button type="button" v-on:click="login()">Login</button>
-        </form>    
+      <div class="main-content center">
+        <div>
+          <h1>Log In</h1>
+          <form id="login" method="POST" action="/">
+            <input type="text" name="username" placeholder="username" /><br>
+            <input type="password" name="password" placeholder="password" /><br><br>
+            <button type="button" @click="login()">Login</button>
+            <div id="login-conf">
+          </form>
+        </div>    
       </div>
     `,
-    data() {
-      return {
-        loginStatus: false
-      }
-    },
     methods: {
       login() {
         login = this
         const formValues = $('form').serialize();
           $.post("/admin/login", formValues, function(data) {
             if (data === "Server: login successful.") {
-              this.loginStatus = true
-              console.log(this.loginStatus)
-              login.$emit('log-in', this.loginStatus);
+              login.$emit('log-in');
               console.log("Client: login success emitted.")
             } else {
-              console.log("Client: username or password incorrect.");
+              $("#login-conf").html("Guess again, sucka!")              
             }
           })
       }
@@ -252,8 +248,8 @@ $(document).ready(function(){
       <div>
         <form id="add-news" method="POST" action="/">
           <h1>Add News</h1>
-          <p><input class="contact-info" type="date" name="date" placeholder="date" class="shadow-one"></p>
-          <p><textarea id="message-box" name="post" rows="6" placeholder="What's the scoop, Betty Boop?" class="shadow-one"></textarea></p>
+          <p><input class="contact-info shadow-one" type="date" name="date" placeholder="date"></p>
+          <p><textarea class="shadow-one" id="message-box" name="post" rows="6" placeholder="What's the scoop, Betty Boop?"></textarea></p>
           <p><button id="add-news-button" @click="addNews()" type="button" class="shadow-one">Done</button></p>
           <div id="news-conf" />
         </form>
@@ -319,9 +315,8 @@ $(document).ready(function(){
       this.loggedIn = sessionStorage.login
     },
     methods: {
-      logIn(loginStatus) {
-        // console.log(loginStatus)
-        this.loggedIn = loginStatus
+      logIn() {
+        this.loggedIn = true
         sessionStorage.setItem("login", true)
         console.log(`sessionStorage.login === ${sessionStorage.getItem('login')}`)
       },
