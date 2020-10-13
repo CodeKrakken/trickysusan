@@ -87,10 +87,8 @@ $(document).ready(function(){
       </div>
     `,
     methods: {
-      addNews: async () => {
-    
+      addNews() {
         const formValues = $('form').serialize();
-        
         $.post("/admin/add-news", formValues, function(data) {
           if (data === "Post Added.") { 
             var form = document.getElementById('add-news');
