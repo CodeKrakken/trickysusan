@@ -22,7 +22,7 @@ $(document).ready(function(){
         const formValues = $('form').serialize();
         $.post("/admin/login", formValues, function(data) {
           if (data === "Server: login successful.") {
-            login.$emit('log-in');
+            login.$emit('toggle-login', true);
           } else {
             $("#login-conf").html("Guess again, sucka!")              
           }
@@ -111,7 +111,7 @@ $(document).ready(function(){
     `,
     methods: {
       logout() {
-        this.$emit('logout')
+        this.$emit('toggle-login', false)
       }
     }
   })
@@ -125,10 +125,10 @@ $(document).ready(function(){
         <div v-if="loggedIn === 'true'">
           <list-news />
           <add-news />
-          <logout-button @logout="logOut" />
+          <logout-button @toggle-login="toggleLogin" />
         </div>
         <div v-else>
-          <login-form @log-in="logIn" />
+          <login-form @toggle-login="toggleLogin" />
         </div>
       </div>
     `,
@@ -142,16 +142,12 @@ $(document).ready(function(){
       this.updateLogin()
     },
     methods: {
-      logIn() {
-        this.loggedIn = true
-        sessionStorage.setItem("login", true)
-      },
-      logOut() {
-        this.loggedIn = false
-        sessionStorage.setItem('login', false)
-      },
       updateLogin() {
         this.loggedIn = sessionStorage.login
+      },
+      toggleLogin(status) {
+        this.loggedIn = !this.loggedIn
+        sessionStorage.login = status
       }
     }
   })
