@@ -299,7 +299,7 @@ $(document).ready(function(){
       <div>
         <background />
         <band-name />
-        <div v-if="loggedIn">
+        <div v-if="loggedIn === 'true'">
           <list-news />
           <add-news />
           <logout-button @logout="logOut" />
@@ -310,12 +310,20 @@ $(document).ready(function(){
       </div>
     `,
     data: {
-      loggedIn: false
+      loggedIn: null
+    },
+    mounted() {
+      this.loggedIn = false || sessionStorage.login
+    },
+    beforeUpdate() {
+      this.loggedIn = sessionStorage.login
     },
     methods: {
       logIn(loginStatus) {
         // console.log(loginStatus)
         this.loggedIn = loginStatus
+        sessionStorage.setItem("login", true)
+        console.log(`sessionStorage.login === ${sessionStorage.getItem('login')}`)
       },
       logOut() {
         this.loggedIn = false
