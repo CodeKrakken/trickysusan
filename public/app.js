@@ -377,14 +377,6 @@ $(document).ready(function(){
     }
   })
 
-  Vue.component ('epk', {
-    template: `
-      <div>
-        INSERT CONTENT HERE
-      </div>
-    `
-  })
-
   Vue.component ('tabs', {
     template: `
       <div id="tabs">
@@ -404,16 +396,11 @@ $(document).ready(function(){
           'Photos',
           'Videos',
           'Contact',
-          'EPK'
         ],
       }
     },
     methods: {
       selectTab(tab) {
-        // $.post('/selectedTab', { "newTab" : tab }, function(data) {
-        // })
-        sessionStorage.tab = tab
-        console.log(sessionStorage.tab)
         this.$emit('select-tab', tab)
       }
     }
@@ -458,11 +445,8 @@ $(document).ready(function(){
     methods: {
       selectTab(tab) {
         this.selectedTab = tab
+        sessionStorage.tab = tab
       }
     },
-    // created() {
-    //   $.get("/selectedTab")
-    //   .then(response => (this.selectedTab = response))
-    // },
   })
 })
