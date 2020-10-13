@@ -111,7 +111,6 @@ $(document).ready(function(){
     `,
     methods: {
       logout() {
-        sessionStorage.setItem('login', false)
         this.$emit('logout')
       }
     }
@@ -134,7 +133,7 @@ $(document).ready(function(){
       </div>
     `,
     data: {
-      loggedIn: null
+      loggedIn: false
     },
     mounted() {
       this.updateLogin()
@@ -149,6 +148,7 @@ $(document).ready(function(){
       },
       logOut() {
         this.loggedIn = false
+        sessionStorage.setItem('login', false)
       },
       updateLogin() {
         this.loggedIn = sessionStorage.login
