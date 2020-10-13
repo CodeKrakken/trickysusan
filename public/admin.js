@@ -133,10 +133,7 @@ $(document).ready(function(){
       </div>
     `,
     data: {
-      loggedIn: false
-    },
-    mounted() {
-      this.updateLogin()
+      loggedIn: sessionStorage.login
     },
     beforeUpdate() {
       this.updateLogin()
@@ -146,7 +143,7 @@ $(document).ready(function(){
         this.loggedIn = sessionStorage.login
       },
       toggleLogin(status) {
-        this.loggedIn = !this.loggedIn
+        this.loggedIn = status
         sessionStorage.login = status
       }
     }
