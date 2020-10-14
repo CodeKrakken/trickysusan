@@ -1,7 +1,8 @@
 Vue.config.devtools = true
 
 $(document).ready(function() {
-  Vue.component('music', {
+
+  Vue.component('epk-player', {
     template: `
       <div>
         <div class="music-navigator border">
@@ -33,7 +34,14 @@ $(document).ready(function() {
             id="player-next" 
             @click.prevent="nextSong()">
             <img src="/images/next-button.png" id="next-icon" />
-          </button><br>
+          </button>
+          <div v-for="audio in audios">
+            <button
+              @click.prevent="play(audio.file)"
+            >
+              {{ audio.name }}
+            </button>
+          </div>
         </div>
       </div>
     `,
@@ -51,22 +59,6 @@ $(document).ready(function() {
             name: 'Grab',
             file: new Audio('Grab.mp3')
           },
-          {
-            name: 'Strategy',
-            file: new Audio('Strategy.mp3')
-          },
-          {
-            name: 'Philosophy',
-            file: new Audio('Philosophy.mp3')
-          },
-          {
-            name: 'Lifeline',
-            file: new Audio('Lifeline.mp3')
-          },
-          {
-            name: 'Fidelity',
-            file: new Audio('Fidelity.mp3')
-          }
         ]
       }
     },
@@ -113,9 +105,9 @@ $(document).ready(function() {
     el: '#epk',
     template: `
       <div>
-        <background />
-        <music />
+        <epk-player />
       </div>
     `
   })
+
 })
