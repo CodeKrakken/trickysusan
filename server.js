@@ -95,6 +95,10 @@ app.get('/admin', function (req, res) {
   res.sendFile(path.join(__dirname + '/public/admin.html'));
 })
 
+app.get('/epk', function(req, res) {
+  res.sendFile(path.join(__dirname + '/public/epk.html'));
+})
+
 app.post('/admin/login', async (req, res) => {
   try {
     const users = await client.query("SELECT * FROM users");
