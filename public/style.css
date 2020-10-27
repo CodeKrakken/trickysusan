@@ -322,9 +322,10 @@ iframe {
 
 .music-navigator {
   display: grid;
-  grid-template-areas: "grid-name grid-name grid-name"
+  grid-template-areas: "grid-image grid-image grid-image"
+                       "grid-name grid-name grid-name"
                        "grid-previous grid-play grid-next";
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 3fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   width: 10vw;
@@ -385,3 +386,7 @@ a:focus {
 #news-conf { font-size: 150% }
 
 /* EPK page */
+
+#song-image {
+  width: 10vw
+}

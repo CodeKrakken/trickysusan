@@ -54,9 +54,9 @@ $(document).ready(function(){
     mounted() {
       this.getNews()
     },
-    beforeUpdate() {
-      this.getNews()
-    },
+    // beforeUpdate() {
+    //   this.getNews()
+    // },
     methods: {
       getNews() {
         $.get("/news")

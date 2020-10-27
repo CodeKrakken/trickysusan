@@ -5,6 +5,9 @@ $(document).ready(function() {
   Vue.component('epk-player', {
     template: `
       <div class="music-navigator border">
+        <div id="song-image">
+          <img src="/images/play-button.png">
+        </div>
         <div id="song-name" class="border"> "{{ audios[selectedSongIndex].name }}" </div>
         <button 
           class="nav-button border" 
