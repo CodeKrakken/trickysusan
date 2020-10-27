@@ -35,7 +35,7 @@ $(document).ready(function(){
     template: `
       <div id="list-news">
         <div 
-          v-for="post in posts"
+          v-for="post in news"
           key={post.post_id}
         >
           <span id="admin-news-preview">
@@ -48,7 +48,7 @@ $(document).ready(function(){
     `,
     data() {
       return {
-        posts: []
+        news: []
       }
     },
     mounted() {
@@ -60,7 +60,7 @@ $(document).ready(function(){
     methods: {
       getNews() {
         $.get("/news")
-        .then(response => (this.posts = response.reverse()))
+        .then(response => (this.news = response.reverse()))
       },
       deleteNews(post_id) {
         try {
@@ -80,7 +80,7 @@ $(document).ready(function(){
         <form id="add-news">
           <h1>Add News</h1>
           <p><input class="contact-info shadow-one" type="date" name="date" placeholder="date"></p>
-          <p><textarea id="message-box" name="post" rows="6" placeholder="What's the scoop, Betty Boop?"></textarea></p>
+          <p><textarea id="message-box" name="news" rows="6" placeholder="What's the scoop, Betty Boop?"></textarea></p>
           <p><button id="add-news-button" @click="addNews()" type="button" class="shadow-one">Done</button></p>
           <div id="news-conf" />
         </form>
@@ -99,6 +99,7 @@ $(document).ready(function(){
           };
           $("#news-conf").html(data);       
         })
+        this.$emit()
       }
     }
   })
