@@ -58,6 +58,7 @@ $(document).ready(function(){
           fetch(`/admin/delete-news/${post_id}`, {
             method: "DELETE"
           });
+          this.$emit('delete-news', post_id)
         } catch (err) {
           console.error(err.message)
         }
@@ -125,7 +126,7 @@ $(document).ready(function(){
         <background />
         <band-name />
         <div v-if="loggedIn === 'true'">
-          <list-news :news="news" />
+          <list-news :news="news" @delete-news="deleteNews" />
           <add-news @add-news="addNews" />
           <logout-button @toggle-login="toggleLogin" />
         </div>
@@ -161,6 +162,9 @@ $(document).ready(function(){
         $.get("/news")
         .then(response => (this.news = response.reverse()))
       },
+      deleteNews(post_id) {
+        this.news = this.news.filter( el => el.post_id !== post_id )
+      }
     }
   })
 })
