@@ -46,22 +46,13 @@ $(document).ready(function(){
         </div>
       </div>
     `,
-    data() {
-      return {
-        news: []
+    props: {
+      news: {
+        type: Array,
+        required: true
       }
     },
-    mounted() {
-      this.getNews()
-    },
-    // beforeUpdate() {
-    //   this.getNews()
-    // },
     methods: {
-      getNews() {
-        $.get("/news")
-        .then(response => (this.news = response.reverse()))
-      },
       deleteNews(post_id) {
         try {
           fetch(`/admin/delete-news/${post_id}`, {
@@ -99,7 +90,7 @@ $(document).ready(function(){
           };
           $("#news-conf").html(data);       
         })
-        this.$emit()
+        this.$emit('add-news', formValues)
       }
     }
   })
@@ -124,8 +115,8 @@ $(document).ready(function(){
         <background />
         <band-name />
         <div v-if="loggedIn === 'true'">
-          <list-news />
-          <add-news />
+          <list-news :news="news" />
+          <add-news @add-news="addNews" />
           <logout-button @toggle-login="toggleLogin" />
         </div>
         <div v-else>
@@ -134,7 +125,11 @@ $(document).ready(function(){
       </div>
     `,
     data: {
-      loggedIn: sessionStorage.login
+      loggedIn: sessionStorage.login,
+      news: []
+    },
+    mounted() {
+      this.getNews()
     },
     beforeUpdate() {
       this.updateLogin()
@@ -146,7 +141,14 @@ $(document).ready(function(){
       toggleLogin(status) {
         this.loggedIn = status
         sessionStorage.login = status
-      }
+      },
+      addNews(news) {
+        this.news.push(news)
+      },
+      getNews() {
+        $.get("/news")
+        .then(response => (this.news = response.reverse()))
+      },
     }
   })
 })
