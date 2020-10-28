@@ -70,8 +70,8 @@ $(document).ready(function(){
       <div>
         <form id="add-news">
           <h1>Add News</h1>
-          <p><input class="contact-info shadow-one" type="date" name="date" placeholder="date"></p>
-          <p><textarea id="message-box" name="post" rows="6" placeholder="What's the scoop, Betty Boop?"></textarea></p>
+          <p><input class="contact-info shadow-one" type="date" v-model="date" name="date" placeholder="date"></p>
+          <p><textarea id="message-box" v-model="post" name="post" rows="6" placeholder="What's the scoop, Betty Boop?"></textarea></p>
           <p><button id="add-news-button" @click="addNews()" type="button" class="shadow-one">Done</button></p>
           <div id="news-conf" />
         </form>
@@ -90,7 +90,17 @@ $(document).ready(function(){
           };
           $("#news-conf").html(data);       
         })
-        this.$emit('add-news', formValues)
+        const news = {
+          date: this.date,
+          post: this.post
+        }
+        this.$emit('add-news', news)
+      }
+    },
+    data() {
+      return {
+        date: '',
+        post: ''
       }
     }
   })
@@ -143,6 +153,8 @@ $(document).ready(function(){
         sessionStorage.login = status
       },
       addNews(news) {
+        console.log(this.news)
+        console.log(news)
         this.news.push(news)
       },
       getNews() {
