@@ -155,7 +155,7 @@ $(document).ready(function(){
       addNews(news) {
         console.log(this.news)
         console.log(news)
-        this.news.push(news)
+        this.news.unshift(news)
       },
       getNews() {
         $.get("/news")
