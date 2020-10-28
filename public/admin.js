@@ -154,10 +154,12 @@ $(document).ready(function(){
         sessionStorage.login = status
       },
       addNews(news) {
-        console.log(this.news)
-        console.log(news)
         this.news.unshift(news)
+        console.log(this.news)
+        this.news.sort((a, b) => (a.date > b.date) ? 1 : -1)
+        console.log(this.news)
       },
+
       getNews() {
         $.get("/news")
         .then(response => (this.news = response.reverse()))
