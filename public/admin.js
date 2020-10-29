@@ -155,9 +155,7 @@ $(document).ready(function(){
       },
       addNews(news) {
         this.news.unshift(news)
-        console.log(this.news)
-        this.news.sort((a, b) => (a.date > b.date) ? 1 : -1)
-        console.log(this.news)
+        this.news.sort((a, b) => (a.date < b.date) ? 1 : -1)
       },
 
       getNews() {
