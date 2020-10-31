@@ -25,18 +25,6 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// app.get('/admin/login-status', async(req, res) => {
-//   try {
-//     res.send(process.env.LOGIN_STATUS)
-//   } catch (err) {
-//     console.log(error.message)
-//   }
-// })
-
-app.get('/selectedTab', async(req, res) => {
-  res.send(process.env.SELECTED_TAB)
-})
-
 app.post('/selectedTab', async(req, res) => {
   process.env.SELECTED_TAB = req.body.newTab
 })
