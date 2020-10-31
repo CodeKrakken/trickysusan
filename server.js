@@ -25,10 +25,6 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.post('/selectedTab', async(req, res) => {
-  process.env.SELECTED_TAB = req.body.newTab
-})
-
 app.get('/news', async(req, res) => {
   try {
     const allNews = await client.query("SELECT * FROM news ORDER BY date")
