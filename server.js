@@ -10,7 +10,7 @@ const path = require('path');
 const { Client } = require('pg');
 
 const client = new Client({
-  connectionString: process.env.DATABASE_URL,
+  connectionString: 'postgres://rfldwgovcjzcxh:e0759873d420bc3c03def33e348afb8b70b02af9587f93389835742043ae9b52@ec2-54-75-244-161.eu-west-1.compute.amazonaws.com:5432/datammnpju0sfd',
   ssl: {
     rejectUnauthorized: false
   }
@@ -25,13 +25,13 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.get('/admin/login-status', async(req, res) => {
-  try {
-    res.send(process.env.LOGIN_STATUS)
-  } catch (err) {
-    console.log(error.message)
-  }
-})
+// app.get('/admin/login-status', async(req, res) => {
+//   try {
+//     res.send(process.env.LOGIN_STATUS)
+//   } catch (err) {
+//     console.log(error.message)
+//   }
+// })
 
 app.get('/selectedTab', async(req, res) => {
   res.send(process.env.SELECTED_TAB)
