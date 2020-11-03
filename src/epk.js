@@ -47,11 +47,11 @@ $(document).ready(function() {
         audios: [
           {
             name: 'Undercover',
-            file: new Audio('Undercover.mp3')
+            file: new Audio('audio/Undercover.mp3')
           },
           {
             name: 'Grab',
-            file: new Audio('Grab.mp3')
+            file: new Audio('audio/Grab.mp3')
           },
         ]
       }

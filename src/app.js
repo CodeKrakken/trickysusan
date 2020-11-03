@@ -362,27 +362,27 @@ $(document).ready(function(){
         audios: [
           {
             name: 'Undercover',
-            file: new Audio('Undercover.mp3')
+            file: new Audio('audio/Undercover.mp3')
           },
           {
             name: 'Grab',
-            file: new Audio('Grab.mp3')
+            file: new Audio('audio/Grab.mp3')
           },
           {
             name: 'Strategy',
-            file: new Audio('Strategy.mp3')
+            file: new Audio('audio/Strategy.mp3')
           },
           {
             name: 'Philosophy',
-            file: new Audio('Philosophy.mp3')
+            file: new Audio('audio/Philosophy.mp3')
           },
           {
             name: 'Lifeline',
-            file: new Audio('Lifeline.mp3')
+            file: new Audio('audio/Lifeline.mp3')
           },
           {
             name: 'Fidelity',
-            file: new Audio('Fidelity.mp3')
+            file: new Audio('audio/Fidelity.mp3')
           }
         ]
       }

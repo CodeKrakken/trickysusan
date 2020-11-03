@@ -20,7 +20,7 @@ client.connect();
 
 app.use(cors());
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -76,11 +76,11 @@ app.post('/', (req, res) => {
 });
 
 app.get('/admin', function (req, res) {
-  res.sendFile(path.join(__dirname + '/public/admin.html'));
+  res.sendFile(path.join(__dirname + '/admin.html'));
 })
 
 app.get('/epk', function(req, res) {
-  res.sendFile(path.join(__dirname + '/public/epk.html'));
+  res.sendFile(path.join(__dirname + '/epk.html'));
 })
 
 app.post('/admin/login', async (req, res) => {
