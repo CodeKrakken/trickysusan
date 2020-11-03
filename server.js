@@ -76,11 +76,11 @@ app.post('/', (req, res) => {
 });
 
 app.get('/admin', function (req, res) {
-  res.sendFile(path.join(__dirname + '/admin.html'));
+  res.sendFile(path.join(__dirname + 'public/admin.html'));
 })
 
 app.get('/epk', function(req, res) {
-  res.sendFile(path.join(__dirname + '/epk.html'));
+  res.sendFile(path.join(__dirname + '/public/epk.html'));
 })
 
 app.post('/admin/login', async (req, res) => {
