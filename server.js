@@ -76,7 +76,7 @@ app.post('/', (req, res) => {
 });
 
 app.get('/admin', function (req, res) {
-  res.sendFile(path.join(__dirname + 'public/admin.html'));
+  res.sendFile(path.join(__dirname + '/public/admin.html'));
 })
 
 app.get('/epk', function(req, res) {
