@@ -1,12 +1,16 @@
 <template>
 
-  <div id="socials">
+  <div>
+    <img src="../assets/images/instagram hover.png" />
+  </div>
+
+  <!-- <div id="socials">
     <span v-for="(social, index) in socials" :key="index">
       <a :href="social.link" target="_blank" >
-        <img v-bind:src="social.image" id="social" class="shadow-one">
+        <img src=social.image id="social" class="shadow-one">
       </a> 
     </span>
-  </div>
+  </div> -->
   
 </template>
 
@@ -20,11 +24,11 @@ export default {
           link: 'https://www.instagram.com/trickysusan/?hl=en'
         },
         {
-          image: './facebook hover.png',
+          image: '../assets/images/facebook hover.png',
           link: 'https://www.facebook.com/TrickySusan'
         },
         {
-          image: './youtube.png',
+          image: '../assets/images/youtube.png',
           link: 'https://www.youtube.com/user/youronewayticket'
         }
       ]
@@ -35,7 +39,7 @@ export default {
 
 <style scoped>
 
-  #socials {
+  /* #socials {
     position: absolute;
     top: 30%;
     bottom: 30%;
@@ -58,6 +62,6 @@ export default {
                15px -15px 15px black, 
               -15px -15px 15px black, 
                -15px 15px 15px black 
-  }
+  } */
 
 </style>
