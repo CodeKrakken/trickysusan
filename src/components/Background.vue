@@ -1,7 +1,7 @@
 <template>
 
   <div id="background">
-    Howdy
+    
   </div>
 
 </template>
