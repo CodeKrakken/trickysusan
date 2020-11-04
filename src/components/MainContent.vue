@@ -1,9 +1,9 @@
 <template>
 <div id="main-content">
   <div v-show="selectedTab === 'News'"><News /></div>
-  <!-- <div v-show="selectedTab === 'Music'"><music /></div>
-  <div v-show="selectedTab === 'Gigs'"><gigs /></div>
-  <div v-show="selectedTab === 'Shop'"><shop /></div>
+  <!-- <div v-show="selectedTab === 'Music'"><music /></div> -->
+  <div v-show="selectedTab === 'Gigs'"><Gigs /></div>
+  <!-- <div v-show="selectedTab === 'Shop'"><shop /></div>
   <div v-show="selectedTab === 'Bio'"><bio /></div>
   <div v-show="selectedTab === 'Photos'"><photos /></div>
   <div v-show="selectedTab === 'Videos'"><videos /></div>
@@ -14,7 +14,8 @@
 
 <script>
 import News from './News.vue'
-console.log(News)
+import Gigs from './Gigs.vue'
+
 
 export default {
   props: {
@@ -24,7 +25,8 @@ export default {
     }
   },
   components: {
-    News
+    News,
+    Gigs
   }
 }
 </script>
