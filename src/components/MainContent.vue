@@ -1,6 +1,6 @@
 <template>
 <div id="main-content">
-  <div v-show="selectedTab === 'News'"><news /></div>
+  <!-- <div v-show="selectedTab === 'News'"><news /></div> -->
   <!-- <div v-show="selectedTab === 'Music'"><music /></div>
   <div v-show="selectedTab === 'Gigs'"><gigs /></div>
   <div v-show="selectedTab === 'Shop'"><shop /></div>
