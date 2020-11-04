@@ -3,7 +3,7 @@
     <Background />
     <Bandname />
     <Socials />
-    <!-- <MainContent :selectedTab="selectedTab" /> -->
+    <MainContent :selectedTab="selectedTab" />
     <Tabs @select-tab="selectTab" />
 
   </div>
@@ -13,7 +13,7 @@
 import Background from '@/components/Background'
 import Bandname from '@/components/Bandname'
 import Socials from '@/components/Socials'
-// import MainContent from '@/components/MainContent'
+import MainContent from '@/components/MainContent'
 import Tabs from '@/components/Tabs.vue'
 
   export default {
@@ -21,7 +21,7 @@ import Tabs from '@/components/Tabs.vue'
       Background,
       Bandname,
       Socials,
-      // MainContent,
+      MainContent,
       Tabs
     },
     data() {
