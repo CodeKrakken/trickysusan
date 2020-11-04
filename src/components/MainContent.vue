@@ -4,9 +4,10 @@
   <!-- <div v-show="selectedTab === 'Music'"><music /></div> -->
   <div v-show="selectedTab === 'Gigs'"><Gigs /></div>
   <div v-show="selectedTab === 'Bio'"><Bio /></div>
+  <div v-show="selectedTab === 'Photos'"><Photos /></div>
   <!-- <div v-show="selectedTab === 'Shop'"><shop /></div>
   
-  <div v-show="selectedTab === 'Photos'"><photos /></div>
+  
   <div v-show="selectedTab === 'Videos'"><videos /></div>
   <div v-show="selectedTab === 'Contact'"><contact /></div>
   <div v-show="selectedTab === 'EPK'"><epk /></div> -->
@@ -17,6 +18,7 @@
 import News from './News.vue'
 import Gigs from './Gigs.vue'
 import Bio from './Bio.vue'
+import Photos from './Photos.vue'
 
 export default {
   props: {
@@ -28,12 +30,14 @@ export default {
   components: {
     News,
     Gigs,
-    Bio
+    Bio,
+    Photos
   }
 }
 </script>
 
 <style scoped>
+
 #main-content {
   text-align: justify;
   font-size: 150%;
@@ -48,4 +52,5 @@ export default {
   justify-content: center;
   align-items: center;
 }
+
 </style>
