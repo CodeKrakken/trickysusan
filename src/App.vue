@@ -3,6 +3,7 @@
     <Background />
     <Bandname />
     <Socials />
+    <MainContent :selectedTab="selectedTab" />
 
   </div>
 </template>
@@ -11,12 +12,14 @@
 import Background from '@/components/Background'
 import Bandname from '@/components/Bandname'
 import Socials from '@/components/Socials'
+import MainContent from '@/components/MainContent'
 
   export default {
     components: {
       Background,
       Bandname,
-      Socials
+      Socials,
+      MainContent
     },
     data() {
       return {
