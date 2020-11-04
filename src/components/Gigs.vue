@@ -11,12 +11,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  
-}
-</script>
-
 <style scoped>
 #gig-image-container {
   max-height: 75vh;
