@@ -1,15 +1,29 @@
 <template>
 
-  <div>
-    <img src="../assets/images/instagram hover.png" />
-  </div>
+  <div id="socials">
 
-  <!-- <div id="socials">
-    <span v-for="(social, index) in socials" :key="index">
+    <!-- <span v-for="(social, index) in socials" :key="index">
       <a :href="social.link" target="_blank" >
         <img src=social.image id="social" class="shadow-one">
       </a> 
-    </span>
+    </span> -->
+
+    <a href="https://www.instagram.com/trickysusan/?hl=en" target="_blank" >
+      <img src="../assets/images/instagram hover.png" id="social" />
+    </a>
+
+    <a href="https://www.facebook.com/TrickySusan" target="_blank" >
+      <img src="../assets/images/facebook hover.png" id="social" />
+    </a>
+
+    <a href="https://www.youtube.com/user/youronewayticket" target="_blank" >
+      <img src="../assets/images/youtube.png" id="social" />
+    </a>
+
+  </div>
+
+  <!-- <div id="socials">
+    
   </div> -->
   
 </template>
@@ -39,7 +53,7 @@ export default {
 
 <style scoped>
 
-  /* #socials {
+  #socials {
     position: absolute;
     top: 30%;
     bottom: 30%;
@@ -62,6 +76,17 @@ export default {
                15px -15px 15px black, 
               -15px -15px 15px black, 
                -15px 15px 15px black 
-  } */
+  }
+
+  #social:hover {
+    filter: grayscale(0%);
+    filter: brightness(75%);
+  }
+
+  #social:active {
+    filter: grayscale(0%);
+    filter: brightness(100%);
+    transition: all 0.2s ease;
+  }
 
 </style>
