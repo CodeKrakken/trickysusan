@@ -1,31 +1,11 @@
 <template>
-
   <div id="socials">
-
-    <!-- <span v-for="(social, index) in socials" :key="index">
+    <span v-for="(social, index) in socials" :key="index">
       <a :href="social.link" target="_blank" >
-        <img src=social.image id="social" class="shadow-one">
+        <img :src="social.image" id="social" class="shadow-one">
       </a> 
-    </span> -->
-
-    <a href="https://www.instagram.com/trickysusan/?hl=en" target="_blank" >
-      <img src="/images/instagram hover.png" id="social" />
-    </a>
-
-    <a href="https://www.facebook.com/TrickySusan" target="_blank" >
-      <img src="/images/facebook hover.png" id="social" />
-    </a>
-
-    <a href="https://www.youtube.com/user/youronewayticket" target="_blank" >
-      <img src="/images/youtube.png" id="social" />
-    </a>
-
+    </span>
   </div>
-
-  <!-- <div id="socials">
-    
-  </div> -->
-  
 </template>
 
 <script>
@@ -34,15 +14,15 @@ export default {
     return {
       socials: [
         {
-          image: '../assets/images/instagram hover.png',
+          image: '/images/instagram hover.png',
           link: 'https://www.instagram.com/trickysusan/?hl=en'
         },
         {
-          image: '../assets/images/facebook hover.png',
+          image: '/images/facebook hover.png',
           link: 'https://www.facebook.com/TrickySusan'
         },
         {
-          image: '../assets/images/youtube.png',
+          image: '/images/youtube.png',
           link: 'https://www.youtube.com/user/youronewayticket'
         }
       ]
