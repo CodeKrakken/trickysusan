@@ -48,11 +48,13 @@ export default {
       this.selectedPostIndex === (this.posts.length - 1) ?
       this.selectedPostIndex = 0 :
       this.selectedPostIndex += 1;
+      sessionStorage.selectedPostIndex = this.selectedPostIndex
     },
     previousPost() {
       this.selectedPostIndex === 0 ?
       this.selectedPostIndex = (this.posts.length - 1) :
       this.selectedPostIndex -= 1;
+      sessionStorage.selectedPostIndex = this.selectedPostIndex
     }
   }
 }
