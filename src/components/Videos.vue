@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <span v-html="videos[selectedVideoIndex].address" class="photo" />
+      <span v-html="videos[selectedVideoIndex].address" id="video" />
     </div>
     <div id="video-navigator">
       <button @click="previousVideo()" class="nav-button">
@@ -65,7 +65,7 @@ export default {
 
 <style scoped>
 
-.photo {
+#video {
   box-shadow: 20px 20px 20px black, 
               20px -20px 20px black, 
               -20px -20px 20px black, 

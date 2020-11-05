@@ -2,9 +2,8 @@
   <div id="tabs">
     <span
     v-for="(tab, index) in tabs"
-    @click="selectTab(tab)"
     :key="index"
-    ><div class="tab" :id="tab">{{ tab }}</div></span>
+    ><button @click="selectTab(tab)" class="tab" :id="tab">{{ tab }}</button></span>
   </div>
 </template>
 
@@ -46,15 +45,22 @@ export default {
 
 .tab {
   filter: brightness(50%);
+  background: black;
   font-size: 200%;
   font-style: italic;
   background: transparent;
   color: rgb(0, 174, 239);
   transition: all 0.1s ease;
+  border: none;
+  text-shadow: 5px 5px 3px black, 
+             -5px -5px 3px black, 
+              5px -5px 3px black, 
+              -5px 5px 3px black;
+  font-family: 'Odibee Sans';
+  letter-spacing: 0.1em;
 }
 
 .tab:hover {
-  cursor: pointer;
   filter: brightness(75%);
   transition: all 0.2s ease;
 }
@@ -63,5 +69,7 @@ export default {
   filter: brightness(100%);
   transition: all 0.1s ease;
 }
+
+.tab:focus { outline: none; }
 
 </style>
