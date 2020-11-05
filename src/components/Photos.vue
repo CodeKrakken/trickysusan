@@ -90,6 +90,20 @@ export default {
   border: none
 }
 
+.nav-button:focus, .button:focus, [type="submit"]:focus {
+   outline: none;
+}
+
+.nav-button:hover {
+  filter: brightness(75%);
+  transition: all 0.2s ease;
+}
+
+.nav-button:active {
+  filter: brightness(100%);
+  transition: all 0.1s ease;
+}
+
 #previous-icon { width: 100% }
 
 #next-icon { width: 100% }
