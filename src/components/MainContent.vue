@@ -6,11 +6,8 @@
   <div v-show="selectedTab === 'Bio'"><Bio /></div>
   <div v-show="selectedTab === 'Photos'"><Photos /></div>
   <div v-show="selectedTab === 'Videos'"><videos /></div>
-  <!-- <div v-show="selectedTab === 'Shop'"><shop /></div>
-  
-  
-  
   <div v-show="selectedTab === 'Contact'"><contact /></div>
+  <!-- <div v-show="selectedTab === 'Shop'"><shop /></div>
   <div v-show="selectedTab === 'EPK'"><epk /></div> -->
 </div>
 </template>
@@ -21,6 +18,7 @@ import Gigs from './Gigs.vue'
 import Bio from './Bio.vue'
 import Photos from './Photos.vue'
 import Videos from './Videos.vue'
+import Contact from './Contact.vue'
 
 export default {
   props: {
@@ -34,7 +32,8 @@ export default {
     Gigs,
     Bio,
     Photos,
-    Videos
+    Videos,
+    Contact
   }
 }
 </script>
