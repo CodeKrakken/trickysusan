@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="photo-outer">
+    <div>
       <span v-html="videos[selectedVideoIndex].address" class="photo" />
     </div>
     <div id="video-navigator">
@@ -24,25 +24,25 @@ export default {
           name: "Strategy",
           address: '<iframe src="https://www.youtube.com/embed/exggrODRu4w?rel=0&modestbranding=1" \
                     frameborder="0" fullscreen="0" allow="accelerometer; autoplay; encrypted-media; \
-                    gyroscope; picture-in-picture" allowfullscreen></iframe>'
+                    gyroscope; picture-in-picture" allowfullscreen style="height: 60vh; width: 60vw"></iframe>'
         },
         {
           name: "Tug of War",
           address: '<iframe src="https://www.youtube.com/embed/hm2jNxkG2ak?rel=0&modestbranding=1&start=4" \
                     frameborder="0" fullscreen="0" allow="accelerometer; autoplay; encrypted-media; \
-                    gyroscope; picture-in-picture" allowfullscreen></iframe>'
+                    gyroscope; picture-in-picture" allowfullscreen style="height: 60vh; width: 60vw"></iframe>'
         },
         {
           name: "Come On Over (session)",
           address: '<iframe src="https://www.youtube.com/embed/X3lryMPttIY?rel=0&modestbranding=1" \
                     frameborder="0" fullscreen="0" allow="accelerometer; autoplay; encrypted-media; \
-                    gyroscope; picture-in-picture" allowfullscreen></iframe>'
+                    gyroscope; picture-in-picture" allowfullscreen style="height: 60vh; width: 60vw"></iframe>'
         },
         {
           name: "Baby, I Do",
           address: '<iframe src="https://www.youtube.com/embed/qTJmtTHc31U?rel=0&modestbranding=1" \
                     frameborder="0" fullscreen="0" allow="accelerometer; autoplay; encrypted-media; \
-                    gyroscope; picture-in-picture" allowfullscreen></iframe>'
+                    gyroscope; picture-in-picture" allowfullscreen style="height: 60vh; width: 60vw"></iframe>'
         }
       ],
       selectedVideoIndex: 0
@@ -65,12 +65,7 @@ export default {
 
 <style scoped>
 
-.photo-outer {
-  height: 75vh;
-}
-
 .photo {
-  height: 75vh;
   box-shadow: 20px 20px 20px black, 
               20px -20px 20px black, 
               -20px -20px 20px black, 
