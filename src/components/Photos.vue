@@ -64,7 +64,6 @@ export default {
               -20px 20px 20px black
 }
 
-
 #video-navigator {
   display: flex;
   position: absolute;

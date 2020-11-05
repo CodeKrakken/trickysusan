@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="photo">
-      <span v-html="videos[selectedVideoIndex].address" />
+    <div class="photo-outer">
+      <span v-html="videos[selectedVideoIndex].address" class="photo" />
     </div>
     <div id="video-navigator">
       <button @click="previousVideo()" class="nav-button">
@@ -65,6 +65,10 @@ export default {
 
 <style scoped>
 
+.photo-outer {
+  height: 75vh;
+}
+
 .photo {
   height: 75vh;
   box-shadow: 20px 20px 20px black, 
@@ -106,6 +110,10 @@ export default {
 .nav-button:active {
   filter: brightness(100%);
   transition: all 0.1s ease;
+}
+
+.nav-button:focus, .button:focus, [type="submit"]:focus {
+   outline: none;
 }
 
 #previous-icon { width: 100% }
