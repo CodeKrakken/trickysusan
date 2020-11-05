@@ -10,11 +10,11 @@
     <br><br>
   <div id="video-navigator">
     <button @click="previousPost()" class="nav-button">
-      <img src="../assets/images/previous-button.png" id="previous-icon" />
+      <img src="/images/previous-button.png" id="previous-icon" />
     </button>
     <div id="caption" />
     <button @click="nextPost()" class="nav-button">
-      <img src="../assets/images/next-button.png" id="next-icon" />
+      <img src="/images/next-button.png" id="next-icon" />
     </button>
   </div>
 </div>

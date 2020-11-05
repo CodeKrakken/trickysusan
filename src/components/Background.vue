@@ -9,7 +9,7 @@
 <style scoped>
 
   #background {
-    background: url(../assets/images/stars.jpg);
+    background: url(/images/stars.jpg);
     background-size: cover;
     position: fixed;
     top: 0;

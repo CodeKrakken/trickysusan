@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="shadow-one" id="gig-image-container">
-      <img src="../assets/images/stage.jpg" id="gig-image" /><br><br>
+      <img src="/images/stage.jpg" id="gig-image" /><br><br>
     </div>
     <br>
     <div id="gig-caption">

@@ -9,15 +9,15 @@
     </span> -->
 
     <a href="https://www.instagram.com/trickysusan/?hl=en" target="_blank" >
-      <img src="../assets/images/instagram hover.png" id="social" />
+      <img src="/images/instagram hover.png" id="social" />
     </a>
 
     <a href="https://www.facebook.com/TrickySusan" target="_blank" >
-      <img src="../assets/images/facebook hover.png" id="social" />
+      <img src="/images/facebook hover.png" id="social" />
     </a>
 
     <a href="https://www.youtube.com/user/youronewayticket" target="_blank" >
-      <img src="../assets/images/youtube.png" id="social" />
+      <img src="/images/youtube.png" id="social" />
     </a>
 
   </div>

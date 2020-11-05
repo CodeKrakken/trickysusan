@@ -1,6 +1,6 @@
 <template>
   <div id="band-name-container" >
-    <img src="../assets/images/band-name.jpg" id="band-name" />
+    <img src="/images/band-name.jpg" id="band-name" />
   </div>
 </template>
 
