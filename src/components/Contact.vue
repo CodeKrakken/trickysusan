@@ -25,4 +25,24 @@
               -5px 5px 5px black;
 }
 
+a {
+  cursor: default;
+  filter: brightness(50%)
+}
+
+a:hover {
+  filter: brightness(75%);
+  transition: all 0.2s ease
+}
+
+a:active {
+  filter: brightness(100%);
+  transition: all 0.1s ease;
+}
+
+a:focus {
+  border: none;
+  outline: none
+}
+
 </style>

@@ -89,7 +89,7 @@ export default {
   border: none
 }
 
-.nav-button:focus, .button:focus, [type="submit"]:focus {
+.nav-button:focus {
    outline: none;
 }
 
