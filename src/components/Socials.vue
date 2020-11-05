@@ -3,7 +3,7 @@
     <button 
       v-for="(social, index) in socials" 
       :key="index"
-      @click="window.location.href = social.link"
+      @click="visit(social.link)"
       target="_blank"
       id="social"
     >
@@ -30,6 +30,11 @@ export default {
           link: 'https://www.youtube.com/user/youronewayticket'
         }
       ]
+    }
+  },
+  methods: {
+    visit(link) {
+      window.open(link, '_blank');
     }
   }
 }
@@ -58,7 +63,6 @@ export default {
   #social {
     width: 3vw;
     filter: grayscale(100%);
-    /* text-align: left; */
     transition: all 0.1s ease;
     box-shadow: 15px 15px 15px black, 
                15px -15px 15px black, 
