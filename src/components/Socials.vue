@@ -1,10 +1,14 @@
 <template>
   <div id="socials">
-    <span v-for="(social, index) in socials" :key="index">
-      <a :href="social.link" target="_blank" >
-        <img :src="social.image" id="social" class="shadow-one">
-      </a> 
-    </span>
+    <button 
+      v-for="(social, index) in socials" 
+      :key="index"
+      @click="window.location.href = social.link"
+      target="_blank"
+      id="social"
+    >
+      <img :src="social.image" id="social-image">
+    </button> 
   </div>
 </template>
 
@@ -37,30 +41,38 @@ export default {
     position: absolute;
     top: 30%;
     bottom: 30%;
-    right: 0;
-    width: 8%;
+    right: 3vw;
+    width: 3vw;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    text-align: left;
-    background: transparent;
+
+    background: black;
     z-index: 1
+  }
+
+  #social-image {
+    width: 3vw
   }
 
   #social {
     width: 3vw;
     filter: grayscale(100%);
-    text-align: left;
-    background: black;
+    /* text-align: left; */
+    transition: all 0.1s ease;
     box-shadow: 15px 15px 15px black, 
                15px -15px 15px black, 
               -15px -15px 15px black, 
-               -15px 15px 15px black 
+               -15px 15px 15px black;
+    border: none;
+    outline: none;
+    background: black
   }
 
   #social:hover {
     filter: grayscale(0%);
     filter: brightness(75%);
+    transition: all 0.2s ease;
   }
 
   #social:active {
@@ -68,5 +80,7 @@ export default {
     filter: brightness(100%);
     transition: all 0.2s ease;
   }
+
+ 
 
 </style>

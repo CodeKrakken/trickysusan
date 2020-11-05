@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div>
-      <span v-html="videos[selectedVideoIndex].address" id="video" />
+    <div id="video">
+      <span v-html="videos[selectedVideoIndex].address" />
     </div>
     <div id="video-navigator">
       <button @click="previousVideo()" class="nav-button">
@@ -107,7 +107,7 @@ export default {
   transition: all 0.1s ease;
 }
 
-.nav-button:focus, .button:focus, [type="submit"]:focus {
+.nav-button:focus {
    outline: none;
 }
 
