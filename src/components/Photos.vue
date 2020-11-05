@@ -20,17 +20,17 @@ export default {
   data() {
     return {
       images: [
-        '@/assets/images/A_IMGP9182-1-StandingLilWall_neon.jpg',
-        '@/assets/images/B_IMGP8878-1_WallSatire_Neon_Blue.jpg',
-        '@/assets/images/C_IMGP9120-1_LilWall_neon.jpg',
-        '@/assets/images/D_IMGP8979-1_Chair_2_Neon_lightening.jpg',
-        '@/assets/images/E_IMGP8842-1_Val_Neon.jpg',
-        '@/assets/images/F_8832-1_Wall_neon.jpg',
-        '@/assets/images/IMGP9959.jpg',
-        '@/assets/images/promo.jpg',
-        '@/assets/images/IMGP9985.jpg',
-        '@/assets/images/WaterRats.jpg',
-        '@/assets/images/IMGP9917.jpg',
+        '/images/A_IMGP9182-1-StandingLilWall_neon.jpg',
+        '/images/B_IMGP8878-1_WallSatire_Neon_Blue.jpg',
+        '/images/C_IMGP9120-1_LilWall_neon.jpg',
+        '/images/D_IMGP8979-1_Chair_2_Neon_lightening.jpg',
+        '/images/E_IMGP8842-1_Val_Neon.jpg',
+        '/images/F_8832-1_Wall_neon.jpg',
+        '/images/IMGP9959.jpg',
+        '/images/promo.jpg',
+        '/images/IMGP9985.jpg',
+        '/images/WaterRats.jpg',
+        '/images/IMGP9917.jpg',
       ],
       selectedImageIndex: 1,
     }
