@@ -27,11 +27,12 @@
 
 a {
   cursor: default;
-  filter: brightness(50%)
+  filter: brightness(70%);
+  color: #E22076
 }
 
 a:hover {
-  filter: brightness(75%);
+  filter: brightness(85%);
   transition: all 0.2s ease
 }
 
