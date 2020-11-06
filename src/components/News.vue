@@ -36,24 +36,27 @@ export default {
             post: 'Let’s face it - COVID-19 continues to be a major prick. We’re working really hard to establish which venues will have us back as soon as possible, so we can provide the antidote to all this BS – a large and loud dose of Tricky Susan.<br><br>In the meanwhile we’ve been in the recording studio laying down our latest tracks. Watch this space ...<br><br><div style="text-align: center"><h1>KA-POW.</h1></div>'
         },
       ],
-      selectedPostIndex: 0
+      selectedPostIndex: (parseInt(sessionStorage.selectedPostIndex, 10) || 0)
     }
   },
-  // mounted() {
-  //   $.get("/news")
-  //   .then(response => (this.posts = response.reverse()))
-  // },
+  mounted() {
+    // $.get("/news")
+    // .then(response => (this.posts = response.reverse()))
+  },
   methods: {
     nextPost() {
       this.selectedPostIndex === (this.posts.length - 1) ?
       this.selectedPostIndex = 0 :
       this.selectedPostIndex += 1;
-      sessionStorage.selectedPostIndex = this.selectedPostIndex
+      this.storeIndex()
     },
     previousPost() {
       this.selectedPostIndex === 0 ?
       this.selectedPostIndex = (this.posts.length - 1) :
       this.selectedPostIndex -= 1;
+      this.storeIndex()
+    },
+    storeIndex() {
       sessionStorage.selectedPostIndex = this.selectedPostIndex
     }
   }
