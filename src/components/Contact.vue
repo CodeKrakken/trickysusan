@@ -35,7 +35,7 @@ a:hover {
   filter: brightness(85%);
   transition: all 0.2s ease
 }
-
+ 
 a:active {
   filter: brightness(100%);
   transition: all 0.1s ease;
