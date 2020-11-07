@@ -20,8 +20,8 @@ export default {
   data() {
     return {
       images: [
-        '/images/A_IMGP9182-1-StandingLilWall_neon.jpg',
         '/images/B_IMGP8878-1_WallSatire_Neon_Blue.jpg',
+        '/images/A_IMGP9182-1-StandingLilWall_neon.jpg',
         '/images/C_IMGP9120-1_LilWall_neon.jpg',
         '/images/D_IMGP8979-1_Chair_2_Neon_lightening.jpg',
         '/images/E_IMGP8842-1_Val_Neon.jpg',
@@ -32,7 +32,7 @@ export default {
         '/images/WaterRats.jpg',
         '/images/IMGP9917.jpg',
       ],
-      selectedImageIndex: 1,
+      selectedImageIndex: (this.getIndex() || 0)
     }
   },
   methods: {
@@ -40,11 +40,19 @@ export default {
       this.selectedImageIndex === (this.images.length - 1) ?
       this.selectedImageIndex = 0 :
       this.selectedImageIndex += 1;
+      this.storeIndex()
     },
     previousImage() {
       this.selectedImageIndex === 0 ?
       this.selectedImageIndex = (this.images.length - 1) :
       this.selectedImageIndex -= 1;
+      this.storeIndex()
+    },
+    storeIndex() {
+      sessionStorage.selectedImageIndex = this.selectedImageIndex
+    },
+    getIndex() {
+      return parseInt(sessionStorage.selectedImageIndex, 10)
     }
   }
 }
