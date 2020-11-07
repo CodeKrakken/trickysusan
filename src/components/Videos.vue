@@ -45,7 +45,7 @@ export default {
                     gyroscope; picture-in-picture" allowfullscreen style="height: 60vh; width: 60vw"></iframe>'
         }
       ],
-      selectedVideoIndex: 0
+      selectedVideoIndex: (this.getIndex() || 0)
     }
   },
   methods: {
@@ -53,11 +53,19 @@ export default {
       this.selectedVideoIndex === 0 ?
       this.selectedVideoIndex = (this.videos.length - 1) :
       this.selectedVideoIndex -= 1
+      this.storeIndex()
     },
     nextVideo() {
       this.selectedVideoIndex === (this.videos.length - 1) ?
       this.selectedVideoIndex = 0 :
       this.selectedVideoIndex += 1
+      this.storeIndex()
+    },
+    storeIndex() {
+      sessionStorage.selectedVideoIndex = this.selectedVideoIndex
+    },
+    getIndex() {
+      return parseInt(sessionStorage.selectedVideoIndex)
     }
   }
 }
