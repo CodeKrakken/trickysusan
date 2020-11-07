@@ -20,17 +20,17 @@ export default {
   data() {
     return {
       images: [
-        '/images/B_IMGP8878-1_WallSatire_Neon_Blue.jpg',
-        '/images/A_IMGP9182-1-StandingLilWall_neon.jpg',
-        '/images/C_IMGP9120-1_LilWall_neon.jpg',
-        '/images/D_IMGP8979-1_Chair_2_Neon_lightening.jpg',
-        '/images/E_IMGP8842-1_Val_Neon.jpg',
-        '/images/F_8832-1_Wall_neon.jpg',
-        '/images/IMGP9959.jpg',
-        '/images/promo.jpg',
-        '/images/IMGP9985.jpg',
-        '/images/WaterRats.jpg',
-        '/images/IMGP9917.jpg',
+        '/images/0.jpg',
+        '/images/1.jpg',
+        '/images/2.jpg',
+        '/images/3.jpg',
+        '/images/4.jpg',
+        '/images/5.jpg',
+        '/images/6.jpg',
+        '/images/7.jpg',
+        '/images/8.jpg',
+        '/images/9.jpg',
+        '/images/10.jpg',
       ],
       selectedImageIndex: (this.getIndex() || 0)
     }
