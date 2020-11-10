@@ -1,11 +1,12 @@
 <template>
 <div id="news">
   <div id="date">
-    {{ posts[selectedPostIndex].date }}
+    <!-- {{ posts[selectedPostIndex].date }} -->
+    {{ posts }}
   </div>
   <br>
   <div>
-    <span v-html="posts[selectedPostIndex].post" />
+    <!-- <span v-html="posts[selectedPostIndex].post" /> -->
   </div>
     <br><br>
   <div id="video-navigator">
@@ -40,8 +41,9 @@ export default {
     }
   },
   mounted() {
-    $.get("trickysusan.herokuapp.com/news")
-    .then(response => (this.posts = response.reverse()))
+    fetch("http://trickysusan.herokuapp.com/news")
+    .then(response => (this.posts = response))
+    .then(console.log(this.posts))
   },
   methods: {
     nextPost() {
