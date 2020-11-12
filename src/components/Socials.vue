@@ -48,15 +48,28 @@ export default {
 
     #socials {
     position: absolute;
-    left: 30%;
-    right: 30%;
-    top: 5vw;
-    height: 3vw;
+    top: 1vw;
+    right: 1vw;
+    /* right: 30%; */
+    /* top: 5vw; */
+    height: 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     background: black;
     z-index: 1
+  }
+
+  #social {
+    box-shadow: 5px 5px 5px black, 
+               5px -5px 5px black, 
+              -5px -5px 5px black, 
+               -5px 5px 5px black;
+  }
+
+  #social-image {
+    width: 30px;
+    min-width: 19px;
   }
 
 }
@@ -78,18 +91,25 @@ export default {
     z-index: 1
   }
 
+  #social {
+    box-shadow: 15px 15px 15px black, 
+               15px -15px 15px black, 
+              -15px -15px 15px black, 
+               -15px 15px 15px black;
+  }
+
+  #social-image {
+    width: 50px;
+  }
+
 }
 
   /* GENERAL */
 
   #social {
-    width: 3vw;
+    width: 50px;
     filter: grayscale(100%);
     transition: all 0.1s ease;
-    box-shadow: 15px 15px 15px black, 
-               15px -15px 15px black, 
-              -15px -15px 15px black, 
-               -15px 15px 15px black;
     border: none;
     outline: none;
     background: black
@@ -105,11 +125,6 @@ export default {
     filter: grayscale(0%);
     filter: brightness(100%);
     transition: all 0.2s ease;
-  }
-
-  #social-image {
-    width: 3vw;
-    min-width: 19px;
   }
 
 </style>
