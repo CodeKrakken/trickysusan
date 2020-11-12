@@ -51,13 +51,13 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-
     background: black;
     z-index: 1
   }
 
   #social-image {
-    width: 3vw
+    width: 3vw;
+    min-width: 19px;
   }
 
   #social {
