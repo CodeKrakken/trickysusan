@@ -15,12 +15,18 @@ export default {
   #band-name-container {
     float: left; 
     height: 15vh;
+    width: 15vh;
     box-shadow:  15px 15px 15px black, 
                 15px -15px 15px black, 
                -15px -15px 15px black, 
                 -15px 15px 15px black
   }
   
-  #band-name { max-width: 10vw; height: 15vh }
+  #band-name { 
+    width: 10vw; 
+    height: auto;
+    min-height: 56px;
+    min-width: 75px;
+  }
 
 </style>

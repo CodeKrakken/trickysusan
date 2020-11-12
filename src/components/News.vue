@@ -1,12 +1,12 @@
 <template>
 <div id="news">
   <div id="date">
-    <!-- {{ posts[selectedPostIndex].date }} -->
-    {{ posts }}
+    {{ posts[selectedPostIndex].date }}
+    <!-- {{ posts }} -->
   </div>
   <br>
   <div>
-    <!-- <span v-html="posts[selectedPostIndex].post" /> -->
+    <span v-html="posts[selectedPostIndex].post" />
   </div>
     <br><br>
   <div id="video-navigator">
@@ -28,22 +28,22 @@ export default {
   data() {
     return {
       posts: [
-        // {
-        //   date: '08.10.20',
-        //   post: 'Word on the street Tricky Su are close to a single release....WHAAAATTTT?!!! WATCH THIS SPACE'
-        // },
-        // {
-        //     date: '14.07.20',
-        //     post: 'Let’s face it - COVID-19 continues to be a major prick. We’re working really hard to establish which venues will have us back as soon as possible, so we can provide the antidote to all this BS – a large and loud dose of Tricky Susan.<br><br>In the meanwhile we’ve been in the recording studio laying down our latest tracks. Watch this space ...<br><br><div style="text-align: center"><h1>KA-POW.</h1></div>'
-        // },
+        {
+          date: '08.10.20',
+          post: 'Word on the street Tricky Su are close to a single release....WHAAAATTTT?!!! WATCH THIS SPACE'
+        },
+        {
+            date: '14.07.20',
+            post: 'Let’s face it - COVID-19 continues to be a major prick. We’re working really hard to establish which venues will have us back as soon as possible, so we can provide the antidote to all this BS – a large and loud dose of Tricky Susan.<br><br>In the meanwhile we’ve been in the recording studio laying down our latest tracks. Watch this space ...<br><br><div style="text-align: center"><h1>KA-POW.</h1></div>'
+        },
       ],
       selectedPostIndex: (this.getIndex() || 0)
     }
   },
   mounted() {
-    fetch("http://trickysusan.herokuapp.com/news")
-    .then(response => (this.posts = response))
-    .then(console.log(this.posts))
+    // fetch("http://trickysusan.herokuapp.com/news")
+    // .then(response => (this.posts = response))
+    // .then(console.log(this.posts))
   },
   methods: {
     nextPost() {
