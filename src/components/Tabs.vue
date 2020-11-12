@@ -58,10 +58,15 @@ export default {
   #tabs {
     position: absolute;
     bottom: 1vh;
+      display: grid;
+  grid-template-columns: repeat(3,120px);  /* 3 columns */
+  grid-template-rows: repeat(2,120px); /* 3 rows  */
+  /* grid-gap:50px 30px; 50 pixels of space added between rows and 30 pixels added between columns  */
   }
 
   .tab {
-    font-size: 150%
+    font-size: 150%;
+    width: 33vw;
   }
 }
 
