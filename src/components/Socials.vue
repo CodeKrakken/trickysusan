@@ -42,6 +42,8 @@ export default {
 
 <style scoped>
 
+/* MOBILE VERSION */
+
 @media only screen and (max-width: 800px) {
 
     #socials {
@@ -58,6 +60,8 @@ export default {
   }
 
 }
+
+/* COMPUTER VERSION */
 
 @media only screen and (min-width: 800px) {
 
@@ -76,10 +80,7 @@ export default {
 
 }
 
-  #social-image {
-    width: 3vw;
-    min-width: 19px;
-  }
+  /* GENERAL */
 
   #social {
     width: 3vw;
@@ -106,6 +107,9 @@ export default {
     transition: all 0.2s ease;
   }
 
- 
+  #social-image {
+    width: 3vw;
+    min-width: 19px;
+  }
 
 </style>
