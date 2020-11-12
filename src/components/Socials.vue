@@ -42,7 +42,26 @@ export default {
 
 <style scoped>
 
-  #socials {
+@media only screen and (max-width: 800px) {
+
+    #socials {
+    position: absolute;
+    left: 30%;
+    right: 30%;
+    top: 5vw;
+    height: 3vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background: black;
+    z-index: 1
+  }
+
+}
+
+@media only screen and (min-width: 800px) {
+
+    #socials {
     position: absolute;
     top: 30%;
     bottom: 30%;
@@ -54,6 +73,8 @@ export default {
     background: black;
     z-index: 1
   }
+
+}
 
   #social-image {
     width: 3vw;
