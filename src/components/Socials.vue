@@ -42,6 +42,36 @@ export default {
 
 <style scoped>
 
+/* COMPUTER VERSION */
+
+@media only screen and (min-width: 800px) {
+
+    #socials {
+    position: absolute;
+    top: 30%;
+    bottom: 30%;
+    right: 5vw;
+    width: 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: black;
+    z-index: 1
+  }
+
+  #social {
+    box-shadow: 15px 15px 15px black, 
+               15px -15px 15px black, 
+              -15px -15px 15px black, 
+               -15px 15px 15px black;
+  }
+
+  #social-image {
+    width: 50px;
+  }
+
+}
+
 /* MOBILE VERSION */
 
 @media only screen and (max-width: 800px) {
@@ -70,36 +100,6 @@ export default {
   #social-image {
     width: 30px;
     min-width: 19px;
-  }
-
-}
-
-/* COMPUTER VERSION */
-
-@media only screen and (min-width: 800px) {
-
-    #socials {
-    position: absolute;
-    top: 30%;
-    bottom: 30%;
-    right: 5vw;
-    width: 3vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    background: black;
-    z-index: 1
-  }
-
-  #social {
-    box-shadow: 15px 15px 15px black, 
-               15px -15px 15px black, 
-              -15px -15px 15px black, 
-               -15px 15px 15px black;
-  }
-
-  #social-image {
-    width: 50px;
   }
 
 }

@@ -31,22 +31,50 @@ export default {
 
 <style scoped>
 
+/* COMPUTER VERSION */
+
+@media only screen and (min-width: 800px) {
+
+  #tabs {
+    position: absolute;
+    top: 25%;
+    bottom: 25%;
+    width: 7%;
+    flex-direction: column;
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .tab {
+    font-size: 200%;
+  }
+}
+
+/* MOBILE VERSION */
+
+@media only screen and (max-width: 800px) {
+  
+  #tabs {
+    position: absolute;
+    bottom: 1vh;
+  }
+
+  .tab {
+    font-size: 150%
+  }
+}
+
+/* GENERAL */
+
 #tabs {
   position: absolute;
-  top: 25%;
-  bottom: 25%;
-  width: 7%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: right;
   background: transparent;
 }
 
 .tab {
   filter: brightness(50%);
   background: black;
-  font-size: 200%;
   font-style: italic;
   background: transparent;
   color: rgb(0, 174, 239);
