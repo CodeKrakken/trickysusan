@@ -70,6 +70,8 @@ export default {
 
 /* GENERAL */
 
+@viewport { width: device-width }
+
 #tabs {
   position: absolute;
   background: transparent;

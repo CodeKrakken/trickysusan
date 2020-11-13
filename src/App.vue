@@ -41,7 +41,10 @@ import Tabs from '@/components/Tabs.vue'
 
 <style>
 
-@viewport { width: device-width }
+@viewport { 
+  width: device-width;
+  height: device-height;
+}
 
 @font-face {
   font-family: 'Odibee Sans';
