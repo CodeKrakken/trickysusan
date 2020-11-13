@@ -36,7 +36,6 @@ export default {
 @media screen and (orientation: landscape) {
 
   #tabs {
-    position: absolute;
     top: 25%;
     bottom: 25%;
     width: 7%;
@@ -56,12 +55,11 @@ export default {
 @media screen and (orientation: portrait) {
   
   #tabs {
-    position: absolute;
-    bottom: 1vh;
-      display: grid;
-  grid-template-columns: repeat(3,120px);  /* 3 columns */
-  grid-template-rows: repeat(2,120px); /* 3 rows  */
-  /* grid-gap:50px 30px; 50 pixels of space added between rows and 30 pixels added between columns  */
+    bottom: 2vh;
+    display: grid;
+    grid-template-columns: repeat(3,33vw); 
+    grid-template-rows: repeat(2,5vh); 
+    /* grid-gap:50px 30px; 50 pixels of space added between rows and 30 pixels added between columns  */
   }
 
   .tab {
