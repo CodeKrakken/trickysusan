@@ -1,7 +1,18 @@
 <template>
   <div>
     <div id="video">
-      <span v-html="videos[selectedVideoIndex].address" />
+      <iframe 
+        style="height: 60vh; width: 60vw"
+        :src="videos[selectedVideoIndex].address"
+        frameborder="0"
+        fullscreen="0"
+        allow="accelerometer; 
+              autoplay; 
+              encrypted-media; 
+              gyroscope; 
+              picture-in-picture" 
+              allowfullscreen>
+      </iframe>
     </div>
     <div id="video-navigator">
       <button @click="previousVideo()" class="nav-button">
@@ -22,33 +33,23 @@ export default {
       videos: [
         {
           name: 'Undercover',
-          address: '<iframe src="https://www.youtube.com/embed/ZZUYN2O9bdU?rel=0&modestbranding=1" \
-                    frameborder="0" fullscreen="0" allow="accelerometer; autoplay; encrypted-media; \
-                    gyroscope; picture-in-picture" allowfullscreen style="height: 60vh; width: 60vw" ></iframe>'
+          address: "https://www.youtube.com/embed/ZZUYN2O9bdU?rel=0&modestbranding=1"
         },
         {
           name: "Strategy",
-          address: '<iframe src="https://www.youtube.com/embed/exggrODRu4w?rel=0&modestbranding=1" \
-                    frameborder="0" fullscreen="0" allow="accelerometer; autoplay; encrypted-media; \
-                    gyroscope; picture-in-picture" allowfullscreen style="height: 60vh; width: 60vw"></iframe>'
+          address: "https://www.youtube.com/embed/exggrODRu4w?rel=0&modestbranding=1"
         },
         {
           name: "Tug of War",
-          address: '<iframe src="https://www.youtube.com/embed/hm2jNxkG2ak?rel=0&modestbranding=1&start=4" \
-                    frameborder="0" fullscreen="0" allow="accelerometer; autoplay; encrypted-media; \
-                    gyroscope; picture-in-picture" allowfullscreen style="height: 60vh; width: 60vw"></iframe>'
+          address: "https://www.youtube.com/embed/hm2jNxkG2ak?rel=0&modestbranding=1&start=4"
         },
         {
           name: "Come On Over (session)",
-          address: '<iframe src="https://www.youtube.com/embed/X3lryMPttIY?rel=0&modestbranding=1" \
-                    frameborder="0" fullscreen="0" allow="accelerometer; autoplay; encrypted-media; \
-                    gyroscope; picture-in-picture" allowfullscreen style="height: 60vh; width: 60vw"></iframe>'
+          address: "https://www.youtube.com/embed/X3lryMPttIY?rel=0&modestbranding=1"
         },
         {
           name: "Baby, I Do",
-          address: '<iframe src="https://www.youtube.com/embed/qTJmtTHc31U?rel=0&modestbranding=1" \
-                    frameborder="0" fullscreen="0" allow="accelerometer; autoplay; encrypted-media; \
-                    gyroscope; picture-in-picture" allowfullscreen style="height: 60vh; width: 60vw"></iframe>'
+          address: "https://www.youtube.com/embed/qTJmtTHc31U?rel=0&modestbranding=1"
         }
       ],
       selectedVideoIndex: (this.getIndex() || 0)
@@ -79,11 +80,11 @@ export default {
 
 <style scoped>
 
-#video {
-  box-shadow: 20px 20px 20px black, 
-              20px -20px 20px black, 
-              -20px -20px 20px black, 
-              -20px 20px 20px black
+iframe {
+  box-shadow: 20px 20px 20px red 
+              20px -20px 20px red, 
+              -20px -20px 20px red, 
+              -20px 20px 20px red;
 }
 
 #video-navigator {
