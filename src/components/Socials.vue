@@ -59,13 +59,6 @@ export default {
     z-index: 1
   }
 
-  #social {
-    box-shadow: 15px 15px 15px black, 
-               15px -15px 15px black, 
-              -15px -15px 15px black, 
-               -15px 15px 15px black;
-  }
-
   #social-image {
     width: 3vw;
     min-width: 30px
@@ -91,13 +84,6 @@ export default {
     z-index: 1
   }
 
-  #social {
-    box-shadow: 5px 5px 5px black, 
-               5px -5px 5px black, 
-              -5px -5px 5px black, 
-               -5px 5px 5px black;
-  }
-
   #social-image {
     width: 30px;
   }
@@ -117,7 +103,11 @@ export default {
     transition: all 0.1s ease;
     border: none;
     outline: none;
-    background: black
+    background: black;
+    box-shadow:  5px  5px 5px black, 
+                 5px -5px 5px black, 
+                -5px -5px 5px black, 
+                -5px  5px 5px black;
   }
 
   #social:hover {
