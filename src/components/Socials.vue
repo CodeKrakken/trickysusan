@@ -42,7 +42,7 @@ export default {
 
 <style scoped>
 
-/* COMPUTER VERSION */
+/* LANDSCAPE */
 
 @media screen and (orientation: landscape) {
 
@@ -67,12 +67,13 @@ export default {
   }
 
   #social-image {
-    width: 50px;
+    width: 3vw;
+    min-width: 30px
   }
 
 }
 
-/* MOBILE VERSION */
+/* PORTRAIT */
 
 @media screen and (orientation: portrait) {
 
@@ -99,7 +100,6 @@ export default {
 
   #social-image {
     width: 30px;
-    min-width: 19px;
   }
 
 }

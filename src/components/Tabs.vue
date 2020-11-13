@@ -31,7 +31,7 @@ export default {
 
 <style scoped>
 
-/* COMPUTER VERSION */
+/* LANDSCAPE VERSION */
 
 @media screen and (orientation: landscape) {
 
@@ -46,11 +46,12 @@ export default {
   }
 
   .tab {
-    font-size: 200%;
+    font-size: 5vh;
+    max-height: 30px
   }
 }
 
-/* MOBILE VERSION */
+/* PORTRAIT VERSION */
 
 @media screen and (orientation: portrait) {
   
@@ -63,7 +64,7 @@ export default {
   }
 
   .tab {
-    font-size: 150%;
+    font-size: 4vh;
     width: 33vw;
   }
 }
