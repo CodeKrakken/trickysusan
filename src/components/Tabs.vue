@@ -70,7 +70,10 @@ export default {
 
 /* GENERAL */
 
-@viewport { width: device-width }
+@viewport { 
+  width: device-width;
+  height: device-height
+}
 
 #tabs {
   position: absolute;

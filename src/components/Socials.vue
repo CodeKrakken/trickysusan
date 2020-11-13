@@ -106,8 +106,11 @@ export default {
 
   /* GENERAL */
 
-  @viewport { width: device-width }
-
+  @viewport { 
+    width: device-width;
+    height: device-height
+  }
+  
   #social {
     width: 50px;
     filter: grayscale(100%);

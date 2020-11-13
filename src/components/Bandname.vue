@@ -12,7 +12,10 @@ export default {
 
 <style scoped>
 
-  @viewport { width: device-width }
+  @viewport { 
+    width: device-width;
+    height: device-height
+  }
 
   #band-name-container {
     float: left; 

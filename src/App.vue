@@ -43,7 +43,7 @@ import Tabs from '@/components/Tabs.vue'
 
 @viewport { 
   width: device-width;
-  height: device-height;
+  height: device-height
 }
 
 @font-face {
