@@ -102,7 +102,8 @@ export default {
               5px -5px 5px black,
               -5px -5px 5px black,
               -5px 5px 5px black;
-  border: none
+  border: none;
+  min-width: 30px
 }
 
 .nav-button:focus, .button:focus, [type="submit"]:focus {

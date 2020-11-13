@@ -24,7 +24,7 @@ export default {
           name: 'Undercover',
           address: '<iframe src="https://www.youtube.com/embed/ZZUYN2O9bdU?rel=0&modestbranding=1" \
                     frameborder="0" fullscreen="0" allow="accelerometer; autoplay; encrypted-media; \
-                    gyroscope; picture-in-picture" allowfullscreen style="height: 60vh; width: 60vw"></iframe>'
+                    gyroscope; picture-in-picture" allowfullscreen style="height: 60vh; width: 60vw" ></iframe>'
         },
         {
           name: "Strategy",
@@ -108,7 +108,8 @@ export default {
               5px -5px 5px black,
               -5px -5px 5px black,
               -5px 5px 5px black;
-  border: none
+  border: none;
+  min-width: 30px
 }
 
 .nav-button:hover {

@@ -40,11 +40,26 @@ export default {
 
 <style scoped>
 
+/* LANDSCAPE VERSION */
+
+@media screen and (orientation: landscape) {
+
+  #main-content {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+
+/* PORTRAIT VERSION */
+
+@media screen and (orientation: portrait) { }
+
+
+/* GENERAL */
+
 #main-content {
   text-align: justify;
   font-size: 150%;
-  padding-left: 15%;
-  padding-right: 15%;
   position: absolute;
   top: 0;
   bottom: 0;
