@@ -38,7 +38,7 @@ export default {
   #tabs {
     top: 25%;
     bottom: 25%;
-    width: 7%;
+    width: 9%;
     flex-direction: column;
     text-align: right;
     display: flex;
@@ -46,8 +46,7 @@ export default {
   }
 
   .tab {
-    font-size: 5vh;
-    max-height: 30px
+    font-size: 2.5vw
   }
 }
 
