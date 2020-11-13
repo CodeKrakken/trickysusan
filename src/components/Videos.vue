@@ -21,6 +21,12 @@ export default {
     return {
       videos: [
         {
+          name: 'Undercover',
+          address: '<iframe src="https://www.youtube.com/embed/ZZUYN2O9bdU?rel=0&modestbranding=1" \
+                    frameborder="0" fullscreen="0" allow="accelerometer; autoplay; encrypted-media; \
+                    gyroscope; picture-in-picture" allowfullscreen style="height: 60vh; width: 60vw"></iframe>'
+        },
+        {
           name: "Strategy",
           address: '<iframe src="https://www.youtube.com/embed/exggrODRu4w?rel=0&modestbranding=1" \
                     frameborder="0" fullscreen="0" allow="accelerometer; autoplay; encrypted-media; \

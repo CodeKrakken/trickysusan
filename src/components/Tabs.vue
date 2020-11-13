@@ -33,7 +33,7 @@ export default {
 
 /* COMPUTER VERSION */
 
-@media only screen and (min-width: 800px) {
+@media screen and (orientation: landscape) {
 
   #tabs {
     position: absolute;
@@ -53,7 +53,7 @@ export default {
 
 /* MOBILE VERSION */
 
-@media only screen and (max-width: 800px) {
+@media screen and (orientation: portrait) {
   
   #tabs {
     position: absolute;
