@@ -1,8 +1,9 @@
 <template>
   <div>
-    <div id="video">
-      <iframe 
-        style="height: 60vh; width: 60vw;"
+    <div>
+      <iframe
+        id="video" 
+        style=""
         :src="videos[selectedVideoIndex].address"
         frameborder="0"
         fullscreen="0"
@@ -81,6 +82,8 @@ export default {
 <style scoped>
 
 #video {
+  height: 60vh; 
+  width: 60vw;
   box-shadow: 20px 20px 20px black,
               20px -20px 20px black, 
               -20px -20px 20px black, 
