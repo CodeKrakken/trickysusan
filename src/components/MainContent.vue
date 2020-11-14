@@ -50,11 +50,6 @@ export default {
   }
 }
 
-/* PORTRAIT VERSION */
-
-@media screen and (orientation: portrait) { }
-
-
 /* GENERAL */
 
 #main-content {

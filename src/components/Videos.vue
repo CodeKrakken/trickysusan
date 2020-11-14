@@ -81,9 +81,23 @@ export default {
 
 <style scoped>
 
+/* PORTRAIT VERSION */
+
+@media screen and (orientation: portrait) {
+  #video {
+    height: 60vh; 
+    width: 100vw;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  #video {
+    height: 60vh; 
+    width: 60vw;
+  }
+}
+
 #video {
-  height: 60vh; 
-  width: 60vw;
   box-shadow: 20px 20px 20px black,
               20px -20px 20px black, 
               -20px -20px 20px black, 
