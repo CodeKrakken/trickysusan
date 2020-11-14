@@ -2,7 +2,7 @@
   <div>
     <div id="video">
       <iframe 
-        style="height: 60vh; width: 60vw"
+        style="height: 60vh; width: 60vw;"
         :src="videos[selectedVideoIndex].address"
         frameborder="0"
         fullscreen="0"
@@ -80,11 +80,11 @@ export default {
 
 <style scoped>
 
-iframe {
-  box-shadow: 20px 20px 20px red 
-              20px -20px 20px red, 
-              -20px -20px 20px red, 
-              -20px 20px 20px red;
+#video {
+  box-shadow: 20px 20px 20px black,
+              20px -20px 20px black, 
+              -20px -20px 20px black, 
+              -20px 20px 20px black;
 }
 
 #video-navigator {
