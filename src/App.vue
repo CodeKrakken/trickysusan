@@ -26,7 +26,7 @@ import Tabs from '@/components/Tabs.vue'
     },
     data() {
       return {
-        selectedTab: (sessionStorage.tab || 'News')
+        selectedTab: (sessionStorage.tab || 'Videos')
       }
     },   
     methods: {
