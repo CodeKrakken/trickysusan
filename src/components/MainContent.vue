@@ -5,8 +5,8 @@
   <div v-show="selectedTab === 'Gigs'"><Gigs /></div>
   <div v-show="selectedTab === 'Bio'"><Bio /></div>
   <div v-show="selectedTab === 'Photos'"><Photos /></div>
-  <div v-show="selectedTab === 'Videos'"><videos /></div>
-  <div v-show="selectedTab === 'Contact'"><contact /></div>
+  <div v-show="selectedTab === 'Videos'"><Videos /></div>
+  <div v-show="selectedTab === 'Contact'"><Contact /></div>
   <!-- <div v-show="selectedTab === 'Shop'"><shop /></div>
   <div v-show="selectedTab === 'EPK'"><epk /></div> -->
 </div>

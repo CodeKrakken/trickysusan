@@ -103,7 +103,7 @@ export default {
   }
 
   #video-navigator {
-    top: 87vh;
+    top: 90vh;
   }
 }
 

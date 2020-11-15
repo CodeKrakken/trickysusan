@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="photo-outer">
+    <!-- <div class="photo-outer"> -->
       <img :src="images[selectedImageIndex]" class="photo" />
-    </div>
+    <!-- </div> -->
     <div id="video-navigator">
       <button @click="previousImage()" class="nav-button">
         <img src="/images/previous-button.png" id="previous-icon" />
