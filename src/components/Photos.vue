@@ -66,6 +66,10 @@ export default {
   .photo {
     width: 100vw;
   }
+
+  #video-navigator {
+      top: 75vh;
+  }
 }
 
 /* LANDSCAPE VERSION */
@@ -73,6 +77,10 @@ export default {
 @media screen and (orientation: landscape) {
   .photo {
     height: 75vh;
+  }
+
+  #video-navigator {
+    top: 90vh;
   }
 }
 
@@ -94,7 +102,6 @@ export default {
   position: absolute;
   left: 0;
   right: 0;
-  top: 90vh;
   justify-content: center;
   background: transparent;
   align-content: center;
