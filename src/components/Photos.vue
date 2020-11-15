@@ -64,7 +64,7 @@ export default {
 
 @media screen and (orientation: portrait) {
   .photo {
-    width: 100vw;
+    height: 38vh
   }
 
   #video-navigator {
