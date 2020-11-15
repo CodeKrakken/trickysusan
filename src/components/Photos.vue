@@ -60,12 +60,29 @@ export default {
 
 <style scoped>
 
+/* PORTRAIT VERSION */
+
+@media screen and (orientation: portrait) {
+  .photo {
+    width: 100vw;
+  }
+}
+
+/* LANDSCAPE VERSION */
+
+@media screen and (orientation: landscape) {
+  .photo {
+    height: 75vh;
+  }
+}
+
+/* GENERAL */
+
 .photo-outer {
   height: 75vh;
 }
 
 .photo {
-  height: 75vh;
   box-shadow: 20px 20px 20px black, 
               20px -20px 20px black, 
               -20px -20px 20px black, 

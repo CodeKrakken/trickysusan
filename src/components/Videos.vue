@@ -88,6 +88,10 @@ export default {
     height: 32vh; 
     width: 100vw;
   }
+
+  #video-navigator {
+    top: 75vh;
+  }
 }
 
 /* LANDSCAPE VERSION */
@@ -96,6 +100,10 @@ export default {
   #video {
     height: 60vh; 
     width: 60vw;
+  }
+
+  #video-navigator {
+    top: 87vh;
   }
 }
 
@@ -113,7 +121,6 @@ export default {
   position: absolute;
   left: 0;
   right: 0;
-  top: 75vh;
   justify-content: center;
   background: transparent;
   align-content: center;
