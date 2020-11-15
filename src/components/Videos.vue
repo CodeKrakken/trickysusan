@@ -90,12 +90,16 @@ export default {
   }
 }
 
+/* LANDSCAPE VERSION */
+
 @media screen and (orientation: landscape) {
   #video {
     height: 60vh; 
     width: 60vw;
   }
 }
+
+/* GENERAL */
 
 #video {
   box-shadow: 20px 20px 20px black,
