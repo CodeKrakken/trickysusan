@@ -109,7 +109,7 @@ export default {
   position: absolute;
   left: 0;
   right: 0;
-  top: 90vh;
+  top: 75vh;
   justify-content: center;
   background: transparent;
   align-content: center;
