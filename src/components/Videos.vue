@@ -85,7 +85,7 @@ export default {
 
 @media screen and (orientation: portrait) {
   #video {
-    height: 60vh; 
+    height: 32vh; 
     width: 100vw;
   }
 }
