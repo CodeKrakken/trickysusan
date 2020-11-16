@@ -42,13 +42,13 @@ export default {
 
 /* LANDSCAPE VERSION */
 
-@media screen and (orientation: landscape) {
+/* @media screen and (orientation: landscape) { */
 
   #main-content {
     padding-left: 15%;
     padding-right: 15%;
   }
-}
+/* } */
 
 /* GENERAL */
 

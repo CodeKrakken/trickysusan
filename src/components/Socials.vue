@@ -44,7 +44,7 @@ export default {
 
 /* LANDSCAPE */
 
-@media screen and (orientation: landscape) {
+/* @media screen and (orientation: landscape) { */
 
     #socials {
     position: absolute;
@@ -64,18 +64,16 @@ export default {
     min-width: 30px
   }
 
-}
+/* } */
 
 /* PORTRAIT */
 
-@media screen and (orientation: portrait) {
+/* @media screen and (orientation: portrait) {
 
     #socials {
     position: absolute;
     top: 1vw;
     right: 1vw;
-    /* right: 30%; */
-    /* top: 5vw; */
     height: 50px;
     display: flex;
     flex-direction: row;
@@ -88,7 +86,7 @@ export default {
     width: 30px;
   }
 
-}
+} */
 
   /* GENERAL */
 

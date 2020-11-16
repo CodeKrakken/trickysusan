@@ -62,7 +62,7 @@ export default {
 
 /* PORTRAIT VERSION */
 
-@media screen and (orientation: portrait) {
+/* @media screen and (orientation: portrait) {
   .photo {
     height: 38vh
   }
@@ -70,11 +70,11 @@ export default {
   #video-navigator {
       top: 69vh;
   }
-}
+} */
 
 /* LANDSCAPE VERSION */
 
-@media screen and (orientation: landscape) {
+/* @media screen and (orientation: landscape) { */
   .photo {
     height: 75vh;
   }
@@ -82,7 +82,7 @@ export default {
   #video-navigator {
     top: 90vh;
   }
-}
+/* } */
 
 /* GENERAL */
 

@@ -33,7 +33,7 @@ export default {
 
 /* LANDSCAPE VERSION */
 
-@media screen and (orientation: landscape) {
+/* @media screen and (orientation: landscape) { */
 
   #tabs {
     top: 25%;
@@ -48,25 +48,24 @@ export default {
   .tab {
     font-size: 2.5vw
   }
-}
+/* } */
 
 /* PORTRAIT VERSION */
 
-@media screen and (orientation: portrait) {
+/* @media screen and (orientation: portrait) {
   
   #tabs {
     bottom: 2vh;
     display: grid;
     grid-template-columns: repeat(3,33vw); 
     grid-template-rows: repeat(2,5vh); 
-    /* grid-gap:50px 30px; 50 pixels of space added between rows and 30 pixels added between columns  */
   }
 
   .tab {
     font-size: 4vh;
     width: 33vw;
   }
-}
+} */
 
 /* GENERAL */
 
