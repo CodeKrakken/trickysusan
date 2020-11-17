@@ -51,13 +51,14 @@ import Tabs from '@/components/Tabs.vue'
   src: url('assets/Odibee_Sans/OdibeeSans-Regular.ttf') format('truetype');
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
+@media screen and (orientation: portrait) {
   html {
     transform: rotate(-90deg);
     transform-origin: left top;
     width: 100vh;
     height: 100vw;
     overflow-x: hidden;
+    overflow-y: hidden;
     position: absolute;
     top: 100%;
     left: 0;

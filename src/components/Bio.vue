@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="bio" >
     Tricky Susan are here to assault your taste buds with their attention-grabbing rock ‘n’ roll.
     <br><br>
     A four-piece outfit formed in London, Tricky Susan entice you to join their journey with their melodic, hook-driven and beat-centric hits.
@@ -17,6 +17,12 @@
 </template>
 
 <style scoped>
+
+#bio {
+  width: 50vw;
+  height: 50vh;
+  font-size: 3vh;
+}
 
 #quotes {
   font-size: 70%;

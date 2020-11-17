@@ -73,7 +73,8 @@ export default {
 
 #news {
   width: 50vw;
-  height: 50vh
+  height: 50vh;
+  font-size: 3vh
 }
 
 #date {
