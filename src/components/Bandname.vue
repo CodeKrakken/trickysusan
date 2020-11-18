@@ -20,11 +20,7 @@ export default {
   #band-name-container {
     float: left; 
     height: 15vh;
-    width: 15vh;
-    box-shadow:  15px 15px 15px black, 
-                15px -15px 15px black, 
-               -15px -15px 15px black, 
-                -15px 15px 15px black
+    width: 15vh
   }
   
   #band-name { 
@@ -32,6 +28,10 @@ export default {
     height: auto;
     min-height: 56px;
     min-width: 75px;
+    box-shadow: 15px  15px 15px black, 
+                15px -15px 15px black, 
+               -15px -15px 15px black, 
+               -15px  15px 15px black
   }
 
 </style>
