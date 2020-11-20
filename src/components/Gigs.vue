@@ -30,7 +30,8 @@
   margin: auto;
   left: 0;
   right: 0;
-  text-align: center
+  text-align: center;
+  font-size:calc(6px + 1.5vw);
 }
 
 </style>
