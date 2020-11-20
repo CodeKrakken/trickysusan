@@ -1,8 +1,8 @@
 <template>
 
 <div id="contact"> 
-  <h2>Wanna get in touch?</h2>
-  <h2>Hit us up on</h2>
+  Wanna get in touch?<br><br>
+  Hit us up on<br><br>
 
   <div id="email">
     <a href="mailto:trickysusanband@gmail.com">trickysusanband@gmail.com</a>
@@ -13,8 +13,6 @@
 
 <style>
 
-#email { font-size: 200%}
-
 #contact {
     text-shadow: none;
     text-align: center;
@@ -23,7 +21,10 @@
               5px -5px 5px black,
               -5px -5px 5px black,
               -5px 5px 5px black;
+    font-size: calc(12px + 1.5vw)
 }
+
+#email { font-size: calc(24px + 1.5vw) }
 
 a {
   cursor: default;
