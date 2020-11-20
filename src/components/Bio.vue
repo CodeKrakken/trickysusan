@@ -7,10 +7,10 @@
     <br><br>
     Head over to the Gigs page and follow them on Instagram and Facebook … PRONTO. 
       
-    <div id="quotes">
+    <!-- <div id="quotes">
       "... I’ve seen deaf people cry at a Tricky Susan show ..."<br>
       "... I’ve even seen a goose take a bump at one of their shows ..."
-    </div>
+    </div> -->
 
   </div>
   
@@ -28,9 +28,10 @@
   font-size: 70%;
   font-style: italic;
   position: absolute;
-  top: 80%;
+  /* top: 80%; */
   left: 0;
   right: 0;
+  bottom: 1vh;
   text-align: center
 }
 
