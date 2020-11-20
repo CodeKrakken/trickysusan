@@ -71,10 +71,12 @@ export default {
 
 <style scoped>
 
+
+
 #news {
   width: 50vw;
   height: 50vh;
-  font-size: 3vh
+  font-size:calc(6px + 1.5vw);
 }
 
 #date {
