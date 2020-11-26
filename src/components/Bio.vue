@@ -1,17 +1,15 @@
 <template>
-  <div id="bio" >
-    Tricky Susan are here to assault your taste buds with their attention-grabbing rock ‘n’ roll.
+  <div id="bio">
+    A four-piece outfit formed in London, Tricky Susan immediately snatch your attention with their hook-centric tunes and an energy hard to eclipse.
     <br><br>
-    A four-piece outfit formed in London, Tricky Susan entice you to join their journey with their melodic, hook-driven and beat-centric hits.
-    Packing the punch in their storytelling and an intense gusto for performing live – their energy is hard to eclipse.
+    Cementing this with a penchant for a stonking good time (on stage and off), it won’t take you long to get what this lot are about.
     <br><br>
-    Head over to the Gigs page and follow them on Instagram and Facebook … PRONTO. 
+    Tricky Susan entice you to join them on their journey. Buckle up for the ride.
       
     <!-- <div id="quotes">
       "... I’ve seen deaf people cry at a Tricky Susan show ..."<br>
       "... I’ve even seen a goose take a bump at one of their shows ..."
     </div> -->
-
   </div>
   
 </template>
@@ -22,6 +20,9 @@
   width: 50vw;
   height: 50vh;
   font-size:calc(6px + 1.5vw);
+  align-items: center;
+  display: flex;
+  text-align: justify
 }
 
 #quotes {
