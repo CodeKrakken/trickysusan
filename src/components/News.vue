@@ -29,6 +29,10 @@ export default {
     return {
       posts: [
         {
+          date: '24.11.20',
+          post: 'Our new video, UNDERCOVER, is out now! Shimmy on over to the Videos page to watch.<br><br>Our music is now available to stream across Amazon, Anghami, Apple Music, MediaNet, Deezer, Instagram/Facebook, Google Play, iHeartRadio, ClaroMusica, iTunes, KKBox, Napster, NetEase, Pandora, Saavn, Shazam, Spotify, Tidal, TikTok and Soundtrack By Twitch.'
+        },
+        {
           date: '08.10.20',
           post: 'Word on the street Tricky Su are close to a single release....WHAAAATTTT?!!! WATCH THIS SPACE'
         },
