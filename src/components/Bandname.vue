@@ -28,4 +28,18 @@
                -15px  15px 15px black
   }
 
+  @media screen and (orientation: portrait) {
+    #band-name {
+    transform: rotate(-90deg);
+    /* transform-origin: left top;
+    width: 100vh;
+    height: 100vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0; */
+  }
+}
+
 </style>
