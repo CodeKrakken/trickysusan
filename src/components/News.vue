@@ -88,7 +88,6 @@ export default {
   align-items: center;
   justify-content: center;
   width: fit-content
-  /* position: absolute; */
 }
 
 #date {
@@ -100,28 +99,16 @@ export default {
   display: inline
 }
 
-/* #navigator {
-  display: flex;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 90vh;
-  justify-content: center;
-  background: transparent;
-  align-content: center;
-  border: none
-} */
-
 .nav-button {
   filter: brightness(50%);
   background: black;
   width: 3vw;
   height: 3vw;
   transition: all 0.1s ease;
-  /* box-shadow: 5px 5px 5px black, 
-              5px -5px 5px black,
-              -5px -5px 5px black,
-              -5px 5px 5px black; */
+  box-shadow: 3px  3px 3px black, 
+              3px -3px 3px black,
+             -3px -3px 3px black,
+             -3px  3px 3px black;
   border: none;
   min-width: 40px
 }

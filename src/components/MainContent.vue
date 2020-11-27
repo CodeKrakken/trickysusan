@@ -39,7 +39,9 @@ export default {
 </script>
 
 <style scoped>
+
 @media screen and (orientation: portrait) {
+
   #main-content {
     /* transform: rotate(-90deg);
     transform-origin: left top; */
@@ -51,6 +53,7 @@ export default {
     top: 100%;
     left: 0;*/
   }
+
 }
 /* LANDSCAPE VERSION */
 
@@ -60,6 +63,7 @@ export default {
     padding-left: 15%;
     padding-right: 15%;
   }
+
 }
 
 /* GENERAL */
