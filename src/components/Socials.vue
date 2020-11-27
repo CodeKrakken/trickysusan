@@ -21,7 +21,7 @@ export default {
           image: '/images/instagram hover.png',
           link: 'https://www.instagram.com/trickysusan/?hl=en'
         },
-                {
+        {
           image: '/images/youtube.png',
           link: 'https://www.youtube.com/user/youronewayticket'
         },
@@ -44,46 +44,32 @@ export default {
 
 /* LANDSCAPE */
 
-/* @media screen and (orientation: landscape) { */
+@media screen and (orientation: landscape) {
 
-    #socials {
-    position: absolute;
+  #socials {
     top: 30%;
     bottom: 30%;
     right: 5vw;
-    width: 3vw;
-    display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     background: black;
-    z-index: 1
+    z-index: 1;
+    width: 50px
   }
 
-  #social-image {
-    width: 3vw;
-    min-width: 30px
-  }
-
-/* } */
+}
 
 /* PORTRAIT */
 
 @media screen and (orientation: portrait) {
 
-    /* #socials {
-    position: absolute;
-    top: 1vw;
-    right: 1vw;
-    height: 50px;
-    display: flex;
+  #socials {
     flex-direction: row;
-    justify-content: space-evenly;
     background: black;
-    z-index: 1
-  } */
-
-  #social-image {
-    transform: rotate(-90deg)
+    z-index: 1;
+    width: 150px;
+    right: 7px;
+    top: 10px;
   }
 
 }
@@ -94,18 +80,29 @@ export default {
     width: device-width;
     height: device-height
   }
+
+  #socials {
+    position: fixed;
+    display: flex;
+    background: black;
+    z-index: 1;
+  }
+
+  #social-image {
+    width: 100%;
+  }
   
   #social {
-    width: 50px;
+    width: 100%;
     filter: grayscale(100%);
     transition: all 0.1s ease;
     border: none;
     outline: none;
     background: black;
-    box-shadow:  5px  5px 5px black, 
+    /* box-shadow:  5px  5px 5px black, 
                  5px -5px 5px black, 
                 -5px -5px 5px black, 
-                -5px  5px 5px black;
+                -5px  5px 5px black; */
   }
 
   #social:hover {

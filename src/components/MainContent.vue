@@ -55,16 +55,6 @@ export default {
   }
 
 }
-/* LANDSCAPE VERSION */
-
-@media screen and (orientation: landscape) {
-
-  #main-content {
-    padding-left: 15%;
-    padding-right: 15%;
-  }
-
-}
 
 /* GENERAL */
 
@@ -72,13 +62,14 @@ export default {
   text-align: justify;
   font-size: 150%;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  top: 12vh;
+  bottom: 12vh;
+  left: 12vw;
+  right: 12vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  /* border: thin white dashed */
 }
 
 </style>
