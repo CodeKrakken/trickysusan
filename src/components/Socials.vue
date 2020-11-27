@@ -68,9 +68,9 @@ export default {
 
 /* PORTRAIT */
 
-/* @media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) {
 
-    #socials {
+    /* #socials {
     position: absolute;
     top: 1vw;
     right: 1vw;
@@ -80,13 +80,13 @@ export default {
     justify-content: space-evenly;
     background: black;
     z-index: 1
-  }
+  } */
 
   #social-image {
-    width: 30px;
+    transform: rotate(-90deg)
   }
 
-} */
+}
 
   /* GENERAL */
 

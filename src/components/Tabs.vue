@@ -52,20 +52,19 @@ export default {
 
 /* PORTRAIT VERSION */
 
-/* @media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) {
   
-  #tabs {
+  /* #tabs {
     bottom: 2vh;
     display: grid;
     grid-template-columns: repeat(3,33vw); 
     grid-template-rows: repeat(2,5vh); 
-  }
+  } */
 
   .tab {
-    font-size: 4vh;
-    width: 33vw;
+    transform: rotate(-90deg);
   }
-} */
+}
 
 /* GENERAL */
 
