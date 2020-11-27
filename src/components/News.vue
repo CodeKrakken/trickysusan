@@ -1,22 +1,19 @@
 <template>
 <div id="news">
-  <div id="date">
-    {{ posts[selectedPostIndex].date }}
-    <!-- {{ posts }} -->
+  <div id="header">
+    <button @click="previousPost()" class="nav-button">
+      <img src="/images/previous-button.png" class="icon" />
+    </button>
+    <div id="date">
+      {{ posts[selectedPostIndex].date }}
+    </div>
+    <button @click="nextPost()" class="nav-button">
+      <img src="/images/next-button.png" class="icon" />
+    </button>
   </div>
   <br>
   <div>
     <span v-html="posts[selectedPostIndex].post" />
-  </div>
-    <br><br>
-  <div id="video-navigator">
-    <button @click="previousPost()" class="nav-button">
-      <img src="/images/previous-button.png" id="previous-icon" />
-    </button>
-    <div id="caption" />
-    <button @click="nextPost()" class="nav-button">
-      <img src="/images/next-button.png" id="next-icon" />
-    </button>
   </div>
 </div>
   
@@ -75,19 +72,35 @@ export default {
 
 <style scoped>
 
-
-
 #news {
   width: 50vw;
   height: 50vh;
   font-size:calc(6px + 1.5vw);
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+#header {
+  text-align: center;
+  /* border: thin dashed white; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content
+  /* position: absolute; */
 }
 
 #date {
+  min-width: 9vw;
+  max-width: 9vw;
+  height: fit-content;
+  /* border: thin dashed white; */
   text-align: center;
+  display: inline
 }
 
-#video-navigator {
+/* #navigator {
   display: flex;
   position: absolute;
   left: 0;
@@ -97,7 +110,7 @@ export default {
   background: transparent;
   align-content: center;
   border: none
-}
+} */
 
 .nav-button {
   filter: brightness(50%);
@@ -105,10 +118,10 @@ export default {
   width: 3vw;
   height: 3vw;
   transition: all 0.1s ease;
-  box-shadow: 5px 5px 5px black, 
+  /* box-shadow: 5px 5px 5px black, 
               5px -5px 5px black,
               -5px -5px 5px black,
-              -5px 5px 5px black;
+              -5px 5px 5px black; */
   border: none;
   min-width: 30px
 }
@@ -127,9 +140,7 @@ export default {
   transition: all 0.1s ease;
 }
 
-#next-icon { width: 100% }
-
-#previous-icon { width: 100% }
+.icon { width: 75% }
 
 #caption {
   font-size: 150%;
