@@ -39,7 +39,19 @@ export default {
 </script>
 
 <style scoped>
-
+@media screen and (orientation: portrait) {
+  #main-content {
+    transform: rotate(-90deg);
+    /* transform-origin: left top;
+    width: 100vh;
+    height: 100vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0; */
+  }
+}
 /* LANDSCAPE VERSION */
 
 /* @media screen and (orientation: landscape) { */
