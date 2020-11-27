@@ -21,14 +21,14 @@ export default {
           image: '/images/instagram hover.png',
           link: 'https://www.instagram.com/trickysusan/?hl=en'
         },
+                {
+          image: '/images/youtube.png',
+          link: 'https://www.youtube.com/user/youronewayticket'
+        },
         {
           image: '/images/facebook hover.png',
           link: 'https://www.facebook.com/TrickySusan'
         },
-        {
-          image: '/images/youtube.png',
-          link: 'https://www.youtube.com/user/youronewayticket'
-        }
       ]
     }
   },

@@ -41,26 +41,26 @@ export default {
 <style scoped>
 @media screen and (orientation: portrait) {
   #main-content {
-    transform: rotate(-90deg);
-    /* transform-origin: left top;
-    width: 100vh;
-    height: 100vw;
+    /* transform: rotate(-90deg);
+    transform-origin: left top; */
+    width: 100vw
+    /* height: 100vw;
     overflow-x: hidden;
     overflow-y: hidden;
     position: absolute;
     top: 100%;
-    left: 0; */
+    left: 0;*/
   }
 }
 /* LANDSCAPE VERSION */
 
-/* @media screen and (orientation: landscape) { */
+@media screen and (orientation: landscape) {
 
   #main-content {
     padding-left: 15%;
     padding-right: 15%;
   }
-/* } */
+}
 
 /* GENERAL */
 
