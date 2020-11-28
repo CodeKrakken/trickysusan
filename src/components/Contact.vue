@@ -1,9 +1,10 @@
 <template>
 
-<div id="contact"> 
-  Wanna get in touch?<br><br>
-  Hit us up on<br><br>
-
+<div id="contact">
+  <div id="question">
+    Wanna get in touch?<br><br>
+    Hit us up on<br><br>
+  </div>
   <div id="email">
     <a href="mailto:trickysusanband@gmail.com">trickysusanband@gmail.com</a>
   </div>
@@ -21,10 +22,26 @@
               5px -5px 5px black,
               -5px -5px 5px black,
               -5px 5px 5px black;
-    font-size: calc(10px + 1.5vw)
 }
 
-#email { font-size: calc(24px + 1.5vw) }
+@media screen and (orientation: portrait) {
+
+  #question { 
+    font-size: calc(14px + 1.5vh)
+  }
+
+}
+
+@media screen and (orientation: landscape) {
+    #question { 
+    font-size: calc(10px + 1.5vw)
+  }
+}
+
+
+#email { 
+  font-size: calc(26px + 1.5vw) 
+}
 
 a {
   cursor: default;
