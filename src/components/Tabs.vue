@@ -33,7 +33,7 @@ export default {
 
 /* LANDSCAPE VERSION */
 
-/* @media screen and (orientation: landscape) { */
+@media screen and (orientation: landscape) {
 
   #tabs {
     top: 25%;
@@ -45,25 +45,19 @@ export default {
     justify-content: space-between;
   }
 
-  .tab {
-    font-size: 2.5vw
-  }
-/* } */
 
+}
 /* PORTRAIT VERSION */
 
 @media screen and (orientation: portrait) {
   
-  /* #tabs {
+  #tabs {
     bottom: 2vh;
     display: grid;
     grid-template-columns: repeat(3,33vw); 
     grid-template-rows: repeat(2,5vh); 
-  } */
-
-  .tab {
-    transform: rotate(-90deg);
   }
+
 }
 
 /* GENERAL */
@@ -85,13 +79,14 @@ export default {
   background: transparent;
   color: rgb(0, 174, 239);
   transition: all 0.1s ease;
-  border: none;
+  border: thin white dashed;
   text-shadow: 5px 5px 3px black, 
              -5px -5px 3px black, 
               5px -5px 3px black, 
               -5px 5px 3px black;
   font-family: 'Odibee Sans';
   letter-spacing: 0.1em;
+  font-size: 4vh
 }
 
 .tab:hover {
