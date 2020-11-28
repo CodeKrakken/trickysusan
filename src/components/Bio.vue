@@ -5,7 +5,7 @@
     Cementing this with a penchant for a stonking good time (on stage and off), it won’t take you long to get what this lot are about.
     <br><br>
     Tricky Susan entice you to join them on their journey. Buckle up for the ride.
-    <br><br>
+    <br><br><br>
     <div id="quotes">
       "... I’ve seen deaf people cry at a Tricky Susan show ..."<br><br>
       "... I’ve even seen a goose take a bump at one of their shows ..."
@@ -42,8 +42,8 @@
 @media screen and (orientation: portrait) {
   #bio {
     width: 80vw;
-    height: 75vh;
-    font-size:calc(12px + 1.5vh);
+    height: 70vh;
+    font-size:calc(10px + 1.5vh);
   }
 
   #quotes {

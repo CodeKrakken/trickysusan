@@ -21,7 +21,7 @@
               5px -5px 5px black,
               -5px -5px 5px black,
               -5px 5px 5px black;
-    font-size: calc(12px + 1.5vw)
+    font-size: calc(10px + 1.5vw)
 }
 
 #email { font-size: calc(24px + 1.5vw) }
