@@ -103,7 +103,7 @@ export default {
   }
 
   #video-navigator {
-    top: 87vh;
+    top: 90vh;
   }
 
 }
@@ -162,7 +162,7 @@ export default {
 #caption {
   font-size: 150%;
   background: transparent;
-  width: 25%;
+  width: 25vw;
   text-align: center;
 }
 

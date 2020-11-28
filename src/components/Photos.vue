@@ -4,6 +4,7 @@
       <button @click="previousImage()" class="nav-button">
         <img src="/images/previous-button.png" class="icon" />
       </button>
+      <div id="caption" />
       <button @click="nextImage()" class="nav-button">
         <img src="/images/next-button.png" class="icon" />
       </button>
@@ -71,7 +72,11 @@ export default {
   }
 
   .nav-button {
-    width: 3vh;
+    width: 4vh;
+    box-shadow: 3px 3px 3px black, 
+            3px -3px 3px black,
+            -3px -3px 3px black,
+            -3px 3px 3px black;
   }
     
 }
@@ -79,9 +84,10 @@ export default {
 /* LANDSCAPE VERSION */
 
 @media screen and (orientation: landscape) {
-  /* .photo {
-    height: 75vh;
-  } */
+  .photo {
+    max-width: 75vh;
+    max-height: 75vh
+  }
 
   #navigator {
     top: 90vh;
@@ -91,7 +97,20 @@ export default {
 
   .nav-button {
     width: 3vw;
+    min-width: 40px;
+    box-shadow: 5px 5px 5px black, 
+            5px -5px 5px black,
+            -5px -5px 5px black,
+            -5px 5px 5px black;
   }
+
+  #caption {
+    font-size: 150%;
+    background: transparent;
+    width: 25vw;
+    text-align: center;
+  }
+
 }
 
 /* GENERAL */
@@ -120,12 +139,8 @@ export default {
   filter: brightness(50%);
   background: black;
   transition: all 0.1s ease;
-  box-shadow: 5px 5px 5px black, 
-              5px -5px 5px black,
-              -5px -5px 5px black,
-              -5px 5px 5px black;
   border: none;
-  min-width: 30px
+  min-width: 40px
 }
 
 .nav-button:focus {
@@ -143,12 +158,5 @@ export default {
 }
 
 .icon { width: 100% }
-
-#caption {
-  font-size: 150%;
-  background: transparent;
-  width: 25%;
-  text-align: center;
-}
 
 </style>
