@@ -107,7 +107,6 @@ export default {
 
 #header {
   text-align: center;
-  /* border: thin dashed white; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -115,9 +114,7 @@ export default {
 }
 
 #date {
-
   height: fit-content;
-  /* border: thin dashed white; */
   text-align: center;
   display: inline
 }
@@ -126,14 +123,13 @@ export default {
   filter: brightness(50%);
   background: black;
   width: 3vw;
-  height: 3vw;
   transition: all 0.1s ease;
   box-shadow: 3px  3px 3px black, 
               3px -3px 3px black,
              -3px -3px 3px black,
              -3px  3px 3px black;
   border: none;
-  min-width: 40px
+  min-width: 40px;
 }
 
 .nav-button:focus, .button:focus, [type="submit"]:focus {
