@@ -12,6 +12,27 @@
 </template>
 
 <style scoped>
+
+@media screen and (orientation: portrait) {
+  #gig-image {
+    width: 100vw
+  }
+
+  #gig-caption {
+    font-size:calc(6px + 1.5vh);
+  }
+}
+
+@media screen and (orientation: landscape) {
+  #gig-image {
+    max-height: 75vh
+  }
+
+  #gig-caption {
+    font-size:calc(6px + 1.5vw);
+  }
+}
+
 #gig-image-container {
   max-height: 75vh;
   background: black;
@@ -21,17 +42,16 @@
               -15px 15px 15px black 
 }
 
-#gig-image {
-  max-height: 75vh
-}
-
 #gig-caption {
   position: absolute;
   margin: auto;
   left: 0;
   right: 0;
   text-align: center;
-  font-size:calc(6px + 1.5vw);
+
 }
+
+
+
 
 </style>
