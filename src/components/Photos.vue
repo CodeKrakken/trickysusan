@@ -63,7 +63,8 @@ export default {
 @media screen and (orientation: portrait) {
   .photo {
     max-width: 100vw;
-    max-height: 100vw
+    /* max-height: 100vw; */
+    max-height: 75vh
   }
 
   #navigator {
