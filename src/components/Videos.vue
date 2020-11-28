@@ -88,9 +88,9 @@ export default {
     width: 100vw;
   }
 
-  /* #video-navigator {
+  #video-navigator {
     top: 69vh;
-  } */
+  }
 }
 
 /* LANDSCAPE VERSION */

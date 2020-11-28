@@ -1,15 +1,13 @@
 <template>
   <div>
-    <!-- <div class="photo-outer"> -->
-      <img :src="images[selectedImageIndex]" class="photo" />
-    <!-- </div> -->
-    <div id="video-navigator">
+    <img :src="images[selectedImageIndex]" class="photo" />
+    <div id="navigator">
       <button @click="previousImage()" class="nav-button">
-        <img src="/images/previous-button.png" id="previous-icon" />
+        <img src="/images/previous-button.png" class="icon" />
       </button>
       <div id="caption" />
       <button @click="nextImage()" class="nav-button">
-        <img src="/images/next-button.png" id="next-icon" />
+        <img src="/images/next-button.png" class="icon" />
       </button>
     </div>
   </div>
@@ -62,24 +60,24 @@ export default {
 
 /* PORTRAIT VERSION */
 
-/* @media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) {
   .photo {
-    height: 38vh
+    width: 100vw
   }
 
-  #video-navigator {
-      top: 69vh;
+  #navigator {
+    top: 69vh;
   }
-} */
+}
 
 /* LANDSCAPE VERSION */
 
 /* @media screen and (orientation: landscape) { */
-  .photo {
+  /* .photo {
     height: 75vh;
-  }
+  } */
 
-  #video-navigator {
+  #navigator {
     top: 90vh;
   }
 /* } */
@@ -96,8 +94,8 @@ export default {
               -20px -20px 20px black, 
               -20px 20px 20px black
 }
-
-#video-navigator {
+/* 
+#navigator {
   display: flex;
   position: absolute;
   left: 0;
@@ -106,7 +104,7 @@ export default {
   background: transparent;
   align-content: center;
   border: none
-}
+} */
 
 .nav-button {
   filter: brightness(50%);
@@ -136,9 +134,7 @@ export default {
   transition: all 0.1s ease;
 }
 
-#previous-icon { width: 100% }
-
-#next-icon { width: 100% }
+.icon { width: 100% }
 
 #caption {
   font-size: 150%;
