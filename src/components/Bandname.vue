@@ -14,7 +14,10 @@
   #band-name-container {
     float: left; 
     height: 15vh;
-    width: 15vh
+    width: 15vh;
+    position: absolute;
+    top: 10px;
+    left: 10px
   }
   
   #band-name { 

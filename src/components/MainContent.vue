@@ -43,32 +43,22 @@ export default {
 @media screen and (orientation: portrait) {
 
   #main-content {
-    /* transform: rotate(-90deg);
-    transform-origin: left top; */
-    width: 100vw
-    /* height: 100vw;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    position: absolute;
-    top: 100%;
-    left: 0;*/
+    width: 100vw;
   }
 
 }
 
-@media screen and (orientation: landscape) {
-
-  #main-content {
-    text-align: justify;
-    font-size: 150%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+#main-content {
+  text-align: justify;
+  font-size: 150%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
+
 </style>
