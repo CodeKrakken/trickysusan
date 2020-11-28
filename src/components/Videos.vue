@@ -3,7 +3,6 @@
     <div>
       <iframe
         id="video" 
-        style=""
         :src="videos[selectedVideoIndex].address"
         frameborder="0"
         fullscreen="0"
@@ -83,20 +82,21 @@ export default {
 
 /* PORTRAIT VERSION */
 
-/* @media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) {
   #video {
     height: 32vh; 
     width: 100vw;
   }
 
-  #video-navigator {
+  /* #video-navigator {
     top: 69vh;
-  }
-} */
+  } */
+}
 
 /* LANDSCAPE VERSION */
 
-/* @media screen and (orientation: landscape) { */
+@media screen and (orientation: landscape) {
+
   #video {
     height: 60vh; 
     width: 60vw;
@@ -105,7 +105,8 @@ export default {
   #video-navigator {
     top: 90vh;
   }
-/* } */
+
+}
 
 /* GENERAL */
 

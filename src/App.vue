@@ -51,8 +51,22 @@ import Tabs from '@/components/Tabs.vue'
   src: url('assets/Odibee_Sans/OdibeeSans-Regular.ttf') format('truetype');
 }
 
+#app {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 body {
   background-color: black;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   color: white;
   box-sizing: border-box;
   font-family: 'Odibee Sans';

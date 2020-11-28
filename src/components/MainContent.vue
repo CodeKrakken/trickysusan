@@ -56,20 +56,20 @@ export default {
 
 }
 
-/* GENERAL */
+@media screen and (orientation: landscape) {
 
-#main-content {
-  text-align: justify;
-  font-size: 150%;
-  position: absolute;
-  top: 12vh;
-  bottom: 12vh;
-  left: 12vw;
-  right: 12vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* border: thin white dashed */
+  #main-content {
+    text-align: justify;
+    font-size: 150%;
+    position: absolute;
+    top: 12vh;
+    bottom: 12vh;
+    left: 12vw;
+    right: 12vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: thin white dashed */
+  }
 }
-
 </style>
