@@ -62,14 +62,13 @@ export default {
     text-align: justify;
     font-size: 150%;
     position: absolute;
-    top: 12vh;
-    bottom: 12vh;
-    left: 12vw;
-    right: 12vw;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: thin white dashed */
   }
 }
 </style>
