@@ -55,7 +55,8 @@ export default {
     bottom: 2vh;
     display: grid;
     grid-template-columns: repeat(3,33vw); 
-    grid-template-rows: repeat(2,5vh); 
+    grid-template-rows: repeat(2,5vh);
+    text-align: center
   }
 
 }
@@ -79,7 +80,7 @@ export default {
   background: transparent;
   color: rgb(0, 174, 239);
   transition: all 0.1s ease;
-  border: thin white dashed;
+  border: none;
   text-shadow: 5px 5px 3px black, 
              -5px -5px 3px black, 
               5px -5px 3px black, 
