@@ -132,7 +132,6 @@ export default {
   filter: brightness(50%);
   background: black;
   width: 3vw;
-  height: 3vw;
   transition: all 0.1s ease;
   box-shadow: 5px 5px 5px black, 
               5px -5px 5px black,

@@ -1,15 +1,14 @@
 <template>
   <div>
-    <img :src="images[selectedImageIndex]" class="photo" />
     <div id="navigator">
       <button @click="previousImage()" class="nav-button">
         <img src="/images/previous-button.png" class="icon" />
       </button>
-      <div id="caption" />
       <button @click="nextImage()" class="nav-button">
         <img src="/images/next-button.png" class="icon" />
       </button>
-    </div>
+    </div>     
+    <img :src="images[selectedImageIndex]" class="photo" />
   </div>
 </template>
 
@@ -62,25 +61,38 @@ export default {
 
 @media screen and (orientation: portrait) {
   .photo {
-    width: 100vw
+    max-width: 100vw;
+    max-height: 100vw
   }
 
   #navigator {
-    top: 69vh;
+    top: 3.2vh;
+    left: 18vh
   }
+
+  .nav-button {
+    width: 3vh;
+  }
+    
 }
 
 /* LANDSCAPE VERSION */
 
-/* @media screen and (orientation: landscape) { */
+@media screen and (orientation: landscape) {
   /* .photo {
     height: 75vh;
   } */
 
   #navigator {
     top: 90vh;
+    left: 0;
+    right: 0;
   }
-/* } */
+
+  .nav-button {
+    width: 3vw;
+  }
+}
 
 /* GENERAL */
 
@@ -94,23 +106,19 @@ export default {
               -20px -20px 20px black, 
               -20px 20px 20px black
 }
-/* 
+ 
 #navigator {
   display: flex;
   position: absolute;
-  left: 0;
-  right: 0;
   justify-content: center;
   background: transparent;
   align-content: center;
   border: none
-} */
+}
 
 .nav-button {
   filter: brightness(50%);
   background: black;
-  width: 3vw;
-  height: 3vw;
   transition: all 0.1s ease;
   box-shadow: 5px 5px 5px black, 
               5px -5px 5px black,
