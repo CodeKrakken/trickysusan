@@ -73,12 +73,36 @@ export default {
 <style scoped>
 
 #news {
-  width: 50vw;
-  height: 50vh;
-  font-size:calc(6px + 1.5vw);
   display: flex;
   flex-direction: column;
   align-items: center
+}
+
+@media screen and (orientation: landscape) {
+  #news {
+    width: 50vw;
+    height: 50vh;
+    font-size:calc(6px + 1.5vw);
+  }
+
+  #date {
+    min-width: 9vw;
+    max-width: 9vw;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  #news {
+    width: 80vw;
+    height: 70vh;
+    font-size:calc(10px + 1.5vh);
+  }
+
+  #date {
+    min-width: 12vh;
+    max-width: 12vh;
+  }
+
 }
 
 #header {
@@ -91,8 +115,7 @@ export default {
 }
 
 #date {
-  min-width: 9vw;
-  max-width: 9vw;
+
   height: fit-content;
   /* border: thin dashed white; */
   text-align: center;
