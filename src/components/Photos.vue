@@ -64,7 +64,7 @@ export default {
   .photo {
     max-width: 100vw;
     /* max-height: 100vw; */
-    max-height: 100vw;
+    max-height: 56.25vh;
   }
 
   #navigator {
@@ -86,7 +86,7 @@ export default {
 
 @media screen and (orientation: landscape) {
   .photo {
-    max-width: 75vh;
+    max-width: 75vw;
     max-height: 75vh
   }
 
