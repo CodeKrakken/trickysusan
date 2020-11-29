@@ -64,7 +64,7 @@ export default {
   .photo {
     max-width: 100vw;
     /* max-height: 100vw; */
-    max-height: 75vh
+    max-height: 100vw;
   }
 
   #navigator {
