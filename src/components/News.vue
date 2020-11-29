@@ -107,10 +107,10 @@ export default {
   .nav-button {
     width: 3vw;
     min-width: 40px;
-    box-shadow: 3px 3px 3px black, 
-            5px -3px 3px black,
-            -5px -5px 5px black,
-            -5px 5px 5px black;
+    box-shadow: 3px  3px 3px black, 
+                3px -3px 3px black,
+               -3px -3px 3px black,
+               -3px  3px 3px black;
   }
 
   #navigator {

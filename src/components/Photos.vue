@@ -1,10 +1,9 @@
 <template>
-  <div>
+  <div id="photos">
     <div id="navigator">
       <button @click="previousImage()" class="nav-button">
         <img src="/images/previous-button.png" class="icon" />
       </button>
-      <div id="caption" />
       <button @click="nextImage()" class="nav-button">
         <img src="/images/next-button.png" class="icon" />
       </button>
@@ -74,10 +73,6 @@ export default {
 
   .nav-button {
     width: 4vh;
-    box-shadow: 3px 3px 3px black, 
-            3px -3px 3px black,
-            -3px -3px 3px black,
-            -3px 3px 3px black;
   }
     
 }
@@ -91,30 +86,24 @@ export default {
   }
 
   #navigator {
-    top: 90vh;
-    left: 0;
-    right: 0;
+    top: calc(10px + 2vh);
+    margin: auto auto
   }
 
   .nav-button {
     width: 3vw;
     min-width: 40px;
-    box-shadow: 5px 5px 5px black, 
-            5px -5px 5px black,
-            -5px -5px 5px black,
-            -5px 5px 5px black;
-  }
-
-  #caption {
-    font-size: 150%;
-    background: transparent;
-    width: 25vw;
-    text-align: center;
   }
 
 }
 
 /* GENERAL */
+
+#photos {
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
 
 .photo-outer {
   height: 75vh;
@@ -129,10 +118,11 @@ export default {
  
 #navigator {
   display: flex;
-  position: absolute;
   justify-content: center;
   background: transparent;
   align-content: center;
+  border: none;
+  position: absolute;
   border: none
 }
 
@@ -141,7 +131,11 @@ export default {
   background: black;
   transition: all 0.1s ease;
   border: none;
-  min-width: 40px
+  min-width: 40px;
+  box-shadow: 3px  3px 3px black, 
+                3px -3px 3px black,
+               -3px -3px 3px black,
+               -3px  3px 3px black;
 }
 
 .nav-button:focus {
