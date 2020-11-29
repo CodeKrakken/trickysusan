@@ -16,11 +16,11 @@
     </div>
     <div id="video-navigator">
       <button @click="previousVideo()" class="nav-button">
-        <img src="/images/previous-button.png" id="previous-icon" />
+        <img src="/images/previous-button.png" class="icon" />
       </button>
       <div id="caption" />
       <button @click="nextVideo()" class="nav-button">
-        <img src="/images/next-button.png" id="next-icon" />
+        <img src="/images/next-button.png" class="icon" />
       </button>
     </div>
   </div>
@@ -89,7 +89,16 @@ export default {
   }
 
   #video-navigator {
-    top: 69vh;
+    top: 16px;
+    left: 15vh
+  }
+
+  .nav-button {
+    width: 4vh;
+    box-shadow: 3px 3px 3px black, 
+            3px -3px 3px black,
+            -3px -3px 3px black,
+            -3px 3px 3px black;
   }
 }
 
@@ -104,6 +113,24 @@ export default {
 
   #video-navigator {
     top: 90vh;
+    left: 0;
+    right: 0
+  }
+
+  .nav-button {
+    width: 3vw;
+    min-width: 40px;
+    box-shadow: 5px 5px 5px black, 
+            5px -5px 5px black,
+            -5px -5px 5px black,
+            -5px 5px 5px black;
+  }
+
+  #caption {
+    font-size: 150%;
+    background: transparent;
+    width: 25vw;
+    text-align: center;
   }
 
 }
@@ -120,8 +147,6 @@ export default {
 #video-navigator {
   display: flex;
   position: absolute;
-  left: 0;
-  right: 0;
   justify-content: center;
   background: transparent;
   align-content: center;
@@ -131,14 +156,9 @@ export default {
 .nav-button {
   filter: brightness(50%);
   background: black;
-  width: 3vw;
   transition: all 0.1s ease;
-  box-shadow: 5px 5px 5px black, 
-              5px -5px 5px black,
-              -5px -5px 5px black,
-              -5px 5px 5px black;
   border: none;
-  min-width: 30px
+  min-width: 40px
 }
 
 .nav-button:hover {
@@ -155,15 +175,6 @@ export default {
    outline: none;
 }
 
-#previous-icon { width: 100% }
-
-#next-icon { width: 100% }
-
-#caption {
-  font-size: 150%;
-  background: transparent;
-  width: 25vw;
-  text-align: center;
-}
+.icon { width: 100% }
 
 </style>
