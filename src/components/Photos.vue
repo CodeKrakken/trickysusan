@@ -123,7 +123,6 @@ export default {
   align-content: center;
   border: none;
   position: absolute;
-  border: none
 }
 
 .nav-button {

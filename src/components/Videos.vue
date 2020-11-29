@@ -1,5 +1,13 @@
 <template>
-  <div>
+  <div id="videos">
+    <div id="navigator">
+      <button @click="previousVideo()" class="nav-button">
+        <img src="/images/previous-button.png" class="icon" />
+      </button>
+      <button @click="nextVideo()" class="nav-button">
+        <img src="/images/next-button.png" class="icon" />
+      </button>
+    </div>
     <div>
       <iframe
         id="video" 
@@ -13,15 +21,6 @@
               picture-in-picture" 
               allowfullscreen>
       </iframe>
-    </div>
-    <div id="video-navigator">
-      <button @click="previousVideo()" class="nav-button">
-        <img src="/images/previous-button.png" class="icon" />
-      </button>
-      <div id="caption" />
-      <button @click="nextVideo()" class="nav-button">
-        <img src="/images/next-button.png" class="icon" />
-      </button>
     </div>
   </div>
 </template>
@@ -88,7 +87,7 @@ export default {
     width: 100vw;
   }
 
-  #video-navigator {
+  #navigator {
     top: 16px;
     left: 15vh
   }
@@ -111,31 +110,24 @@ export default {
     width: 60vw;
   }
 
-  #video-navigator {
-    top: 90vh;
-    left: 0;
-    right: 0
+  #navigator {
+    top: calc(10px + 2vh);
+    margin: auto auto
   }
 
   .nav-button {
     width: 3vw;
     min-width: 40px;
-    box-shadow: 5px 5px 5px black, 
-            5px -5px 5px black,
-            -5px -5px 5px black,
-            -5px 5px 5px black;
   }
-
-  #caption {
-    font-size: 150%;
-    background: transparent;
-    width: 25vw;
-    text-align: center;
-  }
-
 }
 
 /* GENERAL */
+
+#videos {
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
 
 #video {
   box-shadow: 20px 20px 20px black,
@@ -144,7 +136,7 @@ export default {
               -20px 20px 20px black;
 }
 
-#video-navigator {
+#navigator {
   display: flex;
   position: absolute;
   justify-content: center;
@@ -158,7 +150,11 @@ export default {
   background: black;
   transition: all 0.1s ease;
   border: none;
-  min-width: 40px
+  min-width: 40px;
+  box-shadow: 3px 3px 3px black, 
+        3px -3px 3px black,
+        -3px -3px 3px black,
+        -3px 3px 3px black;
 }
 
 .nav-button:hover {
