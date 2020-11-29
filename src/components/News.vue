@@ -8,14 +8,13 @@
     <span v-html="posts[selectedPostIndex].post" />
   </div>
   <div id="navigator">
-      <button @click="previousPost()" class="nav-button">
-        <img src="/images/previous-button.png" class="icon" />
-      </button>
-      <div id="caption" />
-      <button @click="nextPost()" class="nav-button">
-        <img src="/images/next-button.png" class="icon" />
-      </button>
-    </div>
+    <button @click="previousPost()" class="nav-button">
+      <img src="/images/previous-button.png" class="icon" />
+    </button>
+    <button @click="nextPost()" class="nav-button">
+      <img src="/images/next-button.png" class="icon" />
+    </button>
+  </div>
 </div>
   
 </template>
@@ -86,17 +85,14 @@ export default {
     max-width: 12vh;
   }
 
+  .nav-button {
+    width: 4vh;
+    
+  }
+
   #navigator {
     top: 16px;
     left: 15vh
-  }
-
-  .nav-button {
-    width: 4vh;
-    box-shadow: 3px 3px 3px black, 
-            3px -3px 3px black,
-            -3px -3px 3px black,
-            -3px 3px 3px black;
   }
 
 }
@@ -108,32 +104,20 @@ export default {
     font-size:calc(6px + 1.5vw);
   }
 
-  #date {
-    min-width: 9vw;
-    max-width: 9vw;
-  }
-
-  #navigator {
-    top: 90vh;
-    left: 0;
-    right: 0;
-  }
-
   .nav-button {
     width: 3vw;
     min-width: 40px;
-    box-shadow: 5px 5px 5px black, 
-            5px -5px 5px black,
+    box-shadow: 3px 3px 3px black, 
+            5px -3px 3px black,
             -5px -5px 5px black,
             -5px 5px 5px black;
   }
 
-  #caption {
-    font-size: 150%;
-    background: transparent;
-    width: 25vw;
-    text-align: center;
+  #navigator {
+    top: calc(10px + 2vh);
+    margin: auto auto
   }
+
 }
 
 #navigator {
@@ -142,21 +126,13 @@ export default {
   justify-content: center;
   background: transparent;
   align-content: center;
-  border: none
+  border: none;
 }
 
 #news {
   display: flex;
   flex-direction: column;
   align-items: center
-}
-
-#header {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: fit-content
 }
 
 #date {
@@ -170,7 +146,11 @@ export default {
   background: black;
   transition: all 0.1s ease;
   border: none;
-  min-width: 40px
+  min-width: 40px;
+  box-shadow: 3px 3px 3px black, 
+            3px -3px 3px black,
+            -3px -3px 3px black,
+            -3px 3px 3px black;
 }
 
 .nav-button:focus, .button:focus, [type="submit"]:focus {
