@@ -10,19 +10,11 @@
     width: device-width;
     height: device-height
   }
-
-  #band-name-container {
-    height: 8.3vw;
-    width: 8.3vw;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-  }
   
   #band-name {
     position: absolute;
     top: 10px;
-    left: 10px; 
+    left: calc(10px + 3vw); 
     width: 12vw;
     height: auto;
     min-height: 56px;

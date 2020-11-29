@@ -47,13 +47,12 @@ export default {
 @media screen and (orientation: landscape) {
 
   #socials {
-    top: calc(10px + 2vh);
-    left: 20vw;
-    flex-direction: row;
-    justify-content: space-evenly;
+    top: 10px;
+    left: 5px;
+    flex-direction: column;
     background: black;
     z-index: 1;
-    width: 9vw;
+    width: 3vw;
   }
 
 }
@@ -85,10 +84,12 @@ export default {
     display: flex;
     background: black;
     z-index: 1;
+
   }
 
   #social-image {
     width: 100%;
+
   }
   
   #social {
@@ -98,10 +99,10 @@ export default {
     border: none;
     outline: none;
     background: black;
-    /* box-shadow:  5px  5px 5px black, 
-                 5px -5px 5px black, 
-                -5px -5px 5px black, 
-                -5px  5px 5px black; */
+    box-shadow:  3px  3px 3px black, 
+                 3px -3px 3px black, 
+                -3px -3px 3px black, 
+                -3px  3px 3px black;
   }
 
   #social:hover {
