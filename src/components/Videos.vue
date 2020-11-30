@@ -94,21 +94,12 @@ export default {
 
   .nav-button {
     width: 4vh;
-    box-shadow: 3px 3px 3px black, 
-            3px -3px 3px black,
-            -3px -3px 3px black,
-            -3px 3px 3px black;
   }
 }
 
 /* LANDSCAPE VERSION */
 
 @media screen and (orientation: landscape) {
-
-  iframe {
-    height: 60vh; 
-    width: 60vw;
-  }
 
   #navigator {
     top: calc(10px + 2vh);
@@ -119,6 +110,18 @@ export default {
     width: 3vw;
     min-width: 40px;
   }
+
+  #video {
+    position: absolute;
+    bottom: 10px;
+    top: 12vh;
+    max-width: 70vw
+  }
+
+  iframe {
+    height: 100%
+  }
+
 }
 
 /* GENERAL */
@@ -129,11 +132,11 @@ export default {
   align-items: center
 }
 
-#iframe {
-  box-shadow: 20px 20px 20px black,
-              20px -20px 20px black, 
-              -20px -20px 20px black, 
-              -20px 20px 20px black;
+#photo {
+  box-shadow:  10px  10px 10px black,
+               10px -10px 10px black, 
+              -10px -10px 10px black, 
+              -10px  10px 10px black;
 }
 
 #navigator {

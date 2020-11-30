@@ -1,22 +1,21 @@
 <template>
-<div id="news">
-  <div id="date">
-    {{ posts[selectedPostIndex].date }}
+  <div id="news">
+    <div id="date">
+      {{ posts[selectedPostIndex].date }}
+    </div>
+    <br>
+    <div>
+      <span v-html="posts[selectedPostIndex].post" />
+    </div>
+    <div id="navigator">
+      <button @click="previousPost()" class="nav-button">
+        <img src="/images/previous-button.png" class="icon" />
+      </button>
+      <button @click="nextPost()" class="nav-button">
+        <img src="/images/next-button.png" class="icon" />
+      </button>
+    </div>
   </div>
-  <br>
-  <div>
-    <span v-html="posts[selectedPostIndex].post" />
-  </div>
-  <div id="navigator">
-    <button @click="previousPost()" class="nav-button">
-      <img src="/images/previous-button.png" class="icon" />
-    </button>
-    <button @click="nextPost()" class="nav-button">
-      <img src="/images/next-button.png" class="icon" />
-    </button>
-  </div>
-</div>
-  
 </template>
 
 <script>
@@ -87,7 +86,6 @@ export default {
 
   .nav-button {
     width: 4vh;
-    
   }
 
   #navigator {
@@ -98,6 +96,7 @@ export default {
 }
 
 @media screen and (orientation: landscape) {
+  
   #news {
     width: 50vw;
     height: 50vh;
@@ -107,10 +106,6 @@ export default {
   .nav-button {
     width: 3vw;
     min-width: 40px;
-    box-shadow: 3px  3px 3px black, 
-                3px -3px 3px black,
-               -3px -3px 3px black,
-               -3px  3px 3px black;
   }
 
   #navigator {

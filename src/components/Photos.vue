@@ -8,8 +8,8 @@
         <img src="/images/next-button.png" class="icon" />
       </button>
     </div>
-    <div id="photo">
-      <img :src="images[selectedImageIndex]" />
+    <div id="photo-outer">
+      <img :src="images[selectedImageIndex]" id="photo-inner" />
     </div>
   </div>
 </template>
@@ -82,9 +82,9 @@ export default {
 
 @media screen and (orientation: landscape) {
 
-  #navigator {
-    top: calc(10px + 2vh);
-    margin: auto auto
+  #photos {
+    width: 50vw;
+    height: 50vh;
   }
 
   .nav-button {
@@ -92,14 +92,19 @@ export default {
     min-width: 40px;
   }
 
-  #photo {
+  #navigator {
+    top: calc(10px + 2vh);
+    margin: auto auto
+  }
+
+  #photo-outer {
     position: absolute;
     bottom: 10px;
     top: 12vh;
     max-width: 70vw
   }
 
-  img {
+  #photo-inner {
     height: 100%
   }
 
