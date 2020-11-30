@@ -82,7 +82,7 @@ export default {
 /* PORTRAIT VERSION */
 
 @media screen and (orientation: portrait) {
-  #video {
+  iframe {
     height: 32vh; 
     width: 100vw;
   }
@@ -105,7 +105,7 @@ export default {
 
 @media screen and (orientation: landscape) {
 
-  #video {
+  iframe {
     height: 60vh; 
     width: 60vw;
   }
@@ -129,7 +129,7 @@ export default {
   align-items: center
 }
 
-#video {
+#iframe {
   box-shadow: 20px 20px 20px black,
               20px -20px 20px black, 
               -20px -20px 20px black, 
