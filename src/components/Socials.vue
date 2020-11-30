@@ -48,7 +48,7 @@ export default {
 
   #socials {
     top: 10px;
-    left: 5px;
+    left: 3px;
     flex-direction: column;
     background: black;
     z-index: 1;

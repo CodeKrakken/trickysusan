@@ -7,8 +7,10 @@
       <button @click="nextImage()" class="nav-button">
         <img src="/images/next-button.png" class="icon" />
       </button>
-    </div>     
-    <img :src="images[selectedImageIndex]" class="photo" />
+    </div>
+    <div id="photo">
+      <img :src="images[selectedImageIndex]" />
+    </div>
   </div>
 </template>
 
@@ -60,9 +62,8 @@ export default {
 /* PORTRAIT VERSION */
 
 @media screen and (orientation: portrait) {
-  .photo {
+  img {
     max-width: 100vw;
-    /* max-height: 100vw; */
     max-height: 56.25vh;
   }
 
@@ -80,10 +81,6 @@ export default {
 /* LANDSCAPE VERSION */
 
 @media screen and (orientation: landscape) {
-  .photo {
-    max-width: 75vw;
-    max-height: 75vh
-  }
 
   #navigator {
     top: calc(10px + 2vh);
@@ -93,6 +90,17 @@ export default {
   .nav-button {
     width: 3vw;
     min-width: 40px;
+  }
+
+  #photo {
+    position: absolute;
+    bottom: 10px;
+    top: 12vh;
+    max-width: 70vw
+  }
+
+  img {
+    height: 100%
   }
 
 }
@@ -105,15 +113,11 @@ export default {
   align-items: center
 }
 
-.photo-outer {
-  height: 75vh;
-}
-
-.photo {
-  box-shadow: 20px 20px 20px black, 
-              20px -20px 20px black, 
-              -20px -20px 20px black, 
-              -20px 20px 20px black
+#photo {
+  box-shadow:  10px  10px 10px black, 
+               10px -10px 10px black, 
+              -10px -10px 10px black, 
+              -10px  10px 10px black
 }
  
 #navigator {
