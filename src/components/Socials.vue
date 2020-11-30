@@ -52,7 +52,6 @@ export default {
     right: 5vw;
     flex-direction: column;
     justify-content: space-evenly;
-    background: black;
     z-index: 1;
     width: 50px
   }
@@ -65,12 +64,12 @@ export default {
 
   #socials {
     flex-direction: row;
-    background: black;
     z-index: 1;
-    width: 12vw;
-    right: 7px;
-    top: 10px;
-    min-height: 40px;
+    width: 120px;
+    height: 40px;
+    top: 5px;
+    right: 5px;
+    /* border: thin white dashed */
   }
 
 }
@@ -85,14 +84,19 @@ export default {
   #socials {
     position: fixed;
     display: flex;
-    background: black;
+    background: transparent;
     z-index: 1;
-
   }
 
   #social-image {
-    height: 100%;
-    max-height: 40px
+    width: 100%;
+    max-width: 40px;
+    background: black;
+    box-shadow:  3px  3px 3px black, 
+              3px -3px 3px black, 
+            -3px -3px 3px black, 
+            -3px  3px 3px black;
+    /* border: thin white dashed */
   }
   
   #social {
@@ -102,11 +106,8 @@ export default {
     transition: all 0.1s ease;
     border: none;
     outline: none;
-    background: black;
-    box-shadow:  3px  3px 3px black, 
-                 3px -3px 3px black, 
-                -3px -3px 3px black, 
-                -3px  3px 3px black;
+    background: transparent;
+    /* border: thin white dashed */
   }
 
   #social:hover {
