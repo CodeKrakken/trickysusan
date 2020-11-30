@@ -142,6 +142,7 @@ export default {
   transition: all 0.1s ease;
   border: none;
   min-width: 40px;
+  width: 3vw;
   box-shadow: 3px 3px 3px black, 
             3px -3px 3px black,
             -3px -3px 3px black,
