@@ -88,8 +88,8 @@ export default {
   }
 
   #navigator {
-    top: 16px;
-    left: 15vh
+    top: 10px;
+    margin: auto auto
   }
 
   .nav-button {
