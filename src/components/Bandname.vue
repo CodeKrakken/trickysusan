@@ -14,7 +14,7 @@
   #band-name {
     position: absolute;
     top: 10px;
-    left: calc(10px + 3vw); 
+    left: 10px; 
     width: 12vw;
     height: auto;
     min-height: 56px;
