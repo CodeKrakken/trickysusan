@@ -8,9 +8,8 @@
         <img src="/images/next-button.png" class="icon" />
       </button>
     </div>
-    <div>
+    <div id="video-outer">
       <iframe
-        id="video" 
         :src="videos[selectedVideoIndex].address"
         frameborder="0"
         fullscreen="0"
@@ -22,6 +21,7 @@
               allowfullscreen>
       </iframe>
     </div>
+
   </div>
 </template>
 
@@ -111,14 +111,15 @@ export default {
     min-width: 40px;
   }
 
-  #video {
+  #video-outer {
     position: absolute;
-    bottom: 10px;
     top: 12vh;
-    max-width: 70vw
+    bottom: 10px;
+    width: 69vw
   }
 
   iframe {
+    width: 100%;
     height: 100%
   }
 

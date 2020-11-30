@@ -62,7 +62,7 @@ export default {
 /* PORTRAIT VERSION */
 
 @media screen and (orientation: portrait) {
-  img {
+  #photo-inner {
     max-width: 100vw;
     max-height: 56.25vh;
   }
@@ -101,7 +101,7 @@ export default {
     position: absolute;
     bottom: 10px;
     top: 12vh;
-    max-width: 70vw
+    max-width: 69vw
   }
 
   #photo-inner {
