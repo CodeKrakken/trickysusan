@@ -134,21 +134,22 @@ export default {
   position: absolute;
 }
 
+.nav-button:focus {
+  filter: brightness(50%);
+  outline: none;
+}
+
 .nav-button {
   filter: brightness(50%);
   background: black;
   transition: all 0.1s ease;
   border: none;
-  width: 3vw;
   min-width: 40px;
-  box-shadow: 3px  3px 3px black, 
-                3px -3px 3px black,
-               -3px -3px 3px black,
-               -3px  3px 3px black;
-}
-
-.nav-button:focus {
-   outline: none;
+  width: 3vw;
+  box-shadow: 3px 3px 3px black, 
+            3px -3px 3px black,
+            -3px -3px 3px black,
+            -3px 3px 3px black;
 }
 
 .nav-button:hover {

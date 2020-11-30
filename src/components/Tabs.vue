@@ -78,7 +78,6 @@ export default {
   background: black;
   font-style: italic;
   background: transparent;
-  
   color: #E22076;
   transition: all 0.1s ease;
   border: none;
@@ -101,6 +100,9 @@ export default {
   transition: all 0.1s ease;
 }
 
-.tab:focus { outline: none; }
+.tab:focus { 
+  outline: none;
+  /* filter: brightness(50%) */
+}
 
 </style>

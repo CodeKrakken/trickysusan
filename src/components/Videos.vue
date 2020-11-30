@@ -140,17 +140,22 @@ export default {
   border: none
 }
 
+.nav-button:focus {
+  filter: brightness(50%);
+  outline: none;
+}
+
 .nav-button {
   filter: brightness(50%);
   background: black;
   transition: all 0.1s ease;
   border: none;
-  width: 3vw;
   min-width: 40px;
+  width: 3vw;
   box-shadow: 3px 3px 3px black, 
-        3px -3px 3px black,
-        -3px -3px 3px black,
-        -3px 3px 3px black;
+            3px -3px 3px black,
+            -3px -3px 3px black,
+            -3px 3px 3px black;
 }
 
 .nav-button:hover {
@@ -161,10 +166,6 @@ export default {
 .nav-button:active {
   filter: brightness(100%);
   transition: all 0.1s ease;
-}
-
-.nav-button:focus {
-   outline: none;
 }
 
 .icon { width: 100% }

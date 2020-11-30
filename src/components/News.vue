@@ -136,6 +136,11 @@ export default {
   display: inline
 }
 
+.nav-button:focus {
+  filter: brightness(50%);
+  outline: none;
+}
+
 .nav-button {
   filter: brightness(50%);
   background: black;
@@ -149,10 +154,6 @@ export default {
             -3px 3px 3px black;
 }
 
-.nav-button:focus, .button:focus, [type="submit"]:focus {
-   outline: none;
-}
-
 .nav-button:hover {
   filter: brightness(75%);
   transition: all 0.2s ease;
@@ -162,6 +163,7 @@ export default {
   filter: brightness(100%);
   transition: all 0.1s ease;
 }
+
 
 .icon { width: 100% }
 
