@@ -78,7 +78,8 @@ export default {
   background: black;
   font-style: italic;
   background: transparent;
-  color: rgb(0, 174, 239);
+  
+  color: #E22076;
   transition: all 0.1s ease;
   border: none;
   text-shadow: 5px 5px 3px black, 
