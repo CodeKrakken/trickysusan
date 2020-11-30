@@ -133,11 +133,11 @@ export default {
   align-items: center
 }
 
-#photo {
-  box-shadow:  10px  10px 10px black,
-               10px -10px 10px black, 
-              -10px -10px 10px black, 
-              -10px  10px 10px black;
+#video-outer {
+  box-shadow:  5px  5px 5px black,
+               5px -5px 5px black, 
+              -5px -5px 5px black, 
+              -5px  5px 5px black;
 }
 
 #navigator {
