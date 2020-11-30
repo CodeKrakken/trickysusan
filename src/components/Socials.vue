@@ -47,12 +47,14 @@ export default {
 @media screen and (orientation: landscape) {
 
   #socials {
-    top: 10px;
-    left: 3px;
+    top: 30%;
+    bottom: 30%;
+    right: 5vw;
     flex-direction: column;
+    justify-content: space-evenly;
     background: black;
     z-index: 1;
-    width: 3vw;
+    width: 50px
   }
 
 }
