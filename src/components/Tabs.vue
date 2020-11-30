@@ -36,11 +36,11 @@ export default {
 @media screen and (orientation: landscape) {
 
   #tabs {
-    top: calc(10px + 2vh);
-    right: calc(10px + 2vh);
-    width: 40vw;
-    flex-direction: row;
-    text-align: center;
+    top: 25%;
+    bottom: 25%;
+    width: 9%;
+    flex-direction: column;
+    text-align: right;
     display: flex;
     justify-content: space-between;
   }
