@@ -91,10 +91,6 @@ export default {
     top: 10px;
     margin: auto auto
   }
-
-  .nav-button {
-    width: 4vh;
-  }
 }
 
 /* LANDSCAPE VERSION */
@@ -104,11 +100,6 @@ export default {
   #navigator {
     top: calc(10px + 2vh);
     margin: auto auto
-  }
-
-  .nav-button {
-    width: 3vw;
-    min-width: 40px;
   }
 
   #video-outer {
@@ -154,6 +145,7 @@ export default {
   background: black;
   transition: all 0.1s ease;
   border: none;
+  width: 3vw;
   min-width: 40px;
   box-shadow: 3px 3px 3px black, 
         3px -3px 3px black,

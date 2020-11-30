@@ -67,9 +67,10 @@ export default {
     flex-direction: row;
     background: black;
     z-index: 1;
-    width: 150px;
+    width: 12vw;
     right: 7px;
     top: 10px;
+    min-height: 40px;
   }
 
 }
@@ -90,12 +91,13 @@ export default {
   }
 
   #social-image {
-    width: 100%;
-
+    height: 100%;
+    max-height: 40px
   }
   
   #social {
-    width: 100%;
+    height: 100%;
+    max-height: 40px;
     filter: grayscale(100%);
     transition: all 0.1s ease;
     border: none;
@@ -116,6 +118,12 @@ export default {
   #social:active {
     filter: grayscale(0%);
     filter: brightness(100%);
+    transition: all 0.2s ease;
+  }
+
+    #social:focus {
+    filter: grayscale(0%);
+    filter: brightness(75%);
     transition: all 0.2s ease;
   }
 

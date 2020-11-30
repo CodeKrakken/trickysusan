@@ -85,7 +85,7 @@ export default {
   }
 
   .nav-button {
-    width: 4vh;
+    height: 4vh;
   }
 
   #navigator {
