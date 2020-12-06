@@ -1,4 +1,6 @@
-# trickysusan-2
+# trickysusan
+Promotional website for the band Tricky Susan, built with Vue.js and hosted at www.trickysusan.co.uk. 
+See also trickysusan-backend, as it contains backend elements that could not be hosted.
 
 ## Project setup
 ```
