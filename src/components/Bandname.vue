@@ -1,8 +1,20 @@
 <template>
   <div>
-    <img src="/images/band-name.jpg" id="band-name" />
+    <button @click="goHome()">
+      <img src="/images/band-name.jpg" id="band-name" />
+    </button>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    goHome() {
+      this.$emit('select-tab', "Videos")
+    }
+  }
+}
+</script>
 
 <style scoped>
 
@@ -23,8 +35,7 @@
                 15px -15px 15px black, 
                -15px -15px 15px black, 
                -15px  15px 15px black;
+    z-index: 1
   }
-  
-
 
 </style>

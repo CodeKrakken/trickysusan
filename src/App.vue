@@ -1,8 +1,7 @@
 <template>
   <div id="app">
-    <title>Tricky Susan</title>
     <Background />
-    <Bandname />
+    <Bandname @select-tab="selectTab" />
     <Socials />
     <MainContent :selectedTab="selectedTab" />
     <Tabs @select-tab="selectTab" />
