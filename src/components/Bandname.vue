@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button @click="goHome()">
+    <button @click="toggleColours()">
       <img src="/images/band-name.jpg" id="band-name" />
     </button>
   </div>
@@ -9,8 +9,8 @@
 <script>
 export default {
   methods: {
-    goHome() {
-      this.$emit('select-tab', "Videos")
+    toggleColours() {
+      this.$emit('toggle-colours')
     }
   }
 }

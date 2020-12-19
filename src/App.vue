@@ -1,11 +1,10 @@
 <template>
-  <div id="app">
+  <div id="app" :class="{ invertColours: coloursAreInverted }" >
     <Background />
-    <Bandname @select-tab="selectTab" />
+    <Bandname @toggle-colours="toggleColours" />
     <Socials />
     <MainContent :selectedTab="selectedTab" />
     <Tabs @select-tab="selectTab" />
-
   </div>
 </template>
 
@@ -26,13 +25,18 @@ import Tabs from '@/components/Tabs.vue'
     },
     data() {
       return {
-        selectedTab: (sessionStorage.tab || 'Videos')
+        selectedTab: (sessionStorage.tab || 'Videos'),
+        coloursAreInverted: (sessionStorage.coloursAreInverted || false )
       }
     },   
     methods: {
       selectTab(tab) {
         this.selectedTab = tab
         sessionStorage.tab = tab
+      },
+      toggleColours() {
+        sessionStorage.coloursAreInverted = !sessionStorage.coloursAreInverted
+        this.coloursAreInverted = !this.coloursAreInverted
       }
     },
     
@@ -59,6 +63,15 @@ import Tabs from '@/components/Tabs.vue'
   right: 0;
 }
 
+.invertColours {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  filter: invert(100%)
+}
+
 body {
   background-color: black;
   background-size: cover;
@@ -72,7 +85,8 @@ body {
   font-family: 'Odibee Sans';
   letter-spacing: 0.1em;
   cursor: default;
-  text-shadow: 5px 5px 3px black, -5px -5px 3px black, 5px -5px 3px black, -5px 5px 3px black;
+  text-shadow: 5px 5px 3px black, -5px -5px 3px black, 5px -5px 3px black, -5px 5px 3px black
 }
+
 
 </style>
