@@ -1,4 +1,4 @@
-# trickysusan-2
+# trickysusan
 
 ## Project setup
 ```

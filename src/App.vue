@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <title>Tricky Susan</title>
     <Background />
     <Bandname />
     <Socials />

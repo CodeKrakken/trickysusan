@@ -3,7 +3,6 @@
     <div class="shadow-one" id="gig-image-container">
       <img src="/images/stage.jpg" id="gig-image" /><br><br>
     </div>
-    <br>
     <div id="gig-caption">
       You will note the lack of bodies both on and off stage.<br>
       As soon as this can be remedied, it shall be.
@@ -50,8 +49,5 @@
   text-align: center;
 
 }
-
-
-
 
 </style>
