@@ -25,7 +25,7 @@ import Tabs from '@/components/Tabs.vue'
     },
     data() {
       return {
-        selectedTab: (sessionStorage.tab || 'Videos'),
+        selectedTab: (sessionStorage.tab || 'Press'),
         coloursAreInverted: (sessionStorage.coloursAreInverted || false )
       }
     },   
@@ -35,11 +35,13 @@ import Tabs from '@/components/Tabs.vue'
         sessionStorage.tab = tab
       },
       toggleColours() {
-        // sessionStorage.coloursAreInverted = !sessionStorage.coloursAreInverted
+        sessionStorage.coloursAreInverted = !sessionStorage.coloursAreInverted
         this.coloursAreInverted = !this.coloursAreInverted
       }
     },
-    
+    mounted() {
+      console.log('mounted')
+    }
   }
 </script>
 
