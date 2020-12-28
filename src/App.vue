@@ -35,7 +35,7 @@ import Tabs from '@/components/Tabs.vue'
         sessionStorage.tab = tab
       },
       toggleColours() {
-        sessionStorage.coloursAreInverted = !sessionStorage.coloursAreInverted
+        // sessionStorage.coloursAreInverted = !sessionStorage.coloursAreInverted
         this.coloursAreInverted = !this.coloursAreInverted
       }
     },
