@@ -39,9 +39,6 @@ import Tabs from '@/components/Tabs.vue'
         this.coloursAreInverted = !this.coloursAreInverted
       }
     },
-    mounted() {
-      console.log('mounted')
-    }
   }
 </script>
 
