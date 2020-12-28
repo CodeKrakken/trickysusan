@@ -17,6 +17,7 @@ export default {
         'Bio',
         'Photos',
         'Videos',
+        'Press',
         'Contact',
       ],
     }

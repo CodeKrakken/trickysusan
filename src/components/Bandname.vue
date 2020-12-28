@@ -1,8 +1,11 @@
 <template>
   <div>
-    <button @click="toggleColours()">
-      <img src="/images/band-name.jpg" id="band-name" />
-    </button>
+    <input 
+      type="image" 
+      id="band-name" 
+      @click="toggleColours()" 
+      src="/images/band-name.jpg" 
+    />
   </div>
 </template>
 
@@ -35,7 +38,12 @@ export default {
                 15px -15px 15px black, 
                -15px -15px 15px black, 
                -15px  15px 15px black;
-    z-index: 1
+    z-index: 1;
+    outline: none
+  }
+
+  #band-name:focus {
+    outline: none
   }
 
 </style>

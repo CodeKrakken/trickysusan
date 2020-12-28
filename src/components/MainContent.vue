@@ -6,6 +6,7 @@
   <div v-show="selectedTab === 'Bio'"><Bio /></div>
   <div v-show="selectedTab === 'Photos'"><Photos /></div>
   <div v-show="selectedTab === 'Videos'"><Videos /></div>
+  <div v-show="selectedTab === 'Press'"><Press /></div>
   <div v-show="selectedTab === 'Contact'"><Contact /></div>
   <!-- <div v-show="selectedTab === 'Shop'"><shop /></div>
   <div v-show="selectedTab === 'EPK'"><epk /></div> -->
@@ -18,6 +19,7 @@ import Gigs from './Gigs.vue'
 import Bio from './Bio.vue'
 import Photos from './Photos.vue'
 import Videos from './Videos.vue'
+import Press from './Press.vue'
 import Contact from './Contact.vue'
 
 export default {
@@ -33,6 +35,7 @@ export default {
     Bio,
     Photos,
     Videos,
+    Press,
     Contact
   }
 }
