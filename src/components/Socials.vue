@@ -29,6 +29,10 @@ export default {
           image: '/images/facebook hover.png',
           link: 'https://www.facebook.com/TrickySusan'
         },
+        {
+          image: '/images/email.png',
+          link: 'mailto:trickysusanband@gmail.com'
+        }
       ]
     }
   },
@@ -122,8 +126,7 @@ export default {
     transition: all 0.2s ease;
   }
 
-    #social:focus {
-    filter: grayscale(0%);
+  #social:focus {
     filter: brightness(75%);
     transition: all 0.2s ease;
   }

@@ -47,4 +47,12 @@ export default {
     text-decoration: none
   }
 
+  a:link {
+    color: #00aeef
+  }
+
+  a:visited {
+    color: #E22076
+  }
+
 </style>

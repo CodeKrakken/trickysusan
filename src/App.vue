@@ -25,7 +25,7 @@ import Tabs from '@/components/Tabs.vue'
     },
     data() {
       return {
-        selectedTab: (sessionStorage.tab || 'Press'),
+        selectedTab: (sessionStorage.tab || 'Reviews'),
         coloursAreInverted: (sessionStorage.coloursAreInverted || false )
       }
     },   
@@ -86,6 +86,5 @@ body {
   cursor: default;
   text-shadow: 5px 5px 3px black, -5px -5px 3px black, 5px -5px 3px black, -5px 5px 3px black
 }
-
 
 </style>
