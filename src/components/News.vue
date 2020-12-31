@@ -25,6 +25,10 @@ export default {
     return {
       posts: [
         {
+          date: '31.12.20',
+          post: 'Well there we have it. The end of the year which stopped a lot of the world in its tracks. 2020 – whilst not ALL bad in your DNA, we shan’t miss you. We’re gagging to grace the stage again, and when 2021 allows us to – we’ll be there. Come find us when we do. In the meanwhile to close out 2020, you can head over to Reviews to read The Other Side Reviews discuss our last single, Undercover. We’re excited to announce we will release our NEW SINGLE in the New Year. We can’t wait to share it with you. Keep your chins up. And your pants preferably. Here’s to you achieving your plans, dreams and memorable times in a year which allows you to. Cheers to you, from us. Happy New Year.<br><br>Tricky Susan'
+        },
+        {
           date: '24.11.20',
           post: 'Our new video, UNDERCOVER, is out now! Shimmy on over to the Videos page to watch.<br><br>Our music is now available to stream across Amazon, Anghami, Apple Music, MediaNet, Deezer, Instagram/Facebook, Google Play, iHeartRadio, ClaroMusica, iTunes, KKBox, Napster, NetEase, Pandora, Saavn, Shazam, Spotify, Tidal, TikTok and Soundtrack By Twitch.'
         },

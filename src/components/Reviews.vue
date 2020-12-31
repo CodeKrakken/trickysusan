@@ -52,10 +52,6 @@ export default {
     font-style: italic
   }
 
-  #review-link {
-
-  }
-
   .text {
     text-align: justify
   }
