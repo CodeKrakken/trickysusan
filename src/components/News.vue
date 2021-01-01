@@ -2,8 +2,8 @@
   <div id="news">
     <div id="date">
       {{ posts[selectedPostIndex].date }}
+      <br><br>
     </div>
-    <br>
     <div>
       <span v-html="posts[selectedPostIndex].post" />
     </div>
@@ -25,8 +25,8 @@ export default {
     return {
       posts: [
         {
-          date: '31.12.20',
-          post: 'Well there we have it. The end of the year which stopped a lot of the world in its tracks. 2020 – whilst not ALL bad in your DNA, we shan’t miss you. We’re gagging to grace the stage again, and when 2021 allows us to – we’ll be there. Come find us when we do. In the meanwhile to close out 2020, you can head over to Reviews to read The Other Side Reviews discuss our last single, Undercover. We’re excited to announce we will release our NEW SINGLE in the New Year. We can’t wait to share it with you. Keep your chins up. And your pants preferably. Here’s to you achieving your plans, dreams and memorable times in a year which allows you to. Cheers to you, from us. Happy New Year.<br><br>Tricky Susan'
+          date: '01.01.21',
+          post: 'Well there we have it: the end of the year that stopped the world in its tracks. 2020, we shan’t miss you. We’re gagging to grace the stage again - and when 2021 permits, we’ll be there. Come find us when we do.<br><br>Meanwhile, head over to Reviews for The Other Side Reviews\' thoughts on our latest single, Undercover.<br><br>Keep your chins up. And your pants preferably.<br><br>Here’s to you achieving your dreams in a year which allows it. Cheers to you, from us. Happy New Year!<br><br><br><div style="text-align: center">Tricky Susan</div>'
         },
         {
           date: '24.11.20',
@@ -78,8 +78,8 @@ export default {
 @media screen and (orientation: portrait) {
 
   #news {
-    width: 80vw;
-    height: 70vh;
+    width: 90vw;
+    height: 80vh;
     font-size:calc(10px + 1.5vh);
   }
 
@@ -97,12 +97,16 @@ export default {
     margin: auto auto
   }
 
+  #break {
+    display: none
+  }
+
 }
 
 @media screen and (orientation: landscape) {
   
   #news {
-    width: 50vw;
+    width: 69vw;
     height: 50vh;
     font-size:calc(6px + 1.5vw);
   }
@@ -137,7 +141,7 @@ export default {
 #date {
   height: fit-content;
   text-align: center;
-  display: inline
+  /* display: inline */
 }
 
 .nav-button:focus {
