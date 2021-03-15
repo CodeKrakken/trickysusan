@@ -25,6 +25,9 @@ export default {
     return {
       posts: [
         {
+          date: '04.03.21',
+          post: 'Well well well ... check out our interview with Unrated Magazine ... <br><br><a href="https://www.unratedmag.com/tricky-susan/"><h1 style="text-align: center">HERE.</h1></a>'        },
+        {
           date: '01.01.21',
           post: 'Well there we have it: the end of the year that stopped the world in its tracks. 2020, we shan’t miss you. We’re gagging to grace the stage again - and when 2021 permits, we’ll be there. Come find us when we do.<br><br>Meanwhile, head over to Reviews for The Other Side Reviews\' thoughts on our latest single, Undercover.<br><br>Keep your chins up. And your pants preferably.<br><br>Here’s to you achieving your dreams in a year which allows it. Cheers to you, from us. Happy New Year!<br><br><br><div style="text-align: center">Tricky Susan</div>'
         },
