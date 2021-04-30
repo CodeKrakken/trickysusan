@@ -25,7 +25,7 @@ import Tabs from '@/components/Tabs.vue'
     },
     data() {
       return {
-        selectedTab: (sessionStorage.tab || 'Reviews'),
+        selectedTab: (sessionStorage.tab || 'Press'),
         coloursAreInverted: (sessionStorage.coloursAreInverted || false )
       }
     },   

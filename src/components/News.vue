@@ -100,10 +100,6 @@ export default {
     margin: auto auto
   }
 
-  #break {
-    display: none
-  }
-
 }
 
 @media screen and (orientation: landscape) {
