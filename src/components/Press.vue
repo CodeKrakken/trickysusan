@@ -18,7 +18,7 @@ export default {
     return {
       posts: [
         {
-          content: '<div id="release-row"><div style="height: 30vh; align-content: center; padding: 1vw"><img class="cover" src="/images/Undercover cover.jpg" /></div><div class="element"><div id="release-header">Undercover</div><div id="release-details">(single, 2020)</div><br><div id="review-link"><a href="https://www.theothersidereviews.com/tricky-susan-undercover-2020/">The Other Side Reviews, 28-12-20</a></div></div></div>'
+          content: '<div style="display: flex;flex-direction: column;text-align: center"><div style="height: 30vh; align-content: center; padding: 1vw"><img style="height: 30vh;box-shadow:  10px  10px 10px black,10px -10px 10px black,-10px -10px 10px black,-10px  10px 10px black src="/images/Undercover cover.jpg" /></div><div class="element"><div id="release-header">Undercover</div><div id="release-details">(single, 2020)</div><br><div id="review-link"><a href="https://www.theothersidereviews.com/tricky-susan-undercover-2020/">The Other Side Reviews, 28-12-20</a></div></div></div>'
         }
       ],
       selectedPostIndex: (this.getIndex() || 0)
@@ -52,9 +52,7 @@ export default {
   @media screen and ( orientation: portrait ) {
 
     #release-row {
-      display: flex;
-      flex-direction: column;
-      text-align: center
+      
     }
 
     #press {
@@ -126,11 +124,7 @@ export default {
   }
 
   .cover {
-    height: 30vh;
-    box-shadow:  10px  10px 10px black, 
-               10px -10px 10px black, 
-              -10px -10px 10px black, 
-              -10px  10px 10px black
+    
   }
 
   a {
