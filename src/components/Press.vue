@@ -1,10 +1,10 @@
 <template>
   <div id="press">
     <div id="navigator">
-      <button @click="previousPost()" class="nav-button">
+      <button @click="previous()" class="nav-button">
         <img src="/images/previous-button.png" class="icon" />
       </button>
-      <button @click="nextPost()" class="nav-button">
+      <button @click="next()" class="nav-button">
         <img src="/images/next-button.png" class="icon" />
       </button>
     </div>
@@ -12,14 +12,8 @@
       <div class="element">
         <img class="image" :src="press[selectedPressIndex].image" />
       </div>
+      <br>
       <div class="element">
-        <div id="release-header">
-          {{ press[selectedPressIndex].header }}
-        </div>
-        <div id="release-details">
-          {{ press[selectedPressIndex].subheader }}
-        </div>
-        <br>
         <div id="review-link" v-html="press[selectedPressIndex].link" />
       </div>
     </div>
@@ -35,19 +29,32 @@ export default {
           image: "/images/Undercover cover.jpg",
           header: "Undercover",
           subheader: "(single, 2020)",
-          link: '<a href="https://www.theothersidereviews.com/tricky-susan-undercover-2020/">The Other Side Reviews, 28-12-20</a>'
+          link: '<a href="https://www.theothersidereviews.com/tricky-susan-undercover-2020/">Undercover Review<br>The Other Side Reviews, 28.12.20</a>'
         },
         {
-          image: "/images/Undercover cover.jpg",
-          header: "A wagging bum",
-          aubheader: "bum, wagged 2021",
-          link: '<a href="https://www.unratedmag.com/tricky-susan/">Unrated Magazine</a>'
+          image: "/images/unrated-interview.webp",
+          link: '<a href="https://www.unratedmag.com/tricky-susan/">Interview<br>Unrated Magazine, 26.02.21</a>'
         }
       ],
       selectedPressIndex: this.getIndex() || 0
     }
   },
   methods: {
+    next() {
+      this.selectedPressIndex === (this.press.length - 1) ?
+      this.selectedPressIndex = 0 :
+      this.selectedPressIndex += 1;
+      this.storeIndex()
+    },
+    previous() {
+      this.selectedPressIndex === 0 ?
+      this.selectedPressIndex = (this.press.length - 1) :
+      this.selectedPressIndex -= 1;
+      this.storeIndex()
+    },
+    storeIndex() {
+      sessionStorage.selectedPressIndex = this.selectedPressIndex
+    },
     getIndex() {
       return parseInt(sessionStorage.selectedPressIndex, 10)
     }
@@ -66,8 +73,8 @@ export default {
     }
 
     #release-row {
-      display: flex;
-      flex-direction: row;
+      text-align: center
+      /* display: grid; */
     }
 
     #navigator {
