@@ -124,12 +124,18 @@ export default {
 
 /* GENERAL */
 
+button {
+  border: none;
+  outline: none;
+  background: black;
+}
+
 .image {
   height: 30vh;
-  box-shadow:  10px  10px 10px black, 
+  /* box-shadow:  10px  10px 10px black, 
               10px -10px 10px black, 
             -10px -10px 10px black, 
-            -10px  10px 10px black
+            -10px  10px 10px black */
 }
 
 #link:hover {
