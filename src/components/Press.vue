@@ -115,13 +115,6 @@ export default {
     margin: auto auto
   }
 
-  #video-outer {
-    position: absolute;
-    top: 12vh;
-    bottom: 10px;
-    width: 69vw;
-  }
-
   iframe {
     width: 100%;
     height: 100%
