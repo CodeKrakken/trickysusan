@@ -1,12 +1,8 @@
 <template>
   <div id="press">
     <div id="navigator">
-      <button @click="previous()" class="nav-button">
-        <img src="/images/previous-button.png" class="icon" />
-      </button>
-      <button @click="next()" class="nav-button">
-        <img src="/images/next-button.png" class="icon" />
-      </button>
+      <img value="submit" @click="previous()" class="nav-button" src="/images/previous-button.png" />
+      <img value="submit" @click="next()"     class="nav-button" src="/images/next-button.png"/>
     </div>
     <div id="press-item">
       <img value="submit" class="image" :src="press[selectedPressIndex].image" @click="visit(press[selectedPressIndex].link)"/>
@@ -82,6 +78,16 @@ export default {
 
 }
 
+/* ONLY DESKTOPS */
+
+@media (hover: hover) {
+  .image:hover {
+    filter: invert();
+    transition: all 0.2s ease;
+  }
+  
+}
+
 /* GENERAL */
 
 button {
@@ -93,15 +99,10 @@ button {
 .image {
   height: 30vh;
   transition: all 0.2s ease;
-  /* box-shadow:  10px  10px 10px black, 
+  box-shadow:  10px  10px 10px black, 
               10px -10px 10px black, 
             -10px -10px 10px black, 
-            -10px  10px 10px black */
-}
-
-.image:hover {
-  filter: invert();
-  transition: all 0.2s ease;
+            -10px  10px 10px black
 }
 
 #press {
@@ -115,7 +116,8 @@ button {
                5px -5px 5px black, 
               -5px -5px 5px black, 
               -5px  5px 5px black;
-  text-align: center
+  text-align: center;
+  /* width: 50vw */
 }
 
 #navigator {
@@ -141,6 +143,7 @@ button {
   border: none;
   min-width: 40px;
   width: 3vw;
+  padding: 1vw;
   box-shadow: 3px 3px 3px black, 
             3px -3px 3px black,
             -3px -3px 3px black,
@@ -155,9 +158,7 @@ button {
 
 .nav-button:active {
   filter: brightness(100%);
-  transition: all 0.1s ease;
+  transition: all 0.2s ease;
 }
-
-.icon { width: 100% }
 
 </style>
