@@ -1,12 +1,5 @@
 <template>
   <div id="news">
-    <div id="date">
-      {{ posts[selectedPostIndex].date }}
-      <br><br>
-    </div>
-    <div>
-      <span v-html="posts[selectedPostIndex].post" />
-    </div>
     <div id="navigator">
       <button @click="previousPost()" class="nav-button">
         <img src="/images/previous-button.png" class="icon" />
@@ -14,6 +7,13 @@
       <button @click="nextPost()" class="nav-button">
         <img src="/images/next-button.png" class="icon" />
       </button>
+    </div>
+    <div id="date">
+      {{ posts[selectedPostIndex].date }}
+      <br><br>
+    </div>
+    <div>
+      <span v-html="posts[selectedPostIndex].post" />
     </div>
   </div>
 </template>
