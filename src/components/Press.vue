@@ -119,7 +119,7 @@ export default {
     position: absolute;
     top: 12vh;
     bottom: 10px;
-    width: 69vw
+    width: 69vw;
   }
 
   iframe {
@@ -155,6 +155,7 @@ export default {
                5px -5px 5px black, 
               -5px -5px 5px black, 
               -5px  5px 5px black;
+  text-align: center
 }
 
 #navigator {
