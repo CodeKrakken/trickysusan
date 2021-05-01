@@ -85,6 +85,11 @@ export default {
     filter: invert();
     transition: all 0.2s ease;
   }
+
+  .nav-button:hover {
+    filter: brightness(75%);
+    transition: all 0.2s ease;
+  }
   
 }
 
@@ -130,12 +135,6 @@ button {
   margin: auto auto
 }
 
-.nav-button:focus {
-  filter: brightness(50%);
-  outline: none;
-  transition: all 0.2s ease;
-}
-
 .nav-button {
   filter: brightness(50%);
   background: black;
@@ -143,7 +142,7 @@ button {
   border: none;
   min-width: 40px;
   width: 3vw;
-  padding: 1vw;
+  padding: 10px;
   box-shadow: 3px 3px 3px black, 
             3px -3px 3px black,
             -3px -3px 3px black,
@@ -151,13 +150,14 @@ button {
   transition: all 0.2s ease;
 }
 
-.nav-button:hover {
-  filter: brightness(75%);
+.nav-button:active {
+  filter: brightness(100%);
   transition: all 0.2s ease;
 }
 
-.nav-button:active {
-  filter: brightness(100%);
+.nav-button:focus {
+  filter: brightness(50%);
+  outline: none;
   transition: all 0.2s ease;
 }
 
