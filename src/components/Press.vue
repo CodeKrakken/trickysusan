@@ -9,13 +9,11 @@
       </button>
     </div>
     <div id="release-row">
-      <div class="element">
+      <button id="link" @click="visit(press[selectedPressIndex].link)">
         <img class="image" :src="press[selectedPressIndex].image" />
-      </div>
-      <br>
-      <div class="element">
-        <div id="review-link" v-html="press[selectedPressIndex].link" />
-      </div>
+      </button>
+      <br><br>
+      <div v-html="press[selectedPressIndex].description" />
     </div>
   </div>  
 </template>
@@ -27,13 +25,13 @@ export default {
       press: [
         {
           image: "/images/Undercover cover.jpg",
-          header: "Undercover",
-          subheader: "(single, 2020)",
-          link: '<a href="https://www.theothersidereviews.com/tricky-susan-undercover-2020/">Undercover Review<br>The Other Side Reviews, 28.12.20</a>'
+          link: 'https://www.theothersidereviews.com/tricky-susan-undercover-2020/',
+          description: 'Undercover review<br>The Other Side Reviews<br>28.12.20'
         },
         {
           image: "/images/unrated-interview.webp",
-          link: '<a href="https://www.unratedmag.com/tricky-susan/">Interview<br>Unrated Magazine, 26.02.21</a>'
+          link: 'https://www.unratedmag.com/tricky-susan/',
+          description: 'Interview<br>Unrated Magazine<br>26.02.20'
         }
       ],
       selectedPressIndex: this.getIndex() || 0
@@ -57,6 +55,9 @@ export default {
     },
     getIndex() {
       return parseInt(sessionStorage.selectedPressIndex, 10)
+    },
+    visit(link) {
+      window.open(link, '_blank');
     }
   }
 }
@@ -171,12 +172,6 @@ export default {
     text-align: justify
   }
 
-  .element {
-    height: 30vh;
-    align-content: center;
-    padding: 1vw
-  }
-
   .image {
     height: 30vh;
     box-shadow:  10px  10px 10px black, 
@@ -197,4 +192,9 @@ export default {
     color: #E22076
   }
 
+  #link:hover {
+    filter: invert();
+    transition: all 0.2s ease;
+  }
+  
 </style>
