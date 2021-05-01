@@ -1,5 +1,5 @@
 <template>
-  <div id="videos">
+  <div id="press">
     <div id="navigator">
       <button @click="previous()" class="nav-button">
         <img src="/images/previous-button.png" class="icon" />
@@ -8,10 +8,8 @@
         <img src="/images/next-button.png" class="icon" />
       </button>
     </div>
-    <div id="video-outer">
-      <button id="link" @click="visit(press[selectedPressIndex].link)">
-        <img class="image" :src="press[selectedPressIndex].image" />
-      </button>
+    <div id="press-item">
+      <img value="submit" class="image" :src="press[selectedPressIndex].image" @click="visit(press[selectedPressIndex].link)"/>
       <br><br>
       <div v-html="press[selectedPressIndex].description" />
     </div>
@@ -34,34 +32,7 @@ export default {
           description: 'Interview<br>Unrated Magazine<br>26.02.20'
         }
       ],
-      selectedPressIndex: this.getIndex() || 0,
-      videos: [
-        {
-          name: 'Grab',
-          address: "https://www.youtube.com/embed/9_Tnuuq7exI?rel=0&modestbranding=1"
-        },
-        {
-          name: 'Undercover',
-          address: "https://www.youtube.com/embed/ZZUYN2O9bdU?rel=0&modestbranding=1"
-        },
-        {
-          name: "Strategy",
-          address: "https://www.youtube.com/embed/exggrODRu4w?rel=0&modestbranding=1"
-        },
-        {
-          name: "Tug of War",
-          address: "https://www.youtube.com/embed/hm2jNxkG2ak?rel=0&modestbranding=1&start=4"
-        },
-        {
-          name: "Come On Over (session)",
-          address: "https://www.youtube.com/embed/X3lryMPttIY?rel=0&modestbranding=1"
-        },
-        {
-          name: "Baby, I Do",
-          address: "https://www.youtube.com/embed/qTJmtTHc31U?rel=0&modestbranding=1"
-        }
-      ],
-      selectedVideoIndex: (this.getIndex() || 0)
+      selectedPressIndex: this.getIndex() || 0
     }
   },
   methods: {
@@ -95,14 +66,9 @@ export default {
 /* PORTRAIT VERSION */
 
 @media screen and (orientation: portrait) {
-  iframe {
-    height: 32vh; 
-    width: 100vw;
-  }
 
   #navigator {
     top: 10px;
-    margin: auto auto
   }
 }
 
@@ -112,12 +78,6 @@ export default {
 
   #navigator {
     top: calc(10px + 2vh);
-    margin: auto auto
-  }
-
-  iframe {
-    width: 100%;
-    height: 100%
   }
 
 }
@@ -132,24 +92,25 @@ button {
 
 .image {
   height: 30vh;
+  transition: all 0.2s ease;
   /* box-shadow:  10px  10px 10px black, 
               10px -10px 10px black, 
             -10px -10px 10px black, 
             -10px  10px 10px black */
 }
 
-#link:hover {
+.image:hover {
   filter: invert();
   transition: all 0.2s ease;
 }
 
-#videos {
+#press {
   display: flex;
   flex-direction: column;
   align-items: center
 }
 
-#video-outer {
+#press-item {
   box-shadow:  5px  5px 5px black,
                5px -5px 5px black, 
               -5px -5px 5px black, 
@@ -163,12 +124,14 @@ button {
   justify-content: center;
   background: transparent;
   align-content: center;
-  border: none
+  border: none;
+  margin: auto auto
 }
 
 .nav-button:focus {
   filter: brightness(50%);
   outline: none;
+  transition: all 0.2s ease;
 }
 
 .nav-button {
@@ -182,6 +145,7 @@ button {
             3px -3px 3px black,
             -3px -3px 3px black,
             -3px 3px 3px black;
+  transition: all 0.2s ease;
 }
 
 .nav-button:hover {
