@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="press">
     <div id="navigator">
       <button @click="previousPost()" class="nav-button">
         <img src="/images/previous-button.png" class="icon" />
@@ -58,6 +58,13 @@ export default {
 <style scoped>
 
   @media screen and ( orientation: landscape ) {
+
+    #press {
+      width: 69vw;
+      height: 50vh;
+      font-size:calc(6px + 1.5vw);
+    }
+
     #release-row {
       display: flex;
       flex-direction: row;
@@ -76,6 +83,13 @@ export default {
   }
 
   @media screen and ( orientation: portrait ) {
+
+    #press {
+      width: 90vw;
+      height: 80vh;
+      font-size:calc(10px + 1.5vh);
+    }
+
     #release-row {
       display: flex;
       flex-direction: column;
@@ -90,6 +104,12 @@ export default {
     .nav-button {
       height: 4vh;
     }
+  }
+
+  #press {
+    display: flex;
+    flex-direction: column;
+    align-items: center
   }
 
   .nav-button:focus {
