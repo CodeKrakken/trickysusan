@@ -71,14 +71,6 @@ button {
   }
 }
 
-@media screen and (orientation: portrait) {
-  #gig-display {
-    display: flex;
-    flex-direction: column;
-    height: 10vh
-  }
-}
-
 .grid-box {
   /* border: thin white dashed; */
   justify-content: center;
