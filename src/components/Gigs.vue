@@ -49,10 +49,11 @@ button {
   color: #E22076;
   filter: brightness(50%);
   transition: all 0.2s ease;
-  box-shadow:  10px  10px 10px black, 
-              10px -10px 10px black, 
-            -10px -10px 10px black, 
-            -10px  10px 10px black
+  box-shadow:  5px  5px 5px black, 
+              5px -5px 5px black, 
+            -5px -5px 5px black, 
+            -5px  5px 5px black;
+  margin: 5px
 }
 
 @media (hover: hover) {
@@ -62,13 +63,20 @@ button {
   }
 }
 
+@media screen and (orientation: landscape) {
+  #gig-display {
+    display: grid;
+    grid-template-columns: 24% 62% 19%;
+    grid-column-gap: 20px;
+  }
+}
 
-
-
-#gig-display {
-  display: grid;
-  grid-template-columns: 24% 62% 19%;
-  grid-column-gap: 20px;
+@media screen and (orientation: portrait) {
+  #gig-display {
+    display: flex;
+    flex-direction: column;
+    height: 10vh
+  }
 }
 
 .grid-box {

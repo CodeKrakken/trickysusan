@@ -25,6 +25,10 @@ export default {
     return {
       posts: [
         {
+          date: '02.05.21',
+          post: "It definitely SEEMS like some sort of fever dream ... but no, it's actually true - Tricky Susan are playing a proper live gig in front of real people! Head on over to the Gigs page for more information ...."
+        },
+        {
           date: '04.03.21',
           post: 'Well well well ... check out our interview with Unrated Magazine ... <br><br><a href="https://www.unratedmag.com/tricky-susan/"><h1 style="text-align: center">HERE.</h1></a>'        },
         {
