@@ -124,14 +124,14 @@ export default {
               -10px -10px 10px black, 
               -10px  10px 10px black
 }
- 
+
 #navigator {
   display: flex;
+  position: absolute;
   justify-content: center;
   background: transparent;
   align-content: center;
-  border: none;
-  position: absolute;
+  border: none
 }
 
 .nav-button:focus {
@@ -152,9 +152,11 @@ export default {
             -3px 3px 3px black;
 }
 
-.nav-button:hover {
-  filter: brightness(75%);
-  transition: all 0.2s ease;
+@media (hover: hover) {
+  .nav-button:hover {
+    filter: brightness(75%);
+    transition: all 0.2s ease;
+  }
 }
 
 .nav-button:active {
@@ -163,5 +165,6 @@ export default {
 }
 
 .icon { width: 100% }
+
 
 </style>

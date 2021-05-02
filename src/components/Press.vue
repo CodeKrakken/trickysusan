@@ -1,8 +1,12 @@
 <template>
   <div id="press">
     <div id="navigator">
-      <img value="submit" @click="previous()" class="nav-button" src="/images/previous-button.png" />
-      <img value="submit" @click="next()"     class="nav-button" src="/images/next-button.png"/>
+      <button @click="previous()" class="nav-button">
+        <img src="/images/previous-button.png" class="icon" />
+      </button>
+      <button @click="next()" class="nav-button">
+        <img src="/images/next-button.png" class="icon" />
+      </button>
     </div>
     <div id="press-item">
       <img value="submit" class="image" :src="press[selectedPressIndex].image" @click="visit(press[selectedPressIndex].link)"/>
@@ -66,6 +70,10 @@ export default {
   #navigator {
     top: 10px;
   }
+
+  .nav-button {
+    height: 4vh;
+  }
 }
 
 /* LANDSCAPE VERSION */
@@ -76,21 +84,6 @@ export default {
     top: calc(10px + 2vh);
   }
 
-}
-
-/* ONLY DESKTOPS */
-
-@media (hover: hover) {
-  .image:hover {
-    filter: invert();
-    transition: all 0.2s ease;
-  }
-
-  .nav-button:hover {
-    filter: brightness(75%);
-    transition: all 0.2s ease;
-  }
-  
 }
 
 @media (hover: none) {
@@ -139,7 +132,10 @@ button {
               -5px -5px 5px black, 
               -5px  5px 5px black;
   text-align: center;
-  /* width: 50vw */
+}
+
+@media (hover: hover) {
+
 }
 
 #navigator {
@@ -148,8 +144,12 @@ button {
   justify-content: center;
   background: transparent;
   align-content: center;
-  border: none;
-  margin: auto auto
+  border: none
+}
+
+.nav-button:focus {
+  filter: brightness(50%);
+  outline: none;
 }
 
 .nav-button {
@@ -159,23 +159,29 @@ button {
   border: none;
   min-width: 40px;
   width: 3vw;
-  padding: 10px;
   box-shadow: 3px 3px 3px black, 
             3px -3px 3px black,
             -3px -3px 3px black,
             -3px 3px 3px black;
-  transition: all 0.2s ease;
+}
+
+@media (hover: hover) {
+  .nav-button:hover {
+    filter: brightness(75%);
+    transition: all 0.2s ease;
+  }
+
+  /* .image:hover {
+    filter: invert();
+    transition: all 0.2s ease;
+  } */
 }
 
 .nav-button:active {
   filter: brightness(100%);
-  transition: all 0.2s ease;
+  transition: all 0.1s ease;
 }
 
-.nav-button:focus {
-  filter: brightness(50%);
-  outline: none;
-  transition: all 0.2s ease;
-}
+.icon { width: 100% }
 
 </style>

@@ -126,14 +126,6 @@ export default {
 
 }
 
-#navigator {
-  display: flex;
-  position: absolute;
-  justify-content: center;
-  background: transparent;
-  align-content: center;
-  border: none;
-}
 
 #news {
   display: flex;
@@ -145,6 +137,16 @@ export default {
   height: fit-content;
   text-align: center;
   /* display: inline */
+}
+
+
+#navigator {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  background: transparent;
+  align-content: center;
+  border: none
 }
 
 .nav-button:focus {
@@ -165,16 +167,17 @@ export default {
             -3px 3px 3px black;
 }
 
-.nav-button:hover {
-  filter: brightness(75%);
-  transition: all 0.2s ease;
+@media (hover: hover) {
+  .nav-button:hover {
+    filter: brightness(75%);
+    transition: all 0.2s ease;
+  }
 }
 
 .nav-button:active {
   filter: brightness(100%);
   transition: all 0.1s ease;
 }
-
 
 .icon { width: 100% }
 

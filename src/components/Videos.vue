@@ -162,9 +162,11 @@ export default {
             -3px 3px 3px black;
 }
 
-.nav-button:hover {
-  filter: brightness(75%);
-  transition: all 0.2s ease;
+@media (hover: hover) {
+  .nav-button:hover {
+    filter: brightness(75%);
+    transition: all 0.2s ease;
+  }
 }
 
 .nav-button:active {

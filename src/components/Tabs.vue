@@ -79,7 +79,7 @@ export default {
   font-style: italic;
   background: transparent;
   color: #E22076;
-  transition: all 0.1s ease;
+  transition: all 0.2s ease;
   border: none;
   text-shadow: 5px 5px 3px black, 
              -5px -5px 3px black, 
@@ -90,10 +90,13 @@ export default {
   font-size: 4vh
 }
 
-.tab:hover {
-  filter: brightness(75%);
-  transition: all 0.2s ease;
+@media (hover: hover) {
+  .tab:hover {
+    filter: brightness(75%);
+    transition: all 0.2s ease;
+  }
 }
+
 
 .tab:active {
   filter: brightness(100%);
