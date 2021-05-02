@@ -26,7 +26,7 @@ export default {
       posts: [
         {
           date: '02.05.21',
-          post: "It definitely SEEMS like some sort of fever dream ... but no, it's actually true - Tricky Susan are playing a proper live gig in front of real people! Head on over to the Gigs page for more information ...."
+          post: "It definitely SEEMS like some sort of fever dream ... <br><br>But no, it's actually true - Tricky Susan are playing a proper live gig in front of real people! <br><br>Head on over to the Gigs page for more information ...."
         },
         {
           date: '04.03.21',
