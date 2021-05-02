@@ -95,10 +95,6 @@ export default {
     max-width: 12vh;
   }
 
-  .nav-button {
-    height: 4vh;
-  }
-
   #navigator {
     top: 10px;
     margin: auto auto
@@ -114,18 +110,12 @@ export default {
     font-size:calc(6px + 1.5vw);
   }
 
-  .nav-button {
-    width: 3vw;
-    min-width: 40px;
-  }
-
   #navigator {
     top: calc(10px + 2vh);
     margin: auto auto
   }
 
 }
-
 
 #news {
   display: flex;
@@ -138,7 +128,6 @@ export default {
   text-align: center;
   /* display: inline */
 }
-
 
 #navigator {
   display: flex;
