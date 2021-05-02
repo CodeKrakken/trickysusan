@@ -1,54 +1,81 @@
 <template>
-  <div>
-    <div class="shadow-one" id="gig-image-container">
-      <img src="/images/stage.jpg" id="gig-image" /><br><br>
-    </div>
-    <br>
-    <div id="gig-caption">
-      You will note the lack of bodies both on and off stage.<br>
-      As soon as this can be remedied, it shall be.
-    </div>
+  <div id="gigs">
+    <span v-for="(gig, index) in gigs" :key="index">
+      <div id="gig-display">
+        <span class="grid-box">{{ gig.date }}</span> 
+        <span class="grid-box">{{ gig.venue }}</span>
+        <span class="grid-box">
+          <button @click="visit(gig.link)">
+            TICKETS
+          </button>
+        </span>
+      </div>
+    </span>
   </div>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      gigs: [
+        {
+          date: '29.05.21',
+          venue: 'Amersham Arms, New Cross',
+          link: 'https://www.eventbrite.co.uk/e/underground-sound-presents-amersham-arms-section-1-tickets-148005130329?utm-medium=discovery&utm-campaign=social&utm-content=attendeeshare&aff=escb&utm-source=cp&utm-term=listing'
+        }
+      ]
+    }
+  },
+  methods: {
+    visit(link) {
+      window.open(link, '_blank')
+    }
+  }
+}
+</script>
+
 <style scoped>
 
-@media screen and (orientation: portrait) {
-  #gig-image {
-    width: 100vw
-  }
-
-  #gig-caption {
-    font-size:calc(6px + 1.5vh);
-  }
+@font-face {
+  font-family: 'Odibee Sans';
+  src: url('../assets/Odibee_Sans/OdibeeSans-Regular.ttf') format('truetype');
 }
 
-@media screen and (orientation: landscape) {
-  #gig-image {
-    max-height: 75vh
-  }
-
-  #gig-caption {
-    font-size:calc(6px + 1.5vw);
-  }
-}
-
-#gig-image-container {
-  max-height: 75vh;
+button {
+  font-family: 'Odibee Sans';
+  font-size: 100%;
   background: black;
-  box-shadow: 15px 15px 15px black, 
-              15px -15px 15px black, 
-              -15px -15px 15px black, 
-              -15px 15px 15px black 
+  color: #E22076;
+  filter: brightness(50%);
+  transition: all 0.2s ease;
+  box-shadow:  10px  10px 10px black, 
+              10px -10px 10px black, 
+            -10px -10px 10px black, 
+            -10px  10px 10px black
 }
 
-#gig-caption {
-  position: absolute;
-  margin: auto;
-  left: 0;
-  right: 0;
-  text-align: center;
+@media (hover: hover) {
+  button:hover {
+    filter: brightness(100%);
+    transition: all 0.2s ease
+  }
+}
 
+
+
+
+#gig-display {
+  display: grid;
+  grid-template-columns: 24% 62% 19%;
+  grid-column-gap: 20px;
+}
+
+.grid-box {
+  /* border: thin white dashed; */
+  justify-content: center;
+  display: flex;
+  align-items: center
 }
 
 </style>

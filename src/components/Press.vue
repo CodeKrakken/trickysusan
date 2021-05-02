@@ -95,19 +95,19 @@ export default {
 
 @media (hover: none) {
   @keyframes glowing {
-        0% {
-          filter: brightness(50%)
-        }
-        50% {
-          filter: brightness(100%)
-        }
-        100% {
-          filter: brightness(50%)
-        }
-      }
-      .image {
-        animation: glowing 1300ms infinite;
-      }
+    0% {
+      filter: brightness(50%)
+    }
+    50% {
+      filter: brightness(100%)
+    }
+    100% {
+      filter: brightness(50%)
+    }
+  }
+  .image {
+    animation: glowing 1300ms infinite;
+  }
 }
 
 /* GENERAL */
