@@ -135,10 +135,6 @@ button {
   width: 50vw
 }
 
-@media (hover: hover) {
-
-}
-
 #navigator {
   display: flex;
   position: absolute;
@@ -172,10 +168,10 @@ button {
     transition: all 0.2s ease;
   }
 
-  /* .image:hover {
+  .image:hover {
     filter: invert();
     transition: all 0.2s ease;
-  } */
+  }
 }
 
 .nav-button:active {
