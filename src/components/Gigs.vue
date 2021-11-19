@@ -4,7 +4,7 @@
       <div id="gig-display">
         <span class="grid-box">{{ gig.date }}</span> 
         <span class="grid-box">{{ gig.venue }}</span>
-        <span class="grid-box">
+        <span v-if="gig.link" class="grid-box">
           <button @click="visit(gig.link)">
             TICKETS
           </button>
@@ -23,6 +23,14 @@ export default {
           date: '08.12.21',
           venue: 'Hoxton Underbelly',
           link: 'https://bit.ly/3ADWGje'
+        },
+        {
+          date: '04.02.22',
+          venue: 'Dublin Castle, Camden',
+        },
+        {
+          date: '05.03.22',
+          venue: '229, Great Portland St'
         }
       ]
     }
@@ -53,7 +61,8 @@ button {
               5px -5px 5px black, 
             -5px -5px 5px black, 
             -5px  5px 5px black;
-  margin: 5px
+  margin: 5px;
+  position: absolute
 }
 
 @media (hover: hover) {
@@ -75,7 +84,8 @@ button {
   /* border: thin white dashed; */
   justify-content: center;
   display: flex;
-  align-items: center
+  align-items: center;
+  margin: 5px
 }
 
 </style>
