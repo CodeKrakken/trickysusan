@@ -20,9 +20,9 @@ export default {
     return {
       gigs: [
         {
-          date: '29.05.21',
-          venue: 'Amersham Arms, New Cross',
-          link: 'https://www.eventbrite.co.uk/e/underground-sound-presents-amersham-arms-section-1-tickets-148005130329?utm-medium=discovery&utm-campaign=social&utm-content=attendeeshare&aff=escb&utm-source=cp&utm-term=listing'
+          date: '08.12.21',
+          venue: 'Hoxton Underbelly',
+          link: 'https://bit.ly/3ADWGje'
         }
       ]
     }
