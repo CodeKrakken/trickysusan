@@ -1,9 +1,8 @@
 <template>
   <div>
-    <input 
+    <img 
       type="image" 
       id="band-name" 
-      @click="toggleColours()" 
       src="/images/band-name.jpg" 
     />
   </div>

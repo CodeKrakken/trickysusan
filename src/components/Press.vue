@@ -22,14 +22,19 @@ export default {
     return {
       press: [
         {
-          image: "/images/Undercover cover.jpg",
-          link: 'https://www.theothersidereviews.com/tricky-susan-undercover-2020/',
-          description: 'Undercover review<br>The Other Side Reviews<br>28.12.20'
+          image: "/images/roadie-music.jpg",
+          link: 'https://roadie-music.com/tricky-susan-grab-e-um-brit-indie-rock-sobre-amor-nao-correspondido/',
+          description: 'Grab review<br>Roadie Music<br>22.06.21'
         },
         {
           image: "/images/unrated-interview.webp",
           link: 'https://www.unratedmag.com/tricky-susan/',
           description: 'Interview<br>Unrated Magazine<br>26.02.20'
+        },
+        {
+          image: "/images/Undercover cover.jpg",
+          link: 'https://www.theothersidereviews.com/tricky-susan-undercover-2020/',
+          description: 'Undercover review<br>The Other Side Reviews<br>28.12.20'
         }
       ],
       selectedPressIndex: this.getIndex() || 0

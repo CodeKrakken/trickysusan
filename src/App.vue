@@ -1,5 +1,5 @@
 <template>
-  <div id="app" :class="{ invertColours: coloursAreInverted }" >
+  <div id="app">
     <Background />
     <Bandname @toggle-colours="toggleColours" />
     <Socials />
@@ -25,7 +25,7 @@ import Tabs from '@/components/Tabs.vue'
     },
     data() {
       return {
-        selectedTab: (sessionStorage.tab || 'Press'),
+        selectedTab: (sessionStorage.tab || 'Gigs'),
         coloursAreInverted: (sessionStorage.coloursAreInverted || false )
       }
     },   

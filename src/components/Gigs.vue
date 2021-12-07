@@ -62,7 +62,6 @@ button {
             -5px -5px 5px black, 
             -5px  5px 5px black;
   margin: 5px;
-  position: absolute
 }
 
 @media (hover: hover) {
@@ -77,6 +76,10 @@ button {
     display: grid;
     grid-template-columns: 24% 62% 19%;
     grid-column-gap: 20px;
+  }
+
+  button {
+    position: absolute
   }
 }
 
