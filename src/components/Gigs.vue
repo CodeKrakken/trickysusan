@@ -20,11 +20,6 @@ export default {
     return {
       gigs: [
         {
-          date: '08.12.21',
-          venue: 'Hoxton Underbelly',
-          link: 'https://bit.ly/3ADWGje'
-        },
-        {
           date: '04.02.22',
           venue: 'Dublin Castle, Camden',
         },

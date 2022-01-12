@@ -1,16 +1,19 @@
 <template>
   <div id="bio">
-    A four-piece outfit formed in London, Tricky Susan immediately snatch your attention with their hook-centric tunes and an energy hard to eclipse.
+    London-based five-piece band Tricky Susan immediately snatch your attention with their hook centric melodies and hard-hitting energy. Their punk-pop intertwined with dreamy layers are topped off by their unapologetic stage presence and their penchant for a stonking good time.   
     <br><br>
-    Cementing this with a penchant for a stonking good time (on stage and off), it won’t take you long to get what this lot are about.
+    The band are wildly excited to be marching into a post-lockdown world in 2022 and will be appearing at the infamous Dublin Castle [4th February 2022] and 229 London [5th March 2022].
     <br><br>
-    Tricky Susan entice you to join them on their journey. Buckle up for the ride.
+    If you want a night out to remind you why London still houses the best new indie music in the globe, you need to catch a glimpse of these puppies in action. You won’t regret it.
     <br><br><br>
     <div id="quotes">
       "... I’ve seen deaf people cry at a Tricky Susan show ..."<br><br>
       "... I’ve even seen a goose take a bump at one of their shows ..."
     </div>
   </div>
+
+  
+
   
 </template>
 
